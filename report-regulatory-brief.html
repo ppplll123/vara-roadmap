@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Antweave · Regulatory Affairs &amp; Licensing · Reference brief</title>
+<style>
+  :root {
+    --surface: #ffffff;
+    --surface-2: #fafaf8;
+    --surface-3: #f4f3ee;
+    --border: rgba(0,0,0,0.08);
+    --border-2: rgba(0,0,0,0.15);
+    --text: #1a1a1a;
+    --text-2: #5f5e5a;
+    --text-3: #888780;
+    --accent: #0C447C;
+    --accent-bg: #E6F1FB;
+    --red: #A32D2D;
+    --red-bg: #FCEBEB;
+    --amber: #854F0B;
+    --amber-bg: #FAEEDA;
+    --green: #0F6E56;
+    --green-bg: #E1F5EE;
+    --purple: #534AB7;
+    --purple-bg: #EEEDFE;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "SF Mono", "Monaco", "Consolas", monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--surface);
+    margin: 0;
+    padding: 0;
+    line-height: 1.55;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hdr { padding: 32px 40px 24px; border-bottom: 0.5px solid var(--border); }
+  .hdr .eyebrow { font-size: 11px; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
+  .hdr h1 { font-size: 24px; font-weight: 500; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .hdr .sub { font-size: 14px; color: var(--text-2); margin: 0 0 12px; }
+  .hdr .meta { font-size: 12px; color: var(--text-3); }
+  .toc { background: var(--surface-2); border: 0.5px solid var(--border); border-radius: 8px; padding: 16px 20px; margin: 20px 40px; }
+  .toc-title { font-size: 11px; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+  .toc ol { margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.9; }
+  .toc a { color: var(--accent); text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  .sec { padding: 28px 40px; border-top: 0.5px solid var(--border); }
+  .sec h2 { font-size: 18px; font-weight: 500; margin: 0 0 6px; letter-spacing: -0.005em; }
+  .sec .lede { font-size: 13px; color: var(--text-2); margin: 0 0 20px; font-style: italic; }
+  .sec h3 { font-size: 15px; font-weight: 500; margin: 24px 0 10px; }
+  .sec h4 { font-size: 13px; font-weight: 500; margin: 16px 0 8px; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.05em; }
+  .sec p { font-size: 14px; line-height: 1.65; margin: 8px 0; }
+  .sec ul, .sec ol { font-size: 14px; line-height: 1.7; margin: 8px 0; padding-left: 22px; }
+  .sec li { margin-bottom: 4px; }
+  .sec li code, .sec p code { font-family: var(--font-mono); font-size: 12px; background: var(--surface-3); padding: 1px 5px; border-radius: 3px; }
+  .callout { background: var(--accent-bg); border-left: 3px solid var(--accent); border-radius: 4px; padding: 14px 16px; margin: 16px 0; font-size: 13px; line-height: 1.6; color: #042C53; }
+  .callout.amber { background: var(--amber-bg); border-left-color: var(--amber); color: #412402; }
+  .callout.green { background: var(--green-bg); border-left-color: var(--green); color: #04342C; }
+  .callout.red { background: var(--red-bg); border-left-color: var(--red); color: #501313; }
+  .callout b { font-weight: 500; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 14px 0; }
+  table th { text-align: left; font-weight: 500; color: var(--text-2); padding: 10px 12px; border-bottom: 0.5px solid var(--border); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; background: var(--surface-2); }
+  table td { padding: 11px 12px; border-bottom: 0.5px solid var(--border); line-height: 1.5; vertical-align: top; }
+  table tr:last-child td { border-bottom: none; }
+  table td.num { font-variant-numeric: tabular-nums; text-align: right; }
+  .pill { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500; }
+  .pill-g { background: var(--green-bg); color: var(--green); }
+  .pill-a { background: var(--amber-bg); color: var(--amber); }
+  .pill-r { background: var(--red-bg); color: var(--red); }
+  .pill-b { background: var(--accent-bg); color: var(--accent); }
+  .q-block { margin: 20px 0; }
+  .q-block .q { font-size: 14px; font-weight: 500; margin-bottom: 6px; line-height: 1.5; color: var(--text); }
+  .q-block .a { font-size: 13px; line-height: 1.65; color: var(--text-2); padding-left: 14px; border-left: 2px solid var(--border-2); margin-top: 4px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; margin: 14px 0; }
+  .card { background: var(--surface); border: 0.5px solid var(--border); border-radius: 8px; padding: 14px 16px; }
+  .card h4 { margin-top: 0; }
+  .footer { padding: 24px 40px; background: var(--surface-2); font-size: 12px; color: var(--text-3); text-align: center; line-height: 1.6; border-top: 0.5px solid var(--border); }
+  @media print {
+    body { max-width: none; }
+    .sec, .card, .callout, .q-block, table { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="eyebrow">Reference brief</div>
+  <h1>Antweave · Regulatory Affairs &amp; Licensing</h1>
+  <p class="sub">Real-World Asset (RWA) tokenisation in the United Arab Emirates — licensing landscape, technical content, and operational entry plan</p>
+  <p class="meta">Prepared for the Sky Blue Group panel · April 2026</p>
+</div>
+
+<div class="toc">
+  <div class="toc-title">Contents</div>
+  <ol>
+    <li><a href="#s1">Regulatory landscape — UAE virtual-asset framework</a></li>
+    <li><a href="#s2">VARA licensing pathway, costs and timelines</a></li>
+    <li><a href="#s3">VARA Compulsory Rulebooks &amp; activity scope</a></li>
+    <li><a href="#s4">Mandatory roles &amp; minimum headcount</a></li>
+    <li><a href="#s5">RAK DAO vs VARA — the critical distinction</a></li>
+    <li><a href="#s6">ERC-3643 / Tokeny technology stack</a></li>
+    <li><a href="#s7">UAE RWA competitive landscape</a></li>
+    <li><a href="#s8">First-90-days operating plan</a></li>
+    <li><a href="#s9">Diligence questions for the regulatory function</a></li>
+    <li><a href="#s10">Reference Q&amp;A on common regulatory framing</a></li>
+  </ol>
+</div>
+
+<div class="sec" id="s1">
+  <h2>1 · Regulatory landscape — UAE virtual-asset framework</h2>
+  <p class="lede">The United Arab Emirates operates the most segmented virtual-asset regulatory environment in the region. Four authorities are relevant to any tokenisation venture.</p>
+
+  <table>
+    <thead>
+      <tr><th>Authority</th><th>Jurisdiction</th><th>Legal system</th><th>Scope for virtual assets</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Virtual Assets Regulatory Authority (VARA)</b></td>
+        <td>Emirate of Dubai (excluding Dubai International Financial Centre)</td>
+        <td>UAE federal + dedicated VARA statute (Dubai Law 4/2022)</td>
+        <td>The only regulator that authorises virtual-asset activity directed at Dubai retail investors. Operates the Virtual Asset Service Provider (VASP) licence regime.</td>
+      </tr>
+      <tr>
+        <td><b>Abu Dhabi Global Market (ADGM) — Financial Services Regulatory Authority (FSRA)</b></td>
+        <td>Abu Dhabi financial free zone</td>
+        <td>English common law</td>
+        <td>Authorises virtual-asset activity within ADGM. Institutional-skewed framework. Operates a Financial Services Permission regime.</td>
+      </tr>
+      <tr>
+        <td><b>Dubai International Financial Centre (DIFC) — Dubai Financial Services Authority (DFSA)</b></td>
+        <td>Dubai financial free zone</td>
+        <td>English common law</td>
+        <td>Authorises virtual-asset activity within DIFC. Siloed from VARA's mainland Dubai perimeter.</td>
+      </tr>
+      <tr>
+        <td><b>Ras Al Khaimah Digital Assets Oasis (RAK DAO)</b></td>
+        <td>Ras Al Khaimah free zone</td>
+        <td>RAK International Corporate Centre common-law framework</td>
+        <td>Business registration only — not a regulator. Cannot authorise virtual-asset activity. Often paired with VARA licensing for the underlying entity.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <b>Routing logic for retail offerings.</b> Where the target investor base is Dubai-resident retail (such as Antweave's CF-01 offering at AED 300 minimum subscription), VARA is the sole viable primary regulator. ADGM and DIFC frameworks address institutional segments. Free-zone registration alone (RAK DAO, DMCC, DWTC) provides corporate domicile but does not constitute regulatory authorisation.
+  </div>
+</div>
+
+<div class="sec" id="s2">
+  <h2>2 · VARA licensing pathway, costs and timelines</h2>
+  <p class="lede">VARA's authorisation flow follows a two-stage gating process. End-to-end timing typically ranges from 8 to 18 months depending on activity scope and applicant readiness.</p>
+
+  <h3>Two-stage process</h3>
+  <ol>
+    <li><b>Approval to Incorporate (ATI).</b> The applicant submits an Initial Disclosure Questionnaire (IDQ) via either the Department of Economy and Tourism (DET) for mainland incorporation or the chosen free-zone authority. Typical review window: three to four months. ATI authorises legal incorporation and operational build-out but does not permit client-facing activity.</li>
+    <li><b>Full VASP licence.</b> Following ATI, the applicant finalises office lease, named regulatory hires, paid-up capital deposit, and completes the activity-specific compliance documentation. Typical additional window: three to six months. The operational licence then issues, often via In-Principle Approval (IPA) followed by full licence.</li>
+  </ol>
+  <p>Empirical variance is significant. Several applicants have remained at IPA stage for twelve months or more. A realistic planning range is 8 to 18 months from IDQ submission to operational licence.</p>
+
+  <h3>Indicative cost — Broker-Dealer activity</h3>
+  <table>
+    <thead>
+      <tr><th>Item</th><th>Type</th><th class="num">Amount</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>VARA application fee (Broker-Dealer)</td><td>One-time</td><td class="num">AED 100,000</td></tr>
+      <tr><td>VARA annual supervision fee (Broker-Dealer)</td><td>Recurring</td><td class="num">AED 200,000 / year</td></tr>
+      <tr><td>Minimum paid-up capital — using a VARA-licensed custodian</td><td>Ring-fenced</td><td class="num">AED 400,000–600,000</td></tr>
+      <tr><td>Minimum paid-up capital — self-custody model</td><td>Ring-fenced</td><td class="num">AED 1,500,000+</td></tr>
+      <tr><td>Adding Category 2 Asset-Referenced Virtual Asset issuance</td><td>Additional</td><td class="num">AED ~1,500,000 capital + AED 100k application + AED 200k supervision</td></tr>
+      <tr><td>External legal &amp; compliance preparation</td><td>Project</td><td class="num">USD 20,000–60,000</td></tr>
+      <tr><td>Year-1 total programme outlay (Broker-Dealer only)</td><td>—</td><td class="num">USD 60,000–120,000+ ex. capital</td></tr>
+    </tbody>
+  </table>
+
+  <p>Paid-up capital is held in trust against operational risk, not consumed. Where the licence is withdrawn or surrendered, capital is returnable. Practical net cash burn in Year 1 is therefore meaningfully lower than the gross outlay implies.</p>
+</div>
+
+<div class="sec" id="s3">
+  <h2>3 · VARA Compulsory Rulebooks &amp; activity scope</h2>
+  <p class="lede">All licensed VASPs must satisfy four Compulsory Rulebooks plus one or more Activity Rulebooks corresponding to the scope of their licence.</p>
+
+  <h3>Compulsory Rulebooks (apply to every VASP)</h3>
+  <table>
+    <thead><tr><th>Rulebook</th><th>Scope</th></tr></thead>
+    <tbody>
+      <tr><td><b>Company Rulebook</b></td><td>Governance, board composition, named Responsible Individuals (minimum two UAE-resident), outsourcing arrangements, fitness and propriety</td></tr>
+      <tr><td><b>Compliance and Risk Management Rulebook</b></td><td>Anti-Money Laundering / Counter-Financing of Terrorism programme, sanctions screening, Suspicious Transaction Report filing, enterprise risk assessment</td></tr>
+      <tr><td><b>Technology and Information Rulebook</b></td><td>Cybersecurity, data protection, IT governance, business continuity planning</td></tr>
+      <tr><td><b>Market Conduct Rulebook</b></td><td>Market abuse, insider dealing, manipulation, fair-dealing standards, conflicts of interest</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Activity Rulebooks relevant to RWA tokenisation</h3>
+  <ul>
+    <li><b>Broker-Dealer Services Rulebook</b> — required to facilitate primary placement and secondary trading of virtual assets</li>
+    <li><b>Virtual Asset Issuance Rulebook</b> (effective June 2025), with two categories:
+      <ul>
+        <li><b>Category 1</b> — Fiat-Referenced Virtual Assets (stablecoins)</li>
+        <li><b>Category 2</b> — Asset-Referenced Virtual Assets (ARVAs), the relevant category for tokenised real estate</li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="callout amber">
+    <b>Category nomenclature.</b> Public commentary occasionally conflates "Category 1 VA Issuance" (stablecoins) with the broader issuance permission. For tokenised real estate offerings such as CF-01, the relevant authorisation is Category 2 ARVA Issuance under the Virtual Asset Issuance Rulebook.
+  </div>
+</div>
+
+<div class="sec" id="s4">
+  <h2>4 · Mandatory roles &amp; minimum headcount</h2>
+  <p class="lede">A Broker-Dealer VASP licence requires a minimum of approximately five full-time staff with several named regulatory roles.</p>
+
+  <table>
+    <thead><tr><th>Named role</th><th>Requirements</th></tr></thead>
+    <tbody>
+      <tr><td><b>Responsible Individuals (minimum 2)</b></td><td>Full-time UAE residents, VARA-approved on the licence application, accountable for the firm's regulatory conduct</td></tr>
+      <tr><td><b>Compliance Officer</b></td><td>Dedicated, typically 5+ years' relevant experience, UAE-resident</td></tr>
+      <tr><td><b>Money Laundering Reporting Officer (MLRO)</b></td><td>Named individual responsible for STR filing and the AML/CFT programme</td></tr>
+      <tr><td><b>Company Secretary</b></td><td>Statutory corporate-governance role</td></tr>
+      <tr><td><b>Cybersecurity function (CISO or equivalent)</b></td><td>Required to satisfy the Technology &amp; Information Rulebook</td></tr>
+    </tbody>
+  </table>
+
+  <p>Hiring lead times are material. The UAE-resident pool of qualified Compliance Officers and MLROs with virtual-asset experience is shallow, and approval through VARA's fitness-and-propriety review typically takes four to eight weeks per named individual. Most successful applicants begin sourcing during the IDQ drafting phase rather than after submission.</p>
+</div>
+
+<div class="sec" id="s5">
+  <h2>5 · RAK DAO vs VARA — the critical distinction</h2>
+  <p class="lede">A frequent point of confusion in pre-launch tokenisation ventures: RAK DAO registration provides a corporate vehicle but is not regulatory authorisation.</p>
+
+  <table>
+    <thead><tr><th></th><th>Ras Al Khaimah Digital Assets Oasis (RAK DAO)</th><th>Virtual Assets Regulatory Authority (VARA)</th></tr></thead>
+    <tbody>
+      <tr><td><b>What it is</b></td><td>Business registration authority within a free zone</td><td>Financial regulator for virtual-asset activity in the Emirate of Dubai</td></tr>
+      <tr><td><b>What it provides</b></td><td>UAE-incorporated entity, 0% corporate tax, 100% foreign ownership</td><td>Permission to conduct regulated VASP activities</td></tr>
+      <tr><td><b>Setup time</b></td><td>2–4 weeks</td><td>8–18 months</td></tr>
+      <tr><td><b>Setup cost</b></td><td>AED 12,000–18,000</td><td>USD 60,000–120,000 in Year 1</td></tr>
+      <tr><td><b>Authorises regulated activity?</b></td><td><span class="pill pill-r">No</span></td><td><span class="pill pill-g">Yes</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <b>Practical implication.</b> Where the underlying asset is physically located in Ras Al Khaimah but tokens are offered to UAE residents, VARA authorisation remains required regardless of where the operating entity is incorporated. RAK DAO registration is a useful corporate-domicile tool; it is not a substitute for a VASP licence.
+  </div>
+</div>
+
+<div class="sec" id="s6">
+  <h2>6 · ERC-3643 / Tokeny technology stack</h2>
+  <p class="lede">Antweave's stated technology stack — Ethereum Request for Comments 3643 (ERC-3643) tokens issued through Tokeny infrastructure with Luxembourg Special Purpose Vehicle (SPV) compartments — is the institutional standard for compliant RWA tokenisation.</p>
+
+  <h3>Standard overview</h3>
+  <p>ERC-3643 is the Ethereum token standard for permissioned (compliance-aware) tokens, originally developed as the T-REX protocol and now maintained as an open standard. It was built by Tokeny Solutions (Luxembourg, since acquired by Apex Group).</p>
+
+  <h3>Core components</h3>
+  <ul>
+    <li><code>IToken</code> — an ERC-20 extension with built-in compliance hooks</li>
+    <li><code>IIdentityRegistry</code> — manages investor identity verification via the ONCHAINID identity layer</li>
+    <li><code>IModularCompliance</code> — defines transferability rules (jurisdiction, holding limits, lock-up periods)</li>
+  </ul>
+  <p>Every token transfer triggers two checks at the smart-contract level: <code>IdentityRegistry.isVerified()</code> and <code>Compliance.canTransfer()</code>. Both must pass for the transfer to execute. The effect: Know Your Customer / Anti-Money Laundering enforcement happens at the protocol layer, not after the fact.</p>
+
+  <h3>Institutional adoption</h3>
+  <ul>
+    <li>Recognised by the U.S. Securities and Exchange Commission in published reports on tokenised securities infrastructure</li>
+    <li>Integrated into the Depository Trust &amp; Clearing Corporation's (DTCC) tokenisation framework</li>
+    <li>Used by ABN AMRO Bank for a EUR 5 million digital green bond on Polygon</li>
+    <li>Adopted by Apex Group across fund administration, custody and investor servicing</li>
+    <li>Approximately USD 32 billion in real-world assets tokenised under the standard</li>
+  </ul>
+  <p>The Luxembourg 2004 Securitisation Law SPV compartment is a mature, well-understood structure for issuing tokenised securities to international investors. The combination is institutionally credible and suited to satisfying VARA's expectations on technical infrastructure.</p>
+</div>
+
+<div class="sec" id="s7">
+  <h2>7 · UAE RWA competitive landscape</h2>
+  <p class="lede">As of Q2 2026, VARA's public register lists 45 licensed VASPs and 17 In-Principle Approval holders. Four entities are directly relevant to the RWA tokenisation segment.</p>
+
+  <table>
+    <thead>
+      <tr><th>Entity</th><th>VARA reference</th><th>Activities</th><th>Differentiator</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Tokinvest DMCC</b></td>
+        <td>VL/2024/12/004</td>
+        <td>Broker-Dealer + Category 1 VA Issuance</td>
+        <td>First Dubai Multi Commodities Centre company to receive a full VARA market licence; multi-asset issuance</td>
+      </tr>
+      <tr>
+        <td><b>Ctrl Alt Solutions DMCC</b></td>
+        <td>VL/25/05/002</td>
+        <td>Broker-Dealer + Category 1 VA Issuance</td>
+        <td>First VASP authorised for issuer-related services; over USD 295 million in tokenised assets; direct Dubai Land Department title-deed integration</td>
+      </tr>
+      <tr>
+        <td><b>Prypco FZE</b></td>
+        <td>VL/25/05/001</td>
+        <td>Broker-Dealer</td>
+        <td>Official Dubai Land Department real-estate tokenisation pilot partner; AED 2,000 minimum subscription; Zand Bank custody partnership</td>
+      </tr>
+      <tr>
+        <td><b>Mantra Finance FZE</b></td>
+        <td>VL/25/02/001</td>
+        <td>Exchange + Broker-Dealer + Management &amp; Investment</td>
+        <td>First VARA Decentralised Finance (DeFi) licence; USD 1 billion DAMAC tokenisation deal; operates own Layer 1 blockchain</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout green">
+    <b>Antweave's positioning.</b> The institutional-grade Tokeny / ERC-3643 stack and Luxembourg SPV structure differentiate Antweave from the Dubai Land Department-routed competitors (Prypco, Ctrl Alt). The strategic question is whether Antweave's wedge is the multi-asset-class international investor base, the institutional infrastructure stack, or both.
+  </div>
+</div>
+
+<div class="sec" id="s8">
+  <h2>8 · First-90-days operating plan</h2>
+  <p class="lede">A practical execution plan for the Head of Regulatory Affairs &amp; Licensing, structured against the gating events of the VARA application process.</p>
+
+  <h3>Days 1–30 · Diagnostic &amp; foundation</h3>
+  <h4>Current-state assessment</h4>
+  <ul>
+    <li>Establish Antweave's regulatory posture: any IDQ drafted, any DET or VARA engagement to date, status of Luxembourg SPV setup for CF-01, scope of Tokeny contract</li>
+    <li>Map Sky Blue Group's entity structure — which UAE entity is intended as the VASP applicant, where Antweave sits legally within the group</li>
+    <li>Audit the CF-01 offering against current UAE regulation: is it being marketed to UAE residents under any exemption, and is there latent enforcement exposure</li>
+    <li>Inventory existing vendor relationships (Tokeny, Luxembourg legal counsel, any UAE law firm)</li>
+  </ul>
+
+  <h4>Strategic roadmap</h4>
+  <ul>
+    <li>Decide target licence scope: Broker-Dealer only, or Broker-Dealer + Category 2 ARVA Issuance. The latter doubles capital and timeline but matches Tokinvest and Ctrl Alt positioning</li>
+    <li>Confirm jurisdictional routing: VARA for retail access (the only viable path for CF-01), with ADGM or DIFC kept in reserve for future institutional-only products</li>
+    <li>Produce the IDQ gap-analysis: what must be built before credible submission</li>
+    <li>Present licensing roadmap to CEO / COO with cost, timeline, risk</li>
+  </ul>
+
+  <h3>Days 31–60 · Build the compliance architecture</h3>
+  <h4>Team build</h4>
+  <ul>
+    <li>Identify and interview Compliance Officer candidate (5+ years, UAE-resident)</li>
+    <li>Scope MLRO hire and confirm second Responsible Individual</li>
+    <li>Engage external UAE counsel (10 Leaves, Equiom, ACX Compliance, or equivalent)</li>
+  </ul>
+
+  <h4>Documentation suite</h4>
+  <ul>
+    <li>Regulatory business plan (required for IDQ)</li>
+    <li>AML/CFT policy suite: Customer Due Diligence, Enhanced Due Diligence, Politically Exposed Person screening, sanctions screening, STR/SAR procedures, transaction monitoring rules</li>
+    <li>KYC/KYB onboarding workflows aligned to VARA standards and UAE Federal Decree-Law 20/2018 on Anti-Money Laundering</li>
+    <li>Board-level Risk &amp; Compliance Committee charter; MLRO reporting lines; conflicts-of-interest policy</li>
+    <li>Wind-down plan (required at IDQ stage)</li>
+  </ul>
+
+  <h4>Legal structuring</h4>
+  <ul>
+    <li>Confirm Luxembourg SPV compartment structure with counsel — whether fit for serving UAE retail investors, or whether a parallel UAE-side vehicle (RAK ICC, ADGM SPV-LLC, DIFC Prescribed Company) is required to clean recourse paths</li>
+    <li>Map off-chain / on-chain mirroring: how the Luxembourg SPV holds title to the RAK property, how that interacts with the RAK land registry, and how token holders derive beneficial ownership</li>
+    <li>Compare SPV regime options across cost, speed and investor-perception trade-offs</li>
+  </ul>
+
+  <h3>Days 61–90 · Submit and engage</h3>
+  <h4>Initial Disclosure Questionnaire submission</h4>
+  <ul>
+    <li>File IDQ with the Department of Economy and Tourism or chosen Free Zone (DWTC or DMCC are well-precedented)</li>
+    <li>Pay initial application fee (~AED 50,000, 50% of full)</li>
+    <li>Open the 3–4 month Approval to Incorporate review window</li>
+  </ul>
+
+  <h4>Regulator engagement</h4>
+  <ul>
+    <li>Schedule introductory meeting with the VARA Authorisations team (pre-IDQ or early post-submission to establish relationship)</li>
+    <li>Brief VARA on the Tokeny / ERC-3643 architecture in advance, so it does not surface as a surprise during review</li>
+    <li>Identify probable case officer</li>
+  </ul>
+
+  <h4>Operational readiness</h4>
+  <ul>
+    <li>Secure office lease (VARA requires a physical Dubai office for the full licence)</li>
+    <li>Confirm capital deposit mechanism: UAE bank trust account or surety bond</li>
+    <li>Build the cybersecurity documentation layer required under the Technology &amp; Information Rulebook</li>
+  </ul>
+
+  <h4>Board update at Day 90</h4>
+  <p>Deliver a board-level dashboard covering regulatory milestones, hires made and outstanding, spend-to-date and forward budget, target dates for IPA and full licence, and the live risk register.</p>
+</div>
+
+<div class="sec" id="s9">
+  <h2>9 · Diligence questions for the regulatory function</h2>
+  <p class="lede">A structured set of questions the regulatory function should be able to answer with precision at any point during the application process.</p>
+
+  <h3>Diagnostic — current state of the application</h3>
+  <ul>
+    <li>Where is Antweave in the VARA application process today: pre-IDQ, drafting, or submitted? Has any regulator engagement already occurred?</li>
+    <li>Is the CF-01 offering currently being marketed to UAE residents? If so, under what exemption?</li>
+    <li>Is external VARA licensing counsel engaged, or does that selection sit within the regulatory function's remit?</li>
+    <li>What is the current entity structure — is there already a UAE entity intended as the VASP applicant?</li>
+  </ul>
+
+  <h3>Strategic — scope &amp; positioning</h3>
+  <ul>
+    <li>For CF-01 with retail investors at AED 300 minimum subscription, what is the rationale for Broker-Dealer first vs Broker-Dealer + Category 2 ARVA Issuance?</li>
+    <li>The Luxembourg SPV plus ERC-3643 stack is institutional-grade. For UAE retail investors, does the Luxembourg structure introduce friction on recourse — and is a UAE-side mirror vehicle being considered?</li>
+    <li>Prypco holds the Dubai Land Department partnership advantage on real-estate tokenisation specifically. Where does Antweave intend to differentiate — multi-asset class, international investor base, or the Tokeny institutional stack?</li>
+  </ul>
+
+  <h3>Operational — execution reality</h3>
+  <ul>
+    <li>What is the target date for CF-01 retail go-live? That date reverse-engineers the regulatory timeline.</li>
+    <li>What headcount and budget is allocated to the regulatory function in Year 1?</li>
+    <li>Are the MLRO and Compliance Officer roles to be hired by the regulatory function, or are candidates already identified?</li>
+  </ul>
+</div>
+
+<div class="sec" id="s10">
+  <h2>10 · Reference Q&amp;A on common regulatory framing</h2>
+  <p class="lede">Standard framings for the most frequently asked regulatory questions in UAE virtual-asset licensing conversations.</p>
+
+  <div class="q-block">
+    <div class="q">Q: How should a VARA licensing pathway be described to a board or investor audience?</div>
+    <div class="a">VARA's licensing flow is a two-stage gating process. Stage one is Approval to Incorporate (ATI) — granted after VARA reviews the Initial Disclosure Questionnaire and confirms the applicant has a credible regulatory and operational plan. ATI permits incorporation of the legal entity but does not authorise client-facing activity. Stage two is the full Virtual Asset Service Provider licence — issued after the entity has met capital, staffing, lease, and documentation requirements. Total elapsed time from IDQ submission to operational licence is typically 8 to 18 months for a Broker-Dealer with virtual-asset issuance scope.</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q">Q: How is "Approved Individual" status established with UAE regulators?</div>
+    <div class="a">Within the ADGM Financial Services Regulatory Authority framework, an Approved Individual is a named person who holds a regulated function within an authorised firm — typically Senior Executive Function or Compliance Officer roles. Approved Individuals are listed by name on the ADGM public register. Within the VARA framework, the equivalent named roles are Responsible Individuals; these are also listed on the VARA public register once the firm receives its licence. External advisors who prepare licence applications on behalf of clients are not themselves listed on either register, regardless of how substantive their work has been.</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q">Q: What governance bodies are required at board level for a VARA-licensed VASP?</div>
+    <div class="a">A Board-level Risk &amp; Compliance Committee is the standard requirement for VARA-licensed VASPs, with terms of reference covering AML/CFT oversight, market conduct, technology risk, and capital adequacy. The Committee should meet at least quarterly, with standing reporting from the Compliance Officer and MLRO. For larger or more complex firms, separation into a Risk Committee and a separate Compliance / Audit Committee is appropriate.</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q">Q: What is the most common structural risk in pre-launch RWA tokenisation ventures?</div>
+    <div class="a">The single highest-impact operational risk is pre-authorisation marketing exposure. Where a tokenised offering is marketed to UAE residents — including via website availability, social channels, or waitlist sign-ups — before the issuing entity holds VARA authorisation, this may breach the VARA Marketing of Virtual Assets Regulation 2024 and can prejudice the licence application itself. The standard mitigation is a Day 1 marketing audit, geo-blocking of UAE Internet Protocol addresses where appropriate, restriction to accredited non-UAE investors until In-Principle Approval is received, and consideration of voluntary disclosure to VARA where exposure has occurred.</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q">Q: How is the Luxembourg SPV / UAE retail investor recourse path typically structured?</div>
+    <div class="a">A Luxembourg 2004 Securitisation Law SPV compartment provides a mature legal wrapper for the underlying asset and the issuance of tokenised securities. Where token holders are predominantly UAE retail, the most defensible structure introduces a mirror vehicle in the UAE — typically a RAK International Corporate Centre entity or an ADGM Special Purpose Vehicle Limited Liability Company — as the holder-of-record for UAE-resident investors. The Luxembourg compartment remains the issuer of record; the UAE mirror vehicle ensures that recourse paths for UAE investors do not require enforcement across three jurisdictions.</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q">Q: How does Antweave's Tokeny / ERC-3643 stack differentiate from competitors using direct title-deed tokenisation?</div>
+    <div class="a">There are two architectural models in the UAE RWA market. The direct title-deed model (used by Prypco and Ctrl Alt in partnership with the Dubai Land Department) tokenises the title deed itself, with on-chain transfer corresponding to a registry update at the DLD. The SPV model (used by Tokeny clients and adopted by Antweave) holds the underlying asset within a securitisation vehicle and issues compliance-aware tokens representing economic interests in that vehicle. The SPV model offers broader asset-class flexibility (including assets outside DLD's tokenisation pilot) and stronger cross-border investor accessibility. The direct title-deed model offers tighter integration with the underlying real-estate registry and lower operational complexity for Dubai-only offerings.</div>
+  </div>
+
+  <div class="q-block">
+    <div class="q">Q: What is the practical role of the Securities and Commodities Authority (SCA) in VARA-regulated activity?</div>
+    <div class="a">VARA-licensed VASPs are also required to register with the federal Securities and Commodities Authority. This is a parallel registration, not a separate licensing process. SCA registration is typically completed during or shortly after the full VARA licence is issued. The regulatory function should plan SCA registration into the operational readiness workstream rather than treating it as a separate regulatory pathway.</div>
+  </div>
+</div>
+
+<div class="footer">
+  Reference brief · Antweave Regulatory Affairs &amp; Licensing · April 2026<br>
+  All figures and timelines indicative · Refer to current VARA, ADGM FSRA and DIFC DFSA published rulebooks for the binding regulatory text
+</div>
+
+</body>
+</html>

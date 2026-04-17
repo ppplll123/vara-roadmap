@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VARA Ecosystem — Key People Directory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface: #fff;
+  --surface-2: #fafaf8;
+  --surface-3: #f4f3ee;
+  --border: rgba(0,0,0,0.08);
+  --text: #1a1a1a;
+  --text-2: #5f5e5a;
+  --text-3: #888780;
+  --accent: #0C447C;
+  --accent-bg: #E6F1FB;
+  --red: #A32D2D;
+  --green: #0F6E56;
+  --amber: #854F0B;
+  --purple: #534AB7;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  background: var(--surface-2);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  margin-bottom: 24px;
+}
+.back-link:hover { text-decoration: underline; }
+.back-link svg { width: 14px; height: 14px; }
+
+.report-header {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+}
+.report-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.report-header .subtitle {
+  font-size: 14px;
+  color: var(--text-3);
+}
+.report-header .stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.stat-item .stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: 'JetBrains Mono', monospace;
+}
+.stat-item .stat-label {
+  font-size: 12px;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.card h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-2);
+  margin: 16px 0 8px 0;
+}
+.card h3:first-of-type { margin-top: 0; }
+
+.section-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* Licence type color coding */
+.badge-issuance { background: #E6F1FB; color: #0C447C; }
+.badge-broker { background: #F0E6FB; color: #534AB7; }
+.badge-exchange { background: #FFF3E0; color: #854F0B; }
+.badge-custody { background: #E6FBF3; color: #0F6E56; }
+.badge-investment { background: #FBE6E6; color: #A32D2D; }
+
+table.cap {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+table.cap thead th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-3);
+  padding: 8px 12px;
+  border-bottom: 2px solid var(--border);
+}
+table.cap tbody td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-2);
+  vertical-align: top;
+}
+table.cap tbody tr:last-child td { border-bottom: none; }
+table.cap tbody tr:hover { background: var(--surface-2); }
+table.cap .name { font-weight: 600; color: var(--text); }
+table.cap .company { font-weight: 600; color: var(--text); }
+table.cap a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 12px;
+}
+table.cap a:hover { text-decoration: underline; }
+
+.highlight-card {
+  background: var(--accent-bg);
+  border: 1px solid rgba(12,68,124,0.15);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.highlight-card h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(12,68,124,0.15);
+}
+.priority-list {
+  list-style: none;
+  counter-reset: priority;
+}
+.priority-list li {
+  counter-increment: priority;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(12,68,124,0.10);
+  font-size: 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.priority-list li:last-child { border-bottom: none; }
+.priority-list li::before {
+  content: counter(priority);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+.priority-list .person-name { font-weight: 700; color: var(--text); }
+.priority-list .person-org { color: var(--accent); font-weight: 500; }
+.priority-list .person-note { color: var(--text-2); }
+
+.summary-table { margin-top: 8px; }
+.summary-table table.cap tbody td:last-child {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  color: var(--accent);
+  text-align: right;
+}
+.summary-table table.cap thead th:last-child { text-align: right; }
+.summary-table table.cap tfoot td {
+  padding: 10px 12px;
+  border-top: 2px solid var(--border);
+  font-weight: 700;
+  color: var(--text);
+}
+.summary-table table.cap tfoot td:last-child {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent);
+}
+
+.note-text {
+  font-size: 12px;
+  color: var(--text-3);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.footer {
+  text-align: center;
+  padding: 32px 0 16px;
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+@media print {
+  body { background: #fff; }
+  .container { max-width: 100%; padding: 0; }
+  .back-link { display: none; }
+  .card, .highlight-card, .report-header {
+    break-inside: avoid;
+    border: 1px solid #ddd;
+    box-shadow: none;
+  }
+  table.cap { font-size: 11px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a href="index.html" class="back-link">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+  Back to Dashboard
+</a>
+
+<div class="report-header">
+  <h1>VARA Ecosystem &mdash; Key People Directory</h1>
+  <p class="subtitle">Market research &amp; ecosystem mapping &bull; Compiled April 16, 2026</p>
+  <div class="stats">
+    <div class="stat-item"><div class="stat-value">14</div><div class="stat-label">Entities Mapped</div></div>
+    <div class="stat-item"><div class="stat-value">68</div><div class="stat-label">People Identified</div></div>
+    <div class="stat-item"><div class="stat-value">7</div><div class="stat-label">Licence Categories</div></div>
+  </div>
+</div>
+
+<!-- Category 1: VA Issuance / Broker-Dealer -->
+<div class="card">
+  <h2>Category 1: VA Issuance / Broker-Dealer Holders <span class="section-badge badge-issuance">Priority Contacts</span></h2>
+
+  <h3>Tokinvest Capital <span class="section-badge badge-issuance">VA Issuance</span></h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>Licence</th><th>LinkedIn</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Scott Thiel</td><td>Founder &amp; CEO</td><td>VA Issuance</td><td>&mdash;</td></tr>
+      <tr><td class="name">Matt Blom</td><td>COO</td><td>VA Issuance</td><td>&mdash;</td></tr>
+      <tr><td class="name">Robert Cooper</td><td>CTO</td><td>VA Issuance</td><td>&mdash;</td></tr>
+      <tr><td class="name">James Byrne</td><td>Head of Compliance</td><td>VA Issuance</td><td>&mdash;</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Ctrl Alt <span class="section-badge badge-broker">Broker-Dealer / Issuer &bull; VL/25/05/002</span></h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>Licence</th><th>LinkedIn</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Matt Ong</td><td>Founder &amp; CEO</td><td>Broker-Dealer / Issuer</td><td>&mdash;</td></tr>
+      <tr><td class="name">Jordan McMullen</td><td>COO</td><td>Broker-Dealer / Issuer</td><td>&mdash;</td></tr>
+      <tr><td class="name">Matt Acheson</td><td>CPO</td><td>Broker-Dealer / Issuer</td><td>&mdash;</td></tr>
+      <tr><td class="name">Jack Spargo</td><td>CTO</td><td>Broker-Dealer / Issuer</td><td>&mdash;</td></tr>
+      <tr><td class="name">Robert Farquhar</td><td>CEO, MENA</td><td>Broker-Dealer / Issuer</td><td>&mdash;</td></tr>
+      <tr><td class="name">Jack Denton</td><td>Chief of Staff</td><td>Broker-Dealer / Issuer</td><td>&mdash;</td></tr>
+      <tr><td class="name">Lee Bowyer</td><td>Global Head of Compliance</td><td>Broker-Dealer / Issuer</td><td>&mdash;</td></tr>
+      <tr><td class="name">Kaitlin Lemmo</td><td>Head of Compliance, Ireland</td><td>Broker-Dealer / Issuer</td><td>&mdash;</td></tr>
+      <tr><td class="name">Lawrence Chiu</td><td>Head of Marketing</td><td>Broker-Dealer / Issuer</td><td>&mdash;</td></tr>
+      <tr><td class="name">Charles Lucas</td><td>Head of Capital Markets</td><td>Broker-Dealer / Issuer</td><td>&mdash;</td></tr>
+      <tr><td class="name">Ilya Shichanin</td><td>Head of Partnerships</td><td>Broker-Dealer / Issuer</td><td>&mdash;</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Animoca Brands Middle East Advisory <span class="section-badge badge-broker">Broker-Dealer / Investment &bull; VL/04/02/001</span></h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>Licence</th><th>LinkedIn</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Omar Elassar</td><td>CEO</td><td>Broker-Dealer / Investment</td><td>&mdash;</td></tr>
+      <tr><td class="name">Tamer Ghresi</td><td>Chief Compliance Officer</td><td>Broker-Dealer / Investment</td><td>&mdash;</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Category 2: Broker-Dealer Entities -->
+<div class="card">
+  <h2>Category 2: Broker-Dealer Entities <span class="section-badge badge-broker">Broker-Dealer</span></h2>
+
+  <h3>CoinMENA</h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>LinkedIn</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Talal Tabbaa</td><td>Co-Founder</td><td><a href="https://ae.linkedin.com/in/talaltabbaa" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Dina Sam'an</td><td>Co-Founder</td><td><a href="https://bh.linkedin.com/in/dinasaman" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Yazan Barghuthi</td><td>Co-Founder</td><td><a href="https://www.linkedin.com/in/yazanbarghuthi/" target="_blank">Profile</a></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Fuze</h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>LinkedIn</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Mo Ali</td><td>CEO &amp; Co-founder</td><td><a href="https://www.linkedin.com/in/moaliyusuf" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Arpit Mehta</td><td>COO &amp; Co-founder</td><td><a href="https://www.linkedin.com/in/mehtaarpit" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Srijan R Shetty</td><td>CTO</td><td><a href="https://linkedin.com/in/srijanshetty" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Zunair Ali</td><td>MLRO</td><td><a href="https://www.linkedin.com/in/zunair-ali-3961529b" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Abeeda Khan</td><td>Head of Finance</td><td><a href="https://www.linkedin.com/in/abeeda-k-716b5622" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Arshika Perry</td><td>Head of Legal</td><td><a href="https://www.linkedin.com/in/arshika-perry-240620156" target="_blank">Profile</a></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Selini Capital <span style="font-weight:400;color:var(--text-3);font-size:12px">(OTC)</span></h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>LinkedIn</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Jordi Alexander</td><td>Founder</td><td>&mdash;</td></tr>
+    </tbody>
+  </table>
+
+  <h3>MidChains</h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>LinkedIn</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Basil Al Askari</td><td>Founder &amp; CEO</td><td><a href="https://ae.linkedin.com/in/basil-al-askari-72730999" target="_blank">Profile</a></td></tr>
+    </tbody>
+  </table>
+
+  <p class="note-text">Fasset FZE and DKK Digital: No public team data available at time of research.</p>
+</div>
+
+<!-- Category 3: Exchange Entities -->
+<div class="card">
+  <h2>Category 3: Exchange Entities <span class="section-badge badge-exchange">Exchange</span></h2>
+
+  <h3>BitOasis <span style="font-weight:400;color:var(--text-3);font-size:12px">(acquired by CoinDCX)</span></h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>LinkedIn</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Ola Doudin</td><td>Co-Founder &amp; CEO</td><td><a href="https://ae.linkedin.com/in/ola-doudin-5a026511" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Lavanya Sivaramakrishnan</td><td>Director, Information (Responsible Individual)</td><td>&mdash;</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Backpack Exchange <span style="font-weight:400;color:var(--text-3);font-size:12px">(VL/23/10/001)</span></h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>LinkedIn</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Armani Ferrante</td><td>Founder &amp; CEO</td><td><a href="https://www.linkedin.com/in/armaniferrante/" target="_blank">Profile</a></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Category 4: Custody & Infrastructure -->
+<div class="card">
+  <h2>Category 4: Custody &amp; Infrastructure <span class="section-badge badge-custody">Custody</span></h2>
+
+  <h3>Komainu &mdash; Board of Directors</h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>LinkedIn</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Adam Back</td><td>Board Director (Blockstream)</td><td>&mdash;</td></tr>
+      <tr><td class="name">Steve Ashley</td><td>Board Director (Laser Digital)</td><td>&mdash;</td></tr>
+      <tr><td class="name">PeterPaul Pardi</td><td>Board Director (Blockstream Capital Partners)</td><td>&mdash;</td></tr>
+      <tr><td class="name">Jez Mohideen</td><td>Board Director (Laser Digital)</td><td>&mdash;</td></tr>
+      <tr><td class="name">Paul Frost-Smith</td><td>Board Director &amp; Co-CEO</td><td>&mdash;</td></tr>
+      <tr><td class="name">Nicolas Brand</td><td>Board Director (Blockstream Capital Partners)</td><td>&mdash;</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Komainu &mdash; Leadership Team</h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>LinkedIn</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Paul Frost-Smith</td><td>Co-CEO</td><td>&mdash;</td></tr>
+      <tr><td class="name">Robert Johnson</td><td>Co-CEO &amp; CTO</td><td>&mdash;</td></tr>
+      <tr><td class="name">Tony Larkin</td><td>CFO</td><td>&mdash;</td></tr>
+      <tr><td class="name">Sebastian Widmann</td><td>Head of Dubai</td><td>&mdash;</td></tr>
+      <tr><td class="name">Susan Patterson</td><td>Head of Jersey</td><td>&mdash;</td></tr>
+      <tr><td class="name">Darren Jordan</td><td>Chief Commercial Officer</td><td>&mdash;</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Hex Trust &mdash; Leadership Team</h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>LinkedIn</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Alessio Quaglini</td><td>CEO &amp; Co-Founder</td><td><a href="https://www.linkedin.com/in/alessioquaglini" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Rafal Czerniawski</td><td>CISO &amp; Co-Founder</td><td><a href="https://www.linkedin.com/in/rafalcz" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Tommaso Natale</td><td>CTO</td><td><a href="https://hk.linkedin.com/in/tommaso-natale-4a990" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Marty Jetton</td><td>Chief Risk Officer</td><td><a href="https://www.linkedin.com/in/martyjetton" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">James Harte</td><td>COO</td><td><a href="https://www.linkedin.com/in/jwharte/" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Davy Lassagne</td><td>CFO</td><td><a href="https://www.linkedin.com/in/davylassagne/" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Giorgia Pellizzari</td><td>CPO &amp; Head of Custody</td><td><a href="https://www.linkedin.com/in/giorgiapellizzari/" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Rohit Apte</td><td>Head of Markets</td><td><a href="https://www.linkedin.com/in/rohit-apte-554a262/" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Gabriele Bandi</td><td>Head of Sales</td><td><a href="https://www.linkedin.com/in/gabrielebandi/" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Man Hay Hong</td><td>Head of Operations</td><td><a href="https://hk.linkedin.com/in/manhay-hong" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Federico Fabiano</td><td>MD, Head of Legal &amp; Compliance</td><td><a href="https://www.linkedin.com/in/federico-fabiano-63704416/" target="_blank">Profile</a></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Hex Trust &mdash; Board of Directors</h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>LinkedIn</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Rajah Thiyagarajah</td><td>Chairman</td><td><a href="https://www.linkedin.com/in/rajaht" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Yat Siu</td><td>Director</td><td><a href="https://www.linkedin.com/in/yatsiu/" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Jehan Chu</td><td>Director</td><td><a href="https://www.linkedin.com/in/jehanchu/" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Mark Cheng</td><td>Director</td><td><a href="https://www.linkedin.com/in/cheeech/" target="_blank">Profile</a></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Hex Trust &mdash; Advisory Board</h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>LinkedIn</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Colin Brooks</td><td>Chairman of Advisory Board</td><td><a href="https://www.linkedin.com/in/colin-brooks-b5334b40/" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Henri Arslanian</td><td>Advisory Board Member</td><td><a href="https://www.linkedin.com/in/henriarslanian/" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Anthony Chan</td><td>Advisory Board Member</td><td><a href="https://www.linkedin.com/in/anthony-chan-82452b5a/" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Dave Chapman</td><td>Advisory Board Member</td><td><a href="https://www.linkedin.com/in/davejchapman/" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Carlo Huerlimann</td><td>Advisory Board Member</td><td><a href="https://www.linkedin.com/in/carlo-huerlimann-031533b/" target="_blank">Profile</a></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Category 5: Laser Digital -->
+<div class="card">
+  <h2>Category 5: Laser Digital / Nomura Group <span class="section-badge badge-broker">Broker-Dealer &bull; VL/23/06/001</span></h2>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>LinkedIn</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Jez Mohideen</td><td>CEO</td><td>&mdash;</td></tr>
+      <tr><td class="name">Steve Ashley</td><td>Executive Chairman</td><td>&mdash;</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Category 6: Investment Advisory -->
+<div class="card">
+  <h2>Category 6: Investment Advisory Entities <span class="section-badge badge-investment">Investment</span></h2>
+
+  <h3>Gap 3 Partners <span style="font-weight:400;color:var(--text-3);font-size:12px">(VL/2025/04/004)</span></h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>LinkedIn</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Robin Janaway</td><td>Crypto &amp; Web3 Strategist</td><td>&mdash;</td></tr>
+      <tr><td class="name">Chris Donovan</td><td>COO (&amp; Foundation Council Member, NEAR Foundation)</td><td>&mdash;</td></tr>
+      <tr><td class="name">Adib Y. Tohme</td><td>International Tax &amp; Corporate Lawyer</td><td>&mdash;</td></tr>
+      <tr><td class="name">Abhishek Vaidyanathan</td><td>General Counsel (NEAR Foundation)</td><td>&mdash;</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Nova Digital <span style="font-weight:400;color:var(--text-3);font-size:12px">(VL/26/01/001)</span></h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>LinkedIn</th></tr></thead>
+    <tbody>
+      <tr><td class="name">Kevin Hu</td><td>CEO / Responsible Individual</td><td><a href="https://www.linkedin.com/in/kevin-hu-46a03343/" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Stephen Li</td><td>COO</td><td><a href="https://www.linkedin.com/in/stephenli2/" target="_blank">Profile</a></td></tr>
+      <tr><td class="name">Miles Corney</td><td>CCO / Responsible Individual</td><td><a href="https://www.linkedin.com/in/milescorney/" target="_blank">Profile</a></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Priority Networking Targets -->
+<div class="highlight-card">
+  <h2>High-Value Networking Targets (Recommended Priority)</h2>
+  <ol class="priority-list">
+    <li><span class="person-name">Robin Janaway</span> <span class="person-org">(Gap 3 Partners)</span> &mdash; <span class="person-note">Investment Advisor, ex-Outlier Ventures; could advise on VARA licensing</span></li>
+    <li><span class="person-name">Mo Ali</span> <span class="person-org">(Fuze CEO)</span> &mdash; <span class="person-note">Deeply connected in UAE crypto infrastructure</span></li>
+    <li><span class="person-name">Jordi Alexander</span> <span class="person-org">(Selini Capital Founder)</span> &mdash; <span class="person-note">HFT / OTC expert, VARA licensed</span></li>
+    <li><span class="person-name">Alessio Quaglini</span> <span class="person-org">(Hex Trust CEO)</span> &mdash; <span class="person-note">Custody leader, multi-jurisdiction licensed</span></li>
+    <li><span class="person-name">Paul Frost-Smith</span> <span class="person-org">(Komainu Co-CEO)</span> &mdash; <span class="person-note">ex-JPMorgan, Credit Suisse, Swiss Re</span></li>
+    <li><span class="person-name">Sebastian Widmann</span> <span class="person-org">(Komainu Head of Dubai)</span> &mdash; <span class="person-note">ex-Nomura VP Digital Assets</span></li>
+    <li><span class="person-name">Talal Tabbaa</span> <span class="person-org">(CoinMENA Co-Founder)</span> &mdash; <span class="person-note">Bahrain + UAE dual-licensed</span></li>
+    <li><span class="person-name">Ola Doudin</span> <span class="person-org">(BitOasis Founder)</span> &mdash; <span class="person-note">UAE crypto pioneer since 2015</span></li>
+    <li><span class="person-name">Matt Ong</span> <span class="person-org">(Ctrl Alt Founder &amp; CEO)</span> &mdash; <span class="person-note">FCA + VARA dual licensed</span></li>
+    <li><span class="person-name">Kevin Hu</span> <span class="person-org">(Nova Digital CEO)</span> &mdash; <span class="person-note">Responsible Individual, investment management</span></li>
+    <li><span class="person-name">Henri Arslanian</span> <span class="person-org">(Hex Trust Advisor)</span> &mdash; <span class="person-note">Former PwC crypto leader, major influencer</span></li>
+    <li><span class="person-name">Armani Ferrante</span> <span class="person-org">(Backpack Founder)</span> &mdash; <span class="person-note">VARA + MiFID II licensed exchange</span></li>
+  </ol>
+</div>
+
+<!-- Summary Statistics -->
+<div class="card summary-table">
+  <h2>Summary Statistics</h2>
+  <table class="cap">
+    <thead><tr><th>Entity</th><th>People Found</th></tr></thead>
+    <tbody>
+      <tr><td class="company">Tokinvest Capital</td><td>4</td></tr>
+      <tr><td class="company">Ctrl Alt</td><td>11</td></tr>
+      <tr><td class="company">Animoca Brands ME</td><td>2</td></tr>
+      <tr><td class="company">CoinMENA</td><td>3</td></tr>
+      <tr><td class="company">Fuze</td><td>6</td></tr>
+      <tr><td class="company">Selini Capital</td><td>1</td></tr>
+      <tr><td class="company">MidChains</td><td>1</td></tr>
+      <tr><td class="company">BitOasis</td><td>2</td></tr>
+      <tr><td class="company">Backpack Exchange</td><td>1</td></tr>
+      <tr><td class="company">Komainu</td><td>12</td></tr>
+      <tr><td class="company">Hex Trust</td><td>16</td></tr>
+      <tr><td class="company">Laser Digital</td><td>2</td></tr>
+      <tr><td class="company">Gap 3 Partners</td><td>4</td></tr>
+      <tr><td class="company">Nova Digital</td><td>3</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td>Total (14 entities)</td><td>68</td></tr>
+    </tfoot>
+  </table>
+</div>
+
+<div class="footer">
+  Market research report &bull; Sources: Company websites, LinkedIn public profiles, public registry data &bull; April 2026
+</div>
+
+</div>
+</body>
+</html>

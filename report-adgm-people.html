@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UAE Regulatory Ecosystem — Key Contacts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface: #fff;
+  --surface-2: #fafaf8;
+  --surface-3: #f4f3ee;
+  --border: rgba(0,0,0,0.08);
+  --text: #1a1a1a;
+  --text-2: #5f5e5a;
+  --text-3: #888780;
+  --accent: #0C447C;
+  --accent-bg: #E6F1FB;
+  --red: #A32D2D;
+  --green: #0F6E56;
+  --amber: #854F0B;
+  --purple: #534AB7;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  background: var(--surface-2);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  margin-bottom: 24px;
+}
+.back-link:hover { text-decoration: underline; }
+.back-link svg { width: 14px; height: 14px; }
+
+.report-header {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+}
+.report-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.report-header .subtitle {
+  font-size: 14px;
+  color: var(--text-3);
+}
+.report-header .stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.stat-item .stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: 'JetBrains Mono', monospace;
+}
+.stat-item .stat-label {
+  font-size: 12px;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.card h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-2);
+  margin: 16px 0 8px 0;
+}
+.card h3:first-of-type { margin-top: 0; }
+
+.section-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.badge-vara { background: #E6F1FB; color: #0C447C; }
+.badge-adgm { background: #E6FBF3; color: #0F6E56; }
+.badge-sca { background: #FFF3E0; color: #854F0B; }
+.badge-cbuae { background: #F0E6FB; color: #534AB7; }
+.badge-consultant { background: #FBE6E6; color: #A32D2D; }
+
+table.cap {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+table.cap thead th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-3);
+  padding: 8px 12px;
+  border-bottom: 2px solid var(--border);
+}
+table.cap tbody td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-2);
+  vertical-align: top;
+}
+table.cap tbody tr:last-child td { border-bottom: none; }
+table.cap tbody tr:hover { background: var(--surface-2); }
+table.cap .name { font-weight: 600; color: var(--text); }
+table.cap .company { font-weight: 600; color: var(--text); }
+table.cap .notes { font-size: 12px; color: var(--text-3); max-width: 280px; }
+table.cap a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 12px;
+}
+table.cap a:hover { text-decoration: underline; }
+
+.caveat {
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--amber);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.caveat strong { color: var(--amber); }
+
+.note-text {
+  font-size: 12px;
+  color: var(--text-3);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.footer {
+  text-align: center;
+  padding: 32px 0 16px;
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+@media print {
+  body { background: #fff; }
+  .container { max-width: 100%; padding: 0; }
+  .back-link { display: none; }
+  .card, .caveat, .report-header {
+    break-inside: avoid;
+    border: 1px solid #ddd;
+    box-shadow: none;
+  }
+  table.cap { font-size: 11px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a href="index.html" class="back-link">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+  Back to Dashboard
+</a>
+
+<div class="report-header">
+  <h1>UAE Regulatory Ecosystem &mdash; Key Contacts</h1>
+  <p class="subtitle">Ecosystem mapping for regulatory positioning &bull; Generated April 16, 2026</p>
+  <div class="stats">
+    <div class="stat-item"><div class="stat-value">4</div><div class="stat-label">Regulatory Bodies</div></div>
+    <div class="stat-item"><div class="stat-value">5</div><div class="stat-label">Sections</div></div>
+    <div class="stat-item"><div class="stat-value">30+</div><div class="stat-label">Contacts Mapped</div></div>
+  </div>
+</div>
+
+<div class="caveat">
+  <strong>Note:</strong> LinkedIn URLs in this report were compiled from public sources and should be verified before outreach. Some information may be outdated &mdash; confirm current roles on LinkedIn before making contact.
+</div>
+
+<!-- Section 1: VARA Officials -->
+<div class="card">
+  <h2>VARA Officials <span class="section-badge badge-vara">VARA, Dubai</span></h2>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>Organization</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="name">Matthew White</td>
+        <td>Chief Executive Officer</td>
+        <td class="company">VARA</td>
+        <td class="notes">Appointed CEO Nov 2023; previously a partner at PwC</td>
+      </tr>
+      <tr>
+        <td class="name">Helal Saeed Almarri</td>
+        <td>Chairman of Executive Board</td>
+        <td class="company">VARA</td>
+        <td class="notes">Oversees VARA's strategic direction</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Section 1b: VARA-Licensed Entity Leadership -->
+<div class="card">
+  <h2>VARA-Licensed Entity Leadership <span class="section-badge badge-vara">Licensed VASPs</span></h2>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>Company</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="name">Michael Ourabah</td>
+        <td>CEO</td>
+        <td class="company">Tokinvest DMCC</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr>
+        <td class="name">Gabriella Kusz</td>
+        <td>Chief Strategy Officer</td>
+        <td class="company">Tokinvest DMCC</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr>
+        <td class="name">Martin Walker</td>
+        <td>Chief Technology Officer</td>
+        <td class="company">Tokinvest DMCC</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr>
+        <td class="name">Scott Thiel</td>
+        <td>Chief Legal Officer</td>
+        <td class="company">Tokinvest DMCC</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr>
+        <td class="name">Talal Tabbaa</td>
+        <td>Co-Founder &amp; CEO</td>
+        <td class="company">CoinMENA FZE</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr>
+        <td class="name">Dina Sam'an</td>
+        <td>Co-Founder &amp; Managing Dir.</td>
+        <td class="company">CoinMENA FZE</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr>
+        <td class="name">Yazan Barghuthi</td>
+        <td>Co-Founder</td>
+        <td class="company">CoinMENA FZE</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr>
+        <td class="name">Ola Doudin</td>
+        <td>Co-Founder &amp; CEO</td>
+        <td class="company">BitOasis Technologies FZE</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr>
+        <td class="name">Mohammad Raafi Hossain</td>
+        <td>CEO &amp; Co-Founder</td>
+        <td class="company">Fasset FZE</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr>
+        <td class="name">Mo Ali</td>
+        <td>CEO</td>
+        <td class="company">FUZE (Morpheus Software)</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr>
+        <td class="name">Arpit Mehta</td>
+        <td>Co-Founder &amp; COO</td>
+        <td class="company">FUZE (Morpheus Software)</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Section 2: ADGM FSRA Leadership -->
+<div class="card">
+  <h2>ADGM FSRA Leadership <span class="section-badge badge-adgm">Abu Dhabi</span></h2>
+
+  <h3>FSRA Officials</h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>Organization</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="name">Emmanuel Givanakis</td>
+        <td>Chief Executive Officer</td>
+        <td class="company">ADGM FSRA</td>
+        <td class="notes">Announced enhancements to digital asset framework Dec 2025</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>ADGM FSRA-Licensed Firms &mdash; Key People</h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>Company</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="name">James Greenwood</td>
+        <td>CEO</td>
+        <td class="company">M2</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr>
+        <td class="name">Mike Pozarzycki</td>
+        <td>&mdash;</td>
+        <td class="company">M2</td>
+        <td class="notes">Title not publicly specified</td>
+      </tr>
+      <tr>
+        <td class="name">Bukky Kuti</td>
+        <td>&mdash;</td>
+        <td class="company">M2</td>
+        <td class="notes">Title not publicly specified</td>
+      </tr>
+      <tr>
+        <td class="name">Kay French</td>
+        <td>&mdash;</td>
+        <td class="company">M2</td>
+        <td class="notes">Title not publicly specified</td>
+      </tr>
+      <tr>
+        <td class="name">Yi Zhang</td>
+        <td>&mdash;</td>
+        <td class="company">Brevan Howard Digital</td>
+        <td class="notes">Title not publicly specified</td>
+      </tr>
+      <tr>
+        <td class="name">Chase White, CFA</td>
+        <td>&mdash;</td>
+        <td class="company">Brevan Howard Digital</td>
+        <td class="notes">Title not publicly specified</td>
+      </tr>
+      <tr>
+        <td class="name">Natalie Faye Smith</td>
+        <td>&mdash;</td>
+        <td class="company">Brevan Howard Digital</td>
+        <td class="notes">Title not publicly specified</td>
+      </tr>
+      <tr>
+        <td class="name">Dominic Nelson</td>
+        <td>&mdash;</td>
+        <td class="company">Brevan Howard Digital</td>
+        <td class="notes">Title not publicly specified</td>
+      </tr>
+      <tr>
+        <td class="name">Omar Abbas</td>
+        <td>Co-founder &amp; CEO</td>
+        <td class="company">BurjX</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr>
+        <td class="name">Adam Ferris</td>
+        <td>Co-founder &amp; Chairman</td>
+        <td class="company">BurjX</td>
+        <td class="notes">&mdash;</td>
+      </tr>
+      <tr>
+        <td class="name">Dr. Ryan Lemand</td>
+        <td>Board Member</td>
+        <td class="company">BurjX</td>
+        <td class="notes">Former Binance board member; ex-Head of Risk at SCA</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Section 3: SCA & CBUAE -->
+<div class="card">
+  <h2>Securities &amp; Commodities Authority (SCA) <span class="section-badge badge-sca">Federal UAE</span></h2>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>Organization</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="name">Mohamed Ali Al Shorafa</td>
+        <td>Chairman</td>
+        <td class="company">SCA</td>
+        <td class="notes">Oversees SCA strategic initiatives</td>
+      </tr>
+      <tr>
+        <td class="name">Dr. Maryam Buti Al Suwaidi</td>
+        <td>Chief Executive Officer</td>
+        <td class="company">SCA</td>
+        <td class="notes">Signed cooperation agreement with VARA, Sep 2024</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>Central Bank of the UAE (CBUAE) <span class="section-badge badge-cbuae">Federal</span></h2>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>Organization</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr>
+        <td colspan="4" style="color:var(--text-3);font-style:italic;text-align:center;padding:16px 12px;">Specific officials dealing with digital assets/payments are not publicly disclosed at this time.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Section 4: Licensing Consultants -->
+<div class="card">
+  <h2>VARA Licensing Consultants &amp; Legal Advisors <span class="section-badge badge-consultant">Advisory</span></h2>
+
+  <h3>BSA Ahmad Bin Hezeem &amp; Associates LLP</h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="name">Dr. Ahmad Bin Hezeem</td>
+        <td>Senior Partner</td>
+        <td class="notes">Former Director General of Dubai Courts; extensive UAE legal experience</td>
+      </tr>
+      <tr>
+        <td class="name">Jimmy Haoula</td>
+        <td>Managing Partner</td>
+        <td class="notes">Leads firm strategic direction and operations</td>
+      </tr>
+      <tr>
+        <td class="name">Michael Kortbawi</td>
+        <td>Partner</td>
+        <td class="notes">Specializes in insurance and reinsurance law</td>
+      </tr>
+      <tr>
+        <td class="name">Rima Mrad</td>
+        <td>Partner</td>
+        <td class="notes">Corporate &amp; M&amp;A, banking and finance</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Rasma Legal</h3>
+  <table class="cap">
+    <thead><tr><th>Name</th><th>Title</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="name">Mazen Rasamny</td>
+        <td>Managing Partner</td>
+        <td class="notes">Recognized as Digital Assets Lawyer of the Year 2025</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note-text">Additional licensing consultants and legal advisors may be identified through further market research.</p>
+</div>
+
+<div class="footer">
+  Ecosystem mapping report &bull; Sources: Public regulatory registries, company websites, LinkedIn public profiles &bull; April 2026
+</div>
+
+</div>
+</body>
+</html>

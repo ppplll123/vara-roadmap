@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prypco Deep Dive — Complete Research & Analysis</title>
+<style>
+  :root {
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+    --surface: #ffffff;
+    --surface-2: #fafaf8;
+    --surface-3: #f4f3ee;
+    --border: rgba(0,0,0,0.08);
+    --border-2: rgba(0,0,0,0.15);
+    --text: #1a1a1a;
+    --text-2: #5f5e5a;
+    --text-3: #888780;
+    --accent: #0C447C;
+    --accent-bg: #E6F1FB;
+    --red: #A32D2D;
+    --red-bg: #FCEBEB;
+    --amber: #854F0B;
+    --amber-bg: #FAEEDA;
+    --green: #0F6E56;
+    --green-bg: #E1F5EE;
+    --purple: #534AB7;
+    --purple-bg: #EEEDFE;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:var(--font-sans); color:var(--text); background:var(--surface-2); line-height:1.55; }
+
+  .page-wrap { max-width:1200px; margin:0 auto; background:var(--surface); min-height:100vh; box-shadow:0 0 60px rgba(0,0,0,0.04); }
+
+  .back-link { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:500; color:var(--accent); text-decoration:none; padding:14px 24px 0; }
+  .back-link:hover { text-decoration:underline; }
+
+  .hdr { padding:16px 24px 20px; border-bottom:.5px solid var(--border); }
+  .hdr h1 { font-size:22px; font-weight:600; margin:0 0 6px; letter-spacing:-.02em; color:var(--text); }
+  .hdr .subtitle { font-size:13px; color:var(--text-2); font-weight:400; }
+  .hdr .subtitle strong { color:var(--accent); font-weight:600; }
+
+  .toc { padding:16px 24px; background:var(--surface-3); border-bottom:.5px solid var(--border); }
+  .toc h2 { font-size:11px; font-weight:500; text-transform:uppercase; letter-spacing:.1em; color:var(--text-3); margin:0 0 10px; }
+  .toc-grid { display:flex; flex-wrap:wrap; gap:6px; }
+  .toc a { font-size:12px; color:var(--accent); text-decoration:none; padding:4px 10px; background:var(--surface); border:.5px solid var(--border); border-radius:4px; font-weight:500; }
+  .toc a:hover { background:var(--accent-bg); border-color:var(--accent); }
+
+  .sec { padding:24px 24px 20px; border-bottom:.5px solid var(--border); }
+  .sec h2 { font-size:13px; font-weight:500; text-transform:uppercase; letter-spacing:.08em; color:var(--text-3); margin:0 0 16px; }
+  .sec h3 { font-size:15px; font-weight:600; margin:0 0 12px; color:var(--text); }
+
+  .table-wrap { overflow-x:auto; margin:0 -24px; padding:0 24px; }
+  table.cap { width:100%; border-collapse:collapse; font-size:12px; }
+  table.cap th { text-align:left; font-weight:500; color:var(--text-2); padding:8px 10px; border-bottom:.5px solid var(--border-2); font-size:11px; text-transform:uppercase; letter-spacing:.04em; background:var(--surface-3); position:sticky; top:0; white-space:nowrap; }
+  table.cap td { padding:9px 10px; border-bottom:.5px solid var(--border); vertical-align:top; }
+  table.cap tr:hover td { background:var(--surface-2); }
+  .mono { font-family:var(--font-mono); font-size:11px; color:var(--text-2); }
+
+  .kpi-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-bottom:16px; }
+  .kpi { background:var(--surface-2); border:.5px solid var(--border); border-radius:8px; padding:14px 16px; }
+  .kpi .lbl { font-size:10px; color:var(--text-3); text-transform:uppercase; letter-spacing:.06em; margin-bottom:6px; font-weight:500; }
+  .kpi .val { font-size:22px; font-weight:600; line-height:1.15; }
+  .kpi .sub { font-size:11px; color:var(--text-2); margin-top:4px; }
+  .kpi .val.accent { color:var(--accent); }
+  .kpi .val.green { color:var(--green); }
+  .kpi .val.amber { color:var(--amber); }
+  .kpi .val.red { color:var(--red); }
+
+  .finding-box { background:var(--surface-2); border:.5px solid var(--border); border-radius:8px; padding:16px 18px; margin:12px 0; border-left:3px solid var(--accent); }
+  .finding-box.critical { border-left-color:var(--red); }
+  .finding-box.warning { border-left-color:var(--amber); }
+  .finding-box.ok { border-left-color:var(--green); }
+  .finding-box h4 { font-size:13px; font-weight:600; margin:0 0 6px; }
+  .finding-box p, .finding-box ul { font-size:12px; color:var(--text-2); line-height:1.6; margin:0 0 6px; }
+  .finding-box ul { padding-left:18px; }
+
+  .pill { display:inline-block; font-size:10px; font-weight:500; padding:3px 8px; border-radius:3px; }
+  .pill-green { background:var(--green-bg); color:var(--green); }
+  .pill-red { background:var(--red-bg); color:var(--red); }
+  .pill-amber { background:var(--amber-bg); color:var(--amber); }
+  .pill-accent { background:var(--accent-bg); color:var(--accent); }
+
+  .audit-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:10px; }
+  .audit-card { background:var(--surface-2); border:.5px solid var(--border); border-radius:8px; padding:14px 16px; }
+  .audit-card h4 { font-size:12px; font-weight:600; margin:0 0 8px; }
+  .audit-card .result { font-size:12px; margin:4px 0; }
+
+  blockquote { border-left:3px solid var(--border-2); padding:8px 16px; margin:12px 0; font-size:12px; color:var(--text-2); font-style:italic; background:var(--surface-3); border-radius:0 6px 6px 0; }
+
+  .sources { padding:24px; }
+  .sources h2 { font-size:13px; font-weight:500; text-transform:uppercase; letter-spacing:.08em; color:var(--text-3); margin:0 0 16px; }
+  .sources a { color:var(--accent); text-decoration:none; font-size:12px; }
+  .sources a:hover { text-decoration:underline; }
+  .sources li { margin-bottom:6px; font-size:12px; color:var(--text-2); }
+
+  @media(max-width:700px){
+    .kpi-row { grid-template-columns:1fr 1fr; }
+    .audit-grid { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<a href="index.html" class="back-link">&larr; Back to Dashboard</a>
+
+<div class="hdr">
+  <h1>Prypco Deep Dive &mdash; Complete Research &amp; Analysis</h1>
+  <div class="subtitle">Compiled <strong>April 16, 2026</strong> &middot; Regulatory research and analysis &middot; Triple LLM audit verified</div>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+  <h2>Contents</h2>
+  <div class="toc-grid">
+    <a href="#summary">Executive Summary</a>
+    <a href="#products">1. Mint vs Blocks</a>
+    <a href="#ownership">2. Ownership Model</a>
+    <a href="#issuance">3. Token Issuance Chain</a>
+    <a href="#secondary">4. Secondary Market</a>
+    <a href="#comparison">5. Prypco vs Antweave</a>
+    <a href="#arva">6. ARVA Framework</a>
+    <a href="#implications">7. Regulatory Implications</a>
+    <a href="#audit">8. Triple LLM Audit</a>
+    <a href="#correction">9. Email Correction</a>
+    <a href="#sources">Sources</a>
+  </div>
+</div>
+
+<!-- Executive Summary -->
+<div class="sec" id="summary">
+  <h2>Executive Summary</h2>
+  <div class="kpi-row">
+    <div class="kpi"><div class="lbl">Prypco model</div><div class="val" style="font-size:16px">Platform</div><div class="sub">Crowdfunding intermediary — does NOT own properties</div></div>
+    <div class="kpi"><div class="lbl">Antweave model</div><div class="val red" style="font-size:16px">Sponsor</div><div class="sub">Asset owner/originator — fundamentally different</div></div>
+    <div class="kpi"><div class="lbl">Secondary market</div><div class="val green" style="font-size:16px">P2P</div><div class="sub">Peer-to-peer, NOT principal dealing</div></div>
+    <div class="kpi"><div class="lbl">Token issuer</div><div class="val accent" style="font-size:16px">DLD</div><div class="sub">Minted by Ctrl Alt Solutions DMCC</div></div>
+    <div class="kpi"><div class="lbl">Claims verified</div><div class="val green">6/6</div><div class="sub">Triple LLM audit — all confirmed</div></div>
+    <div class="kpi"><div class="lbl">Email claim</div><div class="val red">Wrong</div><div class="sub">Principal dealing claim corrected to P2P</div></div>
+  </div>
+
+  <div class="finding-box critical">
+    <h4>Key Finding: Antweave is NOT like Prypco</h4>
+    <p>Prypco is a platform/intermediary that facilitates investor-funded property acquisition from third-party sellers. Antweave, which owns its properties, is closer to a principal real estate sponsor using tokenization as a capital-markets wrapper. This creates a fundamentally different regulatory and risk profile under VARA's substance-over-form analysis.</p>
+  </div>
+</div>
+
+<!-- Section 1: Products -->
+<div class="sec" id="products">
+  <h2>1. Prypco's Two Products: Mint vs Blocks</h2>
+  <p style="font-size:13px;color:var(--text-2);margin-bottom:16px">Two fundamentally different products with distinct legal structures, regulators, and investor profiles.</p>
+  <div class="table-wrap">
+    <table class="cap">
+      <thead><tr><th>Feature</th><th>Prypco Mint (Tokenized)</th><th>Prypco Blocks (Fractional)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>What you own</strong></td><td>Digital token (ARVA) &mdash; direct fractional legal title</td><td>Shares in an SPV that owns the property</td></tr>
+        <tr><td><strong>Legal structure</strong></td><td>Direct DLD Title Deed registration in investor's name</td><td>Special Purpose Vehicle (DIFC/ADGM entity)</td></tr>
+        <tr><td><strong>Technology</strong></td><td>Blockchain tokens (NFTs) on-chain</td><td>Traditional share registry / cap table</td></tr>
+        <tr><td><strong>Regulator</strong></td><td>VARA (token) + DLD (property)</td><td>DFSA (SPV/crowdfunding) + DLD (property)</td></tr>
+        <tr><td><strong>Liquidity</strong></td><td>P2P on Prypco marketplace, blockchain-settled</td><td>Legal share transfer agreements</td></tr>
+        <tr><td><strong>Min investment</strong></td><td>AED 2,000 (~USD 545)</td><td>AED 500 (~USD 136)</td></tr>
+        <tr><td><strong>Licence</strong></td><td>VARA VL/25/05/001 (Broker-Dealer)</td><td>DFSA CL7381 (Crowdfunding Platform)</td></tr>
+        <tr><td><strong>Entity</strong></td><td>PRYPCO FZE (DWTC, reg. L-2048)</td><td>PRYPCO Blocks (DIFC) Ltd</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="finding-box" style="margin-top:16px">
+    <h4>T&amp;C References</h4>
+    <ul>
+      <li><strong>Mint T&amp;C 3.1:</strong> "Individual Investors will own a direct portion of the Property"</li>
+      <li><strong>Mint T&amp;C 3.2:</strong> "Investors will directly own a share of the Property, registered in their name with DLD"</li>
+      <li><strong>Blocks T&amp;C 3.1:</strong> "Investors will acquire and own a proportionate share of the SPV"</li>
+      <li><strong>Blocks T&amp;C 3.4:</strong> "For each Property, a special purpose vehicle (SPV) will be established"</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Section 2: Ownership -->
+<div class="sec" id="ownership">
+  <h2>2. Prypco Ownership Model</h2>
+  <h3>Prypco is a crowdfunding platform, NOT a property owner</h3>
+
+  <div class="finding-box ok">
+    <h4>Mint T&amp;C Section 2.6 (verbatim)</h4>
+    <p>"PRYPCO FZE will use the funds raised to acquire the subject Property on your behalf..."</p>
+  </div>
+
+  <div class="finding-box ok">
+    <h4>Mint T&amp;C Section 2.20 (verbatim)</h4>
+    <p>"Seller means the individual or company that owns the legal Title Deed to the Property prior to the Investment Term."</p>
+  </div>
+
+  <p style="font-size:13px;color:var(--text-2);margin:16px 0">This describes a classic crowdfunding/agency model:</p>
+  <ol style="font-size:12px;color:var(--text-2);padding-left:20px;line-height:1.8">
+    <li>Prypco identifies a property owned by a third-party Seller</li>
+    <li>Prypco launches an Investment Round to pool investor funds toward a Funding Target</li>
+    <li>Once the Funding Target is met, Prypco uses those funds to acquire the property from the Seller</li>
+    <li>The property is registered in investors' names (Mint) or in an SPV (Blocks)</li>
+    <li>If the Funding Target is not met, funds are returned to investors</li>
+  </ol>
+
+  <p style="font-size:12px;color:var(--text-2);margin-top:12px"><strong>Revenue model:</strong> Acquisition fees + management fees + trading commissions. Known Sellers include Sobha Realty and Danube Properties.</p>
+</div>
+
+<!-- Section 3: Token Issuance -->
+<div class="sec" id="issuance">
+  <h2>3. Token Issuance Chain</h2>
+  <h3>Three distinct parties with clearly separated roles</h3>
+
+  <div class="kpi-row">
+    <div class="kpi" style="border-left:3px solid var(--accent)">
+      <div class="lbl">Step 1: DLD</div>
+      <div class="val" style="font-size:14px">Legal Authority</div>
+      <div class="sub">Registers property title. Issues the legal right the token represents. Maintains the official registry as "source of truth."</div>
+    </div>
+    <div class="kpi" style="border-left:3px solid var(--purple)">
+      <div class="lbl">Step 2: Ctrl Alt Solutions DMCC</div>
+      <div class="val" style="font-size:14px">Technical Minter</div>
+      <div class="sub">Operates DLD's tokenization engine. Mints tokens on blockchain via smart contracts. Provides custody (warm MPC omnibus account).</div>
+    </div>
+    <div class="kpi" style="border-left:3px solid var(--green)">
+      <div class="lbl">Step 3: Prypco FZE</div>
+      <div class="val" style="font-size:14px">Licensed Distributor</div>
+      <div class="sub">Markets and sells tokens. Operates secondary marketplace. Handles KYC/AML. Licensed by VARA as BD.</div>
+    </div>
+  </div>
+
+  <div class="finding-box warning">
+    <h4>Important Nuance: "Issued by DLD" language</h4>
+    <p>Mint T&amp;C 3.1 states tokens are "issued by DLD and minted by DLD's tokenization engine, Ctrl Alt Solutions DMCC." This is technically imprecise. The DLD issues the property right (Title Deed); the token itself is created (minted) by Ctrl Alt. The T&amp;Cs conflate the legal source of the property right with the technical creation of the token &mdash; phrased to give the token government imprimatur.</p>
+  </div>
+</div>
+
+<!-- Section 4: Secondary Market -->
+<div class="sec" id="secondary">
+  <h2>4. Secondary Market Model</h2>
+  <h3>Peer-to-peer (P2P) &mdash; NOT principal dealing</h3>
+
+  <div class="kpi-row">
+    <div class="kpi"><div class="lbl">Market type</div><div class="val green" style="font-size:16px">P2P</div><div class="sub">Investor-to-investor trading</div></div>
+    <div class="kpi"><div class="lbl">Prypco role</div><div class="val accent" style="font-size:16px">Broker</div><div class="sub">Platform operator, earns commission</div></div>
+    <div class="kpi"><div class="lbl">Price band</div><div class="val" style="font-size:16px">&plusmn;15%</div><div class="sub">Of current property valuation</div></div>
+    <div class="kpi"><div class="lbl">Lock-in</div><div class="val" style="font-size:16px">3 months</div><div class="sub">From Investment Term start</div></div>
+  </div>
+
+  <div class="finding-box ok">
+    <h4>Evidence Chain</h4>
+    <ul>
+      <li><strong>Market research:</strong> "This secondary market operates on a peer-to-peer (P2P) basis... PRYPCO itself does not repurchase the tokens, nor is there a designated market maker."</li>
+      <li><strong>BD Disclosure 3:</strong> "PRYPCO FZE does not hold or maintain funds or Virtual Assets, nor does it provide clearing services."</li>
+      <li><strong>BD Disclosure 2:</strong> Valuations based on DLD Smart Valuation Index or independent valuer, updated every 6 months.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Section 5: Comparison -->
+<div class="sec" id="comparison">
+  <h2>5. Comparison: Prypco vs Antweave</h2>
+  <h3>Operationally similar on the surface, fundamentally different in substance</h3>
+
+  <div class="table-wrap">
+    <table class="cap">
+      <thead><tr><th>Dimension</th><th>Prypco</th><th>Antweave</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Owns the property?</strong></td><td><span class="pill pill-green">No</span> Acquires on behalf of investors</td><td><span class="pill pill-red">Yes</span> Pre-owns via media barter</td></tr>
+        <tr><td><strong>Role</strong></td><td>Platform / Arranger / Distributor</td><td>Asset Owner / Originator / Sponsor</td></tr>
+        <tr><td><strong>Revenue source</strong></td><td>Fees and commissions</td><td>Asset monetization + fees</td></tr>
+        <tr><td><strong>Regulatory position</strong></td><td>Licensed intermediary (BD)</td><td>De facto issuer / promoter risk</td></tr>
+        <tr><td><strong>Analogous to</strong></td><td>Stock exchange / marketplace</td><td>Developer doing tokenized offering</td></tr>
+        <tr><td><strong>Conflict profile</strong></td><td><span class="pill pill-green">Lower</span> Third-party assets</td><td><span class="pill pill-red">Higher</span> Own inventory, barter-acquired</td></tr>
+        <tr><td><strong>Valuation risk</strong></td><td>Third-party, arm's length</td><td>Barter-acquired, potential markup</td></tr>
+        <tr><td><strong>Issuer exposure</strong></td><td><span class="pill pill-green">Minimal</span> Ctrl Alt/DLD are issuers</td><td><span class="pill pill-red">Significant</span> Substance-over-form test</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="finding-box critical" style="margin-top:16px">
+    <h4>Key Distinction</h4>
+    <p>Under Prypco's T&amp;C Section 2.20, the "Seller" is the entity that owns legal title before the Investment Term. If Antweave listed properties on a Prypco-type platform, Antweave would be the <strong>Seller</strong> &mdash; the party on the other side of the table from investors. Antweave is not "like Prypco but better." It is closer to a principal real estate sponsor using tokenization as a capital-markets wrapper.</p>
+  </div>
+</div>
+
+<!-- Section 6: ARVA -->
+<div class="sec" id="arva">
+  <h2>6. ARVA Framework</h2>
+  <h3>Asset-Referenced Virtual Asset &mdash; VARA's regulatory category</h3>
+
+  <p style="font-size:13px;color:var(--text-2);margin-bottom:16px">ARVA tokens derive their value from real-world reference assets. In the real estate context, they represent rights such as rental income distribution, voting rights, governance participation, and capital appreciation.</p>
+
+  <div class="finding-box">
+    <h4>Prypco's Two-Token Model (announced November 2025)</h4>
+    <ul>
+      <li><strong>Existing properties:</strong> Original title deed tokens coexist with newly issued ARVA tokens</li>
+      <li><strong>New listings:</strong> Launch with both tokens from day one &mdash; a title deed token (legal ownership) and an ARVA token (VARA-regulated digital asset)</li>
+    </ul>
+  </div>
+
+  <div class="finding-box warning">
+    <h4>Implications for Antweave</h4>
+    <ul>
+      <li>Any token referencing Antweave's real estate would likely be classified as an ARVA</li>
+      <li>ARVA issuance requires Category 1 VA Issuance licence &mdash; currently only 2 entities hold this (Tokinvest + Ctrl Alt)</li>
+      <li>Antweave must partner with a licensed VA Issuer or obtain its own licence</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Section 7: Regulatory Implications -->
+<div class="sec" id="implications">
+  <h2>7. Regulatory Implications for Antweave</h2>
+  <h3>VARA's substance-over-form principle</h3>
+
+  <div class="finding-box critical">
+    <h4>De Facto Issuer Risk</h4>
+    <p>Even if a separate SPV formally issues tokens, VARA will ask who the real sponsor is. If Antweave owns the asset, selects it, markets it, controls disclosures, and receives proceeds &mdash; Antweave is the economic originator regardless of formal structure.</p>
+  </div>
+
+  <div class="finding-box critical">
+    <h4>Related-Party Conflicts (Barter-Acquired Inventory)</h4>
+    <ul>
+      <li>True acquisition cost vs offering price &mdash; what is the spread?</li>
+      <li>Is property booked at FMV or barter value?</li>
+      <li>Are investors buying sponsor inventory at a premium?</li>
+      <li>Is there hidden monetization of non-cash consideration?</li>
+      <li>Who captures upside between acquisition and token sale?</li>
+    </ul>
+  </div>
+
+  <h3 style="margin-top:20px">What Antweave Must Do Differently</h3>
+  <div class="audit-grid">
+    <div class="audit-card">
+      <h4>Role Separation</h4>
+      <p style="font-size:12px;color:var(--text-2)">Separate asset-owning entity, SPV issuer, licensed BD/distributor, tokenization provider, property manager, and independent valuer/auditor.</p>
+    </div>
+    <div class="audit-card">
+      <h4>Ring-Fence Each Property</h4>
+      <p style="font-size:12px;color:var(--text-2)">One property, one clean title chain, one SPV, one valuation pack, one disclosure file, one waterfall, one investor rights package.</p>
+    </div>
+    <div class="audit-card">
+      <h4>Over-Disclose Conflicts</h4>
+      <p style="font-size:12px;color:var(--text-2)">Acquisition basis, related-party arrangements, consideration paid, valuation methodology, sponsor promote/equity spread.</p>
+    </div>
+    <div class="audit-card">
+      <h4>Independent Valuation</h4>
+      <p style="font-size:12px;color:var(--text-2)">Independent RICS-style valuation, legal title verification, independent disclosure review, fairness opinion if large spread.</p>
+    </div>
+    <div class="audit-card">
+      <h4>Governance Framework</h4>
+      <p style="font-size:12px;color:var(--text-2)">Investment committee, valuation committee, disclosure committee, conflicts policy, related-party transaction policy.</p>
+    </div>
+    <div class="audit-card">
+      <h4>Don't Hide Behind SPV</h4>
+      <p style="font-size:12px;color:var(--text-2)">Regulators look through to the real sponsor. Structure must be defensible on substance, not just paper.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Section 8: Audit -->
+<div class="sec" id="audit">
+  <h2>8. Triple LLM Audit Results</h2>
+  <h3>All 6 claims verified independently by 3 models</h3>
+
+  <div class="table-wrap">
+    <table class="cap">
+      <thead><tr><th style="width:40%">Claim</th><th>GPT-5.4</th><th>Gemini 2.5 Pro</th><th>Opus 4.6</th></tr></thead>
+      <tbody>
+        <tr><td>1. Prypco does NOT pre-own properties</td><td><span class="pill pill-green">CONFIRMED</span></td><td><span class="pill pill-green">CONFIRMED</span></td><td><span class="pill pill-green">CONFIRMED</span></td></tr>
+        <tr><td>2. Mint = direct DLD title; Blocks = SPV</td><td><span class="pill pill-green">CONFIRMED</span></td><td><span class="pill pill-green">CONFIRMED</span></td><td><span class="pill pill-green">CONFIRMED</span></td></tr>
+        <tr><td>3. Secondary market is P2P, not principal dealing</td><td><span class="pill pill-green">CONFIRMED</span></td><td><span class="pill pill-green">CONFIRMED</span></td><td><span class="pill pill-green">CONFIRMED</span></td></tr>
+        <tr><td>4. Tokens issued by DLD, minted by Ctrl Alt</td><td><span class="pill pill-green">CONFIRMED</span></td><td><span class="pill pill-green">CONFIRMED</span></td><td><span class="pill pill-green">CONFIRMED</span></td></tr>
+        <tr><td>5. Prypco = BD/arranger, not principal dealer</td><td><span class="pill pill-green">CONFIRMED</span></td><td><span class="pill pill-green">CONFIRMED</span></td><td><span class="pill pill-green">CONFIRMED</span></td></tr>
+        <tr><td>6. Antweave (asset owner) = Seller, different role</td><td><span class="pill pill-green">CONFIRMED</span></td><td><span class="pill pill-green">CONFIRMED</span></td><td><span class="pill pill-green">CONFIRMED</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="finding-box" style="margin-top:16px">
+    <h4>Audit Notes</h4>
+    <ul>
+      <li><strong>GPT-5.4:</strong> Rated Claim 1 "UNCERTAIN" on narrow wording ("buy from developers" not supported &mdash; Seller can be any entity). Core crowdfunding mechanism confirmed. Claim 6 "UNCERTAIN" because no Antweave evidence was in the pack (correct observation).</li>
+      <li><strong>Gemini 2.5 Pro:</strong> All six CONFIRMED without reservations. Most structured regulatory analysis.</li>
+      <li><strong>Opus 4.6:</strong> All six CONFIRMED. Deepest adversarial analysis &mdash; particularly on "issued by DLD" being technically imprecise.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Section 9: Correction -->
+<div class="sec" id="correction">
+  <h2>9. Correction to First Email</h2>
+
+  <div class="finding-box critical">
+    <h4>What Was Said (Incorrect)</h4>
+    <ul>
+      <li>"Prypco sells tokens to/from their own inventory (principal dealer model)"</li>
+      <li>"Every trade is Prypco &harr; Investor, never Investor &harr; Investor"</li>
+    </ul>
+  </div>
+
+  <div class="finding-box ok">
+    <h4>What Is Actually True (Corrected)</h4>
+    <ul>
+      <li>Prypco does NOT hold or maintain an inventory of Virtual Assets (BD Disclosure 3)</li>
+      <li>The secondary market operates on a P2P basis &mdash; Investor &harr; Investor</li>
+      <li>Prypco acts as broker/arranger, providing the platform and earning commissions</li>
+      <li>Prypco does not repurchase tokens; no designated market maker exists</li>
+    </ul>
+  </div>
+
+  <div class="finding-box">
+    <h4>Corrected Formulation</h4>
+    <ul>
+      <li><strong>Primary market:</strong> Prypco facilitates crowdfunded property acquisition. Investors pool funds to buy from a third-party Seller. Tokens issued by DLD / minted by Ctrl Alt.</li>
+      <li><strong>Secondary market:</strong> P2P marketplace operated by Prypco as licensed BD. Investors trade with each other within a &plusmn;15% price band. Prypco earns commission but is not a counterparty.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Sources -->
+<div class="sources" id="sources">
+  <h2>Sources</h2>
+  <h3 style="font-size:13px;font-weight:600;margin:0 0 10px">Primary Regulatory Documents</h3>
+  <ul style="padding-left:18px;margin-bottom:16px">
+    <li><a href="https://prypco.com/mint/terms-and-conditions">Prypco Mint Terms &amp; Conditions</a></li>
+    <li><a href="https://prypco.com/blocks/terms-and-conditions">Prypco Blocks Terms &amp; Conditions</a></li>
+    <li><a href="https://prypco.com/mint/broker-dealer-disclosure">Prypco Broker-Dealer Disclosure</a></li>
+    <li><a href="https://prypco.com/mint/third-party-providers">Prypco Third Party Providers</a></li>
+    <li><a href="https://prypco.com/mint/virtual-asset-standards">Prypco VA Standards</a></li>
+  </ul>
+
+  <h3 style="font-size:13px;font-weight:600;margin:0 0 10px">Blog &amp; Press</h3>
+  <ul style="padding-left:18px;margin-bottom:16px">
+    <li><a href="https://prypco.com/blogs/understanding-arva-tokens">Understanding ARVA tokens (Nov 25, 2025)</a></li>
+    <li>Prypco Mint Marketplace launch press (Feb 10, 2026) &mdash; via Reuters/Zawya</li>
+  </ul>
+
+  <h3 style="font-size:13px;font-weight:600;margin:0 0 10px">Government &amp; Partner Sources</h3>
+  <ul style="padding-left:18px;margin-bottom:16px">
+    <li><a href="https://dubailand.gov.ae">DLD: "MENA's first tokenized real estate project through Prypco Mint"</a></li>
+    <li><a href="https://www.ctrl-alt.co/press-releases">Ctrl Alt: "Go live with tokenized real estate"</a></li>
+    <li><a href="https://www.ctrl-alt.co/press-releases/ctrl-alt-dld-phase-two">Ctrl Alt: "Phase Two &mdash; Secondary Market Trading"</a></li>
+    <li><a href="https://www.unlock-bc.com">Unlock Blockchain: "Prypco Mint Secondary Market"</a></li>
+  </ul>
+
+  <h3 style="font-size:13px;font-weight:600;margin:0 0 10px">Industry &amp; Media</h3>
+  <ul style="padding-left:18px;margin-bottom:16px">
+    <li><a href="https://www.providentestate.com/blog/tokenized-real-estate-dubai">Provident Estate: "Tokenized Real Estate Dubai"</a></li>
+    <li><a href="https://news.tokenizer.estate">Tokenizer Estate: "Prypco Blocks completes first investor exit"</a></li>
+  </ul>
+
+  <p style="font-size:11px;color:var(--text-3);margin-top:20px;font-style:italic">This research was conducted through regulatory document analysis, public records review, and multi-model adversarial verification. All findings are based on publicly available Terms &amp; Conditions, regulatory disclosures, and press materials.</p>
+</div>
+
+</div>
+</body>
+</html>

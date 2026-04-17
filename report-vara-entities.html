@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VARA Public Register — Complete Entity Deep Dive</title>
+<style>
+  :root {
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+    --surface: #ffffff;
+    --surface-2: #fafaf8;
+    --surface-3: #f4f3ee;
+    --border: rgba(0,0,0,0.08);
+    --border-2: rgba(0,0,0,0.15);
+    --text: #1a1a1a;
+    --text-2: #5f5e5a;
+    --text-3: #888780;
+    --accent: #0C447C;
+    --accent-bg: #E6F1FB;
+    --red: #A32D2D;
+    --red-bg: #FCEBEB;
+    --amber: #854F0B;
+    --amber-bg: #FAEEDA;
+    --green: #0F6E56;
+    --green-bg: #E1F5EE;
+    --purple: #534AB7;
+    --purple-bg: #EEEDFE;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:var(--font-sans); color:var(--text); background:var(--surface-2); line-height:1.55; }
+
+  .page-wrap { max-width:1200px; margin:0 auto; background:var(--surface); min-height:100vh; box-shadow:0 0 60px rgba(0,0,0,0.04); }
+
+  .back-link { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:500; color:var(--accent); text-decoration:none; padding:14px 24px 0; }
+  .back-link:hover { text-decoration:underline; }
+
+  .hdr { padding:16px 24px 20px; border-bottom:.5px solid var(--border); }
+  .hdr h1 { font-size:22px; font-weight:600; margin:0 0 6px; letter-spacing:-.02em; color:var(--text); }
+  .hdr .subtitle { font-size:13px; color:var(--text-2); font-weight:400; }
+  .hdr .subtitle strong { color:var(--accent); font-weight:600; }
+
+  .toc { padding:16px 24px; background:var(--surface-3); border-bottom:.5px solid var(--border); }
+  .toc h2 { font-size:11px; font-weight:500; text-transform:uppercase; letter-spacing:.1em; color:var(--text-3); margin:0 0 10px; }
+  .toc-grid { display:flex; flex-wrap:wrap; gap:6px; }
+  .toc a { font-size:12px; color:var(--accent); text-decoration:none; padding:4px 10px; background:var(--surface); border:.5px solid var(--border); border-radius:4px; font-weight:500; }
+  .toc a:hover { background:var(--accent-bg); border-color:var(--accent); }
+
+  .sec { padding:24px 24px 20px; border-bottom:.5px solid var(--border); }
+  .sec h2 { font-size:13px; font-weight:500; text-transform:uppercase; letter-spacing:.08em; color:var(--text-3); margin:0 0 16px; }
+  .sec h3 { font-size:15px; font-weight:600; margin:0 0 12px; color:var(--text); }
+
+  /* Tables */
+  .table-wrap { overflow-x:auto; margin:0 -24px; padding:0 24px; }
+  table.cap { width:100%; border-collapse:collapse; font-size:12px; }
+  table.cap th { text-align:left; font-weight:500; color:var(--text-2); padding:8px 10px; border-bottom:.5px solid var(--border-2); font-size:11px; text-transform:uppercase; letter-spacing:.04em; background:var(--surface-3); position:sticky; top:0; white-space:nowrap; }
+  table.cap td { padding:9px 10px; border-bottom:.5px solid var(--border); vertical-align:top; }
+  table.cap tr:hover td { background:var(--surface-2); }
+  table.cap td.num { font-variant-numeric:tabular-nums; text-align:right; }
+  table.cap td a { color:var(--accent); text-decoration:none; font-size:11px; }
+  table.cap td a:hover { text-decoration:underline; }
+  .entity-name { font-weight:600; }
+  .cat1-highlight { color:var(--accent); font-weight:600; }
+  .cat1-highlight td { background:var(--accent-bg) !important; }
+  .withdrawn { color:var(--red); font-weight:500; }
+  .mono { font-family:var(--font-mono); font-size:11px; color:var(--text-2); }
+
+  /* KPI row */
+  .kpi-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-bottom:16px; }
+  .kpi { background:var(--surface-2); border:.5px solid var(--border); border-radius:8px; padding:14px 16px; }
+  .kpi .lbl { font-size:10px; color:var(--text-3); text-transform:uppercase; letter-spacing:.06em; margin-bottom:6px; font-weight:500; }
+  .kpi .val { font-size:22px; font-weight:600; line-height:1.15; }
+  .kpi .sub { font-size:11px; color:var(--text-2); margin-top:4px; }
+  .kpi .val.accent { color:var(--accent); }
+  .kpi .val.green { color:var(--green); }
+  .kpi .val.amber { color:var(--amber); }
+
+  /* Risk-card profile boxes */
+  .profile-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:16px; }
+  .risk-card { background:var(--surface); border:.5px solid var(--border); border-radius:8px; padding:18px 18px 14px; position:relative; overflow:hidden; }
+  .risk-card::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--accent); }
+  .risk-card.cat1::before { background:var(--accent); }
+  .risk-card.rwa::before { background:var(--purple); }
+  .risk-card.exchange::before { background:var(--amber); }
+  .risk-card.broker::before { background:var(--green); }
+  .risk-card h4 { font-size:15px; font-weight:600; margin:0 0 4px; }
+  .risk-card .ref { font-family:var(--font-mono); font-size:11px; color:var(--text-3); margin-bottom:10px; }
+  .risk-card .meta-pills { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:12px; }
+  .risk-card .pill { font-size:10px; font-weight:500; padding:3px 8px; border-radius:3px; }
+  .pill-accent { background:var(--accent-bg); color:var(--accent); }
+  .pill-green { background:var(--green-bg); color:var(--green); }
+  .pill-amber { background:var(--amber-bg); color:var(--amber); }
+  .pill-purple { background:var(--purple-bg); color:var(--purple); }
+  .pill-neutral { background:var(--surface-3); color:var(--text-2); }
+  .risk-card .detail-label { font-size:10px; font-weight:500; text-transform:uppercase; letter-spacing:.06em; color:var(--text-3); margin:10px 0 4px; }
+  .risk-card p, .risk-card ul { font-size:12px; color:var(--text-2); margin:0 0 6px; line-height:1.55; }
+  .risk-card ul { padding-left:16px; }
+  .risk-card li { margin-bottom:3px; }
+  .risk-card .insight-box { font-size:12px; color:var(--text); padding:10px 12px; background:var(--surface-2); border-radius:6px; border-left:3px solid var(--accent); margin-top:12px; line-height:1.55; }
+
+  /* Address clusters */
+  .cluster-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:10px; }
+  .cluster { background:var(--surface-2); border:.5px solid var(--border); border-radius:8px; padding:12px 14px; }
+  .cluster h4 { font-size:12px; font-weight:600; margin:0 0 6px; }
+  .cluster p { font-size:11px; color:var(--text-2); line-height:1.6; margin:0; }
+
+  /* Notes */
+  .note { font-size:11px; color:var(--text-3); margin-top:10px; font-style:italic; }
+  .note-box { font-size:12px; color:var(--text-2); padding:12px 14px; background:var(--surface-3); border-radius:6px; margin-top:12px; line-height:1.55; }
+
+  /* Key findings */
+  .findings-list { list-style:none; padding:0; counter-reset:finding; }
+  .findings-list li { counter-increment:finding; display:flex; gap:12px; padding:10px 0; border-bottom:.5px solid var(--border); font-size:13px; line-height:1.55; }
+  .findings-list li:last-child { border-bottom:none; }
+  .findings-list li::before { content:counter(finding); flex-shrink:0; width:24px; height:24px; background:var(--accent-bg); color:var(--accent); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:11px; font-weight:600; margin-top:1px; }
+
+  .footer-note { padding:16px 24px; background:var(--surface-3); font-size:11px; color:var(--text-3); text-align:center; border-top:.5px solid var(--border); }
+
+  /* Print */
+  @media print {
+    body { background:#fff; }
+    .page-wrap { box-shadow:none; max-width:100%; }
+    .back-link, .toc { display:none; }
+    .sec { break-inside:avoid; padding:16px 12px 12px; }
+    .profile-grid { grid-template-columns:1fr 1fr; }
+    .risk-card { break-inside:avoid; }
+    table.cap { font-size:10px; }
+    table.cap th { background:#f4f3ee !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .kpi { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .hdr h1 { font-size:18px; }
+    .footer-note { position:fixed; bottom:0; left:0; right:0; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+<a href="index.html" class="back-link">&larr; Back to Dashboard</a>
+
+<div class="hdr">
+  <h1>VARA Public Register &mdash; Complete Entity Deep Dive</h1>
+  <div class="subtitle"><strong>62</strong> Total Entities (45 Licensed + 17 IPA) &middot; Compiled April 16, 2026</div>
+</div>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <div class="toc-grid">
+    <a href="#licensed">Licensed VASPs (45)</a>
+    <a href="#ipa">IPA Entities (17)</a>
+    <a href="#addresses">Address Clusters</a>
+    <a href="#profiles">Priority Entity Profiles</a>
+    <a href="#timeline">Licensing Timeline</a>
+    <a href="#fees">Licensing Fees</a>
+    <a href="#consultants">Consultants &amp; Law Firms</a>
+    <a href="#activities">Activity Breakdown</a>
+    <a href="#investors">Investor Type Analysis</a>
+    <a href="#findings">Key Findings</a>
+  </div>
+</nav>
+
+<!-- ============================================ -->
+<!-- SECTION 1: LICENSED VASPs -->
+<!-- ============================================ -->
+<div class="sec" id="licensed">
+  <h2>Section 1 &mdash; Complete Licensed VASPs (45 Entities)</h2>
+
+  <div class="kpi-row">
+    <div class="kpi"><div class="lbl">Total Licensed</div><div class="val accent">45</div><div class="sub">Active VASP Licences</div></div>
+    <div class="kpi"><div class="lbl">Category 1 VA Issuance</div><div class="val" style="color:var(--purple)">2</div><div class="sub">Tokinvest &amp; Ctrl Alt</div></div>
+    <div class="kpi"><div class="lbl">Retail-Enabled</div><div class="val green">25</div><div class="sub">56% of total</div></div>
+    <div class="kpi"><div class="lbl">First Licence Issued</div><div class="val">Jul 2023</div><div class="sub">Laser Digital</div></div>
+  </div>
+
+  <div class="table-wrap">
+  <table class="cap">
+    <thead>
+      <tr><th>#</th><th>Entity Name</th><th>Reference</th><th>Licensed Activities</th><th>Date Issued</th><th>Status</th><th>Investor Types</th><th>Website</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td class="entity-name">Amber Premium FZE</td><td class="mono">VL/26/03/003</td><td>Broker-Dealer, Management &amp; Investment, Lending &amp; Borrowing</td><td>2026/04/02</td><td>Issued</td><td>Institutional, Qualified</td><td><a href="https://www.ambr.io/uae" target="_blank">ambr.io</a></td></tr>
+      <tr><td>2</td><td class="entity-name">RIV Technologies FZE</td><td class="mono">VL/26/03/002</td><td>Advisory Services</td><td>2026/03/27</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://www.riv-technologies.com/fze/" target="_blank">riv-technologies.com</a></td></tr>
+      <tr><td>3</td><td class="entity-name">XBase Virtual Assets Broker &amp; Dealer Services LLC</td><td class="mono">VL/17/03/001</td><td>Broker-Dealer (Spot OTC Only)</td><td>2026/03/19</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://xbdgroup.com/uae/" target="_blank">xbdgroup.com</a></td></tr>
+      <tr><td>4</td><td class="entity-name">Animoca Brands Middle East Advisory FZCO</td><td class="mono">VL/26/02/001</td><td>Management &amp; Investment, Broker-Dealer</td><td>2026/02/05</td><td>Issued</td><td>Institutional, Qualified</td><td><a href="https://animocabrands.me/" target="_blank">animocabrands.me</a></td></tr>
+      <tr><td>5</td><td class="entity-name">Nova Digital FZE</td><td class="mono">VL/26/01/001</td><td>Management &amp; Investment</td><td>2026/01/30</td><td>Issued</td><td>Institutional, Qualified</td><td><a href="https://novadigital.xyz/" target="_blank">novadigital.xyz</a></td></tr>
+      <tr><td>6</td><td class="entity-name">LCT Global FZE</td><td class="mono">VL/25/12/001</td><td>Exchange Services</td><td>2025/12/26</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://www.lct.tech/" target="_blank">lct.tech</a></td></tr>
+      <tr><td>7</td><td class="entity-name">Ceffu Custody FZE</td><td class="mono">VL/25/10/001</td><td>Custody Services</td><td>2025/10/09</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://www.ceffu.com/en-AE" target="_blank">ceffu.com</a></td></tr>
+      <tr><td>8</td><td class="entity-name">Selini Capital FZE</td><td class="mono">VL/25/10/002</td><td>Broker-Dealer</td><td>2025/10/08</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://www.selinicapital.ae" target="_blank">selinicapital.ae</a></td></tr>
+      <tr><td>9</td><td class="entity-name">BitGo MENA FZE</td><td class="mono">VL/23/09/001</td><td>Broker-Dealer</td><td>2025/09/17</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://bitgo.ae/#trading" target="_blank">bitgo.ae</a></td></tr>
+      <tr class="cat1-highlight"><td>10</td><td class="entity-name">Ctrl Alt Solutions DMCC</td><td class="mono">VL/25/05/002</td><td><strong>Broker-Dealer, Category 1 VA Issuance</strong></td><td>2025/05/24</td><td>Active</td><td>Qualified, Institutional</td><td><a href="https://www.ctrl-alt.co/" target="_blank">ctrl-alt.co</a></td></tr>
+      <tr><td>11</td><td class="entity-name">Prypco FZE</td><td class="mono">VL/25/05/001</td><td>Broker-Dealer</td><td>2025/05/24</td><td>Active</td><td>Retail, Qualified</td><td><a href="https://mint.prypco.com/" target="_blank">prypco.com</a></td></tr>
+      <tr><td>12</td><td class="entity-name">Midchains FZE</td><td class="mono">VL/25/04/008</td><td>Broker-Dealer</td><td>2025/04/29</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://www.midchains.com" target="_blank">midchains.com</a></td></tr>
+      <tr><td>13</td><td class="entity-name">Gate Technology FZE</td><td class="mono">VL/25/04/007</td><td>Exchange Services</td><td>2025/04/25</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://www.gate.ae/" target="_blank">gate.ae</a></td></tr>
+      <tr><td>14</td><td class="entity-name">BitGo Custody MENA FZE</td><td class="mono">VL/25/04/003</td><td>Custody (incl. custodial staking)</td><td>2025/04/25</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://www.bitgo.ae" target="_blank">bitgo.ae</a></td></tr>
+      <tr><td>15</td><td class="entity-name">Bitpanda Custody MENA DMCC</td><td class="mono">VL/25/04/006</td><td>Custody (incl. custodial staking)</td><td>2025/04/25</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://www.bitpanda.com/en" target="_blank">bitpanda.com</a></td></tr>
+      <tr><td>16</td><td class="entity-name">Atremo Digital FZE</td><td class="mono">VL/25/04/005</td><td>Broker-Dealer</td><td>2025/04/25</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://www.atremo.digital" target="_blank">atremo.digital</a></td></tr>
+      <tr><td>17</td><td class="entity-name">MKX Virtual Assets Broker &amp; Dealer Services L.L.C.</td><td class="mono">VL/25/04/001</td><td>Broker-Dealer</td><td>2025/04/18</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://www.mkx.ae/" target="_blank">mkx.ae</a></td></tr>
+      <tr><td>18</td><td class="entity-name">DKK Digital FZE</td><td class="mono">VL/25/04/002</td><td>Broker-Dealer, Advisory</td><td>2025/04/18</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://dkkdigital.io/" target="_blank">dkkdigital.io</a></td></tr>
+      <tr><td>19</td><td class="entity-name">Hashkey MENA FZE</td><td class="mono">VL/25/03/002</td><td>Broker-Dealer, Exchange</td><td>2025/04/14</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://global.hashkey.com/ae" target="_blank">hashkey.com</a></td></tr>
+      <tr><td>20</td><td class="entity-name">Gap 3 Partners FZCO</td><td class="mono">VL/25/04/004</td><td>Advisory</td><td>2025/04/14</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://www.g3p.io/" target="_blank">g3p.io</a></td></tr>
+      <tr><td>21</td><td class="entity-name">Bitpanda Broker MENA DMCC</td><td class="mono">VL/25/03/001</td><td>Broker-Dealer</td><td>2025/03/19</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://www.bitpanda.com/en/uae/homepage" target="_blank">bitpanda.com</a></td></tr>
+      <tr><td>22</td><td class="entity-name">Mantra Finance FZE</td><td class="mono">VL/25/02/001</td><td>Exchange, Broker-Dealer, Management &amp; Investment</td><td>2025/02/19</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://www.mantrachain.io/" target="_blank">mantrachain.io</a></td></tr>
+      <tr class="cat1-highlight"><td>23</td><td class="entity-name">Tokinvest DMCC</td><td class="mono">VL/2024/12/004</td><td><strong>Broker-Dealer, Category 1 VA Issuance</strong></td><td>2024/12/30</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://tokinvest.capital/" target="_blank">tokinvest.capital</a></td></tr>
+      <tr><td>24</td><td class="entity-name">OFZA Fintech Virtual Asset Exchange Services LLC</td><td class="mono">VL/24/12/002</td><td>Exchange, Broker-Dealer, Management &amp; Investment</td><td>2024/12/30</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://ofza.com/en" target="_blank">ofza.com</a></td></tr>
+      <tr><td>25</td><td class="entity-name">Zand Bank P.J.S.C.</td><td class="mono">VL/2024/12/001</td><td>Custody</td><td>2024/12/09</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://www.zand.ae/en" target="_blank">zand.ae</a></td></tr>
+      <tr><td>26</td><td class="entity-name">BitOasis Technologies FZE</td><td class="mono">VL/2024/11/001</td><td>Broker-Dealer</td><td>2024/11/29</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://www.bitoasis.net/en/home" target="_blank">bitoasis.net</a></td></tr>
+      <tr><td>27</td><td class="entity-name">Deribit FZE</td><td class="mono">VL/23/12/002</td><td>Exchange (incl. VA Derivatives)</td><td>2024/11/01</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://www.deribit.com" target="_blank">deribit.com</a></td></tr>
+      <tr><td>28</td><td class="entity-name">OKX Middle East Fintech FZE</td><td class="mono">VL/23/12/003</td><td>Lending, Management &amp; Investment, Exchange (incl. Derivatives), Broker-Dealer</td><td>2024/09/17</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://www.okx.com/" target="_blank">okx.com</a></td></tr>
+      <tr><td>29</td><td class="entity-name">Aquanow ME FZE</td><td class="mono">VL/24/01/001</td><td>Broker-Dealer, Management &amp; Investment, Lending &amp; Borrowing</td><td>2024/07/22</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://www.aquanow.io" target="_blank">aquanow.io</a></td></tr>
+      <tr><td>30</td><td class="entity-name">Varni Labs FZE (Roma)</td><td class="mono">VL/23/10/001</td><td>Broker-Dealer</td><td>2024/07/22</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="http://www.roma.global/" target="_blank">roma.global</a></td></tr>
+      <tr><td>31</td><td class="entity-name">MBIO FZE (MB.IO)</td><td class="mono">VL/24/06/001</td><td>Broker-Dealer, Exchange</td><td>2024/07/18</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://mb.io/en-AE" target="_blank">mb.io</a></td></tr>
+      <tr><td>32</td><td class="entity-name">HT Markets MENA FZE</td><td class="mono">VL/23/08/003</td><td>Broker-Dealer, Management &amp; Investment</td><td>2024/05/31</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://hextrust.com/" target="_blank">hextrust.com</a></td></tr>
+      <tr><td>33</td><td class="entity-name">Binance FZE</td><td class="mono">VL/24/04/001</td><td>Broker-Dealer, Management &amp; Investment, Lending, Exchange (incl. Derivatives)</td><td>2024/04/15</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://www.binance.com/en-AE" target="_blank">binance.com</a></td></tr>
+      <tr><td>34</td><td class="entity-name">Foris DAX Middle East FZE (Crypto.com)</td><td class="mono">VL/23/10/003</td><td>Broker-Dealer, Management &amp; Investment, Lending, Exchange (incl. Derivatives)</td><td>2024/04/03</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://crypto.com/ae" target="_blank">crypto.com</a></td></tr>
+      <tr><td>35</td><td class="entity-name">Web 3 Innovations FZE (AYA)</td><td class="mono">VL/23/12/001</td><td>Management &amp; Investment</td><td>2023/12/01</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://www.aya.foundation/" target="_blank">aya.foundation</a></td></tr>
+      <tr><td>36</td><td class="entity-name">Fasset FZE</td><td class="mono">VL/23/07/002</td><td>Broker-Dealer</td><td>2023/11/30</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://fasset.com/" target="_blank">fasset.com</a></td></tr>
+      <tr><td>37</td><td class="entity-name">CoinMENA FZE</td><td class="mono">VL/23/09/001</td><td>Broker-Dealer</td><td>2023/11/30</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://www.coinmena.com/en" target="_blank">coinmena.com</a></td></tr>
+      <tr><td>38</td><td class="entity-name">Nine Blocks Capital Management FZE</td><td class="mono">VL/23/09/003</td><td>Management &amp; Investment</td><td>2023/11/21</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://www.nineblockscapital.com" target="_blank">nineblockscapital.com</a></td></tr>
+      <tr><td>39</td><td class="entity-name">GC Exchange FZE (GCEX)</td><td class="mono">VL/23/09/002</td><td>Broker-Dealer</td><td>2023/11/17</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://www.gc.exchange/" target="_blank">gc.exchange</a></td></tr>
+      <tr><td>40</td><td class="entity-name">Morpheus Software Technology FZE (FUZE)</td><td class="mono">VL/23/10/002</td><td>Broker-Dealer</td><td>2023/11/17</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://fuze.ae/" target="_blank">fuze.ae</a></td></tr>
+      <tr><td>41</td><td class="entity-name">Hex Trust MENA FZE</td><td class="mono">VL/23/08/002</td><td>Custody</td><td>2023/11/15</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://hextrust.com/" target="_blank">hextrust.com</a></td></tr>
+      <tr><td>42</td><td class="entity-name">Trek Labs Ltd FZE (Backpack)</td><td class="mono">VL/23/07/001</td><td>Exchange</td><td>2023/10/30</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://www.backpack.exchange/" target="_blank">backpack.exchange</a></td></tr>
+      <tr><td>43</td><td class="entity-name">Scintilla Network FZE</td><td class="mono">VL/23/07/003</td><td>Broker-Dealer, Exchange</td><td>2023/09/11</td><td>Active</td><td>Retail, Qualified, Institutional</td><td><a href="https://www.scintillanetwork.com/" target="_blank">scintillanetwork.com</a></td></tr>
+      <tr><td>44</td><td class="entity-name">Komainu MEA FZE</td><td class="mono">VL/23/08/001</td><td>Custody (incl. staking &amp; collateral wallet)</td><td>2023/08/18</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://www.komainu.com/" target="_blank">komainu.com</a></td></tr>
+      <tr><td>45</td><td class="entity-name">Laser Digital Middle East FZE</td><td class="mono">VL/23/06/001</td><td>Broker-Dealer, Management &amp; Investment</td><td>2023/07/28</td><td>Active</td><td>Institutional, Qualified</td><td><a href="https://www.laserdigital.com/" target="_blank">laserdigital.com</a></td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 2: IPA ENTITIES -->
+<!-- ============================================ -->
+<div class="sec" id="ipa">
+  <h2>Section 2 &mdash; In-Principle Approval Entities (17)</h2>
+
+  <div class="table-wrap">
+  <table class="cap">
+    <thead>
+      <tr><th>#</th><th>Entity Name</th><th>Reference</th><th>Activities Applied For</th><th>Date Issued</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td class="entity-name">Flipster FZE</td><td class="mono">IPA/26/01/004</td><td>Exchange Services</td><td>2026/01/30</td><td>Issued</td></tr>
+      <tr><td>2</td><td class="entity-name">ARBEAT GROUP FZE</td><td class="mono">IPA/26/01/003</td><td>Broker-Dealer, Exchange</td><td>2026/01/22</td><td>Issued</td></tr>
+      <tr><td>3</td><td class="entity-name">Shipfinex FZCO</td><td class="mono">IPA/26/01/002</td><td>Broker-Dealer</td><td>2026/01/14</td><td>Issued</td></tr>
+      <tr><td>4</td><td class="entity-name">Stake RWA FZE</td><td class="mono">IPA/26/01/001</td><td>Broker-Dealer</td><td>2026/01/07</td><td>Issued</td></tr>
+      <tr><td>5</td><td class="entity-name">FIRST CRYPTO EXCHANGE L.L.C</td><td class="mono">IPA/25/12/009</td><td>Broker-Dealer</td><td>2026/01/06</td><td>Issued</td></tr>
+      <tr><td>6</td><td class="entity-name">MuseTech VA FZCO</td><td class="mono">IPA/25/12/006</td><td>Broker-Dealer</td><td>2025/12/31</td><td class="withdrawn">Withdrawn</td></tr>
+      <tr><td>7</td><td class="entity-name">DIMENT VA EXCHANGE SERVICES DMCC</td><td class="mono">IPA/25/12/007</td><td>Broker-Dealer</td><td>2025/12/31</td><td>Issued</td></tr>
+      <tr><td>8</td><td class="entity-name">Daman Virtual Asset Brokerage LLC</td><td class="mono">IPA/25/12/008</td><td>Broker-Dealer</td><td>2025/12/30</td><td>Issued</td></tr>
+      <tr><td>9</td><td class="entity-name">Tribe Tokenisation FZE</td><td class="mono">IPA/25/12/005</td><td>Broker-Dealer</td><td>2025/12/26</td><td>Issued</td></tr>
+      <tr><td>10</td><td class="entity-name">ZEPLY GLOBAL ME FZCO</td><td class="mono">IPA/25/12/003</td><td>Advisory, Broker-Dealer</td><td>2025/12/26</td><td>Issued</td></tr>
+      <tr><td>11</td><td class="entity-name">Nawy Shares FZCO (SmartCrowd)</td><td class="mono">IPA/25/12/004</td><td>Broker-Dealer</td><td>2025/12/26</td><td>Issued</td></tr>
+      <tr><td>12</td><td class="entity-name">Automata FZE (Vancelian)</td><td class="mono">IPA/25/12/001</td><td>Management &amp; Investment, Lending, Advisory, Broker-Dealer</td><td>2025/12/18</td><td>Issued</td></tr>
+      <tr><td>13</td><td class="entity-name">YHEGO Virtual Assets Exchange Service L.L.C</td><td class="mono">IPA/25/10/006</td><td>Broker-Dealer, Exchange</td><td>2025/10/20</td><td>Issued</td></tr>
+      <tr><td>14</td><td class="entity-name">Mc Coin Virtual Assets LLC</td><td class="mono">IPA/25/10/004</td><td>Management &amp; Investment, Broker-Dealer</td><td>2025/10/16</td><td>Issued</td></tr>
+      <tr><td>15</td><td class="entity-name">Liquidity Fintech FZE</td><td class="mono">IPA/25/10/002</td><td>Broker-Dealer</td><td>2025/10/13</td><td>Issued</td></tr>
+      <tr><td>16</td><td class="entity-name">Bybit Fintech FZE</td><td class="mono">IPA/24/08/001</td><td>Exchange</td><td>2024/08/21</td><td>Issued</td></tr>
+      <tr><td>17</td><td class="entity-name">W P M E Technology L.L.C. (WadzPay)</td><td class="mono">VL/24/04/004</td><td>Broker-Dealer</td><td>2024/04/25</td><td class="withdrawn">Withdrawn</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note-box" style="margin-top:14px;">
+    <strong>Notable IPA observations:</strong> Bybit has been in IPA status since August 2024 (20+ months) without progressing to full licence. WadzPay and MuseTech VA FZCO IPAs were withdrawn. Stake RWA FZE and Tribe Tokenisation FZE are notable RWA-focused IPA holders. SmartCrowd (Nawy Shares) is a well-known real estate fractional investment platform.
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 3: ADDRESS CLUSTERS -->
+<!-- ============================================ -->
+<div class="sec" id="addresses">
+  <h2>Section 3 &mdash; Entity Address Clusters</h2>
+  <p style="font-size:13px; color:var(--text-2); margin-bottom:14px;">Most VARA-licensed entities are clustered in the Dubai World Trade Centre / One Central area.</p>
+
+  <div class="cluster-grid">
+    <div class="cluster">
+      <h4>One Central, The Offices 1&ndash;5</h4>
+      <p>Binance, Crypto.com, GCEX, FUZE, Deribit, Komainu, Backpack, Aquanow, Nine Blocks, Web3/AYA, Gap3</p>
+    </div>
+    <div class="cluster">
+      <h4>Sheikh Rashid Tower, DWTC</h4>
+      <p>Prypco, Midchains, Fasset, CoinMENA, Scintilla, Varni Labs</p>
+    </div>
+    <div class="cluster">
+      <h4>Convention Tower, DWTC</h4>
+      <p>HashKey, HT Markets / Hex Trust</p>
+    </div>
+    <div class="cluster">
+      <h4>DMCC (Uptown Tower / JLT)</h4>
+      <p>Tokinvest, Ctrl Alt, Bitpanda (Custody + Broker)</p>
+    </div>
+    <div class="cluster">
+      <h4>Business Bay</h4>
+      <p>XBase, MBIO</p>
+    </div>
+    <div class="cluster">
+      <h4>Other Locations</h4>
+      <p>Zand Bank (MBR Blvd), Laser Digital (One Za'abeel)</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 4: DEEP-DIVE PROFILES -->
+<!-- ============================================ -->
+<div class="sec" id="profiles">
+  <h2>Section 4 &mdash; Priority Entity Deep-Dive Profiles</h2>
+
+  <div class="profile-grid">
+
+    <!-- TOKINVEST -->
+    <div class="risk-card cat1">
+      <h4>Tokinvest DMCC</h4>
+      <div class="ref">VL/2024/12/004 &middot; Broker-Dealer + Category 1 VA Issuance &middot; Dec 30, 2024</div>
+      <div class="meta-pills">
+        <span class="pill pill-accent">Category 1 VA Issuance</span>
+        <span class="pill pill-green">Retail + Qualified + Institutional</span>
+      </div>
+      <div class="detail-label">Leadership</div>
+      <ul>
+        <li><strong>Scott Thiel</strong> &mdash; CEO &amp; Founder. 20+ years as lawyer/entrepreneur. Previously Senior Partner &amp; global fintech co-chair at DLA Piper. Key role in developing VARA regulatory framework. Board member of Hedera LLC.</li>
+        <li><strong>Matt Blom</strong> &mdash; Chief Strategy Officer. 27+ years in financial markets (UK, UAE, China).</li>
+        <li><strong>Robert Cooper</strong> &mdash; COO &amp; CRO. Founded Digivault (first standalone FCA-registered crypto custodian UK).</li>
+      </ul>
+      <div class="detail-label">Funding</div>
+      <p>$3.2M pre-seed closed September 2025. Backed by Triliv Holdings, Exponential Science, family offices, HNWIs.</p>
+      <div class="detail-label">Products &amp; Tokenized Assets</div>
+      <ul>
+        <li>Real Estate, Commodities, Investment Funds, Equity, Art, Debt, ESG Digital Assets</li>
+        <li>First tokenized racehorse with Evolution Stables (sold out)</li>
+        <li>Tokenized world's largest silver bar with DMCC</li>
+        <li>Tokenized Deposit &amp; Stablecoin Management System with UDPN</li>
+      </ul>
+      <div class="insight-box">First entity to receive VARA's multi-asset Category 1 VA Issuance licence. CEO Scott Thiel was instrumental in shaping VARA regulations while at DLA Piper, providing significant regulatory expertise. Serves all investor types including retail.</div>
+    </div>
+
+    <!-- CTRL ALT -->
+    <div class="risk-card cat1">
+      <h4>Ctrl Alt Solutions DMCC</h4>
+      <div class="ref">VL/25/05/002 &middot; Broker-Dealer + Category 1 VA Issuance &middot; May 24, 2025</div>
+      <div class="meta-pills">
+        <span class="pill pill-accent">Category 1 VA Issuance</span>
+        <span class="pill pill-neutral">Qualified + Institutional only</span>
+      </div>
+      <div class="detail-label">Leadership</div>
+      <ul>
+        <li><strong>Matt Ong</strong> &mdash; Chairman &amp; CEO. Background in fund structuring and alternative investments at Morgan Stanley and Credit Suisse.</li>
+        <li><strong>Robert Farquhar</strong> &mdash; CEO for MENA &amp; Board Member</li>
+        <li><strong>Lee Bowyer</strong> &mdash; Global Head of Compliance, Risk Officer &amp; MLRO</li>
+      </ul>
+      <div class="detail-label">Business</div>
+      <ul>
+        <li>Wholly owned subsidiary of Alt Ltd (established UAE July 2024)</li>
+        <li>$850M+ in assets tokenized as of Feb 2026 (real estate, private credit, funds, commodities)</li>
+        <li>First VASP authorized for issuer-related services in Dubai</li>
+        <li>Partnership with Dubai Land Department (DLD) &mdash; Phase 2 of tokenized real estate</li>
+      </ul>
+      <div class="insight-box">Second Category 1 VA Issuance licensee (after Tokinvest). Cannot serve retail investors. The $850M tokenized asset figure and the DLD partnership demonstrate strong government backing and market traction.</div>
+    </div>
+
+    <!-- PRYPCO -->
+    <div class="risk-card rwa">
+      <h4>Prypco FZE</h4>
+      <div class="ref">VL/25/05/001 &middot; Broker-Dealer &middot; May 24, 2025</div>
+      <div class="meta-pills">
+        <span class="pill pill-purple">Real Estate Tokenization</span>
+        <span class="pill pill-green">Retail + Qualified</span>
+      </div>
+      <div class="detail-label">Business</div>
+      <ul>
+        <li>Real estate tokenization via &ldquo;Prypco Mint&rdquo; platform</li>
+        <li>Official partnership with Dubai Land Department (DLD) &mdash; launched MENA's first tokenized real estate project</li>
+        <li>Supported by VARA, Central Bank of UAE, Dubai Future Foundation</li>
+        <li>Investors can buy digital shares of premium Dubai properties from AED 2,000</li>
+        <li>DLD issues certificates of ownership &mdash; legally recognized fractional property ownership</li>
+      </ul>
+      <div class="insight-box">Strongest government backing of any real estate tokenization platform in Dubai. The DLD partnership means tokenized property ownership is legally recognized. Broker-Dealer licence (not VA Issuance) suggests they trade existing tokens rather than issue new ones. Minimum AED 2,000 investment makes this very retail-accessible.</div>
+    </div>
+
+    <!-- MANTRA -->
+    <div class="risk-card exchange">
+      <h4>Mantra Finance FZE</h4>
+      <div class="ref">VL/25/02/001 &middot; Exchange + Broker-Dealer + Management &amp; Investment &middot; Feb 19, 2025</div>
+      <div class="meta-pills">
+        <span class="pill pill-amber">3 Activities</span>
+        <span class="pill pill-green">Retail + Qualified + Institutional</span>
+      </div>
+      <div class="detail-label">Leadership</div>
+      <p>Co-founders: John Patrick Mullin, Rodrigo Quan Miranda, Will Corkin</p>
+      <div class="detail-label">Business</div>
+      <ul>
+        <li>MANTRA Chain &mdash; Layer 1 blockchain purpose-built for tokenizing real-world assets</li>
+        <li>OM token &mdash; native token (current price ~$0.07 as of April 2026)</li>
+        <li>OM token crash on April 13, 2025: 90% drop from $6.30 to $0.37 in hours</li>
+        <li>Post-crash: $45M committed to strategic OM buybacks ($25M + $20M from Inveniam)</li>
+      </ul>
+      <div class="insight-box">Holds one of the broadest VARA licences (3 activities, all investor types). The OM token crash destroyed significant market trust, but the active VARA licence was not revoked, indicating VARA separates market events from regulatory compliance. The 3-activity licence is the most comprehensive among RWA-focused entities.</div>
+    </div>
+
+    <!-- FASSET -->
+    <div class="risk-card broker">
+      <h4>Fasset FZE</h4>
+      <div class="ref">VL/23/07/002 &middot; Broker-Dealer &middot; Nov 30, 2023</div>
+      <div class="meta-pills">
+        <span class="pill pill-green">Retail + Qualified + Institutional</span>
+        <span class="pill pill-neutral">Early Licensee</span>
+      </div>
+      <div class="detail-label">Leadership</div>
+      <p><strong>Mohammad Raafi Hossain</strong> &mdash; CEO &amp; Founder (founded 2019)</p>
+      <div class="detail-label">Funding</div>
+      <p>$22M Series A raised April 15, 2022</p>
+      <div class="detail-label">Business</div>
+      <p>Retail-focused crypto broker. One of the earliest VARA licensees (November 2023, among the first batch). Simple consumer-facing investment platform.</p>
+      <div class="insight-box">One of the original VARA licensees, receiving their licence in November 2023. The $22M Series A pre-dates the VARA licence, demonstrating significant backing going into the regulatory process. Retail-enabled from the start.</div>
+    </div>
+
+    <!-- BINANCE -->
+    <div class="risk-card exchange">
+      <h4>Binance FZE</h4>
+      <div class="ref">VL/24/04/001 &middot; Broker-Dealer + Mgmt &amp; Investment + Lending + Exchange (incl. Derivatives) &middot; Apr 15, 2024</div>
+      <div class="meta-pills">
+        <span class="pill pill-amber">4 Activities</span>
+        <span class="pill pill-green">Retail + Qualified + Institutional</span>
+      </div>
+      <div class="detail-label">Regulatory Timeline</div>
+      <table class="cap" style="margin-top:4px;">
+        <tbody>
+          <tr><td style="white-space:nowrap;">Early 2022</td><td>Applied to VARA MVP programme</td></tr>
+          <tr><td>March 2022</td><td>Provisional licence received</td></tr>
+          <tr><td>Sept 19, 2022</td><td>MVP licence issued (qualified investors only)</td></tr>
+          <tr><td>Mid 2023</td><td>Initial Product Approval (IPA) received</td></tr>
+          <tr><td>April 15, 2024</td><td>Full VASP licence issued</td></tr>
+          <tr><td><strong>Total</strong></td><td><strong>~25 months from first application to full licence</strong></td></tr>
+        </tbody>
+      </table>
+      <div class="insight-box">Binance's 25-month timeline is the most documented case, progressing through the full 4-stage process (MVP &rarr; ATI &rarr; IPA &rarr; FMP). Their 4-activity licence with retail access represents the broadest licence scope. The MVP programme no longer exists; new applicants follow ATI &rarr; IPA &rarr; FMP.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 5: LICENSING TIMELINE -->
+<!-- ============================================ -->
+<div class="sec" id="timeline">
+  <h2>Section 5 &mdash; Licensing Timeline Analysis</h2>
+
+  <h3>Known Timelines (Application to Full Licence)</h3>
+  <div class="table-wrap">
+  <table class="cap">
+    <thead>
+      <tr><th>Entity</th><th>First Known Date</th><th>Full Licence</th><th>Duration</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="entity-name">Binance FZE</td><td>Early 2022 (MVP app)</td><td>Apr 2024</td><td><strong>~25 months</strong></td><td>Full 4-stage process</td></tr>
+      <tr><td class="entity-name">OKX Middle East</td><td>Jan 2024 (announced)</td><td>Sept 2024</td><td><strong>~8 months</strong></td><td>Announcement to licence</td></tr>
+      <tr><td class="entity-name">Bybit</td><td>Before Aug 2024</td><td>Still IPA (Apr 2026)</td><td><strong>20+ months in IPA</strong></td><td>Stuck in IPA stage</td></tr>
+      <tr><td class="entity-name">Crypto.com</td><td>Before Apr 2024</td><td>Apr 2024</td><td>Unknown</td><td>Among earliest full licences</td></tr>
+      <tr><td class="entity-name">Tokinvest</td><td>Unknown</td><td>Dec 2024</td><td>Unknown</td><td>First Category 1 VA Issuance</td></tr>
+      <tr><td class="entity-name">Laser Digital</td><td>Before Jul 2023</td><td>Jul 2023</td><td>Unknown</td><td>First-ever VARA licensee</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 style="margin-top:20px;">VARA Licensing Stages (Current Process)</h3>
+  <div style="display:flex; gap:8px; margin:12px 0 16px; flex-wrap:wrap;">
+    <div style="flex:1; min-width:180px; padding:12px 14px; background:var(--accent-bg); border-radius:6px; border-left:3px solid var(--accent);">
+      <div style="font-size:11px; font-weight:600; color:var(--accent); margin-bottom:4px;">STAGE 1 &mdash; ATI</div>
+      <div style="font-size:12px; color:var(--text-2);">Approval to Incorporate. Preliminary approval, ~50% of application fee.</div>
+    </div>
+    <div style="flex:1; min-width:180px; padding:12px 14px; background:var(--amber-bg); border-radius:6px; border-left:3px solid var(--amber);">
+      <div style="font-size:11px; font-weight:600; color:var(--amber); margin-bottom:4px;">STAGE 2 &mdash; IPA</div>
+      <div style="font-size:12px; color:var(--text-2);">In-Principle Approval. Can incorporate but NOT operate.</div>
+    </div>
+    <div style="flex:1; min-width:180px; padding:12px 14px; background:var(--green-bg); border-radius:6px; border-left:3px solid var(--green);">
+      <div style="font-size:11px; font-weight:600; color:var(--green); margin-bottom:4px;">STAGE 3 &mdash; FMP</div>
+      <div style="font-size:12px; color:var(--text-2);">Full Market Product. Full licence, can begin operations.</div>
+    </div>
+  </div>
+
+  <h3>Typical Duration Estimates</h3>
+  <div class="kpi-row" style="margin-top:10px;">
+    <div class="kpi"><div class="lbl">ATI Stage</div><div class="val">2&ndash;4 mo</div></div>
+    <div class="kpi"><div class="lbl">IPA to Full Licence</div><div class="val amber">6&ndash;18 mo</div></div>
+    <div class="kpi"><div class="lbl">Total Process</div><div class="val">12&ndash;25 mo</div></div>
+    <div class="kpi"><div class="lbl">Fastest Known</div><div class="val green">~8 mo</div><div class="sub">OKX (likely prior engagement)</div></div>
+    <div class="kpi"><div class="lbl">Slowest Known</div><div class="val" style="color:var(--red)">20+ mo</div><div class="sub">Bybit (still IPA)</div></div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 6: LICENSING FEES -->
+<!-- ============================================ -->
+<div class="sec" id="fees">
+  <h2>Section 6 &mdash; VARA Licensing Fees</h2>
+
+  <div class="table-wrap">
+  <table class="cap">
+    <thead>
+      <tr><th>Activity</th><th>Application Fee</th><th>Annual Supervision Fee</th><th>Min Share Capital</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Advisory Services</td><td>AED 40,000 (~$10,900)</td><td>AED 80,000 (~$21,800)</td><td>AED 100,000</td></tr>
+      <tr><td>Broker-Dealer Services</td><td>AED 100,000 (~$27,250)</td><td>AED 200,000 (~$54,500)</td><td>AED 400,000 or 15% annual overhead</td></tr>
+      <tr><td>Exchange Services</td><td>Higher tier</td><td>Higher tier</td><td>Higher tier</td></tr>
+      <tr><td>Custody Services</td><td>Higher tier</td><td>Higher tier</td><td>Higher tier</td></tr>
+      <tr><td>VA Issuance</td><td>Highest tier</td><td>Highest tier</td><td>Significant</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">ATI stage requires 50% of application fee upfront. Total consultant and legal fees typically AED 200,000&ndash;500,000+ additional.</p>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 7: CONSULTANTS -->
+<!-- ============================================ -->
+<div class="sec" id="consultants">
+  <h2>Section 7 &mdash; Consultants &amp; Law Firms for VARA Licensing</h2>
+
+  <h3>Known VARA Licensing Specialists</h3>
+  <div class="table-wrap">
+  <table class="cap">
+    <thead><tr><th>#</th><th>Firm</th><th>Focus</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td class="entity-name">Rasma Legal</td><td>Strategic advisory for VARA licensing (rasmalegal.com)</td></tr>
+      <tr><td>2</td><td class="entity-name">Zerafa Middle East</td><td>Regulatory consultancy across all 8 VARA activities (zerafa.ae)</td></tr>
+      <tr><td>3</td><td class="entity-name">Keepers Compliance</td><td>VARA licensing support, AML, inspections (keeperscompliance.ae)</td></tr>
+      <tr><td>4</td><td class="entity-name">Smart Zones UAE</td><td>VARA licensing, compliance, litigation (smartzonesuae.com)</td></tr>
+      <tr><td>5</td><td class="entity-name">Consulting24</td><td>VARA licence advisory (consulting24.co)</td></tr>
+      <tr><td>6</td><td class="entity-name">DLA Piper</td><td>Tokinvest CEO Scott Thiel was previously Senior Partner; strong VARA connections</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">Specific firms used by Binance, OKX, Crypto.com, Ctrl Alt, and Prypco are not publicly disclosed.</p>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 8: ACTIVITY BREAKDOWN -->
+<!-- ============================================ -->
+<div class="sec" id="activities">
+  <h2>Section 8 &mdash; Activity Breakdown by Type</h2>
+
+  <div class="table-wrap">
+  <table class="cap">
+    <thead><tr><th>Activity</th><th>Licensed VASPs</th><th>% of Total</th></tr></thead>
+    <tbody>
+      <tr><td>Broker-Dealer Services</td><td class="num">35</td><td class="num">78%</td></tr>
+      <tr><td>Management &amp; Investment</td><td class="num">12</td><td class="num">27%</td></tr>
+      <tr><td>Exchange Services</td><td class="num">11</td><td class="num">24%</td></tr>
+      <tr><td>Custody Services</td><td class="num">7</td><td class="num">16%</td></tr>
+      <tr><td>Lending &amp; Borrowing</td><td class="num">6</td><td class="num">13%</td></tr>
+      <tr><td>Advisory Services</td><td class="num">5</td><td class="num">11%</td></tr>
+      <tr style="background:var(--accent-bg);"><td><strong>Category 1 VA Issuance</strong></td><td class="num"><strong>2</strong></td><td class="num"><strong>4%</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="note-box" style="margin-top:12px;">
+    Only two entities hold Category 1 VA Issuance licences (Tokinvest and Ctrl Alt). This is the rarest and most valuable VARA licence type.
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 9: INVESTOR TYPE ANALYSIS -->
+<!-- ============================================ -->
+<div class="sec" id="investors">
+  <h2>Section 9 &mdash; Investor Type Analysis</h2>
+
+  <div class="kpi-row" style="margin-bottom:12px;">
+    <div class="kpi"><div class="lbl">Retail + Qualified + Institutional</div><div class="val green">25</div><div class="sub">56% of licensed VASPs</div></div>
+    <div class="kpi"><div class="lbl">Institutional + Qualified Only</div><div class="val">18</div><div class="sub">40% of licensed VASPs</div></div>
+    <div class="kpi"><div class="lbl">Other Combinations</div><div class="val">2</div><div class="sub">4% of licensed VASPs</div></div>
+  </div>
+  <div class="note-box">
+    56% of licensed VASPs can serve retail investors. Retail access is common for Broker-Dealer and Exchange licences but less common for Custody-only or Advisory-only licences.
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SECTION 10: KEY FINDINGS -->
+<!-- ============================================ -->
+<div class="sec" id="findings">
+  <h2>Section 10 &mdash; Key Findings</h2>
+
+  <ol class="findings-list">
+    <li>Only 2 entities hold VA Issuance licences &mdash; Tokinvest (Dec 2024) and Ctrl Alt (May 2025). This remains the most exclusive VARA licence category.</li>
+    <li>Tokinvest's CEO Scott Thiel played a key role in shaping VARA regulations while at DLA Piper, providing the company with deep regulatory expertise.</li>
+    <li>Binance's 25-month timeline from application to full licence is the longest documented case. Most entities take 12&ndash;18 months.</li>
+    <li>Bybit has been in IPA status for 20+ months without progressing to a full licence, demonstrating that IPA does not guarantee final approval.</li>
+    <li>Two IPAs have been withdrawn (WadzPay and MuseTech), confirming that failure during the licensing process is possible.</li>
+    <li>Prypco has the strongest government backing for real estate tokenization, with an official Dubai Land Department partnership for legally recognized fractional property ownership.</li>
+    <li>MANTRA's OM token crash (&minus;90% in hours) did not result in licence revocation, indicating VARA separates market events from regulatory compliance assessments.</li>
+    <li>One Central / DWTC is the dominant crypto hub &mdash; the vast majority of licensed VASPs are located there.</li>
+    <li>Broker-Dealer is the most common licence type (78% of entities), serving as the standard entry-level VARA licence.</li>
+    <li>The market is accelerating &mdash; 13 new licences were issued in H2 2025 and 8 already in Q1 2026.</li>
+  </ol>
+</div>
+
+<div class="footer-note">
+  Data sourced from the VARA public register (vara.ae) and individual entity disclosures. Compiled April 16, 2026.
+</div>
+
+</div><!-- /page-wrap -->
+</body>
+</html>

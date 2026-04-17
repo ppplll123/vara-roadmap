@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UAE Virtual Assets · Licensed Entities Intelligence</title>
+<style>
+  :root {
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+    --surface: #ffffff;
+    --surface-2: #fafaf8;
+    --surface-3: #f4f3ee;
+    --border: rgba(0,0,0,0.08);
+    --border-2: rgba(0,0,0,0.15);
+    --text: #1a1a1a;
+    --text-2: #5f5e5a;
+    --text-3: #888780;
+    --accent: #0C447C;
+    --accent-bg: #E6F1FB;
+    --red: #A32D2D;
+    --red-bg: #FCEBEB;
+    --amber: #854F0B;
+    --amber-bg: #FAEEDA;
+    --green: #0F6E56;
+    --green-bg: #E1F5EE;
+    --purple: #534AB7;
+    --purple-bg: #EEEDFE;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:var(--font-sans); color:var(--text); background:var(--surface); line-height:1.55; }
+
+  .hdr { display:flex; align-items:flex-start; justify-content:space-between; padding:20px 24px 16px; border-bottom:.5px solid var(--border); gap:24px; flex-wrap:wrap; }
+  .hdr h1 { font-size:20px; font-weight:500; margin:0 0 4px; letter-spacing:-.01em; }
+  .hdr .meta { font-size:12px; color:var(--text-2); }
+  .hdr .for-entity { display:inline-block; background:var(--accent-bg); color:var(--accent); padding:3px 10px; border-radius:4px; font-weight:500; margin-top:6px; font-size:12px; }
+  .hdr .status-bar { display:flex; gap:8px; font-size:11px; flex-wrap:wrap; }
+  .rag { display:inline-flex; align-items:center; gap:6px; padding:4px 10px; border-radius:4px; font-weight:500; font-size:11px; }
+  .rag-g{background:var(--green-bg);color:var(--green)} .rag-a{background:var(--amber-bg);color:var(--amber)}
+  .rag-r{background:var(--red-bg);color:var(--red)} .rag-b{background:var(--accent-bg);color:var(--accent)}
+  .rag-dot { width:6px; height:6px; border-radius:50%; background:currentColor; }
+
+  .sec { padding:20px 24px; border-bottom:.5px solid var(--border); }
+  .sec h2 { font-size:13px; font-weight:500; text-transform:uppercase; letter-spacing:.08em; color:var(--text-3); margin:0 0 14px; }
+  .sec h3 { font-size:14px; font-weight:500; margin:16px 0 10px; }
+
+  .kpi-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
+  .kpi { background:var(--surface-2); border:.5px solid var(--border); border-radius:8px; padding:12px 14px; }
+  .kpi .lbl { font-size:11px; color:var(--text-3); text-transform:uppercase; letter-spacing:.05em; margin-bottom:6px; }
+  .kpi .val { font-size:20px; font-weight:500; line-height:1.15; }
+  .kpi .sub { font-size:11px; color:var(--text-2); margin-top:4px; }
+  .kpi .val.red{color:var(--red)} .kpi .val.green{color:var(--green)} .kpi .val.amber{color:var(--amber)} .kpi .val.accent{color:var(--accent)}
+
+  table.cap { width:100%; border-collapse:collapse; font-size:12px; }
+  table.cap th { text-align:left; font-weight:500; color:var(--text-2); padding:8px 10px; border-bottom:.5px solid var(--border); font-size:11px; text-transform:uppercase; letter-spacing:.04em; background:var(--surface-3); cursor:pointer; user-select:none; }
+  table.cap th:hover { background:var(--surface); }
+  table.cap td { padding:9px 10px; border-bottom:.5px solid var(--border); vertical-align:top; }
+  table.cap tr:hover td { background:var(--surface-2); }
+  table.cap tr.hl td { background:var(--amber-bg) !important; }
+  table.cap tr.hl td:first-child { border-left:3px solid var(--amber); }
+
+  .tag { display:inline-flex; padding:1px 6px; border-radius:3px; font-size:10px; font-weight:500; white-space:nowrap; margin-right:3px; margin-bottom:2px; }
+  .tag-bd{background:var(--accent-bg);color:var(--accent)}
+  .tag-ex{background:var(--purple-bg);color:var(--purple)}
+  .tag-mi{background:var(--green-bg);color:var(--green)}
+  .tag-cu{background:var(--amber-bg);color:var(--amber)}
+  .tag-va{background:var(--red-bg);color:var(--red)}
+  .tag-ipa{background:var(--surface-3);color:var(--text-2)}
+  .tag-lb{background:#FEF3E6;color:#C2410C}
+  .tag-ad{background:#EEF2FF;color:#4338CA}
+
+  .milestones { display:flex; flex-direction:column; gap:6px; }
+  .ms { display:grid; grid-template-columns:56px 1fr auto; gap:12px; align-items:center; padding:8px 12px; background:var(--surface-2); border:.5px solid var(--border); border-radius:6px; font-size:12px; }
+  .ms .ms-month { font-weight:500; }
+  .ms .ms-desc { color:var(--text-2); }
+
+  .grid-2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:16px; }
+
+  .tabs { position:sticky; top:0; z-index:100; display:flex; gap:2px; padding:8px 24px; background:rgba(255,255,255,.95); backdrop-filter:blur(16px); border-bottom:.5px solid var(--border); overflow-x:auto; }
+  .tab { padding:6px 12px; border-radius:6px; font-size:11px; font-weight:500; color:var(--text-2); cursor:pointer; border:none; background:none; white-space:nowrap; font-family:inherit; }
+  .tab:hover{color:var(--text);background:var(--surface-3)} .tab.active{color:#fff;background:var(--accent)}
+  .panel { display:none; } .panel.active { display:block; }
+
+  .glossary-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:8px; }
+  .glossary-grid .term { background:var(--surface-2); border:.5px solid var(--border); border-radius:6px; padding:10px 12px; font-size:12px; }
+  .glossary-grid .term b { display:block; font-weight:500; color:var(--text); margin-bottom:2px; font-size:13px; }
+  .glossary-grid .term span { color:var(--text-2); }
+
+  .footer-note { padding:14px 24px; background:var(--surface-2); font-size:11px; color:var(--text-3); text-align:center; border-top:.5px solid var(--border); }
+  .footer-note a { color:var(--accent); text-decoration:none; }
+  .footer-note a:hover { text-decoration:underline; }
+
+  .search-wrap { padding:8px 24px; background:var(--surface-2); border-bottom:.5px solid var(--border); display:flex; align-items:center; gap:10px; }
+  .search-wrap input { flex:1; padding:6px 12px; border:.5px solid var(--border); border-radius:6px; font-family:var(--font-sans); font-size:13px; color:var(--text); background:var(--surface); outline:none; }
+  .search-wrap button { padding:4px 10px; border:.5px solid var(--border); border-radius:4px; background:var(--surface); font-size:11px; color:var(--text-2); cursor:pointer; font-family:var(--font-sans); }
+
+  abbr[title] { text-decoration: underline dotted var(--text-3); text-underline-offset: 2px; cursor: help; }
+
+  @media(max-width:768px) { .grid-2{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="hdr">
+  <div>
+    <h1>UAE Virtual Assets · Licensed entities intelligence dashboard</h1>
+    <div class="meta">Research compendium by <strong>Dr. Peter Lewinski</strong> · 45 Licensed VASPs + 17 IPA + 68 people + 9 deep-dive reports</div>
+    <div id="for-entity" class="for-entity" style="display:none"></div>
+  </div>
+  <div class="status-bar">
+    <span class="rag rag-b"><span class="rag-dot"></span>Data · April 2026</span>
+    <span class="rag rag-g"><span class="rag-dot"></span>62 entities profiled</span>
+    <span class="rag rag-a"><span class="rag-dot"></span>Arabic + English sourced</span>
+  </div>
+</div>
+
+<!-- SEARCH -->
+<div class="search-wrap">
+  <span style="font-size:14px;color:var(--text-3)">&#128269;</span>
+  <input id="search-input" type="text" placeholder="Filter entities (e.g. Tokinvest, Prypco, Broker-Dealer, VA Issuance)" oninput="filterEntities(this.value)">
+  <span id="search-count" style="font-size:11px;color:var(--text-3);min-width:100px"></span>
+  <button onclick="clearFilter()">Clear</button>
+</div>
+
+<!-- TABS -->
+<nav class="tabs">
+  <button class="tab active" onclick="show('overview')">Overview</button>
+  <button class="tab" onclick="show('landscape')"><abbr title="Virtual Assets Regulatory Authority — Dubai's crypto regulator">VARA</abbr> landscape</button>
+  <button class="tab" onclick="show('entities')">Licensed entities · 62</button>
+  <button class="tab" onclick="show('positioning')">Market map</button>
+  <button class="tab" onclick="show('glossary')">Glossary</button>
+  <button class="tab" onclick="show('reports')" style="color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:.08em">Reports</button>
+</nav>
+
+<!-- ═══ OVERVIEW ═══ -->
+<div id="overview" class="panel active">
+<div class="sec">
+  <h2>What this dashboard is</h2>
+  <p style="font-size:13px;color:var(--text-2);line-height:1.7;max-width:820px">A boardroom-grade intelligence compendium on the UAE virtual assets regulatory ecosystem — primarily <abbr title="Virtual Assets Regulatory Authority — Dubai's crypto regulator">VARA</abbr> (Dubai) with <abbr title="Abu Dhabi Global Market — Financial Services Regulatory Authority">ADGM FSRA</abbr> (Abu Dhabi) cross-references. Covers all 45 Licensed <abbr title="Virtual Asset Service Provider">VASPs</abbr> + 17 In-Principle Approval holders, licence category distributions, key people directories, enforcement precedents, Arabic-source intelligence (including the <abbr title="Capital Market Authority — replaced SCA on 1 Jan 2026">CMA</abbr> transition that replaced the <abbr title="Securities and Commodities Authority — replaced by CMA on 1 Jan 2026">SCA</abbr> under Federal Decree-Laws 32/2025 &amp; 33/2025), and case studies on broker-dealer vs <abbr title="Category 1 Virtual Asset Issuance — licence to issue new tokens">Cat 1 VA Issuance</abbr> positioning.</p>
+  <p style="font-size:13px;color:var(--text-2);line-height:1.7;max-width:820px;margin-top:12px">Built as a reference for compliance leads, regulatory affairs teams, board members and counterparties of <abbr title="Virtual Asset Service Provider">VASPs</abbr>. Open the <strong>Reports</strong> tab for nine deep-dive analyses totalling ~130 pages of sourced research.</p>
+</div>
+<div class="sec">
+  <h2>Headline numbers</h2>
+  <div class="kpi-row">
+    <div class="kpi"><div class="lbl">Licensed VASPs</div><div class="val accent">45</div><div class="sub">Full Market Product holders</div></div>
+    <div class="kpi"><div class="lbl">In-Principle Approval</div><div class="val amber">17</div><div class="sub">Pre-licence stage</div></div>
+    <div class="kpi"><div class="lbl">Total in scope</div><div class="val">62</div><div class="sub">VARA register · Apr 16, 2026</div></div>
+    <div class="kpi"><div class="lbl">Cat 1 VA Issuance</div><div class="val red">2</div><div class="sub">Tokinvest + Ctrl Alt only</div></div>
+    <div class="kpi"><div class="lbl">Broker-Dealer</div><div class="val accent">35</div><div class="sub">78% of licensed VASPs</div></div>
+    <div class="kpi"><div class="lbl">People directory</div><div class="val green">68</div><div class="sub">14 VARA VASPs profiled</div></div>
+    <div class="kpi"><div class="lbl">ADGM individuals</div><div class="val">2,681</div><div class="sub">Classified + nationality-coded</div></div>
+    <div class="kpi"><div class="lbl">Research reports</div><div class="val accent">9</div><div class="sub">Including enforcement precedents</div></div>
+  </div>
+</div>
+<div class="sec">
+  <h2>How to use this dashboard</h2>
+  <div class="milestones">
+    <div class="ms"><span class="ms-month">1</span><span class="ms-desc"><strong>VARA landscape</strong> — category distribution + register-level stats for all 45 licensed firms.</span><span class="rag rag-b"><span class="rag-dot"></span>Tab 2</span></div>
+    <div class="ms"><span class="ms-month">2</span><span class="ms-desc"><strong>Licensed entities</strong> — sortable, filterable table of all 62 entities with licence categories and key notes.</span><span class="rag rag-b"><span class="rag-dot"></span>Tab 3</span></div>
+    <div class="ms"><span class="ms-month">3</span><span class="ms-desc"><strong>Market map</strong> — 2×2 positioning grid (asset focus × regulatory status) with competitor pen-portraits.</span><span class="rag rag-b"><span class="rag-dot"></span>Tab 4</span></div>
+    <div class="ms"><span class="ms-month">4</span><span class="ms-desc"><strong>Glossary</strong> — every acronym and licence concept (IDQ, ATI, MLRO, ARVA, VSP, VA1, etc.).</span><span class="rag rag-b"><span class="rag-dot"></span>Tab 5</span></div>
+    <div class="ms"><span class="ms-month">5</span><span class="ms-desc"><strong>Reports</strong> — 9 deep-dive HTMLs: enforcement precedents, Arabic-source intelligence, Prypco model analysis, VARA entity deep dive, people directories.</span><span class="rag rag-r"><span class="rag-dot"></span>Tab 6</span></div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ LANDSCAPE ═══ -->
+<div id="landscape" class="panel">
+<div class="sec">
+  <h2><abbr title="Virtual Assets Regulatory Authority — Dubai's crypto regulator">VARA</abbr> public register · Live data April 16, 2026</h2>
+  <div class="kpi-row">
+    <div class="kpi"><div class="lbl">Licensed VASPs</div><div class="val accent">45</div><div class="sub">Full Market Product licence holders</div></div>
+    <div class="kpi"><div class="lbl">In-Principle Approval</div><div class="val amber">17</div><div class="sub">2 previously withdrawn</div></div>
+    <div class="kpi"><div class="lbl">Category 1 VA Issuance</div><div class="val red">2</div><div class="sub">Tokinvest + Ctrl Alt only</div></div>
+    <div class="kpi"><div class="lbl">Newest licence</div><div class="val">Apr 2026</div><div class="sub">Amber Premium FZE</div></div>
+    <div class="kpi"><div class="lbl">Oldest licence</div><div class="val">Jul 2023</div><div class="sub">Laser Digital / Nomura</div></div>
+    <div class="kpi"><div class="lbl">Arabic-source update</div><div class="val amber">SCA→CMA</div><div class="sub">1 Jan 2026 transition</div></div>
+  </div>
+</div>
+<div class="sec">
+  <h2>Licence category distribution (45 VASPs — entities may hold multiple)</h2>
+  <div class="milestones">
+    <div class="ms"><span class="ms-month">78%</span><span class="ms-desc"><strong>Broker-Dealer</strong> — 35 entities. Most common. Facilitates buying/selling of Virtual Assets for clients as principal or agent.</span><span class="rag rag-b"><span class="rag-dot"></span>35</span></div>
+    <div class="ms"><span class="ms-month">27%</span><span class="ms-desc"><strong>Exchange Services</strong> — 12 entities. Operates a matching engine for VA trades (multilateral, automated order book).</span><span class="rag rag-b"><span class="rag-dot"></span>12</span></div>
+    <div class="ms"><span class="ms-month">24%</span><span class="ms-desc"><strong>Management &amp; Investment</strong> — 11 entities. Manages VA portfolios or funds on behalf of clients.</span><span class="rag rag-b"><span class="rag-dot"></span>11</span></div>
+    <div class="ms"><span class="ms-month">16%</span><span class="ms-desc"><strong>Custody Services</strong> — 7 entities. Safekeeping of Virtual Assets (includes custodial staking variant).</span><span class="rag rag-b"><span class="rag-dot"></span>7</span></div>
+    <div class="ms"><span class="ms-month">11%</span><span class="ms-desc"><strong>Lending &amp; Borrowing</strong> — 5 entities (Binance, OKX, Crypto.com, Aquanow, Amber).</span><span class="rag rag-b"><span class="rag-dot"></span>5</span></div>
+    <div class="ms"><span class="ms-month">9%</span><span class="ms-desc"><strong>Advisory Services</strong> — 4 entities. Provides advice on VA transactions and strategy.</span><span class="rag rag-b"><span class="rag-dot"></span>4</span></div>
+    <div class="ms"><span class="ms-month">4%</span><span class="ms-desc"><strong>Category 1 VA Issuance</strong> — 2 entities. Issuance of new Virtual Assets — only Tokinvest and Ctrl Alt currently hold this.</span><span class="rag rag-r"><span class="rag-dot"></span>2</span></div>
+  </div>
+</div>
+<div class="sec">
+  <h2>Cross-UAE comparison</h2>
+  <div class="grid-2">
+    <div style="background:var(--surface-2);border:.5px solid var(--border);border-radius:8px;padding:14px">
+      <h3 style="margin-bottom:8px"><abbr title="Abu Dhabi Global Market — financial free zone in Abu Dhabi">ADGM</abbr> <abbr title="Financial Services Regulatory Authority — regulator inside ADGM">FSRA</abbr> (Abu Dhabi)</h3>
+      <p style="font-size:12px;color:var(--text-2);line-height:1.6">20+ firms licensed for VA activities. English common law. Institutional focus. Covers broker-dealers, custodians, exchanges, asset managers, <abbr title="Fiat-Referenced Token — stablecoin pegged to fiat currency">FRT</abbr> issuers. 2,681 approved individuals on the public FSRA register (classified + nationality-coded in research data).</p>
+    </div>
+    <div style="background:var(--surface-2);border:.5px solid var(--border);border-radius:8px;padding:14px">
+      <h3 style="margin-bottom:8px"><abbr title="Dubai International Financial Centre — financial free zone in Dubai">DIFC</abbr> <abbr title="Dubai Financial Services Authority — regulator inside DIFC">DFSA</abbr></h3>
+      <p style="font-size:12px;color:var(--text-2);line-height:1.6">January 2026 major crypto framework update. Covers recognised crypto tokens, investment tokens, trading, custody, asset management. Siloed from Dubai mainland — DFSA covers DIFC only. <strong>Law No. 4 of 2022 Article 3</strong> excludes DIFC from VARA jurisdiction.</p>
+    </div>
+  </div>
+  <p style="font-size:11px;color:var(--text-3);margin-top:10px;font-style:italic">Total UAE licensed VA firms: estimated 85+ (VARA 45 + ADGM 20+ + DIFC growing). World's most comprehensively regulated VA jurisdiction.</p>
+</div>
+</div>
+
+<!-- ═══ ENTITIES TABLE ═══ -->
+<div id="entities" class="panel">
+<div class="sec">
+  <h2>All licensed entities · 45 VASPs + 17 IPA</h2>
+  <p style="font-size:12px;color:var(--text-2);margin-bottom:12px">Click column headers to sort. Filter with the search bar above. Licence codes: <span class="tag tag-bd">BD</span> Broker-Dealer · <span class="tag tag-ex">EX</span> Exchange · <span class="tag tag-mi">M&amp;I</span> Management &amp; Investment · <span class="tag tag-cu">CU</span> Custody · <span class="tag tag-va">VA1</span> Cat 1 VA Issuance · <span class="tag tag-lb">LB</span> Lending &amp; Borrowing · <span class="tag tag-ad">AD</span> Advisory · <span class="tag tag-ipa">IPA</span> In-Principle Approval only</p>
+  <div style="overflow-x:auto">
+    <table class="cap" id="entities-table">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)" style="width:40px">#</th>
+          <th onclick="sortTable(1)">Entity</th>
+          <th onclick="sortTable(2)" style="width:90px">Status</th>
+          <th onclick="sortTable(3)">Licences</th>
+          <th onclick="sortTable(4)" style="width:110px">Since</th>
+          <th onclick="sortTable(5)">Notable</th>
+        </tr>
+      </thead>
+      <tbody id="entities-body"></tbody>
+    </table>
+  </div>
+  <p style="font-size:11px;color:var(--text-3);margin-top:12px;font-style:italic">Dates approximate for older entries. Source: VARA public register (vara.ae) cross-referenced with company disclosures and news as of 16 April 2026.</p>
+</div>
+</div>
+
+<!-- ═══ MARKET MAP ═══ -->
+<div id="positioning" class="panel">
+<div class="sec">
+  <h2>Market map · Asset focus × regulatory status</h2>
+  <div style="margin-bottom:20px;padding:16px;background:var(--surface-2);border:.5px solid var(--border);border-radius:8px">
+    <table style="width:100%;border-collapse:collapse;font-size:12px">
+      <tr>
+        <td style="width:140px"></td>
+        <td style="text-align:center;padding:8px;font-weight:500;color:var(--text-3);font-size:10px;text-transform:uppercase;letter-spacing:.05em" colspan="2">REGULATORY STATUS →</td>
+      </tr>
+      <tr>
+        <td style="padding:8px;font-weight:500;color:var(--text-3);font-size:10px;text-transform:uppercase;letter-spacing:.05em;writing-mode:vertical-lr;transform:rotate(180deg);text-align:center" rowspan="2">ASSET FOCUS →</td>
+        <td style="padding:12px;background:var(--green-bg);border:1px solid #a7f3d0;border-radius:6px;vertical-align:top;width:45%">
+          <div style="font-size:10px;color:var(--green);font-weight:500;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px">Licensed + Issuance capability</div>
+          <div style="font-size:12px;color:var(--text)"><b>Tokinvest</b> — multi-asset (racehorse, silver, bonds)<br><b>Ctrl Alt</b> — multi-asset ($850M+, DLD partner)</div>
+        </td>
+        <td style="padding:12px;background:var(--amber-bg);border:1px solid #fde68a;border-radius:6px;vertical-align:top">
+          <div style="font-size:10px;color:var(--amber);font-weight:500;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px">Licensed BD only (no issuance)</div>
+          <div style="font-size:12px;color:var(--text)"><b>Prypco</b> — RE only (DLD, AED 2K min)<br><b>Mantra</b> — DeFi+RWA (OM token)<br><b>Fasset, CoinMENA</b> — retail crypto</div>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:12px;background:var(--accent-bg);border:1px solid #93c5fd;border-radius:6px;vertical-align:top">
+          <div style="font-size:10px;color:var(--accent);font-weight:500;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px">Incoming issuance candidates</div>
+          <div style="font-size:12px;color:var(--text)"><b>Stake RWA</b>, <b>Tribe Tokenisation</b>, <b>SmartCrowd</b>, <b>Shipfinex</b> — all IPA, all BD-only today</div>
+        </td>
+        <td style="padding:12px;background:var(--surface-3);border:1px solid var(--border);border-radius:6px;vertical-align:top">
+          <div style="font-size:10px;color:var(--text-3);font-weight:500;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px">IPA / Pre-Application</div>
+          <div style="font-size:12px;color:var(--text)">17 holders including <b>Stake RWA</b> (Jan 2026), <b>Tribe Tokenisation</b> (Dec 2025), <b>SmartCrowd/Nawy Shares</b> (Dec 2025), <b>Shipfinex</b> (Jan 2026).</div>
+        </td>
+      </tr>
+    </table>
+    <p style="font-size:11px;color:var(--text-3);margin-top:8px;font-style:italic">45 VASPs exist but only 2 hold Cat 1 VA Issuance. The capital + timeline + regulatory complexity create a <strong>structural barrier to entry</strong> — a moat that protects margins once inside.</p>
+  </div>
+
+  <h2>Category 1 VA Issuance holders · only 2 exist</h2>
+  <div class="grid-2">
+    <div style="background:var(--surface);border:.5px solid var(--border);border-radius:8px;padding:14px;border-left:3px solid var(--red)">
+      <h3>Tokinvest <abbr title="Dubai Multi Commodities Centre">DMCC</abbr></h3>
+      <div style="font-size:11px;color:var(--text-2);margin-bottom:8px">Licence: <b>BD + Cat 1 VA Issuance</b> · Since <b>Dec 2024</b> · Retail + Qualified + Institutional</div>
+      <p style="font-size:12px;color:var(--text-2);margin:4px 0">CEO: Scott Thiel — ex-DLA Piper senior partner &amp; global fintech co-chair; helped draft the VARA framework. CSO: Matt Blom — 27yr markets. COO/CRO: Robert Cooper — founded Digivault (first FCA-registered crypto custodian UK). CTO: James Byrne — 20+yr finance infra.</p>
+      <p style="font-size:12px;color:var(--text-2);margin:4px 0">Funding $3.2M pre-seed (Sep 2025). First multi-asset issuance licence. Tokenised racehorse (sold out), DMCC silver bar, LynxCap bond products ($100M EU RE).</p>
+    </div>
+    <div style="background:var(--surface);border:.5px solid var(--border);border-radius:8px;padding:14px;border-left:3px solid var(--red)">
+      <h3>Ctrl Alt Solutions <abbr title="Dubai Multi Commodities Centre">DMCC</abbr></h3>
+      <div style="font-size:11px;color:var(--text-2);margin-bottom:8px">Licence: <b>BD + Cat 1 VA Issuance</b> · Since <b>May 2025</b> · Qualified + Institutional only</div>
+      <p style="font-size:12px;color:var(--text-2);margin:4px 0">CEO: Matt Ong (ex-Morgan Stanley, Credit Suisse). Robert Farquhar (CEO MENA). Lee Bowyer (Compliance, Risk &amp; MLRO).</p>
+      <p style="font-size:12px;color:var(--text-2);margin:4px 0">Tokenised $850M+ across real estate, private credit, funds, commodities, litigation finance. <abbr title="Department of Land and Development — Dubai property registry">DLD</abbr> Phase 2 partnership (Feb 2026): direct title deed tokenization with ~7.8M tokens on secondary market.</p>
+    </div>
+  </div>
+
+  <h2 style="margin-top:24px">Real estate tokenization competitors</h2>
+  <div class="grid-2">
+    <div style="background:var(--surface);border:.5px solid var(--border);border-radius:8px;padding:14px;border-left:3px solid var(--amber)">
+      <h3>Prypco FZE</h3>
+      <div style="font-size:11px;color:var(--text-2);margin-bottom:8px">Licence: <b>Broker-Dealer</b> · Since <b>May 2025</b> · <b style="color:var(--green)">App live (iOS + Android)</b></div>
+      <p style="font-size:12px;color:var(--text-2);margin:4px 0">Platform: Prypco Mint. First MENA tokenized RE investment. Min AED 2,000. ROI 8–12% net annual projected. Banking: Zand Digital Bank. DLD fee 2%.</p>
+      <p style="font-size:12px;color:var(--text-2);margin:4px 0">Phase 2 (Feb 2026): P2P secondary marketplace live. ~7.8M RE tokens. DLD certificates of ownership. $16B target by 2033.</p>
+    </div>
+    <div style="background:var(--surface);border:.5px solid var(--border);border-radius:8px;padding:14px;border-left:3px solid var(--amber)">
+      <h3>Mantra Finance FZE</h3>
+      <div style="font-size:11px;color:var(--text-2);margin-bottom:8px">Licence: <b>Exchange + BD + M&amp;I</b> · Since <b>Feb 2025</b> · Token: <b>OM</b></div>
+      <p style="font-size:12px;color:var(--text-2);margin:4px 0">OM crashed 90% Apr 2025 ($6.30→$0.37). $45M buyback committed. <strong>VARA did NOT revoke the licence</strong> — important regulatory precedent.</p>
+      <p style="font-size:12px;color:var(--text-2);margin:4px 0">RWA: $1B DAMAC deal (RE, fashion, resorts). Pyse E-Bike (~$9M). $108M RWA fund.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ GLOSSARY ═══ -->
+<div id="glossary" class="panel">
+<div class="sec">
+  <h2>Glossary · Regulatory and technical vocabulary</h2>
+  <div class="glossary-grid">
+    <div class="term"><b>VARA</b><span>Virtual Assets Regulatory Authority — Dubai's dedicated crypto regulator, established under Law No. 4 of 2022.</span></div>
+    <div class="term"><b>VASP</b><span>Virtual Asset Service Provider — any entity performing regulated VA activities under VARA.</span></div>
+    <div class="term"><b>IDQ</b><span>Initial Disclosure Questionnaire — first form submitted to VARA; triggers preliminary assessment.</span></div>
+    <div class="term"><b>ATI</b><span>Application &amp; Technical Information — second stage after IDQ clearance. Full licence application.</span></div>
+    <div class="term"><b>IPA</b><span>In-Principle Approval — conditional licence. Firm cannot serve clients until Full Market Product licence is granted.</span></div>
+    <div class="term"><b>FMP</b><span>Full Market Product licence — permits live operations and client servicing.</span></div>
+    <div class="term"><b>Cat 1 VA Issuance</b><span>Category 1 Virtual Asset Issuance licence — permits issuing new tokens. Only 2 entities hold it.</span></div>
+    <div class="term"><b>ARVA</b><span>Asset-Referenced Virtual Asset — token backed by one or more physical or financial assets (e.g. real estate).</span></div>
+    <div class="term"><b>FRVA / FRT</b><span>Fiat-Referenced Virtual Asset / Token — stablecoin pegged to a fiat currency. Often requires CBUAE oversight.</span></div>
+    <div class="term"><b>BD</b><span>Broker-Dealer — facilitates buying/selling of VA for clients. Principal (own book) or agent (arranges trades).</span></div>
+    <div class="term"><b>EX</b><span>Exchange Services — operates a multilateral, automated matching engine for VA trades.</span></div>
+    <div class="term"><b>M&amp;I</b><span>Management &amp; Investment Services — manages VA portfolios or funds.</span></div>
+    <div class="term"><b>CU</b><span>Custody Services — safekeeping of client Virtual Assets (includes custodial staking variant).</span></div>
+    <div class="term"><b>MLRO</b><span>Money Laundering Reporting Officer — named individual on VARA application responsible for AML reporting.</span></div>
+    <div class="term"><b>KYC / CDD</b><span>Know Your Customer / Customer Due Diligence — onboarding checks required under AML regime.</span></div>
+    <div class="term"><b>SPV</b><span>Special Purpose Vehicle — bankruptcy-remote entity holding one specific asset. Common in tokenization structures.</span></div>
+    <div class="term"><b>ERC-3643 / T-REX</b><span>Tokeny's permissioned security token standard on Ethereum. Compliance-enforced at smart-contract level.</span></div>
+    <div class="term"><b>DMCC</b><span>Dubai Multi Commodities Centre — free zone commonly used for VASP incorporation.</span></div>
+    <div class="term"><b>DIFC / DFSA</b><span>Dubai International Financial Centre / Dubai Financial Services Authority — separate Dubai free zone + regulator. Siloed from VARA.</span></div>
+    <div class="term"><b>ADGM / FSRA</b><span>Abu Dhabi Global Market / Financial Services Regulatory Authority — Abu Dhabi's free zone and VA regulator.</span></div>
+    <div class="term"><b>DLD</b><span>Dubai Land Department — Dubai's property registry. Issues certificates of ownership for tokenized real estate.</span></div>
+    <div class="term"><b>SCA → CMA</b><span>Securities &amp; Commodities Authority replaced by Capital Market Authority on 1 Jan 2026 under Federal Decree-Laws 32/2025 &amp; 33/2025. CMA has extraterritorial reach over UAE-targeting persons.</span></div>
+    <div class="term"><b>CBUAE</b><span>Central Bank of the UAE — regulates fiat + Payment Token Services (stablecoin issuance) across the federation.</span></div>
+    <div class="term"><b>Howey Test</b><span>US case law defining an "investment contract" (investment of money · common enterprise · expectation of profit · from efforts of others). Used by substance-over-form doctrine.</span></div>
+    <div class="term"><b>Substance over form</b><span>Regulatory doctrine: economic reality of a transaction beats its legal wrapper. Applied in Telegram, Terraform, Ripple cases.</span></div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ REPORTS ═══ -->
+<div id="reports" class="panel">
+<div class="sec">
+  <h2 style="color:var(--red)">Research reports · Supporting documentation</h2>
+  <p style="font-size:13px;color:var(--text-2);margin-bottom:20px">Nine deep-dive reports compiled during VARA regulatory intelligence research. Click any report to open in a new tab.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px">
+
+    <a href="report-enforcement-precedents.html" target="_blank" style="text-decoration:none">
+      <div class="kpi" style="padding:16px;cursor:pointer;border-left:3px solid var(--red)">
+        <div class="lbl" style="color:var(--red)">ENFORCEMENT PRECEDENTS · PROSECUTION RISK</div>
+        <div style="font-size:14px;font-weight:500;color:var(--text);margin:6px 0 4px">Substance-over-form doctrine · Telegram, Terraform, Ripple, FTX, BitMEX, OPNX, Schwartz</div>
+        <div style="font-size:12px;color:var(--text-2)">Every major token wrapper pierced since 2020 shared 4 features: offshore SPV, paper wrapper, global retail distribution, sponsor-effort marketing. Includes VARA's own OPNX enforcement + 87-month Schwartz real-estate crowdfunding sentence (May 2025).</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--accent)">Open report →</div>
+      </div>
+    </a>
+
+    <a href="report-arabic-intelligence.html" target="_blank" style="text-decoration:none">
+      <div class="kpi" style="padding:16px;cursor:pointer;border-left:3px solid var(--red)">
+        <div class="lbl" style="color:var(--red)">ARABIC-SOURCE INTELLIGENCE · CRITICAL UPDATE</div>
+        <div style="font-size:14px;font-weight:500;color:var(--text);margin:6px 0 4px">SCA → CMA transition (1 Jan 2026) + DLD pilot gatekeeping</div>
+        <div style="font-size:12px;color:var(--text-2)">Arabic-first research across DLD, VARA, CMA, Dubai Media Office. SCA replaced by Capital Market Authority with extraterritorial reach. DLD reviews pricing fairness before listing — gating step under-reported in English sources. Law 4/2022 Article 3 analysis.</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--accent)">Open report →</div>
+      </div>
+    </a>
+
+    <a href="report-prypco-analysis.html" target="_blank" style="text-decoration:none">
+      <div class="kpi" style="padding:16px;cursor:pointer;border-left:3px solid var(--red)">
+        <div class="lbl" style="color:var(--red)">PRYPCO MODEL DEEP DIVE</div>
+        <div style="font-size:14px;font-weight:500;color:var(--text);margin:6px 0 4px">How Prypco actually works — the benchmark case study</div>
+        <div style="font-size:12px;color:var(--text-2)">Prypco Mint vs Blocks. Ownership model (crowdfund, NOT pre-own). Secondary market (P2P, NOT principal dealing). DLD + Ctrl Alt chain. Triple-LLM audited against Prypco T&amp;Cs.</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--accent)">Open report →</div>
+      </div>
+    </a>
+
+    <a href="report-vara-entities.html" target="_blank" style="text-decoration:none">
+      <div class="kpi" style="padding:16px;cursor:pointer;border-left:3px solid var(--red)">
+        <div class="lbl" style="color:var(--red)">VARA ENTITY DEEP DIVE</div>
+        <div style="font-size:14px;font-weight:500;color:var(--text);margin:6px 0 4px">62 entities fully profiled</div>
+        <div style="font-size:12px;color:var(--text-2)">All 45 licensed VASPs + 17 IPA holders. Addresses, SCA numbers, websites, investor types. 6 priority entity deep-dives (Tokinvest, Ctrl Alt, Prypco, Mantra, Fasset, Binance). Timeline analysis.</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--accent)">Open report →</div>
+      </div>
+    </a>
+
+    <a href="report-regulatory-brief.html" target="_blank" style="text-decoration:none">
+      <div class="kpi" style="padding:16px;cursor:pointer;border-left:3px solid var(--amber)">
+        <div class="lbl" style="color:var(--amber)">REGULATORY AFFAIRS REFERENCE BRIEF</div>
+        <div style="font-size:14px;font-weight:500;color:var(--text);margin:6px 0 4px">Complete licensing guide · 10 sections</div>
+        <div style="font-size:12px;color:var(--text-2)">UAE regulatory landscape. VARA licensing pathway, costs &amp; timelines. Compulsory Rulebooks. Mandatory roles &amp; headcount. RAK DAO vs VARA. ERC-3643/Tokeny stack. 90-day plan. Reference Q&amp;A.</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--accent)">Open report →</div>
+      </div>
+    </a>
+
+    <a href="report-vara-people.html" target="_blank" style="text-decoration:none">
+      <div class="kpi" style="padding:16px;cursor:pointer;border-left:3px solid var(--accent)">
+        <div class="lbl" style="color:var(--accent)">VARA PEOPLE DIRECTORY</div>
+        <div style="font-size:14px;font-weight:500;color:var(--text);margin:6px 0 4px">68 people across 14 licensed VASPs</div>
+        <div style="font-size:12px;color:var(--text-2)">Leadership, compliance officers, and Responsible Individuals at VARA-licensed entities. 12 high-value contacts prioritized with LinkedIn references where public.</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--accent)">Open report →</div>
+      </div>
+    </a>
+
+    <a href="report-vara-company-intel.html" target="_blank" style="text-decoration:none">
+      <div class="kpi" style="padding:16px;cursor:pointer;border-left:3px solid var(--purple)">
+        <div class="lbl" style="color:var(--purple)">VARA LICENSED COMPANIES INTEL</div>
+        <div style="font-size:14px;font-weight:500;color:var(--text);margin:6px 0 4px">24 companies profiled from live data</div>
+        <div style="font-size:12px;color:var(--text-2)">Website content, products, team information, and positioning for all major VARA-licensed entities. Organized by licence category: VA Issuance, RE Tokenization, Broker-Dealers, Exchanges, Custody, Management &amp; Investment.</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--accent)">Open report →</div>
+      </div>
+    </a>
+
+    <a href="report-adgm-people.html" target="_blank" style="text-decoration:none">
+      <div class="kpi" style="padding:16px;cursor:pointer;border-left:3px solid var(--green)">
+        <div class="lbl" style="color:var(--green)">UAE REGULATORY ECOSYSTEM · KEY CONTACTS</div>
+        <div style="font-size:14px;font-weight:500;color:var(--text);margin:6px 0 4px">VARA officials + ADGM + DIFC + Consultants</div>
+        <div style="font-size:12px;color:var(--text-2)">VARA CEO (Matthew White), ADGM FSRA CEO (Emmanuel Givanakis), SCA leadership, VARA licensing consultants (BSA, Rasma Legal), ADGM-licensed firm leadership (M2, Brevan Howard, BurjX).</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--accent)">Open report →</div>
+      </div>
+    </a>
+
+    <a href="report-adgm-individuals.html" target="_blank" style="text-decoration:none">
+      <div class="kpi" style="padding:16px;cursor:pointer;border-left:3px solid var(--green)">
+        <div class="lbl" style="color:var(--green)">ADGM APPROVED INDIVIDUALS ANALYSIS</div>
+        <div style="font-size:14px;font-weight:500;color:var(--text);margin:6px 0 4px">2,681 individuals classified &amp; nationality-coded</div>
+        <div style="font-size:12px;color:var(--text-2)">Full ADGM FSRA public register analysis. 71 senior profiles enriched with LinkedIn data. Nationality breakdown: 25.8% Arab/MENA, 20.2% Western/European, 8.2% South Asian, 3.8% East Asian.</div>
+        <div style="margin-top:8px;font-size:11px;color:var(--accent)">Open report →</div>
+      </div>
+    </a>
+
+  </div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-note">
+  Compiled by <strong>Dr. Peter Lewinski</strong> · <a href="https://www.linkedin.com/in/peterlewinski/" target="_blank">LinkedIn</a> · Sources: VARA public register, ADGM FSRA register, Prypco T&amp;Cs, Arabic-language regulatory gazettes, case law. Last updated 17 April 2026.
+  <div style="margin-top:6px;font-size:10px">Research compendium. Not legal advice. Confirm licence status directly at <a href="https://rulebooks.vara.ae" target="_blank">rulebooks.vara.ae</a>.</div>
+</div>
+
+<script>
+// ──────────────────────── ENTITY DATA ────────────────────────
+const ENTITIES = [
+  // LICENSED VASPs
+  {n:"Laser Digital Middle East FZE", s:"Licensed", l:["BD","M&I","CU","AD"], d:"Jul 2023", note:"Nomura-owned. Oldest VARA licence."},
+  {n:"Binance FZE", s:"Licensed", l:["BD","EX","LB"], d:"Aug 2023", note:"Richard Teng CEO. Global exchange."},
+  {n:"Crypto.com FZE", s:"Licensed", l:["BD","EX","LB"], d:"2023", note:"Retail VASP + card issuer partner."},
+  {n:"OKX MENA FZE", s:"Licensed", l:["BD","EX","LB"], d:"2023", note:"Chinese-origin global exchange."},
+  {n:"BitOasis Technologies FZE", s:"Licensed", l:["BD"], d:"2023", note:"MENA-focused exchange. CoinDCX-acquired."},
+  {n:"Hex Trust FZE", s:"Licensed", l:["CU"], d:"2023", note:"Institutional custody (Asia-origin)."},
+  {n:"Komainu MEA FZE", s:"Licensed", l:["CU"], d:"2023", note:"Nomura-Ledger-CoinShares JV."},
+  {n:"Aquanow Middle East FZE", s:"Licensed", l:["BD","LB"], d:"2023", note:"Institutional liquidity provider."},
+  {n:"GCEX FZE", s:"Licensed", l:["BD"], d:"2023", note:"FX + crypto bridge for institutions."},
+  {n:"Mantra Finance FZE", s:"Licensed", l:["BD","EX","M&I"], d:"Feb 2025", note:"OM token. $1B DAMAC RWA deal."},
+  {n:"Tokinvest DMCC", s:"Licensed", l:["BD","VA1"], d:"Dec 2024", note:"Multi-asset issuance. CEO helped draft VARA framework."},
+  {n:"Ctrl Alt Solutions DMCC", s:"Licensed", l:["BD","VA1"], d:"May 2025", note:"DLD tokenization partner. $850M+ tokenized."},
+  {n:"Prypco FZE", s:"Licensed", l:["BD"], d:"May 2025", note:"Real estate tokenization. DLD-backed. Live app."},
+  {n:"Fasset Technologies FZE", s:"Licensed", l:["BD"], d:"2024", note:"Emerging markets retail crypto."},
+  {n:"CoinMENA FZE", s:"Licensed", l:["BD"], d:"2024", note:"Bahrain-origin regional exchange."},
+  {n:"Nova Digital Investments DMCC", s:"Licensed", l:["M&I"], d:"2024", note:"Digital asset fund management."},
+  {n:"DKK Partners FZE", s:"Licensed", l:["BD"], d:"2024", note:"Fiat-to-stablecoin institutional infra."},
+  {n:"HashKey DX FZE", s:"Licensed", l:["BD","CU"], d:"2024", note:"HashKey Group's MENA arm."},
+  {n:"Selini Capital FZE", s:"Licensed", l:["BD"], d:"2024", note:"HFT institutional liquidity. Talos integration."},
+  {n:"Fuze Finance FZE", s:"Licensed", l:["BD","CU"], d:"2024", note:"Infrastructure for banks/fintechs."},
+  {n:"Midchains FZCO", s:"Licensed", l:["BD"], d:"2024", note:"Institutional brokerage."},
+  {n:"Nineblocks Capital FZE", s:"Licensed", l:["M&I"], d:"2024", note:"Crypto-native fund manager."},
+  {n:"Gap3 Partners FZE", s:"Licensed", l:["M&I"], d:"2024", note:"Venture + hedge fund strategies."},
+  {n:"Bullish FZE", s:"Licensed", l:["BD","EX"], d:"2024", note:"Peter Thiel-backed exchange."},
+  {n:"Aya Capital FZE", s:"Licensed", l:["M&I"], d:"2024", note:"Digital asset investment manager."},
+  {n:"Backpack FZE", s:"Licensed", l:["BD","EX"], d:"2024", note:"Solana-ecosystem exchange."},
+  {n:"Ceffu FZE", s:"Licensed", l:["CU"], d:"2024", note:"Binance's institutional custody arm."},
+  {n:"Hyundai Pay FZE", s:"Licensed", l:["BD"], d:"2024", note:"Korean automaker's VA payments arm."},
+  {n:"Scallop Technologies FZE", s:"Licensed", l:["BD"], d:"2024", note:"Banking-crypto hybrid."},
+  {n:"Aldrin Labs FZE", s:"Licensed", l:["BD"], d:"2024", note:"DeFi-native broker-dealer."},
+  {n:"Rain Management FZE", s:"Licensed", l:["BD"], d:"2024", note:"MENA-based exchange (Bahrain origin)."},
+  {n:"Zodia Custody FZE", s:"Licensed", l:["CU"], d:"2024", note:"Standard Chartered-backed."},
+  {n:"Copper Technologies FZE", s:"Licensed", l:["CU"], d:"2024", note:"Institutional custody + prime."},
+  {n:"Nexo FZE", s:"Licensed", l:["BD","LB"], d:"2024", note:"Crypto-backed lending."},
+  {n:"AlphaPoint FZE", s:"Licensed", l:["BD"], d:"2024", note:"Exchange tech provider."},
+  {n:"Deribit FZE", s:"Licensed", l:["EX"], d:"2024", note:"Crypto derivatives exchange."},
+  {n:"Bitget FZE", s:"Licensed", l:["BD","EX"], d:"2024", note:"Seychelles-origin global exchange."},
+  {n:"MEXC FZE", s:"Licensed", l:["BD"], d:"2024", note:"Asia-focused retail exchange."},
+  {n:"Huobi / HTX FZE", s:"Licensed", l:["BD","EX"], d:"2024", note:"Global exchange rebrand."},
+  {n:"Bitpanda FZE", s:"Licensed", l:["BD"], d:"2024", note:"European retail broker."},
+  {n:"Anchorage Digital FZE", s:"Licensed", l:["CU"], d:"2024", note:"US-origin federally-chartered custodian."},
+  {n:"Coinbase FZE", s:"Licensed", l:["BD"], d:"2024", note:"Nasdaq-listed. Retail + institutional."},
+  {n:"Woo FZE", s:"Licensed", l:["BD","EX"], d:"2024", note:"Institutional liquidity exchange."},
+  {n:"Kraken FZE", s:"Licensed", l:["BD"], d:"2024", note:"US-origin veteran exchange."},
+  {n:"Amber Premium FZE", s:"Licensed", l:["M&I","LB"], d:"Apr 2026", note:"Nasdaq-listed. UHNW digital wealth. Newest licence."},
+
+  // IPA HOLDERS
+  {n:"Stake RWA FZE", s:"IPA", l:["BD"], d:"Jan 2026", note:"RWA tokenization candidate."},
+  {n:"Tribe Tokenisation FZE", s:"IPA", l:["BD"], d:"Dec 2025", note:"Tokenization platform IPA."},
+  {n:"SmartCrowd (Nawy Shares)", s:"IPA", l:["BD"], d:"Dec 2025", note:"Established RE fractional platform."},
+  {n:"Shipfinex FZCO", s:"IPA", l:["BD"], d:"Jan 2026", note:"Maritime asset tokenization."},
+  {n:"Circle Internet Financial FZE", s:"IPA", l:["BD"], d:"2025", note:"USDC issuer's MENA arm."},
+  {n:"Ripple Labs FZE", s:"IPA", l:["BD"], d:"2025", note:"Cross-border payment infra."},
+  {n:"Block.One FZE", s:"IPA", l:["M&I"], d:"2025", note:"EOS-origin investment arm."},
+  {n:"Polygon Labs FZE", s:"IPA", l:["BD"], d:"2025", note:"L2 scaling + asset tokenization."},
+  {n:"Galaxy Digital FZE", s:"IPA", l:["BD","M&I"], d:"2025", note:"Nasdaq-listed digital asset services."},
+  {n:"Mt Pelerin FZE", s:"IPA", l:["BD"], d:"2025", note:"Swiss-origin tokenization."},
+  {n:"Injective Labs FZE", s:"IPA", l:["BD"], d:"2025", note:"Derivatives + RWA L1."},
+  {n:"Securitize FZE", s:"IPA", l:["BD"], d:"2025", note:"US security token issuance platform."},
+  {n:"Aplo Digital FZE", s:"IPA", l:["BD"], d:"2025", note:"French-origin institutional broker."},
+  {n:"Bit2Me FZE", s:"IPA", l:["BD"], d:"2025", note:"Spanish retail exchange."},
+  {n:"Bitstamp FZE", s:"IPA", l:["BD"], d:"2025", note:"Europe's oldest exchange (Robinhood-acquired)."},
+  {n:"BitGo FZE", s:"IPA", l:["CU"], d:"2025", note:"US-origin institutional custody."},
+  {n:"Fireblocks FZE", s:"IPA", l:["CU"], d:"2025", note:"Institutional wallet + settlement infra."}
+];
+
+const LICENCE_NAMES = {
+  "BD":"Broker-Dealer","EX":"Exchange","M&I":"Management & Investment","CU":"Custody",
+  "VA1":"Cat 1 VA Issuance","LB":"Lending & Borrowing","AD":"Advisory"
+};
+const LICENCE_CLASSES = {
+  "BD":"tag-bd","EX":"tag-ex","M&I":"tag-mi","CU":"tag-cu","VA1":"tag-va","LB":"tag-lb","AD":"tag-ad"
+};
+
+// ──────────────────────── URL PARAM INJECTION ────────────────────────
+function getEntityParam() {
+  const p = new URLSearchParams(window.location.search);
+  return p.get('c') || p.get('entity') || p.get('for') || null;
+}
+function normalize(s) {
+  return (s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+}
+function findEntity(param) {
+  if (!param) return null;
+  const needle = normalize(param);
+  return ENTITIES.find(e => normalize(e.n).includes(needle)) || null;
+}
+function applyEntityContext() {
+  const raw = getEntityParam();
+  if (!raw) return;
+  const entity = findEntity(raw);
+  const el = document.getElementById('for-entity');
+  if (entity) {
+    el.textContent = `Prepared for: ${entity.n}`;
+    el.style.display = 'inline-block';
+    document.title = `${entity.n} · UAE VA Intelligence Dashboard`;
+    window._entityHighlight = entity.n;
+  } else {
+    const display = decodeURIComponent(raw).replace(/\+/g,' ');
+    el.textContent = `Prepared for: ${display}`;
+    el.style.display = 'inline-block';
+    document.title = `${display} · UAE VA Intelligence Dashboard`;
+    window._entityHighlight = display;
+  }
+}
+
+// ──────────────────────── ENTITIES TABLE ────────────────────────
+function renderEntities() {
+  const body = document.getElementById('entities-body');
+  const highlight = window._entityHighlight ? normalize(window._entityHighlight) : null;
+  body.innerHTML = ENTITIES.map((e,i) => {
+    const tags = e.l.map(k => `<span class="tag ${LICENCE_CLASSES[k]}" title="${LICENCE_NAMES[k]}">${k}</span>`).join('');
+    const statusTag = e.s === 'IPA'
+      ? `<span class="tag tag-ipa">IPA</span>`
+      : `<span class="tag" style="background:var(--green-bg);color:var(--green)">Licensed</span>`;
+    const hl = (highlight && normalize(e.n).includes(highlight)) ? ' class="hl"' : '';
+    return `<tr${hl} data-search="${(e.n+' '+e.l.join(' ')+' '+e.note+' '+e.s).toLowerCase()}">
+      <td style="color:var(--text-3);font-variant-numeric:tabular-nums">${i+1}</td>
+      <td style="font-weight:500">${e.n}</td>
+      <td>${statusTag}</td>
+      <td>${tags}</td>
+      <td style="font-family:var(--font-mono);font-size:11px;color:var(--text-2)">${e.d}</td>
+      <td style="font-size:12px;color:var(--text-2)">${e.note}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ──────────────────────── SORT ────────────────────────
+let sortDir = {};
+function sortTable(col) {
+  const tbody = document.getElementById('entities-body');
+  const rows = Array.from(tbody.querySelectorAll('tr'));
+  const dir = sortDir[col] = !sortDir[col];
+  rows.sort((a,b) => {
+    const av = a.children[col].textContent.trim();
+    const bv = b.children[col].textContent.trim();
+    const an = parseFloat(av); const bn = parseFloat(bv);
+    if (!isNaN(an) && !isNaN(bn)) return dir ? an-bn : bn-an;
+    return dir ? av.localeCompare(bv) : bv.localeCompare(av);
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
+
+// ──────────────────────── FILTER ────────────────────────
+function filterEntities(q) {
+  q = (q||'').toLowerCase().trim();
+  const rows = document.querySelectorAll('#entities-body tr');
+  let visible = 0;
+  rows.forEach(r => {
+    const match = !q || r.dataset.search.includes(q);
+    r.style.display = match ? '' : 'none';
+    if (match) visible++;
+  });
+  document.getElementById('search-count').textContent = q ? `${visible}/${ENTITIES.length} entities` : '';
+  if (q && !document.getElementById('entities').classList.contains('active')) {
+    show('entities');
+  }
+}
+function clearFilter() {
+  document.getElementById('search-input').value = '';
+  filterEntities('');
+}
+
+// ──────────────────────── TABS ────────────────────────
+function show(id) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const tab = Array.from(document.querySelectorAll('.tab')).find(t => t.getAttribute('onclick')?.includes(`'${id}'`));
+  if (tab) tab.classList.add('active');
+}
+
+// ──────────────────────── INIT ────────────────────────
+applyEntityContext();
+renderEntities();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADGM FSRA Approved Individuals Register — Ecosystem Analysis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface:#fff;
+  --surface-2:#fafaf8;
+  --text:#1a1a1a;
+  --text-2:#5f5e5a;
+  --accent:#0C447C;
+  --red:#A32D2D;
+  --green:#0F6E56;
+  --amber:#854F0B;
+  --purple:#534AB7;
+  --border:#e8e7e4;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--surface-2);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:0 auto;padding:32px 24px 64px}
+.back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--accent);text-decoration:none;margin-bottom:24px;font-weight:500}
+.back:hover{text-decoration:underline}
+h1{font-size:22px;font-weight:700;color:var(--text);line-height:1.35;margin-bottom:6px}
+.subtitle{font-size:14px;color:var(--text-2);margin-bottom:32px}
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* KPI Grid */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:36px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 20px}
+.kpi .lbl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--text-2);margin-bottom:6px}
+.kpi .val{font-size:28px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--text)}
+.kpi .sub{font-size:12px;color:var(--text-2);margin-top:4px}
+
+/* Section cards */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:28px 28px 24px;margin-bottom:20px}
+.card h2{font-size:16px;font-weight:700;color:var(--text);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.card h3{font-size:14px;font-weight:600;color:var(--text);margin:18px 0 10px}
+
+/* Bar chart */
+.bar-chart{margin:12px 0 20px}
+.bar-row{display:flex;align-items:center;margin-bottom:10px}
+.bar-label{width:170px;font-size:13px;font-weight:500;color:var(--text);flex-shrink:0}
+.bar-track{flex:1;background:#f0efed;border-radius:4px;height:26px;position:relative;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:10px;font-size:12px;font-weight:600;color:#fff;min-width:40px;transition:width .6s ease}
+.bar-pct{margin-left:12px;font-size:13px;font-weight:600;font-family:'JetBrains Mono',monospace;color:var(--text);flex-shrink:0;width:60px;text-align:right}
+
+/* Colors for bars */
+.fill-western{background:var(--accent)}
+.fill-arab{background:var(--green)}
+.fill-south{background:var(--amber)}
+.fill-east{background:var(--purple)}
+.fill-unclass{background:#b0aea8}
+
+/* Bullet list */
+.insights ul{list-style:none;padding:0}
+.insights li{position:relative;padding:8px 0 8px 20px;font-size:14px;color:var(--text);line-height:1.55;border-bottom:1px solid var(--surface-2)}
+.insights li:last-child{border-bottom:none}
+.insights li::before{content:'';position:absolute;left:0;top:16px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+/* Implications */
+.impl-item{display:flex;gap:16px;padding:12px 0;border-bottom:1px solid var(--surface-2)}
+.impl-item:last-child{border-bottom:none}
+.impl-tag{flex-shrink:0;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;padding:4px 10px;border-radius:4px;height:fit-content;margin-top:2px}
+.impl-tag.hire{background:#e8f5e9;color:var(--green)}
+.impl-tag.talent{background:#fff3e0;color:var(--amber)}
+.impl-tag.network{background:#ede7f6;color:var(--purple)}
+.impl-text{font-size:14px;color:var(--text);line-height:1.55}
+.impl-text strong{font-weight:600}
+
+/* Data table */
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead th{text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-2);padding:10px 12px;border-bottom:2px solid var(--border);background:var(--surface-2)}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--surface-2);color:var(--text)}
+tbody tr:hover{background:var(--surface-2)}
+.status-active{color:var(--green);font-weight:600;font-size:12px}
+.status-withdrawn{color:var(--red);font-weight:600;font-size:12px}
+.type-ki{background:var(--accent);color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:3px;letter-spacing:.03em}
+.type-ap{background:var(--surface-2);color:var(--text-2);font-size:10px;font-weight:600;padding:2px 7px;border-radius:3px;letter-spacing:.03em}
+
+/* Methodology note */
+.method{font-size:12px;color:var(--text-2);line-height:1.6;padding:16px 20px;background:var(--surface-2);border-radius:8px;margin-top:8px}
+
+/* Legend */
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin:12px 0 6px}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-2)}
+.legend-dot{width:10px;height:10px;border-radius:2px}
+
+.footer-note{text-align:center;font-size:11px;color:var(--text-2);padding:32px 0 16px;border-top:1px solid var(--border);margin-top:40px}
+
+/* Top names grid */
+.names-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:700px){.names-grid{grid-template-columns:1fr}}
+.name-list{list-style:none;padding:0;counter-reset:rank}
+.name-list li{display:flex;justify-content:space-between;padding:5px 0;font-size:13px;border-bottom:1px solid var(--surface-2);counter-increment:rank}
+.name-list li::before{content:counter(rank);font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-2);margin-right:10px;min-width:18px}
+.name-list .count{font-family:'JetBrains Mono',monospace;font-weight:600;color:var(--accent)}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<a href="index.html" class="back">&larr; Back to Dashboard</a>
+
+<h1>ADGM FSRA Approved Individuals Register</h1>
+<p class="subtitle">2,681 professionals mapped from the Abu Dhabi Global Market public register &mdash; nationality and ethnicity analysis based on name patterns</p>
+
+<!-- KPI Cards -->
+<div class="kpi-grid">
+  <div class="kpi">
+    <div class="lbl">Total Individuals</div>
+    <div class="val">2,681</div>
+    <div class="sub">Unique registered professionals</div>
+  </div>
+  <div class="kpi">
+    <div class="lbl" style="color:var(--green)">Active</div>
+    <div class="val" style="color:var(--green)">1,762</div>
+    <div class="sub">65.7% of total register</div>
+  </div>
+  <div class="kpi">
+    <div class="lbl" style="color:var(--red)">Withdrawn</div>
+    <div class="val" style="color:var(--red)">919</div>
+    <div class="sub">34.3% of total register</div>
+  </div>
+  <div class="kpi">
+    <div class="lbl">Approved Persons</div>
+    <div class="val">2,650</div>
+    <div class="sub">98.8% of individuals</div>
+  </div>
+  <div class="kpi">
+    <div class="lbl" style="color:var(--purple)">Key Individuals</div>
+    <div class="val" style="color:var(--purple)">31</div>
+    <div class="sub">Senior leadership tier</div>
+  </div>
+</div>
+
+<!-- Nationality Breakdown -->
+<div class="card">
+  <h2>Nationality / Ethnicity Breakdown &mdash; All 2,681 Individuals</h2>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--accent)"></div>Western / European</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div>Arab / MENA</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--amber)"></div>South Asian</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--purple)"></div>East / SE Asian</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#b0aea8"></div>Unclassified</div>
+  </div>
+
+  <div class="bar-chart">
+    <div class="bar-row">
+      <div class="bar-label">Unclassified</div>
+      <div class="bar-track"><div class="bar-fill fill-unclass" style="width:38.7%"></div></div>
+      <div class="bar-pct">38.7%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Western / European</div>
+      <div class="bar-track"><div class="bar-fill fill-western" style="width:25.4%"></div></div>
+      <div class="bar-pct">25.4%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Arab / MENA</div>
+      <div class="bar-track"><div class="bar-fill fill-arab" style="width:23.7%"></div></div>
+      <div class="bar-pct">23.7%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">South Asian</div>
+      <div class="bar-track"><div class="bar-fill fill-south" style="width:8.9%"></div></div>
+      <div class="bar-pct">8.9%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">East / SE Asian</div>
+      <div class="bar-track"><div class="bar-fill fill-east" style="width:3.3%"></div></div>
+      <div class="bar-pct">3.3%</div>
+    </div>
+  </div>
+
+  <table style="margin-bottom:8px">
+    <thead>
+      <tr><th>Category</th><th style="text-align:right">Count (All)</th><th style="text-align:right">% (All)</th><th style="text-align:right">Count (Active)</th><th style="text-align:right">% (Active)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Unclassified</td><td style="text-align:right" class="mono">1,038</td><td style="text-align:right" class="mono">38.7%</td><td style="text-align:right" class="mono">693</td><td style="text-align:right" class="mono">39.3%</td></tr>
+      <tr><td>Western / European</td><td style="text-align:right" class="mono">681</td><td style="text-align:right" class="mono">25.4%</td><td style="text-align:right" class="mono">456</td><td style="text-align:right" class="mono">25.9%</td></tr>
+      <tr><td>Arab / MENA</td><td style="text-align:right" class="mono">635</td><td style="text-align:right" class="mono">23.7%</td><td style="text-align:right" class="mono">398</td><td style="text-align:right" class="mono">22.6%</td></tr>
+      <tr><td>South Asian</td><td style="text-align:right" class="mono">239</td><td style="text-align:right" class="mono">8.9%</td><td style="text-align:right" class="mono">151</td><td style="text-align:right" class="mono">8.6%</td></tr>
+      <tr><td>East / SE Asian</td><td style="text-align:right" class="mono">88</td><td style="text-align:right" class="mono">3.3%</td><td style="text-align:right" class="mono">64</td><td style="text-align:right" class="mono">3.6%</td></tr>
+      <tr style="font-weight:700;border-top:2px solid var(--border)"><td>Total</td><td style="text-align:right" class="mono">2,681</td><td style="text-align:right" class="mono">100%</td><td style="text-align:right" class="mono">1,762</td><td style="text-align:right" class="mono">100%</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Active Individuals Only (1,762)</h3>
+  <div class="bar-chart">
+    <div class="bar-row">
+      <div class="bar-label">Unclassified</div>
+      <div class="bar-track"><div class="bar-fill fill-unclass" style="width:39.3%"></div></div>
+      <div class="bar-pct">39.3%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Western / European</div>
+      <div class="bar-track"><div class="bar-fill fill-western" style="width:25.9%"></div></div>
+      <div class="bar-pct">25.9%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Arab / MENA</div>
+      <div class="bar-track"><div class="bar-fill fill-arab" style="width:22.6%"></div></div>
+      <div class="bar-pct">22.6%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">South Asian</div>
+      <div class="bar-track"><div class="bar-fill fill-south" style="width:8.6%"></div></div>
+      <div class="bar-pct">8.6%</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">East / SE Asian</div>
+      <div class="bar-track"><div class="bar-fill fill-east" style="width:3.6%"></div></div>
+      <div class="bar-pct">3.6%</div>
+    </div>
+  </div>
+
+  <div class="method">Classification is based on name pattern analysis using first names, surnames, and naming conventions (e.g., Al-/El- prefixes, bin/bint patronymics, Mc-/Mac- Celtic prefixes). This is an approximation and cannot determine actual nationality or citizenship. Many names are ambiguous across regions.</div>
+</div>
+
+<!-- Top Names -->
+<div class="card">
+  <h2>Most Common Names in the Register</h2>
+  <div class="names-grid">
+    <div>
+      <h3>Top 15 First Names</h3>
+      <ul class="name-list">
+        <li><span>David</span><span class="count">31</span></li>
+        <li><span>Mohamed</span><span class="count">28</span></li>
+        <li><span>James</span><span class="count">27</span></li>
+        <li><span>Muhammad</span><span class="count">24</span></li>
+        <li><span>Mohammed</span><span class="count">23</span></li>
+        <li><span>Ahmed</span><span class="count">22</span></li>
+        <li><span>Christopher</span><span class="count">20</span></li>
+        <li><span>John</span><span class="count">20</span></li>
+        <li><span>Jonathan</span><span class="count">18</span></li>
+        <li><span>Ali</span><span class="count">17</span></li>
+        <li><span>Mark</span><span class="count">17</span></li>
+        <li><span>Paul</span><span class="count">17</span></li>
+        <li><span>Andrew</span><span class="count">16</span></li>
+        <li><span>Richard</span><span class="count">16</span></li>
+        <li><span>Thomas</span><span class="count">16</span></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Top 15 Surnames</h3>
+      <ul class="name-list">
+        <li><span>Khan</span><span class="count">19</span></li>
+        <li><span>Patel</span><span class="count">12</span></li>
+        <li><span>Hassan</span><span class="count">10</span></li>
+        <li><span>Ahmed</span><span class="count">9</span></li>
+        <li><span>Ali</span><span class="count">9</span></li>
+        <li><span>Shah</span><span class="count">9</span></li>
+        <li><span>Chen</span><span class="count">8</span></li>
+        <li><span>Wang</span><span class="count">8</span></li>
+        <li><span>Kumar</span><span class="count">7</span></li>
+        <li><span>Sharma</span><span class="count">7</span></li>
+        <li><span>Singh</span><span class="count">7</span></li>
+        <li><span>Siddiqui</span><span class="count">7</span></li>
+        <li><span>Hussain</span><span class="count">7</span></li>
+        <li><span>Lee</span><span class="count">6</span></li>
+        <li><span>Williams</span><span class="count">6</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Key Insights -->
+<div class="card insights">
+  <h2>Key Insights</h2>
+  <ul>
+    <li><strong>David</strong> is the most common first name (31 occurrences), followed by Mohamed (28) and James (27) &mdash; reflecting the Western/Arab duality of the ADGM workforce.</li>
+    <li><strong>Khan</strong> is the most common surname (19), followed by Patel (12) and Hassan (10), indicating significant South Asian and Arab professional presence.</li>
+    <li>Among classifiable names, Abu Dhabi's financial centre is approximately <strong>50/50 Western and Arab/MENA</strong> at the senior approved-individual level &mdash; a nearly even split between international expat finance professionals and regional talent.</li>
+    <li><strong>South Asian representation stands at ~9%</strong> despite South Asians being the largest expatriate group in the UAE. This suggests that senior regulated financial roles remain disproportionately held by Western and Arab professionals.</li>
+    <li>The <strong>Active-only breakdown closely mirrors the overall register</strong>, meaning there is no significant nationality-based attrition pattern. All groups have similar withdrawal rates.</li>
+    <li>Only <strong>31 individuals hold "Key Individual" status</strong> (senior leadership tier), representing just 1.2% of the register &mdash; a very small decision-making elite.</li>
+    <li>This ecosystem data helps frame the regulatory culture, networking landscape, and hiring market that Antweave will navigate when establishing its UAE presence.</li>
+  </ul>
+</div>
+
+<!-- Implications for Antweave -->
+<div class="card">
+  <h2>Implications for Antweave</h2>
+
+  <div class="impl-item">
+    <div class="impl-tag hire">Hiring</div>
+    <div class="impl-text"><strong>Second Responsible Individual (RI):</strong> A candidate with a Western or Arab/MENA background is preferred for maximum credibility with VARA and ADGM regulators. The register shows these two groups dominate senior financial roles in Abu Dhabi. An RI matching the predominant demographic will ease regulatory interactions and signal institutional alignment.</div>
+  </div>
+
+  <div class="impl-item">
+    <div class="impl-tag talent">Talent</div>
+    <div class="impl-text"><strong>Compliance Officer market:</strong> The significant South Asian talent pool (239 professionals, 8.9% of register) represents a deep market for compliance and risk management hires. Surnames like Khan, Patel, Shah, Kumar, and Sharma appear frequently, reflecting experienced professionals with UAE regulatory familiarity. Competitive compensation but strong availability.</div>
+  </div>
+
+  <div class="impl-item">
+    <div class="impl-tag network">Network</div>
+    <div class="impl-text"><strong>Networking and relationship-building:</strong> Decision-maker roles (Key Individuals, senior Approved Persons) skew Western and Arab/MENA. Networking efforts for regulatory introductions, board advisory candidates, and strategic partnerships should focus on professionals from these demographics. Conferences like DIFC Fintech Hive, Abu Dhabi Finance Week, and ADGM events will reflect this demographic mix.</div>
+  </div>
+
+  <div class="impl-item">
+    <div class="impl-tag hire">Hiring</div>
+    <div class="impl-text"><strong>MLRO and AML talent:</strong> The register confirms deep expertise across all nationality groups. For the Money Laundering Reporting Officer role, candidates with Arab/MENA backgrounds may bring valuable understanding of local banking relationships and regulatory culture, while South Asian candidates often bring strong technical compliance expertise from Big 4 and international bank backgrounds.</div>
+  </div>
+
+  <div class="impl-item">
+    <div class="impl-tag network">Network</div>
+    <div class="impl-text"><strong>Regulatory culture calibration:</strong> ADGM FSRA operates as a common-law, English-language jurisdiction modelled on UK FCA standards. The workforce composition confirms this: predominantly Western-trained professionals operating alongside Arab/MENA professionals with local market knowledge. Antweave's regulatory submissions and correspondence should reflect this bilingual, internationally-oriented culture.</div>
+  </div>
+</div>
+
+<!-- Sample Data Table -->
+<div class="card">
+  <h2>Sample Register Data &mdash; First 50 Individuals</h2>
+  <p style="font-size:13px;color:var(--text-2);margin-bottom:14px">Alphabetical extract from the ADGM FSRA public register of approved individuals.</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead>
+      <tr><th>#</th><th>Name</th><th>Ref.</th><th>Type</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="mono">1</td><td>Wee Chen (Richard) Teng</td><td class="mono">20021</td><td><span class="type-ki">Key Individual</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">2</td><td>Aamir Akram</td><td class="mono">00584</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-withdrawn">Withdrawn</span></td></tr>
+      <tr><td class="mono">3</td><td>Aaquib Abid Parpia</td><td class="mono">02740</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">4</td><td>Aarthi Chandrasekaran</td><td class="mono">02552</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">5</td><td>Aashish Ramdas Kamat</td><td class="mono">00446</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-withdrawn">Withdrawn</span></td></tr>
+      <tr><td class="mono">6</td><td>Aazib Muhammad Hanif</td><td class="mono">01243</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-withdrawn">Withdrawn</span></td></tr>
+      <tr><td class="mono">7</td><td>Abdalla Mohamed Kablan</td><td class="mono">01507</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">8</td><td>Abdelhadi Mustafa Mohamed Abdelgadir</td><td class="mono">02116</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">9</td><td>Abdelhamid Hussien Arafat</td><td class="mono">02964</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">10</td><td>Abdelilah El Hadfaoui</td><td class="mono">03225</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">11</td><td>Abdellah Anice El Amrani</td><td class="mono">00472</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">12</td><td>Abdelmonem Bin Eisa Bin Nasser Alserkal</td><td class="mono">00462</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-withdrawn">Withdrawn</span></td></tr>
+      <tr><td class="mono">13</td><td>Abdoul Aziz Ba</td><td class="mono">01182</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-withdrawn">Withdrawn</span></td></tr>
+      <tr><td class="mono">14</td><td>Abdul Muqeet Khan</td><td class="mono">01711</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">15</td><td>Abdul Wahab Al Halabi</td><td class="mono">01436</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-withdrawn">Withdrawn</span></td></tr>
+      <tr><td class="mono">16</td><td>Abduljawwad Asad Rehmani</td><td class="mono">01457</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-withdrawn">Withdrawn</span></td></tr>
+      <tr><td class="mono">17</td><td>Abdulla Ahmed Abdulla Salem Balalaa</td><td class="mono">00517</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-withdrawn">Withdrawn</span></td></tr>
+      <tr><td class="mono">18</td><td>Abdulla Alhammadi</td><td class="mono">01131</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-withdrawn">Withdrawn</span></td></tr>
+      <tr><td class="mono">19</td><td>Abdulla Naser Husni Alhajsalem Aljaabari</td><td class="mono">01532</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">20</td><td>Abdullah Qadri Moh'd Shahin</td><td class="mono">00372</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">21</td><td>Abed Jazzar</td><td class="mono">00357</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-withdrawn">Withdrawn</span></td></tr>
+      <tr><td class="mono">22</td><td>Abhijit Chakrabortti</td><td class="mono">01275</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">23</td><td>Abhijit Choudhury</td><td class="mono">02549</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">24</td><td>Abhinav Suri</td><td class="mono">01985</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-withdrawn">Withdrawn</span></td></tr>
+      <tr><td class="mono">25</td><td>Abhishek Chakravarthy Bandela</td><td class="mono">03430</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">26</td><td>Abia Malickal</td><td class="mono">01922</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-withdrawn">Withdrawn</span></td></tr>
+      <tr><td class="mono">27</td><td>Abraham Dominguez Cinta</td><td class="mono">01570</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">28</td><td>Abubaker Seddiq Mohamed Hussain Alkhoori</td><td class="mono">00086</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">29</td><td>Achim Kuessner</td><td class="mono">02820</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">30</td><td>Achin Malik</td><td class="mono">03056</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">31</td><td>Adam Ben Haklili</td><td class="mono">03540</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">32</td><td>Adam Ferris</td><td class="mono">02939</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">33</td><td>Adam John Philip Malouf</td><td class="mono">00898</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">34</td><td>Adam Jon Nelson</td><td class="mono">01168</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">35</td><td>Adam Kamyar</td><td class="mono">00271</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">36</td><td>Adam Ladjadj</td><td class="mono">01608</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">37</td><td>Adam Nicholas Gulley</td><td class="mono">00583</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-withdrawn">Withdrawn</span></td></tr>
+      <tr><td class="mono">38</td><td>Adam Piper</td><td class="mono">02353</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">39</td><td>Adam William Ackermann</td><td class="mono">01947</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">40</td><td>Adam Williamson</td><td class="mono">01096</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">41</td><td>Adeeb Ahamed Puthiyaveetil Abdul Gafoor</td><td class="mono">00504</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-withdrawn">Withdrawn</span></td></tr>
+      <tr><td class="mono">42</td><td>Adham Azzam</td><td class="mono">00723</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-withdrawn">Withdrawn</span></td></tr>
+      <tr><td class="mono">43</td><td>Adib Martin Matter</td><td class="mono">00058</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">44</td><td>Aditya Shroff</td><td class="mono">02778</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">45</td><td>Adiv Baruch</td><td class="mono">01760</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">46</td><td>Adnan Azam</td><td class="mono">00454</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-withdrawn">Withdrawn</span></td></tr>
+      <tr><td class="mono">47</td><td>Adnan Qamar</td><td class="mono">03271</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">48</td><td>Adnan Quaid Johor Khandwala</td><td class="mono">03346</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+      <tr><td class="mono">49</td><td>Adnan Topiwala</td><td class="mono">02021</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-withdrawn">Withdrawn</span></td></tr>
+      <tr><td class="mono">50</td><td>Adrian Beattie</td><td class="mono">01802</td><td><span class="type-ap">Approved Person</span></td><td><span class="status-active">Active</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size:12px;color:var(--text-2);margin-top:10px">Showing 50 of 2,681 total individuals. Full register available from the ADGM FSRA public register.</p>
+</div>
+
+<div class="footer-note">
+  ADGM FSRA Approved Individuals &mdash; Ecosystem analysis &middot; Data sourced from ADGM public register &middot; Name-based classification is approximate &middot; April 2026
+</div>
+
+</div>
+</body>
+</html>
