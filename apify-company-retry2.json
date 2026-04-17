@@ -1,0 +1,2300 @@
+[{
+  "id": "107943960",
+  "universalName": "gapthree",
+  "linkedinUrl": "https://www.linkedin.com/company/gapthree/",
+  "name": "GAP3",
+  "tagline": "A Digital Studio with a Backstory.",
+  "website": "gap3.co",
+  "phone": {
+    "number": "9428258943",
+    "extension": null
+  },
+  "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQF-U8_btSd2_Q/company-logo_400_400/B4DZfKKZ.9HkAY-/0/1751443415414/gapthree_logo?e=1778112000&v=beta&t=_PpzO0ZCXWsSp37u4u5pKM6ADxm1oOrC3BIN4BSGzcI",
+  "foundedOn": {
+    "month": null,
+    "year": 2025,
+    "day": null
+  },
+  "employeeCount": 2,
+  "employeeCountRange": {
+    "start": 2,
+    "end": 10
+  },
+  "followerCount": 153,
+  "description": "At GAP3, we help brands, businesses, and creators turn ideas into powerful digital experiences.\n\nFrom website design and eCommerce to UI/UX, content, and SEO — we blend creative thinking, clean code, and strategic insight to build digital assets that not only look great, but actually perform.\n\nGAP3 was founded on real relationships and a deep passion for problem-solving. Our name is inspired by the initials of five close friends who supported our early tech journey — a tribute to the power of support and shared ambition.\n\nToday, we’re a lean and focused freelance digital agency offering a wide range of web services tailored to startups, solo entrepreneurs, small businesses, and marketing teams.\n\nWhether you’re launching your first site, redesigning your brand, or growing your digital reach — we can help you get there with strategy, creativity, and precision.\n\nLet’s build something smart, beautiful, and scalable — together.",
+  "locations": [
+    {
+      "country": "IN",
+      "city": "Ahemedabad",
+      "geographicArea": "Gujarat",
+      "line1": null,
+      "line2": null,
+      "postalCode": "382418",
+      "headquarter": true,
+      "description": "Headquarters",
+      "parsed": {
+        "text": null,
+        "countryCode": null,
+        "regionCode": null,
+        "country": null,
+        "countryFull": null
+      }
+    }
+  ],
+  "specialities": [
+    "WordPress Development",
+    "WooCommerce Store Design",
+    "Shopify Theme Customization",
+    "WordPress Plugin Development",
+    "UI/UX Design",
+    "Frontend Development",
+    "React UI (Frontend Only)",
+    "HTML Emails & Banners",
+    "Microsites",
+    "Social Media Creatives",
+    "Graphic Design",
+    "SEO",
+    "Digital Marketing",
+    "Content Writing",
+    "Website Consulting",
+    "Landing Pages",
+    "Creative Campaign Assets",
+    "Responsive Web Design",
+    "Web Performance Optimization"
+  ],
+  "industries": [
+    {
+      "id": "96",
+      "name": "Information Technology & Services",
+      "urn": "urn:li:fsd_industry:96",
+      "title": "IT Services and IT Consulting",
+      "hierarchy": "Professional Services > IT Services and IT Consulting"
+    }
+  ],
+  "logos": [
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4D0BAQF-U8_btSd2_Q/company-logo_400_400/B4DZfKKZ.9HkAY-/0/1751443415414/gapthree_logo?e=1778112000&v=beta&t=_PpzO0ZCXWsSp37u4u5pKM6ADxm1oOrC3BIN4BSGzcI",
+      "width": 400,
+      "height": 400,
+      "expiresAt": 1778112000000
+    },
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4D0BAQF-U8_btSd2_Q/company-logo_200_200/B4DZfKKZ.9HkAI-/0/1751443415414/gapthree_logo?e=1778112000&v=beta&t=sxjJviwIxj76z4wtVzPLCjybh_4oqDO3RFs-e8hf4TM",
+      "width": 200,
+      "height": 200,
+      "expiresAt": 1778112000000
+    },
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4D0BAQF-U8_btSd2_Q/company-logo_100_100/B4DZfKKZ.9HkAQ-/0/1751443415414/gapthree_logo?e=1778112000&v=beta&t=P7y0BDAJIJXumc-c-dxZmT3bJLnM3lnthOLIwApCOLU",
+      "width": 100,
+      "height": 100,
+      "expiresAt": 1778112000000
+    }
+  ],
+  "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQH4PgCxI2R2zg/company-background_10000/B4DZ0zAeR8GUAU-/0/1774677262503/gapthree_cover?e=1777042800&v=beta&t=ACdRdoqaDoPeeZlsOzLWqQ13I1lRacQE3q4b_D_4ap0",
+  "backgroundCovers": [
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4D1BAQH4PgCxI2R2zg/company-background_10000/B4DZ0zAeR8GUAU-/0/1774677262503/gapthree_cover?e=1777042800&v=beta&t=ACdRdoqaDoPeeZlsOzLWqQ13I1lRacQE3q4b_D_4ap0",
+      "width": 5024,
+      "height": 832,
+      "expiresAt": 1777042800000
+    },
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4D1BAQH4PgCxI2R2zg/company-background_400/B4DZ0zAeR8GUAY-/0/1774677262503/gapthree_cover?e=1777042800&v=beta&t=exBGyNaTUQyXlsrDiMcbDKnMjj8z9av9vAEzu4VuM44",
+      "width": 400,
+      "height": 66,
+      "expiresAt": 1777042800000
+    },
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4D1BAQH4PgCxI2R2zg/company-background_200/B4DZ0zAeR8GUAc-/0/1774677262503/gapthree_cover?e=1777042800&v=beta&t=0IOUzeTLnuVtIhQGSUihtsXkXWnqbQ9s46S9c7kjd5w",
+      "width": 200,
+      "height": 33,
+      "expiresAt": 1777042800000
+    }
+  ],
+  "active": true,
+  "jobSearchUrl": "https://www.linkedin.com/jobs/search?geoId=92000000&f_C=107943960",
+  "fundingData": null,
+  "pageVerified": false,
+  "announcement": null,
+  "pageType": "COMPANY",
+  "autoGenerated": false,
+  "callToActionUrl": "https://www.linkedin.com/company/gapthree/services/request-proposal",
+  "similarOrganizations": [
+    {
+      "id": "8187044",
+      "universalName": "software-co",
+      "linkedinUrl": "https://www.linkedin.com/company/software-co/",
+      "name": "Software Co 🚀",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/C560BAQEbvyD7uDTznw/company-logo_400_400/company-logo_400_400/0/1630646947947/software_co_logo?e=1778112000&v=beta&t=gRPCegtomCFsemsX-cgQLScqLGQobM-vXmPWgx42U3Y",
+      "employeeCountRange": {
+        "start": 51,
+        "end": 200
+      },
+      "followerCount": 18377,
+      "description": "At Software Co, we build, scale, and accelerate the organisations of tomorrow, uniting elite software engineering, advanced AI-driven product development, and a full-stack growth marketing ecosystem under one global platform.\n\nWe are not just a software company. We are a technology and marketing powerhouse.\n\nOur model brings together high-performance development teams, intelligent automation, data-driven storytelling, content studios, and AI-enabled growth marketing, giving businesses everything they need to build, ship, and scale digital products with precision and momentum.\n\nOur talent spans Technology Consultants, Senior Engineers, AI/ML Specialists, UI/UX Designers, Creative Directors, Performance Marketers, Content Producers, Project Managers, Quality Analysts, Data Scientists, and Solution Architects. This multidisciplinary strength allows us to deliver end-to-end execution: from strategy and product design to development, launch, user acquisition, and sustainable scale.\n\nAs we evolve, Software Co is becoming one of the world’s most comprehensive AI-native development and growth platforms, a unified environment where human expertise and intelligent automation combine to deliver unmatched speed, quality, creativity, and commercial impact.\n\nWe are ISO 9001:2015 (Quality Management) and ISO/IEC 27001:2013 (Information Security Management) certified, upholding rigorous global standards of engineering excellence, security, and operational governance across every engagement.\n\nFor more information, please visit https://www.softwareco.com",
+      "industries": [
+        {
+          "id": "4",
+          "name": "Computer Software",
+          "urn": "urn:li:fsd_industry:4",
+          "title": "Software Development",
+          "hierarchy": "Technology, Information and Media > Technology, Information and Internet > Software Development"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/C561BAQGS5pIKBPUCdA/company-background_10000/company-background_10000/0/1634731594069/software_co_cover?e=1777042800&v=beta&t=nXhudxgcdM736s_2_Rxcew1xf1a6JePbO4QCtZSdgUM",
+      "callToActionUrl": null
+    },
+    {
+      "id": "31132366",
+      "universalName": "aspiresquare",
+      "linkedinUrl": "https://www.linkedin.com/company/aspiresquare/",
+      "name": "Aspire Square Pvt. Ltd.",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQGAcwdnBirykg/company-logo_400_400/company-logo_400_400/0/1737023398515/aspiresquare_logo?e=1778112000&v=beta&t=l0HFsjHw_bBjxPY1TufkrVbNx4vO-DrBR8Q1USfipz0",
+      "employeeCountRange": {
+        "start": 51,
+        "end": 200
+      },
+      "followerCount": 6364,
+      "description": "Do you aim to relocate to an international destination and realize your abroad dreams? Lack of awareness shouldn't hold you back. As the top industry-leading immigration, study visa, and related consultation service provider based out of Gujarat, Aspire Square Pvt. Ltd. has a rich experience of over 12 years and a dedicated team of highly qualified professionals who are available round-the-clock to help you reach your desired destination. We have 4 offices spread across Gujarat, including the Head Office in Ahmedabad and 3 Representative Offices at Baroda, Surat, and V.V. Nagar.\n\nTrust, Transparency, and Commitment are the vital pillars of our organization, ensuring we meet all your immigration, study visa, language proficiency preparation, and related consultancy needs.\n\nSo, whether you're a student or a working professional, our expertise spans countries like the USA, Canada, Australia, the UK, and New Zealand. Our top-notch services, such as counseling, seminars, and free spot assessment, help you realize your dream of studying, working, and settling abroad.\n\nExplore Our Offerings - \n\nStudent Visa [the USA, Canada, Australia, the UK, and the New Zealand]\nIELTS / PTE / CELPIP Coaching\nAustralia PR\nCanada PR\nFamily Visa\nVisitor Visa",
+      "industries": [
+        {
+          "id": "69",
+          "name": "Education Management",
+          "urn": "urn:li:fsd_industry:69",
+          "title": "Education Administration Programs",
+          "hierarchy": "Government Administration > Health and Human Services > Education Administration Programs"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQH30kubV2TGtg/company-background_10000/company-background_10000/0/1719389279159/aspiresquare_cover?e=1777042800&v=beta&t=PVX-VYT-gg9uzLc5_rYp5JE_JBrTYOuhxAr3CJhbKI0",
+      "callToActionUrl": null
+    },
+    {
+      "id": "3359307",
+      "universalName": "beatroute",
+      "linkedinUrl": "https://www.linkedin.com/company/beatroute/",
+      "name": "BeatRoute",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQEAj8TaIkANjA/company-logo_400_400/company-logo_400_400/0/1630571024340/beatroute_logo?e=1778112000&v=beta&t=z3_ncB6B3Duzvi_Z2pMs5IhBbfz_qXR3BxIlXq1QN04",
+      "employeeCountRange": {
+        "start": 51,
+        "end": 200
+      },
+      "followerCount": 64761,
+      "description": "As the world’s only Goal-Driven AI platform, BeatRoute guides your field sales teams and channel partners toward your business goals. Our unique Goal-Driven AI agents work alongside your sales teams, distributors, retailers, and channel influencers to guide them towards your specific sales goals.\n",
+      "industries": [
+        {
+          "id": "4",
+          "name": "Computer Software",
+          "urn": "urn:li:fsd_industry:4",
+          "title": "Software Development",
+          "hierarchy": "Technology, Information and Media > Technology, Information and Internet > Software Development"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D561BAQEazFC9ixzWZQ/company-background_10000/B56ZcVja.1HoAY-/0/1748413297724/beatroute_cover?e=1777042800&v=beta&t=_HgLNePlq5slsmrSS36ZpXVQ6sqhjgoFF1C5RMqrBxg",
+      "callToActionUrl": null
+    },
+    {
+      "id": "5096270",
+      "universalName": "we-solutions-ltd",
+      "linkedinUrl": "https://www.linkedin.com/company/we-solutions-ltd/",
+      "name": "WESolutions",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQERjwdxf_1CAQ/company-logo_400_400/company-logo_400_400/0/1704289931806/we_solutions_ltd_logo?e=1778112000&v=beta&t=h7EHtvPynHPxomJU1kt6UTTlAaIsiDlCYvUFO7WZzMs",
+      "employeeCountRange": {
+        "start": 11,
+        "end": 50
+      },
+      "followerCount": 4465,
+      "description": "WESolutions was founded by a team of Healthcare professional who believed that the Healthcare sector needed partners in creating cost effective recruitment solutions for the industry. \r\n\r\nWESolutions specialise in project management of mass volume recruitment, with projects ranging from 5 to 50+ applicants. We do this by either initiating international projects, or taking complete control of your HR and recruitment functions and offering our RPO service.\r\n\r\nOur team’s modus operandi is and always will be to deliver a service with integrity and transparency that is beneficial not only to our client’s but also to our candidate’s.\r\nInternational healthcare professionals provide an opportunity to fill a large number of vacancies within a wide range of specialities, whilst still being a cost effective solution – allowing our clients to use economies of scale to help solve their workforce issues. \r\n\r\nThis is a process that warrants a dedicated and proactive approach, ensuring you have the best possible pool of talent to choose from. With a greater understanding of the current market and a large network reach, we are able to recruit from most of Europe, Philippines, India, Australia and New Zealand.\r\n \r\nAll of our solutions are custom-built after assessing and understanding your recruitment requirements and business needs.  You will be assigned a Project Partner that will facilitate you solutions from inception to implementation.\r\n\r\nOur support team will ensure that all applicants are fully compliant within framework regulations and that candidate retention is of the highest priority.",
+      "industries": [
+        {
+          "id": "104",
+          "name": "Staffing & Recruiting",
+          "urn": "urn:li:fsd_industry:104",
+          "title": "Staffing and Recruiting",
+          "hierarchy": "Administrative and Support Services > Staffing and Recruiting"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/C561BAQG7SRdmwQP1iQ/company-background_10000/company-background_10000/0/1612829411103/we_solutions_ltd_cover?e=1777042800&v=beta&t=A4ExeeULUdjjbmK50p-Ebvf_9nte-p7RzYDXBP7vwag",
+      "callToActionUrl": null
+    },
+    {
+      "id": "3254334",
+      "universalName": "esq-solutions",
+      "linkedinUrl": "https://www.linkedin.com/company/esq-solutions/",
+      "name": "ESQ Solutions",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/C4D0BAQGNGbyMz3GJ-g/company-logo_400_400/company-logo_400_400/0/1631343736355?e=1778112000&v=beta&t=PBrp9rmDDOGuxGvhkgNwsq6N2ybL6bPpqyodUH8iDi4",
+      "employeeCountRange": {
+        "start": 11,
+        "end": 50
+      },
+      "followerCount": 1945,
+      "description": "ESQ Solutions gelooft dat elk individu en elke organisatie kan groeien inzake kwaliteit, milieu en welzijn. Vanuit onze ESQ-waarden (ontwikkeling, betrokkenheid, professionalisme en werkplezier) willen wij deze groei bevorderen.\nDit doen we door het ondersteunen van bedrijven bij de wettelijke thema’s (milieu & preventie), door het opzetten van werkbare managementsystemen (ISO & VCA) en door het ontwikkelen van een cultuur die gebaseerd is op zorg voor elkaar (BBS).\nESQ heeft een hands-on programma om duurzaamheid te integreren in de bedrijfsvoering. We zetten eveneens in op bedrijfsinterne opleidingen over deze thema’s en op het creëren van een grote betrokkenheid in alle lagen van de organisaties waar we actief zijn.\nSamen met HCM² verzorgen wij spelconcepten bij bedrijven om het bewustzijn inzake kwaliteit, welzijn en milieu te verhogen!\n",
+      "industries": [
+        {
+          "id": "86",
+          "name": "Environmental Services",
+          "urn": "urn:li:fsd_industry:86",
+          "title": "Environmental Services",
+          "hierarchy": "Professional Services > Business Consulting and Services > Environmental Services"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4E1BAQHjDGEYfJNaMw/company-background_10000/company-background_10000/0/1672992594932/esq_solutions_cover?e=1777042800&v=beta&t=ZvHKCB3OahkDjTXLSd_yR6nsyaui4Dhzfr9hXqUTeZE",
+      "callToActionUrl": null
+    },
+    {
+      "id": "542726",
+      "universalName": "tatvic",
+      "linkedinUrl": "https://www.linkedin.com/company/tatvic/",
+      "name": "Tatvic ®",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQFd6ma1MqmEjw/company-logo_400_400/company-logo_400_400/0/1631319019437?e=1778112000&v=beta&t=7gayEEevbfvuS7y7pLGSTI6EI8aP59Nqc-2PdrKMvXg",
+      "employeeCountRange": {
+        "start": 51,
+        "end": 200
+      },
+      "followerCount": 60845,
+      "description": "For over 15 years, Tatvic has been a trusted force in the marketing technology ecosystem, driving digital transformation for businesses across North America, APAC, and India. As a Google Premium Partner and early advocate of AI-first strategies, we’ve helped brands move beyond marketing execution to marketing efficacy.\n\nOur story began with a simple yet powerful mission: to make marketing smarter, faster, and more human-centered. That mission now takes a bold new form through Agentic AI for Marketing Transformation, Tatvic’s pioneering approach that fuses intelligent automation with decision-making autonomy.\n\n🔹From Automation to Transformation\n\nTatvic’s Agentic AI solutions not only automate tasks but also empower smarter, faster marketing across every stage:\n\n> Campaign Planning: Predictive market research & advanced analytics for data-led strategy\n> Campaign Orchestration: AI-powered campaign management, smart email automation flows and scalable content creation and delivery\n> Campaign Analysis: Autonomous SEO & campaign optimization & real-time performance insights for continuous improvement\n\n\n🔹Driven by Data, Powered by Experience\n\nWith our deep expertise in Conversion Rate Optimization (CRO), Google Analytics, DV360, BigQuery, and Cloud platforms, we deliver full-stack marketing solutions that are both data-rich and action-ready. Whether it’s refining user journeys or scaling experimentation, Tatvic is built to help brands move faster, with clarity and confidence.\n\n🔹What Sets Tatvic Apart?\n\n1. Pioneers in Marketing Efficacy: We don’t just measure; we improve what matters.\n2. CRO Trailblazers: First in India to earn Google’s coveted CRO partner status\n3. Global Experience: Solutions tailored across diverse markets and verticals\n4. Full-Stack Martech: From insight to execution under one roof\n5. Agentic AI Advantage: Automate intelligently, decide autonomously, scale exponentially\n\nAt Tatvic, we believe the future of marketing isn’t just digital, it’s agentic.",
+      "industries": [
+        {
+          "id": "11",
+          "name": "Management Consulting",
+          "urn": "urn:li:fsd_industry:11",
+          "title": "Business Consulting and Services",
+          "hierarchy": "Professional Services > Business Consulting and Services"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQEUcmVKYrmzNw/company-background_10000/company-background_10000/0/1695192610350/tatvic_cover?e=1777042800&v=beta&t=GLur9_99t0-_h4CmBXAI3jX8v4BQh-P7CPkylhqOcf8",
+      "callToActionUrl": null
+    },
+    {
+      "id": "30679688",
+      "universalName": "genixbit",
+      "linkedinUrl": "https://www.linkedin.com/company/genixbit/",
+      "name": "GenixBit",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQGidpUT8E2T-Q/company-logo_400_400/company-logo_400_400/0/1705727016916/genixbit_logo?e=1778112000&v=beta&t=Dp3ymFBe8GJI_FNLMY1Q8vvRQXyVEwlB575wUzvX3jw",
+      "employeeCountRange": {
+        "start": 51,
+        "end": 200
+      },
+      "followerCount": 8903,
+      "description": "At Genixbit Labs, we are redefining innovation through technology. As a leading IT services and consulting company, we specialize in delivering intelligent, AI-powered digital solutions that drive business growth and transformation.\n\nFrom application and web development to ERP systems, data analytics, and cloud-based solutions, we craft scalable products tailored to the unique needs of startups, enterprises, and global brands. Our expertise spans industries including Real Estate, Banking & Finance, Healthcare, Travel, and eCommerce.\n\nWith a passionate team of innovators, designers, and engineers, we combine creativity with advanced technologies such as Artificial Intelligence, Machine Learning, AR/VR, and Automation to help businesses stay ahead in a rapidly evolving digital world.\n\n💡 Our Mission:\nTo empower businesses with intelligent, user-focused solutions that enhance efficiency, performance, and long-term growth.\n\n🌐 Our Promise:\nInnovation. Quality. Collaboration. — delivering excellence in every project we undertake.",
+      "industries": [
+        {
+          "id": "96",
+          "name": "Information Technology & Services",
+          "urn": "urn:li:fsd_industry:96",
+          "title": "IT Services and IT Consulting",
+          "hierarchy": "Professional Services > IT Services and IT Consulting"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQH9IbZvwRwY1Q/company-background_10000/company-background_10000/0/1713438743970/genixbit_cover?e=1777042800&v=beta&t=hurpQm3zkkrvBbB0pPUj6e3-LIM94eiVCnm5cTD3Le4",
+      "callToActionUrl": null
+    },
+    {
+      "id": "14628935",
+      "universalName": "macawberbeekay",
+      "linkedinUrl": "https://www.linkedin.com/company/macawberbeekay/",
+      "name": "Macawber Beekay Pvt Ltd.",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/C510BAQFS555eDh3Egw/company-logo_400_400/company-logo_400_400/0/1630568182748?e=1778112000&v=beta&t=mnmP3EvAVs_sQ3vBfq0AzaA9ibCb5YuhSMpPxSw4dXQ",
+      "employeeCountRange": {
+        "start": 10001,
+        "end": null
+      },
+      "followerCount": 77371,
+      "description": "MBL specializes in providing ash handling solutions, fly ash handling, slurry disposal system, ash water recovery system, coal handling systems and pneumatic coal mill rejects handling system",
+      "industries": [
+        {
+          "id": "147",
+          "name": "Industrial Automation",
+          "urn": "urn:li:fsd_industry:147",
+          "title": "Automation Machinery Manufacturing",
+          "hierarchy": "Manufacturing > Machinery Manufacturing > Automation Machinery Manufacturing"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/C511BAQEMIeXRopB-BQ/company-background_10000/company-background_10000/0/1583906465744/macawberbeekay_cover?e=1777042800&v=beta&t=X8qt-WKGC66ueUB3bo6VJpsyz4x9QfLIKPfw7ZZtZaQ",
+      "callToActionUrl": null
+    },
+    {
+      "id": "3483319",
+      "universalName": "progressive-automations",
+      "linkedinUrl": "https://www.linkedin.com/company/progressive-automations/",
+      "name": "Progressive Automations",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/C4D0BAQHYi3sUfuYWwQ/company-logo_400_400/company-logo_400_400/0/1631619312769/progressive_automations_logo?e=1778112000&v=beta&t=E5LerL4YsZF_WSvG7Mdh6nxwxsC41uYNH1Ug9ZXeMRA",
+      "employeeCountRange": {
+        "start": 11,
+        "end": 50
+      },
+      "followerCount": 4423,
+      "description": "Our customer-service driven business model affords us the opportunity to work closely with individuals and companies all across the North American continent while manufacturing and distributing some of the most high-quality, affordable automation products in the industry. Our product line includes electric linear actuators, motion control systems, table lifts, TV lifts, PLC controls and related accessories.\r\n\r\nOur limitations are the limits of your imagination. Our custom linear actuator service provides each and every project with an automated component that fits perfectly - at an unbeatable price.",
+      "industries": [
+        {
+          "id": "147",
+          "name": "Industrial Automation",
+          "urn": "urn:li:fsd_industry:147",
+          "title": "Automation Machinery Manufacturing",
+          "hierarchy": "Manufacturing > Machinery Manufacturing > Automation Machinery Manufacturing"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQHx31x02onzyg/company-background_10000/company-background_10000/0/1686664579302/progressive_automations_cover?e=1777042800&v=beta&t=d77foL5am72gAejkdNQ05CrU1ZSWw_Mkv8OrOFowUVE",
+      "callToActionUrl": null
+    },
+    {
+      "id": "91609572",
+      "universalName": "experro",
+      "linkedinUrl": "https://www.linkedin.com/company/experro/",
+      "name": "Experro",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQFcKk92haYtbg/company-logo_400_400/company-logo_400_400/0/1735724386532/experro_logo?e=1778112000&v=beta&t=qa64QckqMx_NhH3PWABS9VSd1JpKCS2qVkBJS3LLs-A",
+      "employeeCountRange": {
+        "start": 201,
+        "end": 500
+      },
+      "followerCount": 1881,
+      "description": "Experro is a leading AI-powered Product Discovery Platform built to help eCommerce brands deliver intuitive, high-converting shopping experiences. With advanced Generative AI, conversational interfaces, and discovery intelligence, Experro adapts in real time to each shopper’s intent, behavior, and context, turning every interaction into a moment of higher relevance and higher conversion. \n\nWith 16+ years of deep commerce expertise, Experro focuses on what merchants value most: better discovery, better engagement, and better revenue, without added operational complexity.\n\nOur Solutions:\n- Gen AI Search\n- Conversational AI Shopping Agent\n- Recommendations\n- Personalization\n- Merchandising\n- Smart Collections\n- Bundling\n- Merchant Intelligence\n…and more.\n\nPowering hundreds of millions of shopper interactions every month, Experro is the trusted choice for retailers looking for reliable, long-term impact and an AI-driven foundation for the future of commerce.",
+      "industries": [
+        {
+          "id": "4",
+          "name": "Computer Software",
+          "urn": "urn:li:fsd_industry:4",
+          "title": "Software Development",
+          "hierarchy": "Technology, Information and Media > Technology, Information and Internet > Software Development"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQFUhMpaNmRvcA/company-background_10000/B4DZWpMbkrGkAg-/0/1742300363913/experro_cover?e=1777042800&v=beta&t=hta2HSQtUfkjBfY7ANPXKOJqUWbFZ-2nV2p_oKkfGbE",
+      "callToActionUrl": null
+    },
+    {
+      "id": "94815443",
+      "universalName": "collabcrm",
+      "linkedinUrl": "https://www.linkedin.com/company/collabcrm/",
+      "name": "CollabCRM",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQFmvTfDXN-OVg/company-logo_400_400/B4DZg3bCsKG8Ac-/0/1753276493273/collabcrm_logo?e=1778112000&v=beta&t=QauNvQnsiNg3F4CjyqJ7zutzcb7QK93YfdUDoConFdU",
+      "employeeCountRange": {
+        "start": 51,
+        "end": 200
+      },
+      "followerCount": 1816,
+      "description": "CollabCRM is a Business Operating System for modern IT organizations, designed to replace fragmented tools and spreadsheets with a single, connected workspace. It brings CRM, project execution, people management, recruitment, and reporting together, so teams always work with a complete context.\n\nBy eliminating app-switching and information silos, CollabCRM helps teams work with clarity, continuity, and control across the entire business lifecycle.\n\n50+ trusted IT companies and 3,000+ active users rely on CollabCRM to:\n\n- Centralize Client Relationships\n- Streamline Project Delivery\n- Enhance Team Collaboration\n- Optimize Critical Path Workflows\n\nFrom complex project execution to long-term client management, CollabCRM provides teams with the visibility, alignment, and agility needed to deliver consistently in fast-paced environments.\n\nPowered by a team of 35+ industry experts, we’re building the future of collaborative work to help organizations move faster, stay aligned, and scale. ",
+      "industries": [
+        {
+          "id": "4",
+          "name": "Computer Software",
+          "urn": "urn:li:fsd_industry:4",
+          "title": "Software Development",
+          "hierarchy": "Technology, Information and Media > Technology, Information and Internet > Software Development"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQHBHL-cE29wyQ/company-background_10000/B4DZuc99eoLoAU-/0/1767865047875/collabcrm_cover?e=1777042800&v=beta&t=P9xrYBZ9NVTqZoWIi99uxQejT0UVZpUVIuh4IsFvsiE",
+      "callToActionUrl": null
+    },
+    {
+      "id": "13268859",
+      "universalName": "inbound-webhub",
+      "linkedinUrl": "https://www.linkedin.com/company/inbound-webhub/",
+      "name": "Certified Hubspot Webflow Shopify Partner | Inbound WebHub",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/C4D0BAQFiBarXyEHdnQ/company-logo_400_400/company-logo_400_400/0/1631353601226?e=1778112000&v=beta&t=s37MZm9FatrnYUa4r9Fe4XO2jyf3m_hNKACTqYCGCfU",
+      "employeeCountRange": {
+        "start": 11,
+        "end": 50
+      },
+      "followerCount": 1097,
+      "description": "Inbound Webhub, a Web design and  Hubspot CMS Development company…\nsince 2016, Inbound Webhub provides white label web design and development services to B2B agencies.\n\nOur team of 20+ employees comprises some of the most creative, passionate, and entertaining individuals you can find. We have  Hubspot certified designer in our team.\n\nWe are dealing with marketing agencies to help in Web design and development services. \n\nOur Technical Expertise Include: \n\nPHP || WordPress Customization || CodeIgniter || Laravel || Magento || Custom CMS || Responsive Website Development || Payment Gateway|| API || Web Services || Hubspot|| Shopify ||\n\nAdvantages to Working with Us...\n \n+ Effective WordPress/Hubspot Domain Expert\n+ Affordable price guarantee for all projects. \n+ Commitment to Quality\n+ On time project Completion\n+ A team of extremely Bright, Efficient & Committed individuals\n",
+      "industries": [
+        {
+          "id": "96",
+          "name": "Information Technology & Services",
+          "urn": "urn:li:fsd_industry:96",
+          "title": "IT Services and IT Consulting",
+          "hierarchy": "Professional Services > IT Services and IT Consulting"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQF6nVcv7R51Yw/company-background_10000/company-background_10000/0/1685629358142/inbound_webhub_cover?e=1777042800&v=beta&t=h-p1BxPvVuXybepHdNrM3d1M30GlTT5BLnN2uRHZ-qc",
+      "callToActionUrl": null
+    }
+  ],
+  "peopleStats": [
+    {
+      "statTitle": "Locations",
+      "values": [
+        {
+          "title": "Gujarat, India",
+          "count": 2
+        },
+        {
+          "title": "India",
+          "count": 2
+        },
+        {
+          "title": "Ahmedabad",
+          "count": 2
+        },
+        {
+          "title": "Greater Ahmedabad Area",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "statTitle": "School",
+      "values": [
+        {
+          "title": "Amity University",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "statTitle": "Current Function",
+      "values": [
+        {
+          "title": "Business Development",
+          "count": 2
+        },
+        {
+          "title": "Operations",
+          "count": 1
+        },
+        {
+          "title": "Arts and Design",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "statTitle": "Skill Explicit",
+      "values": [
+        {
+          "title": "Marketing Management",
+          "count": 1
+        },
+        {
+          "title": "Event Management",
+          "count": 1
+        },
+        {
+          "title": "Leadership",
+          "count": 1
+        },
+        {
+          "title": "Digital Media",
+          "count": 1
+        },
+        {
+          "title": "Microsoft Excel",
+          "count": 1
+        },
+        {
+          "title": "Research Skills",
+          "count": 1
+        },
+        {
+          "title": "User Experience Design (UED)",
+          "count": 1
+        },
+        {
+          "title": "Digital Marketing",
+          "count": 1
+        },
+        {
+          "title": "Management",
+          "count": 1
+        },
+        {
+          "title": "Time Management",
+          "count": 1
+        },
+        {
+          "title": "Project Management",
+          "count": 1
+        },
+        {
+          "title": "Digital Marketing Agencies",
+          "count": 1
+        },
+        {
+          "title": "Marketing",
+          "count": 1
+        },
+        {
+          "title": "Microsoft Word",
+          "count": 1
+        },
+        {
+          "title": "PHP",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "statTitle": "Service categories",
+      "values": [
+        {
+          "title": "WordPress Design",
+          "count": 1
+        },
+        {
+          "title": "User Experience Design (UED)",
+          "count": 1
+        },
+        {
+          "title": "Web Design",
+          "count": 1
+        },
+        {
+          "title": "Design",
+          "count": 1
+        },
+        {
+          "title": "UX Research",
+          "count": 1
+        },
+        {
+          "title": "Software Development",
+          "count": 1
+        },
+        {
+          "title": "Web Development",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "statTitle": "Field of Study",
+      "values": [
+        {
+          "title": "Computer and Information Sciences and Support Services",
+          "count": 1
+        },
+        {
+          "title": "Business/Commerce, General",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "originalQuery": {
+    "search": "Gap3",
+    "location": "",
+    "scrapePeopleTab": "true"
+  },
+  "requestId": "adabd5fb-3eff-40a9-8a78-4ddc5273cd83"
+},
+{
+  "id": "53101536",
+  "universalName": "nova-poshta-digital-company",
+  "linkedinUrl": "https://www.linkedin.com/company/nova-poshta-digital-company/",
+  "name": "Nova Digital",
+  "tagline": "delivery of technologies",
+  "website": "https://novadigital.com/",
+  "phone": null,
+  "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQGUU6rTGrFhDg/company-logo_400_400/B4EZvGpD8kGcAY-/0/1768564212572?e=1778112000&v=beta&t=zETc_Qn-Rx9-AYzuFBN0K-JXK0Yw1aGrDtXZ7kYFaQY",
+  "foundedOn": null,
+  "employeeCount": 689,
+  "employeeCountRange": {
+    "start": 501,
+    "end": 1000
+  },
+  "followerCount": 22523,
+  "description": "Nova Digital - Українська IT-компанія, що надає технологічні рішення \nдля логістичних, виробничих та інфраструктурних бізнесів. \nNova Digital – це надійна та системна доставка технологій.",
+  "locations": [
+    {
+      "country": "UA",
+      "city": "Київ, Варшава",
+      "geographicArea": "",
+      "line1": "Столичное шоссе 103",
+      "line2": null,
+      "postalCode": null,
+      "headquarter": true,
+      "description": "Штаб-квартира",
+      "parsed": {
+        "text": "Kyiv, Ukraine",
+        "countryCode": "UA",
+        "regionCode": null,
+        "country": "Ukraine",
+        "countryFull": "Ukraine",
+        "state": "Kyiv",
+        "city": "Kyiv"
+      }
+    }
+  ],
+  "specialities": [
+    "IT"
+  ],
+  "industries": [
+    {
+      "id": "96",
+      "name": "Information Technology & Services",
+      "urn": "urn:li:fsd_industry:96",
+      "title": "IT Services and IT Consulting",
+      "hierarchy": "Professional Services > IT Services and IT Consulting"
+    }
+  ],
+  "logos": [
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4E0BAQGUU6rTGrFhDg/company-logo_400_400/B4EZvGpD8kGcAY-/0/1768564212572?e=1778112000&v=beta&t=zETc_Qn-Rx9-AYzuFBN0K-JXK0Yw1aGrDtXZ7kYFaQY",
+      "width": 400,
+      "height": 400,
+      "expiresAt": 1778112000000
+    },
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4E0BAQGUU6rTGrFhDg/company-logo_200_200/B4EZvGpD8kGcAI-/0/1768564212572?e=1778112000&v=beta&t=fgR9_o5UJA-kFUM6Y7WvBNuZhZWUhp5Bu5uzhvCEqHA",
+      "width": 200,
+      "height": 200,
+      "expiresAt": 1778112000000
+    },
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4E0BAQGUU6rTGrFhDg/company-logo_100_100/B4EZvGpD8kGcAQ-/0/1768564212572?e=1778112000&v=beta&t=cbT8eJLzaptQZXLlic9uNYlDaiL4bGM4YrMeJ5sME90",
+      "width": 100,
+      "height": 100,
+      "expiresAt": 1778112000000
+    }
+  ],
+  "backgroundCover": "https://media.licdn.com/dms/image/v2/D4E1BAQEPreTsZKsGfw/company-background_10000/B4EZv.l_YMHoAU-/0/1769502930968/nova_poshta_digital_company_cover?e=1777042800&v=beta&t=aYX_UkC5w7iczQlzbwGsptpARw6zagm5RyJI9wYPiRw",
+  "backgroundCovers": [
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4E1BAQEPreTsZKsGfw/company-background_10000/B4EZv.l_YMHoAU-/0/1769502930968/nova_poshta_digital_company_cover?e=1777042800&v=beta&t=aYX_UkC5w7iczQlzbwGsptpARw6zagm5RyJI9wYPiRw",
+      "width": 1584,
+      "height": 396,
+      "expiresAt": 1777042800000
+    },
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4E1BAQEPreTsZKsGfw/company-background_400/B4EZv.l_YMHoAY-/0/1769502930968/nova_poshta_digital_company_cover?e=1777042800&v=beta&t=w0mNGtJ-nA52cQsiyHHGrzKVOxTZklHsNCowJp_k15U",
+      "width": 400,
+      "height": 100,
+      "expiresAt": 1777042800000
+    },
+    {
+      "url": "https://media.licdn.com/dms/image/v2/D4E1BAQEPreTsZKsGfw/company-background_200/B4EZv.l_YMHoAc-/0/1769502930968/nova_poshta_digital_company_cover?e=1777042800&v=beta&t=ot_umL87z5cV1-x6fS9QZ28CsBBA3m9pEvGPBUQNsks",
+      "width": 200,
+      "height": 50,
+      "expiresAt": 1777042800000
+    }
+  ],
+  "active": true,
+  "jobSearchUrl": "https://www.linkedin.com/jobs/search?geoId=92000000&f_C=53101536",
+  "fundingData": null,
+  "pageVerified": false,
+  "announcement": null,
+  "pageType": "COMPANY",
+  "autoGenerated": false,
+  "callToActionUrl": "https://novadigital.com/",
+  "similarOrganizations": [
+    {
+      "id": "10683095",
+      "universalName": "laba",
+      "linkedinUrl": "https://www.linkedin.com/school/laba/",
+      "name": "Laba",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQFpB2TyFXVQMg/company-logo_400_400/B4DZfKBX2xG8AY-/0/1751441047358/laba_logo?e=1778112000&v=beta&t=4n4ZM-e4DmI_Y_V0X-WMw-l0Xy6Jbxkj0EPCBPHunqA",
+      "employeeCountRange": {
+        "start": 501,
+        "end": 1000
+      },
+      "followerCount": 57711,
+      "description": "Школа бізнесу. Навчаємо фінансів, маркетингу, HR, продажів, професійної англійської, бізнес-управління та аналітики\n\nМатеріали від експертів у нашому блозі ⏩ https://laba.ua/blog",
+      "industries": [
+        {
+          "id": "132",
+          "name": "E-learning",
+          "urn": "urn:li:fsd_industry:132",
+          "title": "E-Learning Providers",
+          "hierarchy": "Education > E-Learning Providers"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQGJ94Wh5kav1Q/company-background_10000/B4DZb8scgAG0AU-/0/1747996232091/laba_cover?e=1777042800&v=beta&t=3PUo1QoZBGmgUwrNKHV98KbS-akU88HH8VECVoPl7MY",
+      "callToActionUrl": null
+    },
+    {
+      "id": "1613428",
+      "universalName": "developers.org.ua",
+      "linkedinUrl": "https://www.linkedin.com/company/developers.org.ua/",
+      "name": "DOU",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/C4D0BAQH_ifAvgbAmQQ/company-logo_400_400/company-logo_400_400/0/1646295340045?e=1778112000&v=beta&t=BX3j6JlgcJU81KubITA-HmlENZMuv2utI8WdC1aZRko",
+      "employeeCountRange": {
+        "start": 2,
+        "end": 10
+      },
+      "followerCount": 199491,
+      "description": "Started in 2005 as a pet project, developers.org.ua became the leading site for software developers in Ukraine. \r\n\r\nYou can find here company profies for basically every self-respecting dev shop, industry analysis and insights gathered by our team and outside experts, keep track of upcoming tech events and conferences, participate in animate and sometimes furious debates on our forums and keep in touch with your fellow developers.\r\n\r\nFor developers: communicate, learn and have fun\r\nFor HR: get market data and reports, recruitment\r\n\r\nWe believe that software development industry has a great potential to turn Ukraine into a prosperous country. Let's grow our industry together!",
+      "industries": [
+        {
+          "id": "4",
+          "name": "Computer Software",
+          "urn": "urn:li:fsd_industry:4",
+          "title": "Software Development",
+          "hierarchy": "Technology, Information and Media > Technology, Information and Internet > Software Development"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/C561BAQHtEMXNbMVSBg/company-background_10000/company-background_10000/0/1585315953304/developersorgua_cover?e=1777042800&v=beta&t=m2SrDgXia-ojXfZzpOkoB_47dR9brDqyCJDD3OO2-7I",
+      "callToActionUrl": null
+    },
+    {
+      "id": "6549",
+      "universalName": "softserve",
+      "linkedinUrl": "https://www.linkedin.com/company/softserve/",
+      "name": "SoftServe",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQGt1QhyE1s1-Q/company-logo_400_400/B4EZ1sUlE.GcAY-/0/1775638828414/softserve_logo?e=1778112000&v=beta&t=zukmUtUNsajmpaknpS-5x5dBkE6xw9d-ybyjScEaDi4",
+      "employeeCountRange": {
+        "start": 10001,
+        "end": null
+      },
+      "followerCount": 424084,
+      "description": "SoftServe is a digital engineering and technology services company specializing in AI, data, and cloud solutions. We expand the horizon of new technologies to solve today's complex business challenges and achieve meaningful outcomes for our clients. Our boundless curiosity drives us to explore and reimagine the art of the possible. Clients confidently rely on SoftServe to architect and execute mature and innovative capabilities, such as digital engineering, data and analytics, cloud, and AI/ML.\n\nOur global reputation is gained from more than 30 years of experience delivering superior digital solutions at exceptional speed by top-tier engineering talent to enterprise industries, including high tech, financial services, healthcare, life sciences, retail, energy, and manufacturing.\n\nAt SoftServe, we live by our values. Trust, teamwork, growth, innovation, willingness to help, and exceeding expectations are engrained in everything we do. We partner with major technology players, such as Google Cloud Platform, Amazon Web Services, Microsoft Azure, Salesforce, NVIDIA, MuleSoft, VMware, and Odoo, to give clients a competitive advantage in the market.  \n\nFounded in 1993, our global firm is headquartered in Austin, Texas, USA, and Lviv, Ukraine. Visit our website, blog, media, and news pages for more information.\n\nBlog: softserveinc.com/blog\nMedia: softserveinc.com/media\nNews: softserveinc.com/news",
+      "industries": [
+        {
+          "id": "96",
+          "name": "Information Technology & Services",
+          "urn": "urn:li:fsd_industry:96",
+          "title": "IT Services and IT Consulting",
+          "hierarchy": "Professional Services > IT Services and IT Consulting"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4E1BAQEPB8AZdBZvzQ/company-background_10000/B4EZ1sUsohJ4AU-/0/1775638858974/softserve_cover?e=1777042800&v=beta&t=TzOrB065_1Qsz1WljXvLWUxY-tfBqs_ncH2w9X2YGSk",
+      "callToActionUrl": null
+    },
+    {
+      "id": "2416279",
+      "universalName": "genesis-technology-partners",
+      "linkedinUrl": "https://www.linkedin.com/company/genesis-technology-partners/",
+      "name": "Genesis Tech",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQGpZLrnYvUXZA/company-logo_400_400/company-logo_400_400/0/1653309889343/genesis_technology_partners_logo?e=1778112000&v=beta&t=HGsTVQaoc-rbnJCoWt5WNpMMNz89CaPBV3k7BmlbLxc",
+      "employeeCountRange": {
+        "start": 1001,
+        "end": 5000
+      },
+      "followerCount": 65124,
+      "description": "Genesis is an ecosystem of product IT companies focused on building global innovative products\n\nWe're one of the largest global app developers. Apps of Genesis companies have been downloaded by more than 1 billion users globally and are used by tens of millions of users monthly.\n\nGenesis has co-founded now independent tech companies such as Jiji, BetterMe, Headway. We've launched and are currently developing successful projects such as OBRIO, Universe, AMO, Boosters, and others in our ecosystem.\n\nWe have one of the best tech teams in Europe. As a result, we're constantly recognized as top IT employees in CEE and Ukraine.",
+      "industries": [
+        {
+          "id": "4",
+          "name": "Computer Software",
+          "urn": "urn:li:fsd_industry:4",
+          "title": "Software Development",
+          "hierarchy": "Technology, Information and Media > Technology, Information and Internet > Software Development"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQEi1XQQiCOJ7w/company-background_10000/company-background_10000/0/1727271551092/genesis_technology_partners_cover?e=1777042800&v=beta&t=EopTKJGwriDPrFE-j3neifYZw6KhoQY-tQ0-7_5qgHg",
+      "callToActionUrl": null
+    },
+    {
+      "id": "3492161",
+      "universalName": "djinni-co",
+      "linkedinUrl": "https://www.linkedin.com/company/djinni-co/",
+      "name": "Djinni.co",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/C560BAQE7woRKSERFrA/company-logo_400_400/company-logo_400_400/0/1630626883361/djinni_co_logo?e=1778112000&v=beta&t=ySJpATTl1xf8hxYncFANS9Lur4G-RY7RYC8PKxAQgMs",
+      "employeeCountRange": {
+        "start": 11,
+        "end": 50
+      },
+      "followerCount": 84954,
+      "description": "Djinni is the biggest tech jobs marketplace in Ukraine, with more than 50,000 developers using the site monthly. We also have thousands of remote jobs outside of Ukraine, both from European companies, US, UK and Israeli startups.",
+      "industries": [
+        {
+          "id": "6",
+          "name": "Internet",
+          "urn": "urn:li:fsd_industry:6",
+          "title": "Technology, Information and Internet",
+          "hierarchy": "Technology, Information and Media > Technology, Information and Internet"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQEfVI2flSyUiQ/company-background_10000/company-background_10000/0/1666858483101/djinni_co_cover?e=1777042800&v=beta&t=wYl9h9SvMOmuzep6j3QgnMYesKDsw6NGgPlbnr0uQc0",
+      "callToActionUrl": null
+    },
+    {
+      "id": "200846",
+      "universalName": "cd-projekt-red",
+      "linkedinUrl": "https://www.linkedin.com/company/cd-projekt-red/",
+      "name": "CD PROJEKT RED",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQHV0pE-iExhSQ/company-logo_400_400/B4EZfG3vvmHgAY-/0/1751388192284/cd_projekt_red_logo?e=1778112000&v=beta&t=D4Dw_XQ8z4zMf9Cku0CV-CheAy4f6YAoYKUMtN5Sqrg",
+      "employeeCountRange": {
+        "start": 1001,
+        "end": 5000
+      },
+      "followerCount": 607731,
+      "description": "We are CD PROJEKT RED, creators of The Witcher game series and Cyberpunk 2077. Home to over 1,000 game-making professionals from all over the world, we speak many languages but share one love — video games.\n\nWe’re headquartered in Warsaw, Poland — where The Witcher 4 and an original IP codenamed Hadar are in development — and have a growing hub in Boston too, where work is underway on Cyberpunk 2 and Project Sirius, a multiplayer game set in The Witcher universe.\n\nWe have a player-first approach and stay true to our values, with the mission of creating revolutionary role-playing games, with memorable stories, that inspire players.",
+      "industries": [
+        {
+          "id": "109",
+          "name": "Computer Games",
+          "urn": "urn:li:fsd_industry:109",
+          "title": "Computer Games",
+          "hierarchy": "Technology, Information and Media > Technology, Information and Internet > Software Development > Computer Games"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQFz7y1FJcneNg/company-background_10000/B4DZs21c_MKcAc-/0/1766151541385/cd_projekt_red_cover?e=1777042800&v=beta&t=flfzftEDFeAwUqfpc7fmq8Kg5kFLRttC9Gfo-HGSIUw",
+      "callToActionUrl": null
+    },
+    {
+      "id": "2295262",
+      "universalName": "forbes-ukraine",
+      "linkedinUrl": "https://www.linkedin.com/company/forbes-ukraine/",
+      "name": "Forbes Ukraine",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/C4D0BAQG-xWysH4pjYg/company-logo_400_400/company-logo_400_400/0/1630541031933/forbes_ukraine_logo?e=1778112000&v=beta&t=uhGFkNUc_I66U2A-l1W2cSN22RmvL02dkQE2Z_NCJwM",
+      "employeeCountRange": {
+        "start": 51,
+        "end": 200
+      },
+      "followerCount": 92929,
+      "description": "Офіційний канал Forbes в Україні\n\n📰 Назва онлайн-медіа: Forbes\n🆔 R40-05480\n🏢 ТОВ «УЯВИ!»\n📍 вул. Джонса Гарета, будинок 8, 1 пуск. компл., 1 пов., прим. №3, Київ, 04119, Україна\n📧 info@forbes.ua",
+      "industries": [
+        {
+          "id": "82",
+          "name": "Publishing",
+          "urn": "urn:li:fsd_industry:82",
+          "title": "Book and Periodical Publishing",
+          "hierarchy": "Technology, Information and Media > Media and Telecommunications > Book and Periodical Publishing"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQHroIJDIbPWXQ/company-background_10000/B4DZznQEZbIYAU-/0/1773406276642/forbes_ukraine_cover?e=1777042800&v=beta&t=Zfe34INxNCFCvqFItVCbUcd3cLNsRvlttaaiXooWIKQ",
+      "callToActionUrl": null
+    },
+    {
+      "id": "67153999",
+      "universalName": "ministry-of-digital-transformation-of-ukraine",
+      "linkedinUrl": "https://www.linkedin.com/company/ministry-of-digital-transformation-of-ukraine/",
+      "name": "Ministry of Digital Transformation of Ukraine",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHCKAkrxJZhiw/company-logo_400_400/B4DZo2NTNIGwAg-/0/1761846048973?e=1778112000&v=beta&t=PHtYwQejeDvE9dpz3LMEaAfuZOD403IZ_kEM90E1lQU",
+      "employeeCountRange": {
+        "start": 201,
+        "end": 500
+      },
+      "followerCount": 19378,
+      "description": "Цифровізуємо🇺🇦\n\nOfficial page of the Ministry of Digital Transformation of Ukraine",
+      "industries": [
+        {
+          "id": "75",
+          "name": "Government Administration",
+          "urn": "urn:li:fsd_industry:75",
+          "title": "Government Administration",
+          "hierarchy": "Government Administration"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQG3N5kCE8m4-Q/company-background_10000/B4DZoG.VifJAAU-/0/1761053597386/ministry_of_digital_transformation_of_ukraine_cover?e=1777042800&v=beta&t=8GyA1yDG8mSunJJzHOxdvKfqZJn-obAgXSjDmiIPN7w",
+      "callToActionUrl": null
+    },
+    {
+      "id": "10469202",
+      "universalName": "ajax-systems",
+      "linkedinUrl": "https://www.linkedin.com/company/ajax-systems/",
+      "name": "Ajax Systems",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/C560BAQHOSgO-H0-Xqw/company-logo_400_400/company-logo_400_400/0/1631365625984?e=1778112000&v=beta&t=WNuUj-GSuazOqb8tqBSh5I5OQEv2mraxyWlg6fYAh_Q",
+      "employeeCountRange": {
+        "start": 5001,
+        "end": 10000
+      },
+      "followerCount": 89791,
+      "description": "International tech company and the largest manufacturer of security systems in Europe",
+      "industries": [
+        {
+          "id": "112",
+          "name": "Electrical & Electronic Manufacturing",
+          "urn": "urn:li:fsd_industry:112",
+          "title": "Appliances, Electrical, and Electronics Manufacturing",
+          "hierarchy": "Manufacturing > Appliances, Electrical, and Electronics Manufacturing"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQELwLmjAXAu4A/company-background_10000/B4DZsTCni2H0AU-/0/1765551012941/ajax_systems_cover?e=1777042800&v=beta&t=bie-raI8DvXES-DIPoGfacOFMg2EqdcxgM4x5LjaPnM",
+      "callToActionUrl": null
+    },
+    {
+      "id": "34230094",
+      "universalName": "skelartech",
+      "linkedinUrl": "https://www.linkedin.com/company/skelartech/",
+      "name": "SKELAR",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQFlud2J2cXqPQ/company-logo_400_400/B4DZpyVyVyIgAY-/0/1762854905601/skelartech_logo?e=1778112000&v=beta&t=h69x-ty6iN58DQkNVpO4RI2biETQKCz4L9x9DPs4t2k",
+      "employeeCountRange": {
+        "start": 1001,
+        "end": 5000
+      },
+      "followerCount": 31278,
+      "description": "As venture builder, we kick off and run startups with a focus on high tech, data and analytics.\n\nOur business: We have eight products in different niches and millions of users around the world (the USA, South America, Europe and Asia). Every year we demonstrate key indicators of growth by 50-60% and continue to expand.\n \nOur team: We are proud to have a strong team of 1300+ professionals with deep expertise and ambitious goals. Our people are the company's most valuable asset, so we strive to build businesses together with top talents on the market.\n \nIf you share our values, strive to create breakthrough projects and seek professional growth, you are definitely the one to join the SKELAR team!",
+      "industries": [
+        {
+          "id": "4",
+          "name": "Computer Software",
+          "urn": "urn:li:fsd_industry:4",
+          "title": "Software Development",
+          "hierarchy": "Technology, Information and Media > Technology, Information and Internet > Software Development"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQEI6GZYvfI7aw/company-background_10000/company-background_10000/0/1678372126032/skelartech_cover?e=1777042800&v=beta&t=h2slNovAk8DUTAScqcKQxNqlgb2iJf8AfqzJKZ93i8s",
+      "callToActionUrl": null
+    },
+    {
+      "id": "10381460",
+      "universalName": "ukrnaftapeople",
+      "linkedinUrl": "https://www.linkedin.com/company/ukrnaftapeople/",
+      "name": "Ukrnafta",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHptj1VqU3hfw/company-logo_400_400/B4DZzmvEo2IYAY-/0/1773397626068?e=1778112000&v=beta&t=W0b9DPvTun1g1vW2PLUsf_sbVyGu7Bfr9fGx2zMbhzg",
+      "employeeCountRange": {
+        "start": 10001,
+        "end": null
+      },
+      "followerCount": 11562,
+      "description": "Вже більше 70 років UKRNAFTA є найбільшою нафтогазовидобувною компанією України, в складі якої перебувають 1791 нафтових та 147 газових свердловин, а також 600+ монобрендових ВЗК UKRNAFTA майже в усіх регіонах України.\n\nВсе це можливо завдяки людям, які працюють в нашій команді — сильним, відважним, рішучим, інноваційним та об'єднаним спільною метою. Велика команда #UkrnaftaPeople налічує 20 000+ колег по всій Україні.\n\nСлідкуйте за новинами з життя компанії та приєднуйтесь до команди #UkrnaftaPeople",
+      "industries": [
+        {
+          "id": "57",
+          "name": "Oil & Energy",
+          "urn": "urn:li:fsd_industry:57",
+          "title": "Oil and Gas",
+          "hierarchy": "Oil, Gas, and Mining > Oil and Gas"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQER-56_v8UlZg/company-background_10000/B4DZzm8MqOJQAU-/0/1773401066568/ukrnaftapeople_cover?e=1777042800&v=beta&t=0t-T8GpS4A2PLGsgPbttXME5hFHPpfRZghIWpaG3aNM",
+      "callToActionUrl": null
+    },
+    {
+      "id": "1704132",
+      "universalName": "mhp-se",
+      "linkedinUrl": "https://www.linkedin.com/company/mhp-se/",
+      "name": "MHP",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQH0VP1Cy5nUEA/company-logo_400_400/B4DZuOkjV8HwAY-/0/1767623506208?e=1778112000&v=beta&t=NzNAEwme-Ula5qNsgzqc_fNGZVPI9e0c-X8kQj_dn78",
+      "employeeCountRange": {
+        "start": 10001,
+        "end": null
+      },
+      "followerCount": 38034,
+      "description": "MHP is an international food and agri company, which produces high-quality healthy food products that enhance its consumers' lives. MHP ‘s operations span across the agriculture, logistics, food production, and retail sectors, with manufacturing facilities across Ukraine and South-Eastern Europe, alongside subsidiaries in the UK, UAE, Saudi Arabia, the Netherlands, and other EU countries.  \nMHP’s shares are listed on the London Stock Exchange. Employing over 36,000 people in Ukraine and abroad, MHP is ranked among Ukraine’s top 20 employers, according to Forbes Ukraine. \n \nAmid the full-scale war, the company considers it its mission to support Ukraine’s economy and ensure food security. MHP is the largest single taxpayer across Ukraine’sagricultural sector and was recognised by Forbes Ukraine and NV as one of the country’s top investors in 2024. MHP is the leading poultry producer in Europe and ranks among the top 10 poultry producers worldwide, according to the WattPoultry ranking. \nMHP develops over 15 food brands, including Nasha Ryaba, Apetytna, Lehko!, Bashchynskyi, Skott Smeat, RyabChick, and more. \n \nTo ensure Ukrainians always have access to high-quality, tasty food, the company, together with its partners, operates retail stores and food outlets across the country — including MeatMarket, Fresh Food, Nasha Ryaba stores, and Döner Market fast food locations. \n \nTogether with its strategic partner, the Charitable Foundation MHP-Hromadi, the company supports Ukrainians, fosters community development, and preserves Ukrainian culture. To provide personalised assistance and comprehensive support to members of the armed forces, veterans, and their families, MHP has designed and implemented  the MHP Standing Together programme. \n \nThe founder and CEO of MHP is Ukrainian businessman Yuriy Kosyuk. ",
+      "industries": [
+        {
+          "id": "23",
+          "name": "Food Production",
+          "urn": "urn:li:fsd_industry:23",
+          "title": "Food and Beverage Manufacturing",
+          "hierarchy": "Manufacturing > Food and Beverage Manufacturing"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4E1BAQEAnuJ6MKxCYg/company-background_10000/B4EZVDEfrZHMAU-/0/1740587007167/mhp_se_cover?e=1777042800&v=beta&t=nfkCAdz595k7bAbVRw0a5GAZh-evxI98k5vBsw-JVFA",
+      "callToActionUrl": null
+    }
+  ],
+  "peopleStats": [
+    {
+      "statTitle": "Show me only",
+      "values": [
+        {
+          "title": "People",
+          "count": null
+        },
+        {
+          "title": "Jobs",
+          "count": null
+        },
+        {
+          "title": "Posts",
+          "count": null
+        },
+        {
+          "title": "Companies",
+          "count": null
+        },
+        {
+          "title": "Products",
+          "count": null
+        },
+        {
+          "title": "Groups",
+          "count": null
+        },
+        {
+          "title": "Services",
+          "count": null
+        },
+        {
+          "title": "Events",
+          "count": null
+        },
+        {
+          "title": "Courses",
+          "count": null
+        },
+        {
+          "title": "Schools",
+          "count": null
+        }
+      ]
+    },
+    {
+      "statTitle": "Locations",
+      "values": [
+        {
+          "title": "Ukraine",
+          "count": 615
+        },
+        {
+          "title": "Kyiv Metropolitan Area",
+          "count": 271
+        },
+        {
+          "title": "Kyiv City, Ukraine",
+          "count": 261
+        },
+        {
+          "title": "Lviv, Ukraine",
+          "count": 43
+        },
+        {
+          "title": "Lviv",
+          "count": 39
+        },
+        {
+          "title": "Poltava, Ukraine",
+          "count": 37
+        },
+        {
+          "title": "Dnipropetrovsk, Ukraine",
+          "count": 33
+        },
+        {
+          "title": "Poltavska Miska Hromada",
+          "count": 31
+        },
+        {
+          "title": "Dnipro Metropolitan Area",
+          "count": 25
+        },
+        {
+          "title": "Dnipro",
+          "count": 22
+        },
+        {
+          "title": "Kharkiv, Ukraine",
+          "count": 21
+        },
+        {
+          "title": "Kharkiv",
+          "count": 21
+        },
+        {
+          "title": "Kharkiv Metropolitan Area",
+          "count": 21
+        },
+        {
+          "title": "Kyiv, Ukraine",
+          "count": 20
+        },
+        {
+          "title": "Poland",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "statTitle": "School",
+      "values": [
+        {
+          "title": "National Technical University of Ukraine 'Kyiv Polytechnic Institute'​",
+          "count": 48
+        },
+        {
+          "title": "Taras Shevchenko National University of Kyiv",
+          "count": 30
+        },
+        {
+          "title": "National University «Kyiv Aviation Institute»",
+          "count": 26
+        },
+        {
+          "title": "Ivan Franko National University of Lviv",
+          "count": 13
+        },
+        {
+          "title": "Kharkiv National University of Radio Electronics",
+          "count": 11
+        },
+        {
+          "title": "Kyiv National Economics University",
+          "count": 10
+        },
+        {
+          "title": "Lviv Polytechnic National University",
+          "count": 9
+        },
+        {
+          "title": "Hillel IT School",
+          "count": 8
+        },
+        {
+          "title": "National Technical University \"Kharkiv Polytechnic Institute\"",
+          "count": 8
+        },
+        {
+          "title": "Simon  Kuznets Kharkiv National University of Economics",
+          "count": 8
+        },
+        {
+          "title": "National University of Food Technologies",
+          "count": 7
+        },
+        {
+          "title": "Dnipropetrovs'kij Nacional'nij Universitet",
+          "count": 6
+        },
+        {
+          "title": "Beetroot Academy",
+          "count": 6
+        },
+        {
+          "title": "Cherkasy State Technological University",
+          "count": 6
+        },
+        {
+          "title": "GoIT - start your career in IT",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "statTitle": "Current Function",
+      "values": [
+        {
+          "title": "Engineering",
+          "count": 264
+        },
+        {
+          "title": "Information Technology",
+          "count": 121
+        },
+        {
+          "title": "Research",
+          "count": 86
+        },
+        {
+          "title": "Operations",
+          "count": 47
+        },
+        {
+          "title": "Program and Project Management",
+          "count": 42
+        },
+        {
+          "title": "Business Development",
+          "count": 40
+        },
+        {
+          "title": "Customer Success and Support",
+          "count": 24
+        },
+        {
+          "title": "Quality Assurance",
+          "count": 20
+        },
+        {
+          "title": "Arts and Design",
+          "count": 17
+        },
+        {
+          "title": "Sales",
+          "count": 16
+        },
+        {
+          "title": "Media and Communication",
+          "count": 15
+        },
+        {
+          "title": "Human Resources",
+          "count": 12
+        },
+        {
+          "title": "Marketing",
+          "count": 12
+        },
+        {
+          "title": "Education",
+          "count": 8
+        },
+        {
+          "title": "Finance",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "statTitle": "Skill Explicit",
+      "values": [
+        {
+          "title": "SQL",
+          "count": 193
+        },
+        {
+          "title": "Jira",
+          "count": 169
+        },
+        {
+          "title": "Git",
+          "count": 161
+        },
+        {
+          "title": "JavaScript",
+          "count": 156
+        },
+        {
+          "title": "Cascading Style Sheets (CSS)",
+          "count": 141
+        },
+        {
+          "title": "HTML",
+          "count": 135
+        },
+        {
+          "title": "MySQL",
+          "count": 124
+        },
+        {
+          "title": "PHP",
+          "count": 108
+        },
+        {
+          "title": "Project Management",
+          "count": 95
+        },
+        {
+          "title": "Scrum",
+          "count": 94
+        },
+        {
+          "title": "Analytical Skills",
+          "count": 94
+        },
+        {
+          "title": "Communication",
+          "count": 84
+        },
+        {
+          "title": "English",
+          "count": 83
+        },
+        {
+          "title": "Postman API",
+          "count": 81
+        },
+        {
+          "title": "Linux",
+          "count": 78
+        }
+      ]
+    },
+    {
+      "statTitle": "Service categories",
+      "values": [
+        {
+          "title": "Software Development",
+          "count": 9
+        },
+        {
+          "title": "Consulting",
+          "count": 5
+        },
+        {
+          "title": "Web Development",
+          "count": 5
+        },
+        {
+          "title": "Marketing",
+          "count": 3
+        },
+        {
+          "title": "Design",
+          "count": 3
+        },
+        {
+          "title": "Operations",
+          "count": 3
+        },
+        {
+          "title": "Advertising",
+          "count": 3
+        },
+        {
+          "title": "Application Development",
+          "count": 2
+        },
+        {
+          "title": "Project Management",
+          "count": 2
+        },
+        {
+          "title": "Information Technology",
+          "count": 2
+        },
+        {
+          "title": "Marketing Consulting",
+          "count": 2
+        },
+        {
+          "title": "Brand Marketing",
+          "count": 2
+        },
+        {
+          "title": "IT Consulting",
+          "count": 2
+        },
+        {
+          "title": "Technical Support",
+          "count": 2
+        },
+        {
+          "title": "Brand Consulting",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "statTitle": "Field of Study",
+      "values": [
+        {
+          "title": "Computer Science",
+          "count": 40
+        },
+        {
+          "title": "Computational Science",
+          "count": 32
+        },
+        {
+          "title": "Information Technology",
+          "count": 29
+        },
+        {
+          "title": "Computer Software Engineering",
+          "count": 27
+        },
+        {
+          "title": "Computer Engineering",
+          "count": 21
+        },
+        {
+          "title": "Computer Engineering Technologies/Technicians",
+          "count": 21
+        },
+        {
+          "title": "Computer Engineering Technology/Technician",
+          "count": 21
+        },
+        {
+          "title": "Finance, General",
+          "count": 15
+        },
+        {
+          "title": "Computer Technology/Computer Systems Technology",
+          "count": 14
+        },
+        {
+          "title": "Cyber/Electronic Operations and Warfare",
+          "count": 13
+        },
+        {
+          "title": "Computer Programming",
+          "count": 12
+        },
+        {
+          "title": "Applied Mathematics",
+          "count": 12
+        },
+        {
+          "title": "Economics",
+          "count": 12
+        },
+        {
+          "title": "Information Science/Studies",
+          "count": 9
+        },
+        {
+          "title": "Computer Systems Networking and Telecommunications",
+          "count": 9
+        }
+      ]
+    }
+  ],
+  "originalQuery": {
+    "search": "Nova Digital",
+    "location": "",
+    "scrapePeopleTab": "true"
+  },
+  "requestId": "b5f50608-04a3-4063-ba30-687e0df409b3"
+},
+{
+  "id": "18704684",
+  "universalName": "tribe-capital-partners",
+  "linkedinUrl": "https://www.linkedin.com/company/tribe-capital-partners/",
+  "name": "Tribe Capital",
+  "tagline": "N-of-1",
+  "website": "http://www.tribecap.co",
+  "phone": null,
+  "logo": "https://media.licdn.com/dms/image/v2/C560BAQFIIiXrzVCOUA/company-logo_400_400/company-logo_400_400/0/1631421497784/tribe_capital_partners_logo?e=1778112000&v=beta&t=S4dvbmvm-W1yT7hQEHpltD1A_7HgzEd5BuiVNIdD9gI",
+  "foundedOn": {
+    "month": null,
+    "year": 2018,
+    "day": null
+  },
+  "employeeCount": 73,
+  "employeeCountRange": {
+    "start": 11,
+    "end": 50
+  },
+  "followerCount": 15917,
+  "description": "Tribe Capital is a venture capital firm focused on capturing a perpetual edge in venture and crypto using data science. The team is made up of investors, engineers and scientists who use data to model venture-backed private companies. The San Francisco-based firm has approximately $1.7 billion in assets under management and has made notable investments in Apollo.io, Carta, Docker, Kraken, Instabase, Relativity Space, and Shiprocket. To learn more, visit tribecap.co.",
+  "locations": [
+    {
+      "country": "US",
+      "city": "Boston",
+      "geographicArea": "Massachusetts",
+      "line1": null,
+      "line2": null,
+      "postalCode": "02108",
+      "headquarter": false,
+      "description": null,
+      "parsed": {
+        "text": "Boston, MA, United States",
+        "countryCode": "US",
+        "regionCode": null,
+        "country": "United States",
+        "countryFull": "United States of America",
+        "state": "Massachusetts",
+        "city": "Boston"
+      }
+    },
+    {
+      "country": "US",
+      "city": "Menlo Park",
+      "geographicArea": "California",
+      "line1": null,
+      "line2": null,
+      "postalCode": "94025",
+      "headquarter": true,
+      "description": null,
+      "parsed": {
+        "text": "Menlo Park, CA, United States",
+        "countryCode": "US",
+        "regionCode": null,
+        "country": "United States",
+        "countryFull": "United States of America",
+        "state": "California",
+        "city": "Menlo Park"
+      }
+    },
+    {
+      "country": "IN",
+      "city": "Gurgaon",
+      "geographicArea": "HR",
+      "line1": null,
+      "line2": null,
+      "postalCode": "122002",
+      "headquarter": false,
+      "description": null,
+      "parsed": {
+        "text": "Gurgaon, India",
+        "countryCode": "IN",
+        "regionCode": null,
+        "country": "India",
+        "countryFull": "India",
+        "state": "Haryana",
+        "city": "Gurgaon"
+      }
+    }
+  ],
+  "specialities": [],
+  "industries": [
+    {
+      "id": "106",
+      "name": "Venture Capital & Private Equity",
+      "urn": "urn:li:fsd_industry:106",
+      "title": "Venture Capital and Private Equity Principals",
+      "hierarchy": "Financial Services > Capital Markets > Venture Capital and Private Equity Principals"
+    }
+  ],
+  "logos": [
+    {
+      "url": "https://media.licdn.com/dms/image/v2/C560BAQFIIiXrzVCOUA/company-logo_400_400/company-logo_400_400/0/1631421497784/tribe_capital_partners_logo?e=1778112000&v=beta&t=S4dvbmvm-W1yT7hQEHpltD1A_7HgzEd5BuiVNIdD9gI",
+      "width": 400,
+      "height": 400,
+      "expiresAt": 1778112000000
+    },
+    {
+      "url": "https://media.licdn.com/dms/image/v2/C560BAQFIIiXrzVCOUA/company-logo_200_200/company-logo_200_200/0/1631421497784/tribe_capital_partners_logo?e=1778112000&v=beta&t=6ch5DTp8RzHLWAJhNUYpJUDQOlnuHS18nXVS8nuUZms",
+      "width": 200,
+      "height": 200,
+      "expiresAt": 1778112000000
+    },
+    {
+      "url": "https://media.licdn.com/dms/image/v2/C560BAQFIIiXrzVCOUA/company-logo_100_100/company-logo_100_100/0/1631421497784/tribe_capital_partners_logo?e=1778112000&v=beta&t=LGQXgTExfyRKFAUfTad_L2pdT9f-MBKaqmA0WI89TNk",
+      "width": 100,
+      "height": 100,
+      "expiresAt": 1778112000000
+    }
+  ],
+  "active": true,
+  "jobSearchUrl": "https://www.linkedin.com/jobs/search?geoId=92000000&f_C=18704684",
+  "fundingData": null,
+  "pageVerified": false,
+  "announcement": null,
+  "pageType": "COMPANY",
+  "autoGenerated": false,
+  "callToActionUrl": "http://tribecap.co",
+  "similarOrganizations": [
+    {
+      "id": "3767419",
+      "universalName": "shiprocket",
+      "linkedinUrl": "https://www.linkedin.com/company/shiprocket/",
+      "name": "Shiprocket",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D560BAQGTpJiL2yocIA/company-logo_400_400/company-logo_400_400/0/1703604112574?e=1778112000&v=beta&t=p-xuLmFXrHYvHHdPYmBsMgznxacbXXqlh00sdMQVq78",
+      "employeeCountRange": {
+        "start": 501,
+        "end": 1000
+      },
+      "followerCount": 117853,
+      "description": "Shiprocket is India’s largest eCommerce enablement platform providing digital retailers an end-to-end customer experience platform. The platform which is creating an operating system for direct commerce enables shipping, fulfillment, customer communication and marketing tools as well as providers for SMEs, D2C retailers, and social commerce retailers in India. With 25+ courier partners on board, the brand enables pan-India as well as international shipping deliveries. Its shipping solutions are available across 24,000+ pin codes within India and 220 countries worldwide.\n\nLaunched in 2017, Shiprocket is on a mission to create a seamless logistics data platform that connects retailers, carriers, and consumers across national and international locations. Shiprocket provides a technology stack to help retailers integrate their shopping websites on Shopify, Magento, Woocommerce, Zoho, or others with the platform’s multi-carrier API to manage orders, print shipping labels, and avail tracking information from multiple providers including managing Cash on Delivery (COD) orders and payment reconciliation. Shiprocket also offers state-of-the-art fulfillment solutions with more than 35+ warehouses located across India. The technology stack provides a robust post-purchase experience to consumers, resulting in higher engagement and lower RTO (failed deliveries).\n\nToday, Shiprocket is the platform behind 2.5 lakh plus sellers who generate a GMV of more than $2.5B annually. The platform delivers packets to more than 70M consumers annually and is growing transactions 2.5-3X year on year.",
+      "industries": [
+        {
+          "id": "4",
+          "name": "Computer Software",
+          "urn": "urn:li:fsd_industry:4",
+          "title": "Software Development",
+          "hierarchy": "Technology, Information and Media > Technology, Information and Internet > Software Development"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D561BAQGZhLXQA8r6YA/company-background_10000/B56ZkzQ5eyH8AU-/0/1757501693883/shiprocket_cover?e=1777042800&v=beta&t=uo01um9Y2LWVbnhM25atdC405hKUXPFuRuVns8Y6VZ0",
+      "callToActionUrl": null
+    },
+    {
+      "id": "2824458",
+      "universalName": "orios-venture-partners",
+      "linkedinUrl": "https://www.linkedin.com/company/orios-venture-partners/",
+      "name": "Orios Venture Partners",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/C510BAQFTrBhO0zG5ig/company-logo_400_400/company-logo_400_400/0/1630605443171/orios_venture_partners_logo?e=1778112000&v=beta&t=1Sf8gMG0qbX7DJdJuHU2OAeU_wb_AAlXj9pfLTsFkmY",
+      "employeeCountRange": {
+        "start": 11,
+        "end": 50
+      },
+      "followerCount": 70790,
+      "description": "Orios Venture Partners is an Indian technology venture fund. Our portfolio includes Pharmeasy, Country Delight, WeRize, Battrey Smart, Next Wave, Zupee and many other path-breaking, fast-growing companies\n\nOrios works closely with invested companies, especially in marketing and branding, to help them breakout cost effectively and build a loyal tribe of users.  \n\nOrios is actively investing in 2021. We love passionate founders and team members, if you have a startup idea or would like to join us, please email us on hello@oriosvp.com",
+      "industries": [
+        {
+          "id": "106",
+          "name": "Venture Capital & Private Equity",
+          "urn": "urn:li:fsd_industry:106",
+          "title": "Venture Capital and Private Equity Principals",
+          "hierarchy": "Financial Services > Capital Markets > Venture Capital and Private Equity Principals"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/C511BAQG4Gmv-LTR20w/company-background_10000/company-background_10000/0/1584296456469/orios_venture_partners_cover?e=1777042800&v=beta&t=CmdzToYQBb9UVcBO345exbmBYH3ALJ-LyC3VWrYPX4g",
+      "callToActionUrl": null
+    },
+    {
+      "id": "99109212",
+      "universalName": "elevenx-capital",
+      "linkedinUrl": "https://www.linkedin.com/company/elevenx-capital/",
+      "name": "ElevenX Capital",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D560BAQHy3gjUtJhgfA/company-logo_400_400/company-logo_400_400/0/1702912300633/elevenx_capital_logo?e=1778112000&v=beta&t=Jt0HuAsLKeqqY827BBnpAG5T8mYkw38ropVxjTbI4H0",
+      "employeeCountRange": {
+        "start": 51,
+        "end": 200
+      },
+      "followerCount": 22747,
+      "description": "ElevenX Capital is a venture studio and venture capital fund that builds companies from the ground up. Founded in 2014 by serial entrepreneur Anjli Jain, ElevenX redefines the traditional venture capital model by combining ideas, capital and talent to create and scale companies across various sectors, including cybersecurity, artificial intelligence, and education and workforce management. The firm brings together experienced entrepreneurs and value creation specialists in marketing, sales, engineering, talent, legal and finance to support the development of new ventures from inception to scale. ElevenX has offices in Miami, Florida and Gurgaon, India. For more information, visit: https://www.elevenxcapital.com.",
+      "industries": [
+        {
+          "id": "106",
+          "name": "Venture Capital & Private Equity",
+          "urn": "urn:li:fsd_industry:106",
+          "title": "Venture Capital and Private Equity Principals",
+          "hierarchy": "Financial Services > Capital Markets > Venture Capital and Private Equity Principals"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQHrDTPeQvqrSg/company-background_10000/company-background_10000/0/1702319015474/elevenx_capital_cover?e=1777042800&v=beta&t=JkRI6gaf0FFTVv4J9PH0Q7c9CxYG52eUMeXNyTUt0jE",
+      "callToActionUrl": null
+    },
+    {
+      "id": "15802182",
+      "universalName": "northflank",
+      "linkedinUrl": "https://www.linkedin.com/company/northflank/",
+      "name": "Northflank",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/C4D0BAQFNJj6wa4vC1g/company-logo_400_400/company-logo_400_400/0/1630537041412/northflank_ltd_logo?e=1778112000&v=beta&t=Isah4T92Gke8ywAkf_WPerKn7QDwGYVVwaRt_Tu40Ow",
+      "employeeCountRange": {
+        "start": 11,
+        "end": 50
+      },
+      "followerCount": 2955,
+      "description": "Northflank is a self-service developer platform that automates and unifies deployment of any workload, on any cloud, at any scale.",
+      "industries": [
+        {
+          "id": "4",
+          "name": "Computer Software",
+          "urn": "urn:li:fsd_industry:4",
+          "title": "Software Development",
+          "hierarchy": "Technology, Information and Media > Technology, Information and Internet > Software Development"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/C4D1BAQFGpKzLcQSCRw/company-background_10000/company-background_10000/0/1633014688015/northflank_ltd_cover?e=1777042800&v=beta&t=DEIYTbya0oLRL_Rp-s20DjfdFtZR8dR7mERvLKAd0Ho",
+      "callToActionUrl": null
+    },
+    {
+      "id": "1476137",
+      "universalName": "pelion-venture-partners",
+      "linkedinUrl": "https://www.linkedin.com/company/pelion-venture-partners/",
+      "name": "Pelion Venture Partners",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQHPoFRYXiOnNQ/company-logo_400_400/B4DZxX3I6IGUAk-/0/1771000598883/pelion_venture_partners_logo?e=1778112000&v=beta&t=IMiQKr-Zdl_wOHzFoMr8HPVrsYvitd8cnWbnoth9bDg",
+      "employeeCountRange": {
+        "start": 11,
+        "end": 50
+      },
+      "followerCount": 13148,
+      "description": "Since 1986, Pelion Venture Partners has been helping entrepreneurs turn early-stage concepts into tomorrow’s industry-leading companies. The Pelion team has deep and diverse industry and investment experience. We are hands-on in our approach and work collaboratively on each portfolio company over the life of an investment. Our company partners benefit from our insights and our abilities to focus strategically and tactically on success. We can tap into and leverage a vast network of technology executives in all corners of the IT industry to help our companies achieve success.",
+      "industries": [
+        {
+          "id": "106",
+          "name": "Venture Capital & Private Equity",
+          "urn": "urn:li:fsd_industry:106",
+          "title": "Venture Capital and Private Equity Principals",
+          "hierarchy": "Financial Services > Capital Markets > Venture Capital and Private Equity Principals"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQEd_X90MDMOSg/company-background_10000/B4DZxX25RYI8AU-/0/1771000535539/pelion_venture_partners_cover?e=1777042800&v=beta&t=m0wXqw2whNMtmRSwB3Xc31dt6JRBbXgZdgWdjsxIE90",
+      "callToActionUrl": null
+    },
+    {
+      "id": "27221633",
+      "universalName": "antlerglobal",
+      "linkedinUrl": "https://www.linkedin.com/company/antlerglobal/",
+      "name": "Antler",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQGcO8WhScYJvg/company-logo_400_400/company-logo_400_400/0/1630652634929/antlerglobal_logo?e=1778112000&v=beta&t=-IhwGWOAk8VB-KotS7X1S0OE7FnLJSXPSEG25DDqCfM",
+      "employeeCountRange": {
+        "start": 201,
+        "end": 500
+      },
+      "followerCount": 343219,
+      "description": "Antler is one of the most active early-stage investors globally. The firm leads in ‘Day Zero’ investing, an approach to venture capital focused on partnering with founders pre-launch. Antler systematically removes capital and network constraints for early-stage technology entrepreneurs by providing co-founder matching, deep business model validation, initial capital, expansion support, and follow-on funding. The firm is present in 27 cities across most leading technology ecosystems globally and has made over 1,300 investments into early-stage startups. Antler has been repeatedly recognized by Pitchbook as the world’s most active angel and seed-stage investor.",
+      "industries": [
+        {
+          "id": "106",
+          "name": "Venture Capital & Private Equity",
+          "urn": "urn:li:fsd_industry:106",
+          "title": "Venture Capital and Private Equity Principals",
+          "hierarchy": "Financial Services > Capital Markets > Venture Capital and Private Equity Principals"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQEUE_I5WSkYnw/company-background_10000/B4DZfqoM60GkAw-/0/1751988097049/antlerglobal_cover?e=1777042800&v=beta&t=ZFdlCmzw_Rw0200a1dKilusvIyfgb6DI1MQC_C1rp7I",
+      "callToActionUrl": null
+    },
+    {
+      "id": "28292",
+      "universalName": "ftv-capital",
+      "linkedinUrl": "https://www.linkedin.com/company/ftv-capital/",
+      "name": "FTV Capital",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/C560BAQGR4kwh5lsNOg/company-logo_400_400/company-logo_400_400/0/1676506424889/ftv_capital_logo?e=1778112000&v=beta&t=MhltKKkGMM-JKj1aT6YbNh5_0pq6hVKLtz_ZRMf3s-M",
+      "employeeCountRange": {
+        "start": 51,
+        "end": 200
+      },
+      "followerCount": 19261,
+      "description": "FTV Capital is a growth equity investment firm that has raised over $10.2 billion to invest in high-growth companies offering a range of innovative solutions in financial technology and services, vertical software, enterprise technology and services, and healthcare technology and services. FTV’s experienced team leverages its domain expertise and proven track record in these sectors to help motivated management teams accelerate growth. FTV also provides companies with access to FTV Propel®, experienced executives dedicated to driving value for our portfolio companies across a range of business functions, and FTV's Global Partner Network®, a group of the world’s leading enterprises and executives who have helped our portfolio companies for over 28 years. Founded in 1998, FTV Capital has invested in over 150 portfolio companies. FTV has offices in New York, San Francisco, London and Connecticut.  ",
+      "industries": [
+        {
+          "id": "106",
+          "name": "Venture Capital & Private Equity",
+          "urn": "urn:li:fsd_industry:106",
+          "title": "Venture Capital and Private Equity Principals",
+          "hierarchy": "Financial Services > Capital Markets > Venture Capital and Private Equity Principals"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D561BAQH9NU2a-sCJTA/company-background_10000/company-background_10000/0/1706027760261/ftv_capital_cover?e=1777042800&v=beta&t=bM2T1t4aA5zxQVBoLTfU_eX5tYM1hdLJLDg5LRNiWAg",
+      "callToActionUrl": null
+    },
+    {
+      "id": "83531039",
+      "universalName": "oisterglobal",
+      "linkedinUrl": "https://www.linkedin.com/company/oisterglobal/",
+      "name": "Oister Global",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D560BAQFe1-qALy7aeQ/company-logo_400_400/company-logo_400_400/0/1709027091916/oisterglobal_logo?e=1778112000&v=beta&t=X-rrl6wHYpvhwdTJz65MClLJF0vebQg8BnIb_H3EdfY",
+      "employeeCountRange": {
+        "start": 11,
+        "end": 50
+      },
+      "followerCount": 26599,
+      "description": "Oister is India’s Premier Alternative Assets Manager\n\nWe provide access, expertise, and value creation across top-tier private market opportunities, with a focus on differentiated secondary transactions in late-stage, high-growth companies. \n\nWe manage proprietary funds, invest in PE/VC funds and secondary opportunities, and partner with CRISIL to publish the industry’s leading annual benchmarking report on private equity and venture capital. \n\nSince our launch, we have invested in eight top-tier funds, backing 50+ high-growth companies, all within a high-performance, deeply selective investment ecosystem. \n\nAt Oister, we deliver precision, transparency, and curated high- quality opportunities, empowering qualified investors to participate meaningfully in private markets in collaboration with leading Private Banks and Wealth Managers.",
+      "industries": [
+        {
+          "id": "43",
+          "name": "Financial Services",
+          "urn": "urn:li:fsd_industry:43",
+          "title": "Financial Services",
+          "hierarchy": "Financial Services"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4D1BAQFop1Yf3Z9UpA/company-background_10000/company-background_10000/0/1708502688873/oisterglobal_cover?e=1777042800&v=beta&t=-83EAolk2TNy8uDc4pa31QgO32qvUCDp9bGCXr1LMiA",
+      "callToActionUrl": null
+    },
+    {
+      "id": "3787845",
+      "universalName": "krakenfx",
+      "linkedinUrl": "https://www.linkedin.com/company/krakenfx/",
+      "name": "Kraken",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQFm8yg0gGJN1A/company-logo_400_400/company-logo_400_400/0/1697458897774/krakenfx_logo?e=1778112000&v=beta&t=X_2xkk8Ocu67NJ82TVfngaWqTGstjBoNer8wNAky0Kc",
+      "employeeCountRange": {
+        "start": 1001,
+        "end": 5000
+      },
+      "followerCount": 286619,
+      "description": "Kraken is one of the world’s longest-standing and most secure crypto platforms. Our mission is to accelerate the global adoption of crypto, so that everyone can achieve financial freedom and inclusion. Globally, Kraken clients trade more than 200 digital assets and 6 different national currencies, including GBP, EUR, USD, CAD, CHF, and AUD.\n\nKraken was founded in 2011 and was one of the first platforms to offer spot trading with margin, parachain auctions, staking, regulated derivatives and index services. \n\nTrusted by over 10 million individuals, traders and institutions around the world, Kraken offers professional 24/7/365 client support along with one of the fastest, most performant trading platforms available. Kraken has set the industry standard for transparency and client trust, and was the first crypto platform to conduct Proof of Reserves audits. \n\nIn 2024, Kraken ranked 12th in Newsweek's Global Top 100 list of Most Loved Workplaces, recognizing how the platform offers one of the world's most compelling employment opportunities.\n\nRisk Disclosure: https://www.kraken.com/en-ca/social-media-disclosure",
+      "industries": [
+        {
+          "id": "43",
+          "name": "Financial Services",
+          "urn": "urn:li:fsd_industry:43",
+          "title": "Financial Services",
+          "hierarchy": "Financial Services"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D4E1BAQF0a3qrA7n72A/company-background_10000/B4EZ0LU8SkJAAU-/0/1774011533424/krakenfx_cover?e=1777042800&v=beta&t=g25_25fpGLgSlc1D4weLJv61iZN1koI8nNp3O_KbIlo",
+      "callToActionUrl": null
+    },
+    {
+      "id": "103900",
+      "universalName": "kauffmanfellows",
+      "linkedinUrl": "https://www.linkedin.com/company/kauffmanfellows/",
+      "name": "Kauffman Fellows",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQEkZXoAvhnzDw/company-logo_400_400/company-logo_400_400/0/1686060738182/kauffmanfellows_logo?e=1778112000&v=beta&t=yjM2W2NKWyU6FxMfP2V455QWT0Kb9t2dEENarKvWw2s",
+      "employeeCountRange": {
+        "start": 2,
+        "end": 10
+      },
+      "followerCount": 47443,
+      "description": "Since 1995, Kauffman Fellows has accelerated the development and success of venture capital investors around the world, supporting Fellows to navigate every aspect of innovation investing, from deal flow to public markets. With 800+ Fellows across 65 countries, Kauffman Fellows is the largest network of VCs and innovation leaders in the world. In the 27 years since inception, Kauffman Fellows have started hundreds of funds, raised and deployed hundreds of billions of dollars in capital, and helped pave the way for some of the world’s most groundbreaking companies. As a network, Kauffman Fellows represent over $290 billion in assets under management, have collectively raised over $790 billion dollars in capital, and have been responsible for over $8.5 trillion in exits to LPs.\n\nFor more information visit www.kauffmanfellows.org ",
+      "industries": [
+        {
+          "id": "100",
+          "name": "Non-profit Organization Management",
+          "urn": "urn:li:fsd_industry:100",
+          "title": "Non-profit Organizations",
+          "hierarchy": "Consumer Services > Non-profit Organizations"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D561BAQHUFT884FWd-Q/company-background_10000/company-background_10000/0/1695113075210/kauffmanfellows_cover?e=1777042800&v=beta&t=B8-H38Pe-DDX99F3R8nUH5uAr1SQ-veZHxtKa0fgA9E",
+      "callToActionUrl": null
+    },
+    {
+      "id": "2435150",
+      "universalName": "yournest-venture-capital",
+      "linkedinUrl": "https://www.linkedin.com/company/yournest-venture-capital/",
+      "name": "YourNest Venture Capital",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/C510BAQE-F6Aq8da6qQ/company-logo_400_400/company-logo_400_400/0/1631411124688/yournest_angel_fund_logo?e=1778112000&v=beta&t=HNEitGFjd3Zeepls-5rUASNn8UbsAy58HA140LVixOE",
+      "employeeCountRange": {
+        "start": 11,
+        "end": 50
+      },
+      "followerCount": 26509,
+      "description": "YourNest Venture Capital is a sharply focused 'Pre-Series A' fund house that was established in 2011 to nurture global market leaders from India. It invests in technology-led, enterprise-driven (B2B) and DeepTech (IoT, SaaS) startups. We are seeing India swiftly shift from an IT service outsourcing-hub to an IP/Patent driven 'Product Nation' with compelling investment opportunities. \n\nOur first fund of US$ 14 mn, started in 2012, and invested in 16 companies.  It helped YourNest to be ranked as the Youngest VC firm in Preqin’s Top 10 Alternative Assets (2017).\n\nHaving completely invested this first fund, YourNest launched its second fund of US$ 30 in 2017 mn and has invested in 19 Indian startups with a focus on DeepTech. As of March 2021, CRISIL ranked it 7th among 48 AIFs launched in FY17. \n\nWhile several exits have been taking place from both funds, some of the Fund II portfolio companies – including Miko, Dozee and Exponent Energy – have already shown early promise of being Dragons i.e. companies that can potentially return the entire fund corpus in a single exit.\n\nThe current fund – YourNest Innovative Products VC Fund III – was launched in 2021 and is likely to close at US$ 100 mn, after exercising the greenshoe option. It has already invested in seven companies – including crossover investments in three existing portfolio companies.\n\nIn a country where entrepreneurship is encouraged but comes with its own challenges, the Indian DeepTech eco-system is rapidly evolving. Adept at identifying daring founders who we call ‘Challengineers’ and emerging ideas, the YourNest team of four general partners include a business builder, a leadership coach, a global technology leader, an analyst and a technologist. As local Fund Managers they operate as unified enablers to nurture and guide our portfolio companies to global success as they benefit from our experience, networks and resources worldwide to build enterprises that dominate markets. They are supported by another f",
+      "industries": [
+        {
+          "id": "106",
+          "name": "Venture Capital & Private Equity",
+          "urn": "urn:li:fsd_industry:106",
+          "title": "Venture Capital and Private Equity Principals",
+          "hierarchy": "Financial Services > Capital Markets > Venture Capital and Private Equity Principals"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D561BAQFpiZTAuZ1Gqg/company-background_10000/B56Z1q8C1nKcAU-/0/1775615619576/yournest_venture_capital_cover?e=1777042800&v=beta&t=oPeTBsxobxZIlXk-k_FX4ZWHgkyjG1jUgwr7Saj6gvo",
+      "callToActionUrl": null
+    },
+    {
+      "id": "96608875",
+      "universalName": "natcapcentral",
+      "linkedinUrl": "https://www.linkedin.com/company/natcapcentral/",
+      "name": "Natural Capital",
+      "website": null,
+      "logo": "https://media.licdn.com/dms/image/v2/D560BAQFJByZ2Pt6GjA/company-logo_400_400/company-logo_400_400/0/1692121745153?e=1778112000&v=beta&t=GQsmGmyNffichlVllD3-O5FpWInqcmI3FuRfz-K7KVs",
+      "employeeCountRange": {
+        "start": 2,
+        "end": 10
+      },
+      "followerCount": 287,
+      "description": "Bringing capital, technology, and entrepreneurs together to solve the world's hardest problems",
+      "industries": [
+        {
+          "id": "106",
+          "name": "Venture Capital & Private Equity",
+          "urn": "urn:li:fsd_industry:106",
+          "title": "Venture Capital and Private Equity Principals",
+          "hierarchy": "Financial Services > Capital Markets > Venture Capital and Private Equity Principals"
+        }
+      ],
+      "backgroundCover": "https://media.licdn.com/dms/image/v2/D561BAQFV-hB5eUkO9A/company-background_10000/B56Zf1mXJrHYAY-/0/1752172164154/natcapcentral_cover?e=1777042800&v=beta&t=S9BSZGy3no8cXiEp5MGytM2NmTn4OS4UiM87_58Rvv4",
+      "callToActionUrl": null
+    }
+  ],
+  "peopleStats": [
+    {
+      "statTitle": "Show me only",
+      "values": [
+        {
+          "title": "People",
+          "count": null
+        },
+        {
+          "title": "Jobs",
+          "count": null
+        },
+        {
+          "title": "Posts",
+          "count": null
+        },
+        {
+          "title": "Companies",
+          "count": null
+        },
+        {
+          "title": "Products",
+          "count": null
+        },
+        {
+          "title": "Groups",
+          "count": null
+        },
+        {
+          "title": "Services",
+          "count": null
+        },
+        {
+          "title": "Events",
+          "count": null
+        },
+        {
+          "title": "Courses",
+          "count": null
+        },
+        {
+          "title": "Schools",
+          "count": null
+        }
+      ]
+    },
+    {
+      "statTitle": "Locations",
+      "values": [
+        {
+          "title": "United States",
+          "count": 58
+        },
+        {
+          "title": "California, United States",
+          "count": 27
+        },
+        {
+          "title": "San Francisco Bay Area",
+          "count": 22
+        },
+        {
+          "title": "San Francisco, CA",
+          "count": 15
+        },
+        {
+          "title": "New York City Metropolitan Area",
+          "count": 8
+        },
+        {
+          "title": "New York, United States",
+          "count": 7
+        },
+        {
+          "title": "Greater Boston",
+          "count": 7
+        },
+        {
+          "title": "Massachusetts, United States",
+          "count": 6
+        },
+        {
+          "title": "New York, NY",
+          "count": 6
+        },
+        {
+          "title": "India",
+          "count": 3
+        },
+        {
+          "title": "Los Angeles Metropolitan Area",
+          "count": 3
+        },
+        {
+          "title": "Pakistan",
+          "count": 2
+        },
+        {
+          "title": "Florida, United States",
+          "count": 2
+        },
+        {
+          "title": "Mountain View, CA",
+          "count": 2
+        },
+        {
+          "title": "Boston, MA",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "statTitle": "School",
+      "values": [
+        {
+          "title": "Stanford University",
+          "count": 4
+        },
+        {
+          "title": "University of Massachusetts Amherst",
+          "count": 4
+        },
+        {
+          "title": "The Wharton School",
+          "count": 4
+        },
+        {
+          "title": "NYU Stern School of Business",
+          "count": 3
+        },
+        {
+          "title": "Penn State University",
+          "count": 3
+        },
+        {
+          "title": "Yale University",
+          "count": 2
+        },
+        {
+          "title": "Harvard University",
+          "count": 2
+        },
+        {
+          "title": "University of California, Berkeley",
+          "count": 2
+        },
+        {
+          "title": "New York University",
+          "count": 2
+        },
+        {
+          "title": "Stuyvesant High School",
+          "count": 2
+        },
+        {
+          "title": "St. George's School",
+          "count": 1
+        },
+        {
+          "title": "The Hong Kong University of Science and Technology",
+          "count": 1
+        },
+        {
+          "title": "Saint Joseph's University",
+          "count": 1
+        },
+        {
+          "title": "Harvard Business School Executive Education",
+          "count": 1
+        },
+        {
+          "title": "Clark University",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "statTitle": "Current Function",
+      "values": [
+        {
+          "title": "Entrepreneurship",
+          "count": 25
+        },
+        {
+          "title": "Business Development",
+          "count": 22
+        },
+        {
+          "title": "Information Technology",
+          "count": 14
+        },
+        {
+          "title": "Operations",
+          "count": 13
+        },
+        {
+          "title": "Finance",
+          "count": 11
+        },
+        {
+          "title": "Accounting",
+          "count": 6
+        },
+        {
+          "title": "Research",
+          "count": 6
+        },
+        {
+          "title": "Engineering",
+          "count": 5
+        },
+        {
+          "title": "Legal",
+          "count": 4
+        },
+        {
+          "title": "Military and Protective Services",
+          "count": 4
+        },
+        {
+          "title": "Administrative",
+          "count": 4
+        },
+        {
+          "title": "Sales",
+          "count": 4
+        },
+        {
+          "title": "Media and Communication",
+          "count": 3
+        },
+        {
+          "title": "Education",
+          "count": 3
+        },
+        {
+          "title": "Marketing",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "statTitle": "Skill Explicit",
+      "values": [
+        {
+          "title": "Leadership",
+          "count": 23
+        },
+        {
+          "title": "Strategy",
+          "count": 19
+        },
+        {
+          "title": "Management",
+          "count": 19
+        },
+        {
+          "title": "Venture Capital",
+          "count": 18
+        },
+        {
+          "title": "Microsoft Office",
+          "count": 17
+        },
+        {
+          "title": "Startups",
+          "count": 17
+        },
+        {
+          "title": "Microsoft Excel",
+          "count": 16
+        },
+        {
+          "title": "Data Analysis",
+          "count": 16
+        },
+        {
+          "title": "Finance",
+          "count": 15
+        },
+        {
+          "title": "Entrepreneurship",
+          "count": 14
+        },
+        {
+          "title": "Social Media",
+          "count": 14
+        },
+        {
+          "title": "Customer Service",
+          "count": 14
+        },
+        {
+          "title": "Business Strategy",
+          "count": 13
+        },
+        {
+          "title": "Strategic Planning",
+          "count": 12
+        },
+        {
+          "title": "Product Management",
+          "count": 12
+        }
+      ]
+    },
+    {
+      "statTitle": "Service categories",
+      "values": [
+        {
+          "title": "Consulting",
+          "count": 2
+        },
+        {
+          "title": "Marketing",
+          "count": 2
+        },
+        {
+          "title": "Coaching & Mentoring",
+          "count": 2
+        },
+        {
+          "title": "Resume Writing",
+          "count": 1
+        },
+        {
+          "title": "Wealth Management",
+          "count": 1
+        },
+        {
+          "title": "Application Development",
+          "count": 1
+        },
+        {
+          "title": "Digital Marketing",
+          "count": 1
+        },
+        {
+          "title": "Customer Support",
+          "count": 1
+        },
+        {
+          "title": "Social Media Marketing",
+          "count": 1
+        },
+        {
+          "title": "Telecommunications",
+          "count": 1
+        },
+        {
+          "title": "Database Development",
+          "count": 1
+        },
+        {
+          "title": "Information Technology",
+          "count": 1
+        },
+        {
+          "title": "Human Resources (HR)",
+          "count": 1
+        },
+        {
+          "title": "Executive Coaching",
+          "count": 1
+        },
+        {
+          "title": "Mobile Application Development",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "statTitle": "Field of Study",
+      "values": [
+        {
+          "title": "Finance, General",
+          "count": 12
+        },
+        {
+          "title": "Economics",
+          "count": 11
+        },
+        {
+          "title": "Mathematics",
+          "count": 6
+        },
+        {
+          "title": "Computer Science",
+          "count": 5
+        },
+        {
+          "title": "Business Administration and Management, General",
+          "count": 5
+        },
+        {
+          "title": "Entrepreneurship/Entrepreneurial Studies",
+          "count": 5
+        },
+        {
+          "title": "Accounting and Finance",
+          "count": 4
+        },
+        {
+          "title": "Financial Mathematics",
+          "count": 3
+        },
+        {
+          "title": "Computational Science",
+          "count": 3
+        },
+        {
+          "title": "Physics",
+          "count": 3
+        },
+        {
+          "title": "Accounting and Related Services",
+          "count": 3
+        },
+        {
+          "title": "Data Science",
+          "count": 3
+        },
+        {
+          "title": "Electrical and Electronics Engineering",
+          "count": 2
+        },
+        {
+          "title": "International/Global Studies",
+          "count": 2
+        },
+        {
+          "title": "Business Administration, Management and Operations",
+          "count": 2
+        }
+      ]
+    }
+  ],
+  "originalQuery": {
+    "search": "Tribe Capital crypto",
+    "location": "",
+    "scrapePeopleTab": "true"
+  },
+  "requestId": "b452a8f5-72f6-4769-ab8d-6c39d278f66f"
+}]

@@ -107,7 +107,7 @@
 <div class="hdr">
   <div>
     <h1>UAE Virtual Assets · Licensed entities intelligence dashboard</h1>
-    <div class="meta">Research compendium by <strong>Dr. Peter Lewinski</strong> · 45 Licensed VASPs + 17 IPA + 68 people + 9 deep-dive reports</div>
+    <div class="meta">Research compendium by <strong>Dr. Peter Lewinski</strong> · 62 entities (54 LinkedIn) · 143 people (123 LinkedIn · 39 emails) · 9 deep-dive reports</div>
     <div id="for-entity" class="for-entity" style="display:none"></div>
   </div>
   <div class="status-bar">
@@ -130,6 +130,7 @@
   <button class="tab active" onclick="show('overview')">Overview</button>
   <button class="tab" onclick="show('landscape')"><abbr title="Virtual Assets Regulatory Authority — Dubai's crypto regulator">VARA</abbr> landscape</button>
   <button class="tab" onclick="show('entities')">Licensed entities · 62</button>
+  <button class="tab" onclick="show('people')">People directory · 143</button>
   <button class="tab" onclick="show('positioning')">Market map</button>
   <button class="tab" onclick="show('glossary')">Glossary</button>
   <button class="tab" onclick="show('reports')" style="color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:.08em">Reports</button>
@@ -150,8 +151,9 @@
     <div class="kpi"><div class="lbl">Total in scope</div><div class="val">62</div><div class="sub">VARA register · Apr 16, 2026</div></div>
     <div class="kpi"><div class="lbl">Cat 1 VA Issuance</div><div class="val red">2</div><div class="sub">Tokinvest + Ctrl Alt only</div></div>
     <div class="kpi"><div class="lbl">Broker-Dealer</div><div class="val accent">35</div><div class="sub">78% of licensed VASPs</div></div>
-    <div class="kpi"><div class="lbl">People directory</div><div class="val green">68</div><div class="sub">14 VARA VASPs profiled</div></div>
-    <div class="kpi"><div class="lbl">ADGM individuals</div><div class="val">2,681</div><div class="sub">Classified + nationality-coded</div></div>
+    <div class="kpi"><div class="lbl">People directory</div><div class="val green">143</div><div class="sub">72 VARA + 71 ADGM · LinkedIn-enriched</div></div>
+    <div class="kpi"><div class="lbl">LinkedIn profiles</div><div class="val accent">123</div><div class="sub">86% match rate · Apify HarvestAPI</div></div>
+    <div class="kpi"><div class="lbl">Work emails verified</div><div class="val green">39</div><div class="sub">Full Ctrl Alt + Komainu chains</div></div>
     <div class="kpi"><div class="lbl">Research reports</div><div class="val accent">9</div><div class="sub">Including enforcement precedents</div></div>
   </div>
 </div>
@@ -159,10 +161,11 @@
   <h2>How to use this dashboard</h2>
   <div class="milestones">
     <div class="ms"><span class="ms-month">1</span><span class="ms-desc"><strong>VARA landscape</strong> — category distribution + register-level stats for all 45 licensed firms.</span><span class="rag rag-b"><span class="rag-dot"></span>Tab 2</span></div>
-    <div class="ms"><span class="ms-month">2</span><span class="ms-desc"><strong>Licensed entities</strong> — sortable, filterable table of all 62 entities with licence categories and key notes.</span><span class="rag rag-b"><span class="rag-dot"></span>Tab 3</span></div>
-    <div class="ms"><span class="ms-month">3</span><span class="ms-desc"><strong>Market map</strong> — 2×2 positioning grid (asset focus × regulatory status) with competitor pen-portraits.</span><span class="rag rag-b"><span class="rag-dot"></span>Tab 4</span></div>
-    <div class="ms"><span class="ms-month">4</span><span class="ms-desc"><strong>Glossary</strong> — every acronym and licence concept (IDQ, ATI, MLRO, ARVA, VSP, VA1, etc.).</span><span class="rag rag-b"><span class="rag-dot"></span>Tab 5</span></div>
-    <div class="ms"><span class="ms-month">5</span><span class="ms-desc"><strong>Reports</strong> — 9 deep-dive HTMLs: enforcement precedents, Arabic-source intelligence, Prypco model analysis, VARA entity deep dive, people directories.</span><span class="rag rag-r"><span class="rag-dot"></span>Tab 6</span></div>
+    <div class="ms"><span class="ms-month">2</span><span class="ms-desc"><strong>Licensed entities</strong> — sortable, filterable table of all 62 entities with LinkedIn URLs + follower counts + HQ + licence categories.</span><span class="rag rag-b"><span class="rag-dot"></span>Tab 3</span></div>
+    <div class="ms"><span class="ms-month">3</span><span class="ms-desc"><strong>People directory</strong> — 143 people across VARA + ADGM with LinkedIn URLs and verified work emails. Filterable by name, company, role.</span><span class="rag rag-g"><span class="rag-dot"></span>Tab 4</span></div>
+    <div class="ms"><span class="ms-month">4</span><span class="ms-desc"><strong>Market map</strong> — 2×2 positioning grid (asset focus × regulatory status) with competitor pen-portraits.</span><span class="rag rag-b"><span class="rag-dot"></span>Tab 5</span></div>
+    <div class="ms"><span class="ms-month">5</span><span class="ms-desc"><strong>Glossary</strong> — every acronym and licence concept (IDQ, ATI, MLRO, ARVA, VSP, VA1, etc.).</span><span class="rag rag-b"><span class="rag-dot"></span>Tab 6</span></div>
+    <div class="ms"><span class="ms-month">6</span><span class="ms-desc"><strong>Reports</strong> — 9 deep-dive HTMLs: enforcement precedents, Arabic-source intelligence, Prypco model analysis, VARA entity deep dive, people directories.</span><span class="rag rag-r"><span class="rag-dot"></span>Tab 7</span></div>
   </div>
 </div>
 </div>
@@ -222,13 +225,44 @@
           <th onclick="sortTable(2)" style="width:90px">Status</th>
           <th onclick="sortTable(3)">Licences</th>
           <th onclick="sortTable(4)" style="width:110px">Since</th>
-          <th onclick="sortTable(5)">Notable</th>
+          <th onclick="sortTable(5)" style="width:100px">LinkedIn</th>
+          <th onclick="sortTable(6)">Notable</th>
         </tr>
       </thead>
       <tbody id="entities-body"></tbody>
     </table>
   </div>
   <p style="font-size:11px;color:var(--text-3);margin-top:12px;font-style:italic">Dates approximate for older entries. Source: VARA public register (vara.ae) cross-referenced with company disclosures and news as of 16 April 2026.</p>
+</div>
+</div>
+
+<!-- ═══ PEOPLE DIRECTORY ═══ -->
+<div id="people" class="panel">
+<div class="sec">
+  <h2>People directory · 143 contacts across VARA + ADGM</h2>
+  <p style="font-size:12px;color:var(--text-2);margin-bottom:12px">LinkedIn-enriched roster of senior individuals at VARA-licensed VASPs (72 people across 14 entities) and ADGM FSRA-approved senior individuals (71 profiles). <span class="tag" style="background:var(--accent-bg);color:var(--accent)">VARA</span> = VARA VASP. <span class="tag" style="background:var(--purple-bg);color:var(--purple)">ADGM</span> = ADGM FSRA approved. Confidence: <span style="color:var(--green)">●</span> high (name+company matched) · <span style="color:var(--amber)">●</span> medium · <span style="color:var(--text-3)">●</span> low or unmatched.</p>
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+    <input id="people-search" type="text" placeholder="Filter by name, company, role, location…" oninput="filterPeople(this.value)" style="flex:1;padding:6px 12px;border:.5px solid var(--border);border-radius:6px;font-family:var(--font-sans);font-size:13px;outline:none">
+    <span id="people-count" style="font-size:11px;color:var(--text-3);min-width:70px;text-align:right"></span>
+  </div>
+  <div style="overflow-x:auto">
+    <table class="cap">
+      <thead>
+        <tr>
+          <th style="width:40px">#</th>
+          <th>Name</th>
+          <th>Company</th>
+          <th>Role / title</th>
+          <th style="width:70px">Source</th>
+          <th style="width:60px;text-align:center" title="Match confidence">Conf.</th>
+          <th style="width:60px;text-align:center">LinkedIn</th>
+          <th style="width:60px;text-align:center">Email</th>
+        </tr>
+      </thead>
+      <tbody id="people-body"></tbody>
+    </table>
+  </div>
+  <p style="font-size:11px;color:var(--text-3);margin-top:12px;font-style:italic">143 people profiled · 123 LinkedIn URLs · 39 work emails verified via Apify HarvestAPI. Emails for remaining contacts may be sourced via Smartlead SmartProspect (domain + name lookup).</p>
 </div>
 </div>
 
@@ -436,71 +470,214 @@
 <script>
 // ──────────────────────── ENTITY DATA ────────────────────────
 const ENTITIES = [
-  // LICENSED VASPs
-  {n:"Laser Digital Middle East FZE", s:"Licensed", l:["BD","M&I","CU","AD"], d:"Jul 2023", note:"Nomura-owned. Oldest VARA licence."},
-  {n:"Binance FZE", s:"Licensed", l:["BD","EX","LB"], d:"Aug 2023", note:"Richard Teng CEO. Global exchange."},
-  {n:"Crypto.com FZE", s:"Licensed", l:["BD","EX","LB"], d:"2023", note:"Retail VASP + card issuer partner."},
-  {n:"OKX MENA FZE", s:"Licensed", l:["BD","EX","LB"], d:"2023", note:"Chinese-origin global exchange."},
-  {n:"BitOasis Technologies FZE", s:"Licensed", l:["BD"], d:"2023", note:"MENA-focused exchange. CoinDCX-acquired."},
-  {n:"Hex Trust FZE", s:"Licensed", l:["CU"], d:"2023", note:"Institutional custody (Asia-origin)."},
-  {n:"Komainu MEA FZE", s:"Licensed", l:["CU"], d:"2023", note:"Nomura-Ledger-CoinShares JV."},
-  {n:"Aquanow Middle East FZE", s:"Licensed", l:["BD","LB"], d:"2023", note:"Institutional liquidity provider."},
-  {n:"GCEX FZE", s:"Licensed", l:["BD"], d:"2023", note:"FX + crypto bridge for institutions."},
+  {n:"Laser Digital Middle East FZE", s:"Licensed", l:["BD","M&I","CU","AD"], d:"Jul 2023", note:"Nomura-owned. Oldest VARA licence.", url:"https://www.linkedin.com/company/laserdigital/", followers:22870, employees:133, hq:"Zurich, CH"},
+  {n:"Binance FZE", s:"Licensed", l:["BD","EX","LB"], d:"Aug 2023", note:"Richard Teng CEO. Global exchange.", url:"https://www.linkedin.com/company/binance/", followers:1058426, employees:14241},
+  {n:"Crypto.com FZE", s:"Licensed", l:["BD","EX","LB"], d:"2023", note:"Retail VASP + card issuer partner.", url:"https://www.linkedin.com/company/cryptocom/", followers:771861, employees:7560, hq:"Singapore, SG"},
+  {n:"OKX MENA FZE", s:"Licensed", l:["BD","EX","LB"], d:"2023", note:"Chinese-origin global exchange.", url:"https://www.linkedin.com/company/okxofficial/", followers:510305, employees:7126},
+  {n:"BitOasis Technologies FZE", s:"Licensed", l:["BD"], d:"2023", note:"MENA-focused exchange. CoinDCX-acquired.", url:"https://www.linkedin.com/company/bitoasis-technologies-fze/", followers:67492, employees:117, hq:"Dubai, AE"},
+  {n:"Hex Trust FZE", s:"Licensed", l:["CU"], d:"2023", note:"Institutional custody (Asia-origin).", url:"https://www.linkedin.com/company/hextrust/", followers:64482, employees:127, hq:"Hong Kong, HK"},
+  {n:"Komainu MEA FZE", s:"Licensed", l:["CU"], d:"2023", note:"Nomura-Ledger-CoinShares JV.", url:"https://www.linkedin.com/company/komainu-the-institutional-gateway-for-digital-assets/", followers:9215, employees:77, hq:"London, GB"},
+  {n:"Aquanow Middle East FZE", s:"Licensed", l:["BD","LB"], d:"2023", note:"Institutional liquidity provider.", url:"https://www.linkedin.com/company/aquanow/", followers:79037, employees:142, hq:"Vancouver, CA"},
+  {n:"GCEX FZE", s:"Licensed", l:["BD"], d:"2023", note:"FX + crypto bridge for institutions.", url:"https://www.linkedin.com/company/gc-exchange/", followers:8269, employees:34, hq:"Kastrup, DK"},
   {n:"Mantra Finance FZE", s:"Licensed", l:["BD","EX","M&I"], d:"Feb 2025", note:"OM token. $1B DAMAC RWA deal."},
-  {n:"Tokinvest DMCC", s:"Licensed", l:["BD","VA1"], d:"Dec 2024", note:"Multi-asset issuance. CEO helped draft VARA framework."},
+  {n:"Tokinvest DMCC", s:"Licensed", l:["BD","VA1"], d:"Dec 2024", note:"Multi-asset issuance. CEO helped draft VARA framework.", url:"https://www.linkedin.com/company/tokinvest/", followers:3158, employees:14, hq:"Dubai, AE"},
   {n:"Ctrl Alt Solutions DMCC", s:"Licensed", l:["BD","VA1"], d:"May 2025", note:"DLD tokenization partner. $850M+ tokenized."},
-  {n:"Prypco FZE", s:"Licensed", l:["BD"], d:"May 2025", note:"Real estate tokenization. DLD-backed. Live app."},
-  {n:"Fasset Technologies FZE", s:"Licensed", l:["BD"], d:"2024", note:"Emerging markets retail crypto."},
-  {n:"CoinMENA FZE", s:"Licensed", l:["BD"], d:"2024", note:"Bahrain-origin regional exchange."},
+  {n:"Prypco FZE", s:"Licensed", l:["BD"], d:"May 2025", note:"Real estate tokenization. DLD-backed. Live app.", url:"https://www.linkedin.com/company/prypcocom/", followers:23640, employees:190, hq:"Dubai, AE"},
+  {n:"Fasset Technologies FZE", s:"Licensed", l:["BD"], d:"2024", note:"Emerging markets retail crypto.", url:"https://www.linkedin.com/company/fassethq/", followers:43752, employees:137, hq:"Dubai, AE"},
+  {n:"CoinMENA FZE", s:"Licensed", l:["BD"], d:"2024", note:"Bahrain-origin regional exchange.", url:"https://www.linkedin.com/company/coinmena/", followers:27727, employees:60, hq:"Manama, BH"},
   {n:"Nova Digital Investments DMCC", s:"Licensed", l:["M&I"], d:"2024", note:"Digital asset fund management."},
-  {n:"DKK Partners FZE", s:"Licensed", l:["BD"], d:"2024", note:"Fiat-to-stablecoin institutional infra."},
-  {n:"HashKey DX FZE", s:"Licensed", l:["BD","CU"], d:"2024", note:"HashKey Group's MENA arm."},
-  {n:"Selini Capital FZE", s:"Licensed", l:["BD"], d:"2024", note:"HFT institutional liquidity. Talos integration."},
-  {n:"Fuze Finance FZE", s:"Licensed", l:["BD","CU"], d:"2024", note:"Infrastructure for banks/fintechs."},
-  {n:"Midchains FZCO", s:"Licensed", l:["BD"], d:"2024", note:"Institutional brokerage."},
-  {n:"Nineblocks Capital FZE", s:"Licensed", l:["M&I"], d:"2024", note:"Crypto-native fund manager."},
-  {n:"Gap3 Partners FZE", s:"Licensed", l:["M&I"], d:"2024", note:"Venture + hedge fund strategies."},
-  {n:"Bullish FZE", s:"Licensed", l:["BD","EX"], d:"2024", note:"Peter Thiel-backed exchange."},
-  {n:"Aya Capital FZE", s:"Licensed", l:["M&I"], d:"2024", note:"Digital asset investment manager."},
-  {n:"Backpack FZE", s:"Licensed", l:["BD","EX"], d:"2024", note:"Solana-ecosystem exchange."},
-  {n:"Ceffu FZE", s:"Licensed", l:["CU"], d:"2024", note:"Binance's institutional custody arm."},
+  {n:"DKK Partners FZE", s:"Licensed", l:["BD"], d:"2024", note:"Fiat-to-stablecoin institutional infra.", url:"https://www.linkedin.com/company/dkk-partners-ltd/", followers:2185, employees:30, hq:"London, GB"},
+  {n:"HashKey DX FZE", s:"Licensed", l:["BD","CU"], d:"2024", note:"HashKey Group's MENA arm.", url:"https://www.linkedin.com/company/hashkey-digital-asset-group/", followers:36791, employees:220, hq:"Hong Kong, HK"},
+  {n:"Selini Capital FZE", s:"Licensed", l:["BD"], d:"2024", note:"HFT institutional liquidity. Talos integration.", url:"https://www.linkedin.com/company/selini-capital/", followers:3069, employees:35},
+  {n:"Fuze Finance FZE", s:"Licensed", l:["BD","CU"], d:"2024", note:"Infrastructure for banks/fintechs.", url:"https://www.linkedin.com/company/fuze-finance/", followers:249, hq:"Oxford, GB"},
+  {n:"Midchains FZCO", s:"Licensed", l:["BD"], d:"2024", note:"Institutional brokerage.", url:"https://www.linkedin.com/company/midchains/", followers:33023, employees:22, hq:"Abu Dhabi, AE"},
+  {n:"Nineblocks Capital FZE", s:"Licensed", l:["M&I"], d:"2024", note:"Crypto-native fund manager.", url:"https://www.linkedin.com/company/nineblockscapital/", followers:1618, employees:5, hq:"Grand Cayman, KY"},
+  {n:"Gap3 Partners FZE", s:"Licensed", l:["M&I"], d:"2024", note:"Venture + hedge fund strategies.", url:"https://www.linkedin.com/company/gapthree/", followers:153, employees:2, hq:"Ahemedabad, IN"},
+  {n:"Bullish FZE", s:"Licensed", l:["BD","EX"], d:"2024", note:"Peter Thiel-backed exchange.", url:"https://www.linkedin.com/company/bullish-inc-/", followers:10081, employees:65, hq:"New York, US"},
+  {n:"Aya Capital FZE", s:"Licensed", l:["M&I"], d:"2024", note:"Digital asset investment manager.", url:"https://www.linkedin.com/company/aya-capital-inc/", followers:206, employees:7},
+  {n:"Backpack FZE", s:"Licensed", l:["BD","EX"], d:"2024", note:"Solana-ecosystem exchange.", url:"https://www.linkedin.com/company/backpackexchange/", followers:7903, employees:89, hq:"Remote, US"},
+  {n:"Ceffu FZE", s:"Licensed", l:["CU"], d:"2024", note:"Binance's institutional custody arm.", url:"https://www.linkedin.com/company/ceffu/", followers:40667, employees:20, hq:"Global, SG"},
   {n:"Hyundai Pay FZE", s:"Licensed", l:["BD"], d:"2024", note:"Korean automaker's VA payments arm."},
-  {n:"Scallop Technologies FZE", s:"Licensed", l:["BD"], d:"2024", note:"Banking-crypto hybrid."},
+  {n:"Scallop Technologies FZE", s:"Licensed", l:["BD"], d:"2024", note:"Banking-crypto hybrid.", url:"https://www.linkedin.com/company/scallopcom/", followers:6572, employees:52, hq:"Dublin, IE"},
   {n:"Aldrin Labs FZE", s:"Licensed", l:["BD"], d:"2024", note:"DeFi-native broker-dealer."},
-  {n:"Rain Management FZE", s:"Licensed", l:["BD"], d:"2024", note:"MENA-based exchange (Bahrain origin)."},
-  {n:"Zodia Custody FZE", s:"Licensed", l:["CU"], d:"2024", note:"Standard Chartered-backed."},
-  {n:"Copper Technologies FZE", s:"Licensed", l:["CU"], d:"2024", note:"Institutional custody + prime."},
-  {n:"Nexo FZE", s:"Licensed", l:["BD","LB"], d:"2024", note:"Crypto-backed lending."},
-  {n:"AlphaPoint FZE", s:"Licensed", l:["BD"], d:"2024", note:"Exchange tech provider."},
-  {n:"Deribit FZE", s:"Licensed", l:["EX"], d:"2024", note:"Crypto derivatives exchange."},
-  {n:"Bitget FZE", s:"Licensed", l:["BD","EX"], d:"2024", note:"Seychelles-origin global exchange."},
-  {n:"MEXC FZE", s:"Licensed", l:["BD"], d:"2024", note:"Asia-focused retail exchange."},
-  {n:"Huobi / HTX FZE", s:"Licensed", l:["BD","EX"], d:"2024", note:"Global exchange rebrand."},
-  {n:"Bitpanda FZE", s:"Licensed", l:["BD"], d:"2024", note:"European retail broker."},
-  {n:"Anchorage Digital FZE", s:"Licensed", l:["CU"], d:"2024", note:"US-origin federally-chartered custodian."},
-  {n:"Coinbase FZE", s:"Licensed", l:["BD"], d:"2024", note:"Nasdaq-listed. Retail + institutional."},
-  {n:"Woo FZE", s:"Licensed", l:["BD","EX"], d:"2024", note:"Institutional liquidity exchange."},
-  {n:"Kraken FZE", s:"Licensed", l:["BD"], d:"2024", note:"US-origin veteran exchange."},
+  {n:"Rain Management FZE", s:"Licensed", l:["BD"], d:"2024", note:"MENA-based exchange (Bahrain origin).", url:"https://www.linkedin.com/company/rain", followers:62782, employees:279, hq:"Middle East, BH"},
+  {n:"Zodia Custody FZE", s:"Licensed", l:["CU"], d:"2024", note:"Standard Chartered-backed.", url:"https://www.linkedin.com/company/zodiacustody/", followers:25073, employees:113, hq:"London, GB"},
+  {n:"Copper Technologies FZE", s:"Licensed", l:["CU"], d:"2024", note:"Institutional custody + prime.", url:"https://www.linkedin.com/company/copperco/", followers:46612, employees:281, hq:"London, GB"},
+  {n:"Nexo FZE", s:"Licensed", l:["BD","LB"], d:"2024", note:"Crypto-backed lending.", url:"https://www.linkedin.com/company/nexofinance/", followers:40529, employees:806, hq:"Everywhere, KY"},
+  {n:"AlphaPoint FZE", s:"Licensed", l:["BD"], d:"2024", note:"Exchange tech provider.", url:"https://www.linkedin.com/company/alpha-point/", followers:39946, employees:95, hq:"New York, US"},
+  {n:"Deribit FZE", s:"Licensed", l:["EX"], d:"2024", note:"Crypto derivatives exchange.", url:"https://www.linkedin.com/company/deribit/", followers:17981, employees:126, hq:"Dubai, AE"},
+  {n:"Bitget FZE", s:"Licensed", l:["BD","EX"], d:"2024", note:"Seychelles-origin global exchange.", url:"https://www.linkedin.com/company/bitget-global/", followers:323508, employees:2431, hq:"⠀, SC"},
+  {n:"MEXC FZE", s:"Licensed", l:["BD"], d:"2024", note:"Asia-focused retail exchange.", url:"https://www.linkedin.com/company/mexcofficial/", followers:172378, employees:1353, hq:"MEXC, SC"},
+  {n:"Huobi / HTX FZE", s:"Licensed", l:["BD","EX"], d:"2024", note:"Global exchange rebrand.", url:"https://www.linkedin.com/company/htxglobalofficial/", followers:118292, employees:1072, hq:"Seychelles, SC"},
+  {n:"Bitpanda FZE", s:"Licensed", l:["BD"], d:"2024", note:"European retail broker.", url:"https://www.linkedin.com/company/bitpanda/", followers:85104, employees:941, hq:"Vienna, AT"},
+  {n:"Anchorage Digital FZE", s:"Licensed", l:["CU"], d:"2024", note:"US-origin federally-chartered custodian.", url:"https://www.linkedin.com/company/anchorage/", followers:61040, employees:725, hq:"San Francisco, US"},
+  {n:"Coinbase FZE", s:"Licensed", l:["BD"], d:"2024", note:"Nasdaq-listed. Retail + institutional.", url:"https://www.linkedin.com/company/coinbase/", followers:1410773, employees:7543, hq:"Remote First, US"},
+  {n:"Woo FZE", s:"Licensed", l:["BD","EX"], d:"2024", note:"Institutional liquidity exchange.", url:"https://www.linkedin.com/company/wooxsyndicate/", followers:268, employees:17, hq:"Jeseník, CZ"},
+  {n:"Kraken FZE", s:"Licensed", l:["BD"], d:"2024", note:"US-origin veteran exchange.", url:"https://www.linkedin.com/company/krakenfx/", followers:286619, employees:1078, hq:"Remote First, US"},
   {n:"Amber Premium FZE", s:"Licensed", l:["M&I","LB"], d:"Apr 2026", note:"Nasdaq-listed. UHNW digital wealth. Newest licence."},
-
-  // IPA HOLDERS
   {n:"Stake RWA FZE", s:"IPA", l:["BD"], d:"Jan 2026", note:"RWA tokenization candidate."},
-  {n:"Tribe Tokenisation FZE", s:"IPA", l:["BD"], d:"Dec 2025", note:"Tokenization platform IPA."},
-  {n:"SmartCrowd (Nawy Shares)", s:"IPA", l:["BD"], d:"Dec 2025", note:"Established RE fractional platform."},
-  {n:"Shipfinex FZCO", s:"IPA", l:["BD"], d:"Jan 2026", note:"Maritime asset tokenization."},
+  {n:"Tribe Tokenisation FZE", s:"IPA", l:["BD"], d:"Dec 2025", note:"Tokenization platform IPA.", url:"https://www.linkedin.com/company/tribe-capital-partners/", followers:15917, employees:73, hq:"Menlo Park, US"},
+  {n:"SmartCrowd (Nawy Shares)", s:"IPA", l:["BD"], d:"Dec 2025", note:"Established RE fractional platform.", url:"https://www.linkedin.com/company/smart-crowd-property/", followers:19789, employees:47, hq:"Dubai, AE"},
+  {n:"Shipfinex FZCO", s:"IPA", l:["BD"], d:"Jan 2026", note:"Maritime asset tokenization.", url:"https://www.linkedin.com/company/shipfinex/", followers:9236, employees:30, hq:"Dubai, AE"},
   {n:"Circle Internet Financial FZE", s:"IPA", l:["BD"], d:"2025", note:"USDC issuer's MENA arm."},
-  {n:"Ripple Labs FZE", s:"IPA", l:["BD"], d:"2025", note:"Cross-border payment infra."},
-  {n:"Block.One FZE", s:"IPA", l:["M&I"], d:"2025", note:"EOS-origin investment arm."},
-  {n:"Polygon Labs FZE", s:"IPA", l:["BD"], d:"2025", note:"L2 scaling + asset tokenization."},
-  {n:"Galaxy Digital FZE", s:"IPA", l:["BD","M&I"], d:"2025", note:"Nasdaq-listed digital asset services."},
-  {n:"Mt Pelerin FZE", s:"IPA", l:["BD"], d:"2025", note:"Swiss-origin tokenization."},
-  {n:"Injective Labs FZE", s:"IPA", l:["BD"], d:"2025", note:"Derivatives + RWA L1."},
-  {n:"Securitize FZE", s:"IPA", l:["BD"], d:"2025", note:"US security token issuance platform."},
-  {n:"Aplo Digital FZE", s:"IPA", l:["BD"], d:"2025", note:"French-origin institutional broker."},
-  {n:"Bit2Me FZE", s:"IPA", l:["BD"], d:"2025", note:"Spanish retail exchange."},
-  {n:"Bitstamp FZE", s:"IPA", l:["BD"], d:"2025", note:"Europe's oldest exchange (Robinhood-acquired)."},
-  {n:"BitGo FZE", s:"IPA", l:["CU"], d:"2025", note:"US-origin institutional custody."},
-  {n:"Fireblocks FZE", s:"IPA", l:["CU"], d:"2025", note:"Institutional wallet + settlement infra."}
+  {n:"Ripple Labs FZE", s:"IPA", l:["BD"], d:"2025", note:"Cross-border payment infra.", url:"https://www.linkedin.com/company/ripple-labs-inc/", followers:183, employees:9},
+  {n:"Block.One FZE", s:"IPA", l:["M&I"], d:"2025", note:"EOS-origin investment arm.", url:"https://www.linkedin.com/company/blockone/", followers:695, employees:8, hq:"Wilmingtom, US"},
+  {n:"Polygon Labs FZE", s:"IPA", l:["BD"], d:"2025", note:"L2 scaling + asset tokenization.", url:"https://www.linkedin.com/company/polygonlabs/", followers:208044, employees:395, hq:"Cayman Islands, KY"},
+  {n:"Galaxy Digital FZE", s:"IPA", l:["BD","M&I"], d:"2025", note:"Nasdaq-listed digital asset services.", url:"https://www.linkedin.com/company/galaxy-digital/", followers:4399, employees:71, hq:"Asheville, US"},
+  {n:"Mt Pelerin FZE", s:"IPA", l:["BD"], d:"2025", note:"Swiss-origin tokenization.", url:"https://www.linkedin.com/company/mt-pelerin/", followers:9413, employees:19, hq:"Neuchâtel, CH"},
+  {n:"Injective Labs FZE", s:"IPA", l:["BD"], d:"2025", note:"Derivatives + RWA L1.", url:"https://www.linkedin.com/company/injectivelabs/", followers:661, employees:35},
+  {n:"Securitize FZE", s:"IPA", l:["BD"], d:"2025", note:"US security token issuance platform.", url:"https://www.linkedin.com/company/securitize/", followers:34100, employees:245, hq:"Miami, US"},
+  {n:"Aplo Digital FZE", s:"IPA", l:["BD"], d:"2025", note:"French-origin institutional broker.", url:"https://www.linkedin.com/company/aplo-group/", followers:11812, employees:35, hq:"Ottawa, CA"},
+  {n:"Bit2Me FZE", s:"IPA", l:["BD"], d:"2025", note:"Spanish retail exchange.", url:"https://www.linkedin.com/company/bit2me/", followers:27449, employees:206, hq:"Elche/Elx, ES"},
+  {n:"Bitstamp FZE", s:"IPA", l:["BD"], d:"2025", note:"Europe's oldest exchange (Robinhood-acquired).", url:"https://www.linkedin.com/company/bitstamp/", followers:39061, employees:332, hq:"Luxembourg, LU"},
+  {n:"BitGo FZE", s:"IPA", l:["CU"], d:"2025", note:"US-origin institutional custody.", url:"https://www.linkedin.com/company/bitgo/", followers:59113, employees:146, hq:"Sioux Falls, US"},
+  {n:"Fireblocks FZE", s:"IPA", l:["CU"], d:"2025", note:"Institutional wallet + settlement infra.", url:"https://www.linkedin.com/company/fireblocks/", followers:101765, employees:952, hq:"New York, US"},
+];
+
+const PEOPLE = [
+  {fn:"Scott", ln:"Thiel", co:"Tokinvest Capital", r:"Co-Founder & CEO", src:"VARA", url:"https://www.linkedin.com/in/scott-thiel-9961bb6/", c:"high"},
+  {fn:"Matt", ln:"Blom", co:"Tokinvest Capital", r:"Chief Strategy Officer", src:"VARA", url:"https://www.linkedin.com/in/matthew-blom-2bb277b1/", c:"high"},
+  {fn:"Matt", ln:"Ong", co:"Ctrl Alt", r:"Founder & CEO", src:"VARA", url:"https://www.linkedin.com/in/mattong1/", c:"high"},
+  {fn:"Robert", ln:"Farquhar", co:"Ctrl Alt", r:"Head of MENA", src:"VARA", url:"https://www.linkedin.com/in/robert-farquhar-98a417a6/", c:"high"},
+  {fn:"Lee", ln:"Bowyer", co:"Ctrl Alt", r:"Global Head of Compliance", src:"VARA", url:"https://www.linkedin.com/in/lee-bowyer-629126b7/", c:"high"},
+  {fn:"Omar", ln:"Elassar", co:"Animoca Brands ME", r:"Managing Director", src:"VARA", url:"https://www.linkedin.com/in/oelassar/", c:"high"},
+  {fn:"Talal", ln:"Tabbaa", co:"CoinMENA", r:"Co-Founder", src:"VARA", url:"https://ae.linkedin.com/in/talaltabbaa", c:"high"},
+  {fn:"Dina", ln:"Sam'an", co:"CoinMENA", r:"Co-Founder", src:"VARA", url:"https://bh.linkedin.com/in/dinasaman", c:"high"},
+  {fn:"Yazan", ln:"Barghuthi", co:"CoinMENA", r:"Co-Founder", src:"VARA", url:"https://www.linkedin.com/in/yazanbarghuthi/", c:"high"},
+  {fn:"Mo", ln:"Ali", co:"Fuze", r:"CEO & Co-founder", src:"VARA", url:"https://www.linkedin.com/in/moaliyusuf", c:"high"},
+  {fn:"Arpit", ln:"Mehta", co:"Fuze", r:"COO & Co-founder", src:"VARA", url:"https://www.linkedin.com/in/mehtaarpit", c:"high"},
+  {fn:"Srijan", ln:"Shetty", co:"Fuze", r:"CTO", src:"VARA", url:"https://linkedin.com/in/srijanshetty", c:"high"},
+  {fn:"Zunair", ln:"Ali", co:"Fuze", r:"MLRO", src:"VARA", url:"https://www.linkedin.com/in/zunair-ali-3961529b", c:"high"},
+  {fn:"Abeeda", ln:"Khan", co:"Fuze", r:"Head of Finance", src:"VARA", url:"https://www.linkedin.com/in/abeeda-k-716b5622", c:"high"},
+  {fn:"Arshika", ln:"Perry", co:"Fuze", r:"Head of Legal", src:"VARA", url:"https://www.linkedin.com/in/arshika-perry-240620156", c:"high"},
+  {fn:"Mohammad", ln:"Hossain", co:"Fasset", r:"Co-Founder & CEO", src:"VARA", url:"https://ae.linkedin.com/in/raafihossain", c:"high"},
+  {fn:"Basil", ln:"Askari", co:"MidChains", r:"Founder & CEO", src:"VARA", url:"https://ae.linkedin.com/in/basil-al-askari-72730999", c:"high"},
+  {fn:"Ola", ln:"Doudin", co:"BitOasis", r:"Co-Founder & CEO", src:"VARA", url:"https://ae.linkedin.com/in/ola-doudin-5a026511", c:"high"},
+  {fn:"Armani", ln:"Ferrante", co:"Backpack Exchange", r:"Founder & CEO", src:"VARA", url:"https://www.linkedin.com/in/armaniferrante/", c:"high"},
+  {fn:"Alessio", ln:"Quaglini", co:"Hex Trust", r:"CEO & Co-Founder", src:"VARA", url:"https://www.linkedin.com/in/alessioquaglini", c:"high"},
+  {fn:"Rafal", ln:"Czerniawski", co:"Hex Trust", r:"CISO & Co-Founder", src:"VARA", url:"https://www.linkedin.com/in/rafalcz", c:"high"},
+  {fn:"Tommaso", ln:"Natale", co:"Hex Trust", r:"CTO", src:"VARA", url:"https://hk.linkedin.com/in/tommaso-natale-4a990", c:"high"},
+  {fn:"Marty", ln:"Jetton", co:"Hex Trust", r:"Chief Risk Officer", src:"VARA", url:"https://www.linkedin.com/in/martyjetton", c:"high"},
+  {fn:"James", ln:"Harte", co:"Hex Trust", r:"COO", src:"VARA", url:"https://www.linkedin.com/in/jwharte/", c:"high"},
+  {fn:"Davy", ln:"Lassagne", co:"Hex Trust", r:"CFO", src:"VARA", url:"https://www.linkedin.com/in/davylassagne/", c:"high"},
+  {fn:"Giorgia", ln:"Pellizzari", co:"Hex Trust", r:"CPO & Head of Custody", src:"VARA", url:"https://www.linkedin.com/in/giorgiapellizzari/", c:"high"},
+  {fn:"Rohit", ln:"Apte", co:"Hex Trust", r:"Head of Markets", src:"VARA", url:"https://www.linkedin.com/in/rohit-apte-554a262/", c:"high"},
+  {fn:"Gabriele", ln:"Bandi", co:"Hex Trust", r:"Head of Sales", src:"VARA", url:"https://www.linkedin.com/in/gabrielebandi/", c:"high"},
+  {fn:"Man", ln:"Hong", co:"Hex Trust", r:"Head of Operations", src:"VARA", url:"https://hk.linkedin.com/in/manhay-hong", c:"high"},
+  {fn:"Federico", ln:"Fabiano", co:"Hex Trust", r:"MD, Head of Legal & Compliance", src:"VARA", url:"https://www.linkedin.com/in/federico-fabiano-63704416/", c:"high"},
+  {fn:"Rajah", ln:"Thiyagarajah", co:"Hex Trust", r:"Chairman", src:"VARA", url:"https://www.linkedin.com/in/rajaht", c:"high"},
+  {fn:"Yat", ln:"Siu", co:"Hex Trust", r:"Director", src:"VARA", url:"https://www.linkedin.com/in/yatsiu/", c:"high"},
+  {fn:"Jehan", ln:"Chu", co:"Hex Trust", r:"Director", src:"VARA", url:"https://www.linkedin.com/in/jehanchu/", c:"high"},
+  {fn:"Mark", ln:"Cheng", co:"Hex Trust", r:"Director", src:"VARA", url:"https://www.linkedin.com/in/cheeech/", c:"high"},
+  {fn:"Colin", ln:"Brooks", co:"Hex Trust", r:"Chairman of Advisory Board", src:"VARA", url:"https://www.linkedin.com/in/colin-brooks-b5334b40/", c:"high"},
+  {fn:"Henri", ln:"Arslanian", co:"Hex Trust", r:"Advisory Board Member", src:"VARA", url:"https://www.linkedin.com/in/henriarslanian/", c:"high"},
+  {fn:"Anthony", ln:"Chan", co:"Hex Trust", r:"Advisory Board Member", src:"VARA", url:"https://www.linkedin.com/in/anthony-chan-82452b5a/", c:"high"},
+  {fn:"Dave", ln:"Chapman", co:"Hex Trust", r:"Advisory Board Member", src:"VARA", url:"https://www.linkedin.com/in/davejchapman/", c:"high"},
+  {fn:"Carlo", ln:"Huerlimann", co:"Hex Trust", r:"Advisory Board Member", src:"VARA", url:"https://www.linkedin.com/in/carlo-huerlimann-031533b/", c:"high"},
+  {fn:"Robin", ln:"Janaway", co:"Gap 3 Partners", r:"CEO / Web3 Advisor", src:"VARA", url:"https://www.linkedin.com/in/robin-janaway-11799837/", c:"high"},
+  {fn:"Kevin", ln:"Hu", co:"Nova Digital", r:"CEO / Responsible Individual", src:"VARA", url:"https://www.linkedin.com/in/kevin-hu-46a03343/", c:"high"},
+  {fn:"Stephen", ln:"Li", co:"Nova Digital", r:"COO", src:"VARA", url:"https://www.linkedin.com/in/stephenli2/", c:"high"},
+  {fn:"Miles", ln:"Corney", co:"Nova Digital", r:"CCO / Responsible Individual", src:"VARA", url:"https://www.linkedin.com/in/milescorney/", c:"high"},
+  {fn:"Burim", ln:"Bivolaku", co:"Intercontinental Exchange (ICE)", r:"Business Information Security Officer, Trading & Clearing", src:"ADGM", url:"https://www.linkedin.com/in/burim-bivolaku-2317781/", c:"high"},
+  {fn:"Gabriel", ln:"Abed", co:"Binance", r:"Chairman of the Board", src:"ADGM", url:"https://www.linkedin.com/in/gabrielabed/", c:"high"},
+  {fn:"Stuart", ln:"Williams", co:"Intercontinental Exchange (ICE)", r:"Chief Operating Officer", src:"ADGM", url:"https://www.linkedin.com/in/stuart-williams-2586761/", c:"high"},
+  {fn:"Sunny", ln:"Li", co:null, r:"Key Individual", src:"ADGM", url:"https://www.linkedin.com/in/sunny-li-a859554a/", c:"high"},
+  {fn:"Wee", ln:"Teng", co:"Binance", r:"Chief Executive Officer", src:"ADGM", url:"https://www.linkedin.com/in/richard-teng-binance/", c:"high"},
+  {fn:"Wilson", ln:"Cheung", co:null, r:"Key Individual", src:"ADGM", url:"https://www.linkedin.com/in/wilson-cheung-cpa-ca-cfa-13a5b61b/", c:"high"},
+  {fn:"Adam", ln:"Williamson", co:"Adam Williamson & Co", r:"Artist and Stone/Wood Carver", src:"ADGM", url:"https://uk.linkedin.com/in/adam-williamson-4920681a", c:"high"},
+  {fn:"Adnan", ln:"Qamar", co:"Deloitte Consulting", r:"Managing Director", src:"ADGM", url:"https://www.linkedin.com/in/adnanqamar", c:"high"},
+  {fn:"Afroditi", ln:"Boura", co:"Pnyx Hill Group", r:"Senior Partner, GRC Advisory", src:"ADGM", url:"https://www.linkedin.com/in/afroditi-boura", c:"high"},
+  {fn:"James", ln:"Byrne", co:"Tokinvest Capital", r:"Head of Compliance", src:"VARA", c:"none"},
+  {fn:"Robert", ln:"Cooper", co:"Tokinvest Capital", r:"Co-Founder & COO", src:"VARA", c:"none"},
+  {fn:"Lawrence", ln:"Chiu", co:"Ctrl Alt", r:"Head of Marketing", src:"VARA", url:"https://www.linkedin.com/in/lawrencehfchiu", em:"lawrence@ctrl-alt.co", h:"Marketing Leader | Strategy, Design and Campaigns | Head of Marketing @ Ctrl Alt", loc:"United Kingdom", c:"high"},
+  {fn:"Matt", ln:"Acheson", co:"Ctrl Alt", r:"CPO", src:"VARA", url:"https://www.linkedin.com/in/m-acheson", em:"matt.acheson@ctrl-alt.co", h:"Chief Product Officer @ Ctrl Alt", loc:"Dubai, United Arab Emirates", c:"high"},
+  {fn:"Kaitlin", ln:"Lemmo", co:"Ctrl Alt", r:"Head of Compliance, Ireland", src:"VARA", url:"https://www.linkedin.com/in/kaitlin-lemmo-8032828", em:"kaitlin@ctrl-alt.co", h:"Head of AML Ireland at Ctrl Alt", loc:"County Dublin, Ireland", c:"high"},
+  {fn:"Jack", ln:"Denton", co:"Ctrl Alt", r:"Chief of Staff", src:"VARA", url:"https://www.linkedin.com/in/jack-denton-uk", em:"jack.denton@ctrl-alt.co", h:"Chief of Staff at Ctrl Alt", loc:"United Kingdom", c:"high"},
+  {fn:"Ilya", ln:"Shichanin", co:"Ctrl Alt", r:"Head of Partnerships", src:"VARA", url:"https://www.linkedin.com/in/ilyashichanin", em:"ilya@ctrl-alt.co", h:"Partnerships at Ctrl Alt  |  ex-Google, ex-VC", loc:"Dubai, United Arab Emirates", c:"high"},
+  {fn:"Jordan", ln:"McMullen", co:"Ctrl Alt", r:"COO", src:"VARA", url:"https://www.linkedin.com/in/jordan-mcmullen-9b951ab8", em:"jordan@ctrl-alt.co", h:"Ctrl Alt - Chief Operating Officer", loc:"Belfast, Northern Ireland, United Kingdom", c:"high"},
+  {fn:"Jordi", ln:"Alexander", co:"Selini Capital", r:"Founder", src:"VARA", c:"none"},
+  {fn:"Adam", ln:"Back", co:"Komainu", r:"Board Director (Blockstream)", src:"VARA", c:"none"},
+  {fn:"PeterPaul", ln:"Pardi", co:"Komainu", r:"Board Director (Blockstream Capital Partners)", src:"VARA", c:"none"},
+  {fn:"Steve", ln:"Ashley", co:"Komainu", r:"Board Director (Laser Digital)", src:"VARA", c:"none"},
+  {fn:"Tamer", ln:"Ghresi", co:"Animoca Brands ME", r:"Chief Compliance Officer", src:"VARA", c:"none"},
+  {fn:"Jack", ln:"Spargo", co:"Ctrl Alt", r:"CTO", src:"VARA", url:"https://www.linkedin.com/in/jack-spargo", em:"jack@ctrl-alt.co", h:"Tokenization | CTO @ Ctrl Alt", loc:"Belfast Metropolitan Area", c:"high"},
+  {fn:"Charles", ln:"Lucas", co:"Ctrl Alt", r:"Head of Capital Markets", src:"VARA", url:"https://www.linkedin.com/in/charles-lucas-159b9246", em:"charles@ctrl-alt.co", h:"Co-Head of Capital Markets", loc:"London, England, United Kingdom", c:"high"},
+  {fn:"Jez", ln:"Mohideen", co:"Komainu", r:"Board Director (Laser Digital)", src:"VARA", url:"https://www.linkedin.com/in/dr-jez-mohideen", em:"jez.mohideen@laserdigital.com", h:"Co-Founder & CEO | Laser Digital", loc:"Dubai, United Arab Emirates", c:"high"},
+  {fn:"Robert", ln:"Johnson", co:"Komainu", r:"Co-CEO & CTO", src:"VARA", url:"https://www.linkedin.com/in/robdj", em:"robert.johnson@komainu.com", h:"co-CEO | CTO | Komainu | Digital Assets", loc:"Singapore", c:"high"},
+  {fn:"Jez", ln:"Mohideen", co:"Laser Digital", r:"CEO", src:"VARA", url:"https://www.linkedin.com/in/dr-jez-mohideen", em:"jez.mohideen@laserdigital.com", h:"Co-Founder & CEO | Laser Digital", loc:"Dubai, United Arab Emirates", c:"high"},
+  {fn:"Tony", ln:"Larkin", co:"Komainu", r:"CFO", src:"VARA", url:"https://www.linkedin.com/in/tony-larkin-901184b", em:"tony.larkin@komainu.com", h:"CFO at Komainu", loc:"Greater London, England, United Kingdom", c:"high"},
+  {fn:"Sebastian", ln:"Widmann", co:"Komainu", r:"Head of Dubai", src:"VARA", url:"https://www.linkedin.com/in/sebastianwidmann", h:"GM @ Komainu | ₿ |  Digital Assets Custody & Strategy", loc:"Dubai, United Arab Emirates", c:"high"},
+  {fn:"Susan", ln:"Patterson", co:"Komainu", r:"Head of Jersey", src:"VARA", url:"https://www.linkedin.com/in/susan-patterson-a1961aab", em:"susan.patterson@komainu.com", h:"Komainu Managing Director", loc:"Jersey", c:"high"},
+  {fn:"Lavanya", ln:"Sivaramakrishnan", co:"BitOasis", r:"Director, Information (Responsible Individual)", src:"VARA", url:"https://www.linkedin.com/in/lavanya-sivaramakrishnan-0265041", h:"Cyber Security | Data Protection | Risk Management", loc:"Dubai, United Arab Emirates", c:"high"},
+  {fn:"Paul", ln:"Frost-Smith", co:"Komainu", r:"Board Director & Co-CEO", src:"VARA", url:"https://www.linkedin.com/in/paulfrostsmith", h:"Group Managing Director, Komainu", loc:"Jersey", c:"high"},
+  {fn:"Steve", ln:"Ashley", co:"Laser Digital", r:"Executive Chairman", src:"VARA", url:"https://www.linkedin.com/in/steven-ashley-010748b1", h:"Co-Founder and Executive Chairman, Laser Digital - Nomura Group", loc:"London, England, United Kingdom", c:"high"},
+  {fn:"Darren", ln:"Jordan", co:"Komainu", r:"Chief Commercial Officer", src:"VARA", url:"https://www.linkedin.com/in/darren-jordan-135a233", em:"darren.jordan@komainu.com", h:"Chief Commercial Officer - Komainu", loc:"United Kingdom", c:"high"},
+  {fn:"Chris", ln:"Donovan", co:"Gap 3 Partners", r:"COO (& Foundation Council Member, NEAR Foundation)", src:"VARA", c:"none"},
+  {fn:"Abhishek", ln:"Vaidyanathan", co:"Gap 3 Partners", r:"General Counsel (NEAR Foundation)", src:"VARA", c:"none"},
+  {fn:"Adib", ln:"Tohme", co:"Gap 3 Partners", r:"International Tax & Corporate Lawyer", src:"VARA", url:"https://www.linkedin.com/in/adib-tohme-a1178751", em:"adib@g3p.io", h:"Tokenisation, Corporate Finance, Compliance, Tax and Entrepreneuship", loc:"Dubai, United Arab Emirates", c:"high"},
+  {fn:"Andrew", ln:"Whittaker", co:"Abu Dhabi Global Market (ADGM)", r:"Member of the Appeals Panel", src:"ADGM", c:"none"},
+  {fn:"David", ln:"Peniket", co:null, r:"Key Individual", src:"ADGM", url:"https://www.linkedin.com/in/david-peniket-15a7389", em:"david.peniket@ice.com", h:"Exchange Non-Executive Director", loc:"United Kingdom", c:"medium"},
+  {fn:"Fatema", ln:"Teneiji", co:"ICE Futures Abu Dhabi", r:"Board Member", src:"ADGM", c:"none"},
+  {fn:"He", ln:"Yi", co:"Binance", r:"Co-Founder and Chief Marketing Officer", src:"ADGM", c:"none"},
+  {fn:"Gordon", ln:"Bennett", co:"Intercontinental Exchange (ICE)", r:"Managing Director, Utility Markets", src:"ADGM", c:"none"},
+  {fn:"Heina", ln:"Chen", co:null, r:"Key Individual", src:"ADGM", c:"none"},
+  {fn:"Nicolas", ln:"Brand", co:"Komainu", r:"Board Director (Blockstream Capital Partners)", src:"VARA", url:"https://www.linkedin.com/in/n10d", h:"Institutional Bitcoin Finance", loc:"Zurich, Switzerland", c:"high"},
+  {fn:"Roger", ln:"Wang", co:"Binance", r:"Chief Technology Officer", src:"ADGM", c:"none"},
+  {fn:"Chao", ln:"Lu", co:null, r:"Key Individual", src:"ADGM", url:"https://www.linkedin.com/in/chao-lu-b4000420", em:"chao.lu@siemens.com", h:"Quantitative Associate", loc:"New York, New York, United States", c:"medium"},
+  {fn:"David", ln:"Nevin", co:null, r:"Key Individual", src:"ADGM", url:"https://www.linkedin.com/in/david-nevin-68a3092", em:"david.nevin@ibm.com", h:"SAP TM SME, Implementation Expert", loc:"Frankfurt Rhine-Main Metropolitan Area", c:"medium"},
+  {fn:"Xin", ln:"Wang", co:null, r:"Key Individual", src:"ADGM", url:"https://www.linkedin.com/in/xin-wang-5a05ab1b5", em:"xin.wang@hsbc.com", h:"Senior Quantitative Analyst", loc:"Beijing, China", c:"medium"},
+  {fn:"Hamad", ln:"Dhaheri", co:null, r:"Key Individual", src:"ADGM", url:"https://www.linkedin.com/in/hamad-al-dhaheri-27509512", h:"🇦🇪 Internal Audit & Assurance professional", loc:"Abu Dhabi Emirate, United Arab Emirates", c:"medium"},
+  {fn:"Ahmad", ln:"Hamdi", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/ahmad-sufi-hamdi-b-shamsudin-82543b360", h:"K-Youth Semiconductor Talent Development Programme Participant under Khazanah Nasional Berhad | Student at Universiti Teknikal Malaysia Melaka", loc:"Kampar, Perak, Malaysia", c:"medium"},
+  {fn:"Aaquib", ln:"Parpia", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/aaquib-parpia-65544624", em:"aaquib.parpia@wahed.com", h:"CA | CPA | Finance Director at Wahed", loc:"Mumbai, Maharashtra, India", c:"medium"},
+  {fn:"Abdelhadi", ln:"Abdelgadir", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/abdelhadi-abdelgadir-94885362", h:"Architect at UKCC", loc:"Sudan", c:"medium"},
+  {fn:"Tom", ln:"Norman", co:null, r:"Key Individual", src:"ADGM", url:"https://www.linkedin.com/in/tomnormanmarketing", h:"Marketing Professional", loc:"Los Angeles Metropolitan Area", c:"medium"},
+  {fn:"Thomas", ln:"Gregory", co:null, r:"Key Individual", src:"ADGM", url:"https://www.linkedin.com/in/thomas-gregory-8b2792403", em:"thomas.gregory@uber.com", h:"Technical Writer at Uber", loc:"Rome, Latium, Italy", c:"medium"},
+  {fn:"Patrick", ln:"Rattray", co:null, r:"Key Individual", src:"ADGM", url:"https://www.linkedin.com/in/patrick-rattray-39bbbb33", em:"patrick.rattray@ice.com", h:"Chief Risk Officer European Exchanges", loc:"London, England, United Kingdom", c:"medium"},
+  {fn:"Abdulla", ln:"Aljaabari", co:null, r:"Approved Person", src:"ADGM", c:"none"},
+  {fn:"Abdelhamid", ln:"Arafat", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/abdelhamid-arafat-fcca-b7215b404", em:"abdelhamid.arafat@kraken.com", h:"Information Security Analyst at Kraken", loc:"Kipséli, Thessalia, Greece", c:"medium"},
+  {fn:"Afsar", ln:"Ebrahim", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/afsar-ebrahim-762a1b350", h:"--", loc:"Port Louis, Mauritius", c:"medium"},
+  {fn:"Abdelilah", ln:"Hadfaoui", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/abdelilah-el-hadfaoui-cfa-b8393155", h:"Asset management", loc:"Abu Dhabi Emirate, United Arab Emirates", c:"medium"},
+  {fn:"Abhijit", ln:"Choudhury", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/abhichou", h:"Project Head @ L&T  | MBA Finance, BE,PMP,LEED AP", loc:"Tabuk Region", c:"medium"},
+  {fn:"Abdalla", ln:"Kablan", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/abdalla-kablan-8551a0239", h:"--", loc:"Tripoli, Tripoli, Libya", c:"medium"},
+  {fn:"Abhijit", ln:"Chakrabortti", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/abhijit-chakrabortti-96500815", h:"Research Manager at Duquesne Capital Management", loc:"New York, New York, United States", c:"medium"},
+  {fn:"Achim", ln:"Kuessner", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/achim-kuessner-994b893a", h:"Private Investor", loc:"City of Cape Town, Western Cape, South Africa", c:"medium"},
+  {fn:"Abdellah", ln:"Amrani", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/abdellah-el-amrani-0755313b", h:"Spécialiste en gouvernance financière et protection sociale", loc:"Prefecture of Casablanca, Casablanca-Settat, Morocco", c:"medium"},
+  {fn:"Aarthi", ln:"Chandrasekaran", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/aarthi-chandrasekaran-962a288", h:"Postdoctoral Researcher at Sandia National Laboratories", loc:"Livermore, California, United States", c:"medium"},
+  {fn:"Abhishek", ln:"Bandela", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/abhishek-bandela-5b67b934", h:"Assistant Event Manager at the wedding lounge", loc:"Jaipur, Rajasthan, India", c:"medium"},
+  {fn:"Abraham", ln:"Cinta", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/abraham-cinta-233237101", em:"abraham.cinta@braskem.com", h:"Maintenance Supervisor en Braskem", loc:"Mexico", c:"medium"},
+  {fn:"Abubaker", ln:"Alkhoori", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/abubaker-alkhoori-55211883", h:"SH at Oil", loc:"United Arab Emirates", c:"medium"},
+  {fn:"Achin", ln:"Malik", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/achin-malik-6b945a7", em:"achin.malik@tcs.com", h:"Agile Coach / Project Manager at Tata Consultancy Services", loc:"Delhi, India", c:"medium"},
+  {fn:"Adam", ln:"Ferris", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/adampferris", em:"adam.ferris@deputy.com", h:"GTM Leader & Team Builder | 4x VP Sales | 2x Exits", loc:"San Francisco Bay Area", c:"medium"},
+  {fn:"Abdul", ln:"Khan", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/abdulhaseeboff", em:"work.abdulhaseeb@gmail.com", h:"Aspiring Consultant / FinTech Professional | Strategy, M&A, Operations | Ex-Founder’s Associate | MSc @ TU Ilmenau", loc:"Tampere, Pirkanmaa, Finland", c:"medium"},
+  {fn:"Adam", ln:"Malouf", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/adam-malouf-91583a75", h:"Education and Training Facilities Manager ", loc:"Greater Sydney Area", c:"medium"},
+  {fn:"Adib", ln:"Matter", co:null, r:"Approved Person", src:"ADGM", c:"none"},
+  {fn:"Adam", ln:"Kamyar", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/adam-kamyar-6027777", em:"a.kamyar@winton.com", h:"Director at Winton Group", loc:"United Arab Emirates", c:"medium"},
+  {fn:"Adam", ln:"Nelson", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/adamcoopernelson", h:"Founder and CEO at Nelson Management", loc:"New York, New York, United States", c:"medium"},
+  {fn:"Alvin", ln:"Loke", co:null, r:"Key Individual", src:"ADGM", url:"https://www.linkedin.com/in/alvinloke", em:"alvin@gic.com.sg", h:"Senior VP & Portfolio Manager @ GIC Public Equities | CFA", loc:"New York, New York, United States", c:"medium"},
+  {fn:"Adam", ln:"Haklili", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/adam-haklili-33290729", em:"adam@beamventures.com", h:"Founder-First Investor | Web3 VC | Managing Partner at Beam Ventures", loc:"Portugal", c:"medium"},
+  {fn:"Adrian", ln:"Longland", co:"Barrenjoey Markets Pty Limited", r:"Senior Executive Officer, Senior Manager", src:"ADGM", c:"none"},
+  {fn:"Adam", ln:"Piper", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/adam-piper-10153b23", h:"Head of Clearing MENA - Marex Capital (AD) Ltd", loc:"Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates", c:"medium"},
+  {fn:"Adrian", ln:"Colberg", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/adrian-colberg-b99b32218", h:"--", loc:"Denver, Colorado, United States", c:"medium"},
+  {fn:"Aggelos", ln:"Stylianos", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/aggelos-stylianos-49056912", em:"aggelos.stylianos@mizuhogroup.com", h:"Head of Compliance, Mizuho Bank Ltd (DIFC), Mizuho International Plc (DIFC)", loc:"Dubai, United Arab Emirates", c:"medium"},
+  {fn:"Aditya", ln:"Shroff", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/aditya-shroff-8033a31b0", h:"Connecting People, Processes & Technology | Digital Transformation & Analytics | Industrial Automation | AI Enablement Specialist | Turning Data Into Better Decisions (CAPM & CSM)", loc:"Greater Toronto Area, Canada", c:"medium"},
+  {fn:"Adam", ln:"Ackermann", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/adam-ackermann-427a777", em:"aackermann@paxos.com", h:"Head of Treasury and Portfolio Management @ Paxos", loc:"Charleston, South Carolina, United States", c:"medium"},
+  {fn:"Adam", ln:"Ladjadj", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/adamladjadj", em:"adam.ladjadj@msquared.co.uk", h:"BEng Chemical and Process Engineering | Estimator | Interested in Project Management/Engineering in Construction and Renewable Sectors ", loc:"Greater Melbourne Area", c:"medium"},
+  {fn:"Adiv", ln:"Baruch", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/adiv-baruch-a14b4", em:"adiv.baruch@boscom.com", h:"CEO &president at BOS", loc:"Israel", c:"medium"},
+  {fn:"Adrian", ln:"Kershaw", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/adrian-kershaw", h:"IGG - Investigative Genetic Genealogy, Genealogy", loc:"Doyle, California, United States", c:"medium"},
+  {fn:"Ahmad", ln:"Bochor", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/ahmad-bochor-91414516", h:"Real Estate Marketing Director", loc:"Ottawa, Ontario, Canada", c:"medium"},
+  {fn:"Ahmed", ln:"Alsheewari", co:null, r:"Approved Person", src:"ADGM", c:"none"},
+  {fn:"Ahmed", ln:"Helal", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/ahmed-helal-872357126", h:"Structural Design Engineer", loc:"Cairo, Egypt", c:"medium"},
+  {fn:"Ahmed", ln:"Almehairi", co:"ADS Investment Solutions Limited", r:"Licensed Director", src:"ADGM", c:"none"},
+  {fn:"Ahmad", ln:"Al-Ameri", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/ahmad-al-ameri-056926173", h:"Supply Chain Manager at Transarabia Shipping & Logistics", loc:"Jordan", c:"medium"},
+  {fn:"Ahmad", ln:"Ali", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/ali-ahmad-binesh-1645011a5", h:"Ausbildung ", loc:"Hamburg, Hamburg, Germany", c:"medium"},
+  {fn:"Ahmad", ln:"Malik", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/taimurmalikrr", h:"Helping utilities, developers & investors drive Germany’s energy transition. 17+ years scaling consulting ventures in offshore wind, hydrogen & transmission with a proven record in growth and execution.", loc:"Hamburg, Hamburg, Germany", c:"medium"},
+  {fn:"Ahmed", ln:"Kamal", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/ahmed-kamal-go-dev", em:"ahmed.kamal@deliveryhero.com", h:"Software Engineer II", loc:"Berlin, Berlin, Germany", c:"medium"},
+  {fn:"Ahmed", ln:"Alromaithi", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/ahmed-alromaithi-156bba73", h:"CEO at ABU DHABI COOPERATIVE SOCIETY", loc:"United Arab Emirates", c:"medium"},
+  {fn:"Ahmed", ln:"Dajani", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/ahmeddajani", em:"ahmed.dajani@target.com", h:"Product Marketing | Effective Branding | Social Media Strategy", loc:"Elk Grove, California, United States", c:"medium"},
+  {fn:"Abdullah", ln:"Shahin", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/abdullahshahin", em:"abdullah.shahin@top.legal", h:"Software Engineer at Top.Legal | M.Sc. DEA at TUM ", loc:"Munich, Bavaria, Germany", c:"medium"},
+  {fn:"Adnan", ln:"Khandwala", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/adnan-khandwala-fca-18452829", em:"adnan.khandwala@tplproperty.com", h:"Chief Financial Officer & Executive Director at TPL Properties, Member SEALA.", loc:"Pakistan", c:"medium"},
+  {fn:"Adrian", ln:"Beattie", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/adrian-beattie", em:"adrianbeattie@bestpracticenet.co.uk", h:"Data Manager", loc:"Bristol, England, United Kingdom", c:"medium"},
+  {fn:"Ahmed", ln:"Advani", co:null, r:"Approved Person", src:"ADGM", url:"https://www.linkedin.com/in/ahmed-advani-23666a199", h:"employer at DAATA Mobile", loc:"Pakistan", c:"medium"},
 ];
 
 const LICENCE_NAMES = {
@@ -544,6 +721,12 @@ function applyEntityContext() {
 }
 
 // ──────────────────────── ENTITIES TABLE ────────────────────────
+function fmtNum(n) {
+  if (!n && n !== 0) return '';
+  if (n >= 1e6) return (n/1e6).toFixed(1).replace(/\.0$/,'') + 'M';
+  if (n >= 1e3) return (n/1e3).toFixed(1).replace(/\.0$/,'') + 'k';
+  return String(n);
+}
 function renderEntities() {
   const body = document.getElementById('entities-body');
   const highlight = window._entityHighlight ? normalize(window._entityHighlight) : null;
@@ -553,16 +736,67 @@ function renderEntities() {
       ? `<span class="tag tag-ipa">IPA</span>`
       : `<span class="tag" style="background:var(--green-bg);color:var(--green)">Licensed</span>`;
     const hl = (highlight && normalize(e.n).includes(highlight)) ? ' class="hl"' : '';
-    return `<tr${hl} data-search="${(e.n+' '+e.l.join(' ')+' '+e.note+' '+e.s).toLowerCase()}">
+    let liCell = '<span style="color:var(--text-3);font-size:11px">—</span>';
+    if (e.url) {
+      const meta = [];
+      if (e.followers) meta.push(fmtNum(e.followers)+' followers');
+      if (e.employees) meta.push(fmtNum(e.employees)+' employees');
+      if (e.hq) meta.push(e.hq);
+      const tip = meta.join(' · ');
+      liCell = `<a href="${e.url}" target="_blank" title="${tip}" style="display:inline-flex;align-items:center;gap:4px;color:var(--accent);text-decoration:none;font-size:11px;font-weight:500"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3h-14c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2zm-11 16h-3v-10h3v10zm-1.5-11.3c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zm12.5 11.3h-3v-5.6c0-1.37-.03-3.13-1.91-3.13-1.91 0-2.2 1.49-2.2 3.03v5.7h-3v-10h2.88v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6v5.59z"/></svg>${e.followers ? fmtNum(e.followers) : 'View'}</a>`;
+    }
+    return `<tr${hl} data-search="${(e.n+' '+e.l.join(' ')+' '+e.note+' '+e.s+' '+(e.hq||'')).toLowerCase()}">
       <td style="color:var(--text-3);font-variant-numeric:tabular-nums">${i+1}</td>
       <td style="font-weight:500">${e.n}</td>
       <td>${statusTag}</td>
       <td>${tags}</td>
       <td style="font-family:var(--font-mono);font-size:11px;color:var(--text-2)">${e.d}</td>
+      <td>${liCell}</td>
       <td style="font-size:12px;color:var(--text-2)">${e.note}</td>
     </tr>`;
   }).join('');
 }
+
+// ──────────────────────── PEOPLE DIRECTORY ────────────────────────
+function renderPeople(filter) {
+  const body = document.getElementById('people-body');
+  if (!body) return;
+  const q = (filter||'').toLowerCase().trim();
+  const rows = PEOPLE
+    .map((p,i) => ({p, i}))
+    .filter(({p}) => {
+      if (!q) return true;
+      const hay = ((p.fn||'')+' '+(p.ln||'')+' '+(p.co||'')+' '+(p.r||'')+' '+(p.src||'')+' '+(p.h||'')+' '+(p.loc||'')).toLowerCase();
+      return hay.includes(q);
+    });
+  document.getElementById('people-count').textContent = rows.length + ' / ' + PEOPLE.length;
+  body.innerHTML = rows.map(({p,i}) => {
+    const name = `${p.fn||''} ${p.ln||''}`.trim();
+    const srcTag = p.src === 'VARA'
+      ? `<span class="tag" style="background:var(--accent-bg);color:var(--accent)">VARA</span>`
+      : `<span class="tag" style="background:var(--purple-bg);color:var(--purple)">ADGM</span>`;
+    const confDot = p.c === 'high' ? `<span title="High confidence" style="color:var(--green);font-size:14px">●</span>` :
+                    p.c === 'medium' ? `<span title="Medium confidence" style="color:var(--amber);font-size:14px">●</span>` :
+                    `<span title="Low confidence" style="color:var(--text-3);font-size:14px">●</span>`;
+    const liIcon = p.url
+      ? `<a href="${p.url}" target="_blank" title="${p.h||p.url}" style="color:var(--accent);text-decoration:none"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle"><path d="M19 3h-14c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2zm-11 16h-3v-10h3v10zm-1.5-11.3c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.75-1.75 1.75zm12.5 11.3h-3v-5.6c0-1.37-.03-3.13-1.91-3.13-1.91 0-2.2 1.49-2.2 3.03v5.7h-3v-10h2.88v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6v5.59z"/></svg></a>`
+      : `<span style="color:var(--text-3)">—</span>`;
+    const emailIcon = p.em
+      ? `<a href="mailto:${p.em}" title="${p.em}" style="color:var(--green);text-decoration:none"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>`
+      : `<span style="color:var(--text-3)">—</span>`;
+    return `<tr>
+      <td style="color:var(--text-3);font-variant-numeric:tabular-nums;width:40px">${i+1}</td>
+      <td style="font-weight:500">${name || '<em style="color:var(--text-3)">unnamed</em>'}</td>
+      <td style="font-size:12px;color:var(--text-2)">${p.co||'<span style="color:var(--text-3)">—</span>'}</td>
+      <td style="font-size:12px;color:var(--text-2)">${p.r||''}</td>
+      <td>${srcTag}</td>
+      <td style="text-align:center">${confDot}</td>
+      <td style="text-align:center">${liIcon}</td>
+      <td style="text-align:center">${emailIcon}</td>
+    </tr>`;
+  }).join('') || `<tr><td colspan="8" style="text-align:center;color:var(--text-3);padding:24px">No people match "${q}"</td></tr>`;
+}
+function filterPeople(v) { renderPeople(v); }
 
 // ──────────────────────── SORT ────────────────────────
 let sortDir = {};
@@ -612,6 +846,7 @@ function show(id) {
 // ──────────────────────── INIT ────────────────────────
 applyEntityContext();
 renderEntities();
+renderPeople('');
 </script>
 
 </body>
