@@ -1,0 +1,578 @@
+[
+  {
+    "firstName": "Scott",
+    "lastName": "Thiel",
+    "companyDomain": "tokinvest.co",
+    "_source": "VARA",
+    "_company": "Tokinvest Capital",
+    "_role": "Co-Founder & CEO",
+    "_linkedin": "https://www.linkedin.com/in/scott-thiel-9961bb6/"
+  },
+  {
+    "firstName": "Matt",
+    "lastName": "Blom",
+    "companyDomain": "tokinvest.co",
+    "_source": "VARA",
+    "_company": "Tokinvest Capital",
+    "_role": "Chief Strategy Officer",
+    "_linkedin": "https://www.linkedin.com/in/matthew-blom-2bb277b1/"
+  },
+  {
+    "firstName": "Matt",
+    "lastName": "Ong",
+    "companyDomain": "ctrl-alt.co",
+    "_source": "VARA",
+    "_company": "Ctrl Alt",
+    "_role": "Founder & CEO",
+    "_linkedin": "https://www.linkedin.com/in/mattong1/"
+  },
+  {
+    "firstName": "Robert",
+    "lastName": "Farquhar",
+    "companyDomain": "ctrl-alt.co",
+    "_source": "VARA",
+    "_company": "Ctrl Alt",
+    "_role": "Head of MENA",
+    "_linkedin": "https://www.linkedin.com/in/robert-farquhar-98a417a6/"
+  },
+  {
+    "firstName": "Lee",
+    "lastName": "Bowyer",
+    "companyDomain": "ctrl-alt.co",
+    "_source": "VARA",
+    "_company": "Ctrl Alt",
+    "_role": "Global Head of Compliance",
+    "_linkedin": "https://www.linkedin.com/in/lee-bowyer-629126b7/"
+  },
+  {
+    "firstName": "Omar",
+    "lastName": "Elassar",
+    "companyDomain": "animocabrands.com",
+    "_source": "VARA",
+    "_company": "Animoca Brands ME",
+    "_role": "Managing Director",
+    "_linkedin": "https://www.linkedin.com/in/oelassar/"
+  },
+  {
+    "firstName": "Talal",
+    "lastName": "Tabbaa",
+    "companyDomain": "coinmena.com",
+    "_source": "VARA",
+    "_company": "CoinMENA",
+    "_role": "Co-Founder",
+    "_linkedin": "https://ae.linkedin.com/in/talaltabbaa"
+  },
+  {
+    "firstName": "Dina",
+    "lastName": "Sam'an",
+    "companyDomain": "coinmena.com",
+    "_source": "VARA",
+    "_company": "CoinMENA",
+    "_role": "Co-Founder",
+    "_linkedin": "https://bh.linkedin.com/in/dinasaman"
+  },
+  {
+    "firstName": "Yazan",
+    "lastName": "Barghuthi",
+    "companyDomain": "coinmena.com",
+    "_source": "VARA",
+    "_company": "CoinMENA",
+    "_role": "Co-Founder",
+    "_linkedin": "https://www.linkedin.com/in/yazanbarghuthi/"
+  },
+  {
+    "firstName": "Mo",
+    "lastName": "Ali",
+    "companyDomain": "fuzefinance.com",
+    "_source": "VARA",
+    "_company": "Fuze",
+    "_role": "CEO & Co-founder",
+    "_linkedin": "https://www.linkedin.com/in/moaliyusuf"
+  },
+  {
+    "firstName": "Arpit",
+    "lastName": "Mehta",
+    "companyDomain": "fuzefinance.com",
+    "_source": "VARA",
+    "_company": "Fuze",
+    "_role": "COO & Co-founder",
+    "_linkedin": "https://www.linkedin.com/in/mehtaarpit"
+  },
+  {
+    "firstName": "Srijan",
+    "lastName": "Shetty",
+    "companyDomain": "fuzefinance.com",
+    "_source": "VARA",
+    "_company": "Fuze",
+    "_role": "CTO",
+    "_linkedin": "https://linkedin.com/in/srijanshetty"
+  },
+  {
+    "firstName": "Zunair",
+    "lastName": "Ali",
+    "companyDomain": "fuzefinance.com",
+    "_source": "VARA",
+    "_company": "Fuze",
+    "_role": "MLRO",
+    "_linkedin": "https://www.linkedin.com/in/zunair-ali-3961529b"
+  },
+  {
+    "firstName": "Abeeda",
+    "lastName": "Khan",
+    "companyDomain": "fuzefinance.com",
+    "_source": "VARA",
+    "_company": "Fuze",
+    "_role": "Head of Finance",
+    "_linkedin": "https://www.linkedin.com/in/abeeda-k-716b5622"
+  },
+  {
+    "firstName": "Arshika",
+    "lastName": "Perry",
+    "companyDomain": "fuzefinance.com",
+    "_source": "VARA",
+    "_company": "Fuze",
+    "_role": "Head of Legal",
+    "_linkedin": "https://www.linkedin.com/in/arshika-perry-240620156"
+  },
+  {
+    "firstName": "Mohammad",
+    "lastName": "Hossain",
+    "companyDomain": "fasset.com",
+    "_source": "VARA",
+    "_company": "Fasset",
+    "_role": "Co-Founder & CEO",
+    "_linkedin": "https://ae.linkedin.com/in/raafihossain"
+  },
+  {
+    "firstName": "Basil",
+    "lastName": "Askari",
+    "companyDomain": "midchains.com",
+    "_source": "VARA",
+    "_company": "MidChains",
+    "_role": "Founder & CEO",
+    "_linkedin": "https://ae.linkedin.com/in/basil-al-askari-72730999"
+  },
+  {
+    "firstName": "Ola",
+    "lastName": "Doudin",
+    "companyDomain": "bitoasis.net",
+    "_source": "VARA",
+    "_company": "BitOasis",
+    "_role": "Co-Founder & CEO",
+    "_linkedin": "https://ae.linkedin.com/in/ola-doudin-5a026511"
+  },
+  {
+    "firstName": "Armani",
+    "lastName": "Ferrante",
+    "companyDomain": "backpack.exchange",
+    "_source": "VARA",
+    "_company": "Backpack Exchange",
+    "_role": "Founder & CEO",
+    "_linkedin": "https://www.linkedin.com/in/armaniferrante/"
+  },
+  {
+    "firstName": "Alessio",
+    "lastName": "Quaglini",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "CEO & Co-Founder",
+    "_linkedin": "https://www.linkedin.com/in/alessioquaglini"
+  },
+  {
+    "firstName": "Rafal",
+    "lastName": "Czerniawski",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "CISO & Co-Founder",
+    "_linkedin": "https://www.linkedin.com/in/rafalcz"
+  },
+  {
+    "firstName": "Tommaso",
+    "lastName": "Natale",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "CTO",
+    "_linkedin": "https://hk.linkedin.com/in/tommaso-natale-4a990"
+  },
+  {
+    "firstName": "Marty",
+    "lastName": "Jetton",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "Chief Risk Officer",
+    "_linkedin": "https://www.linkedin.com/in/martyjetton"
+  },
+  {
+    "firstName": "James",
+    "lastName": "Harte",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "COO",
+    "_linkedin": "https://www.linkedin.com/in/jwharte/"
+  },
+  {
+    "firstName": "Davy",
+    "lastName": "Lassagne",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "CFO",
+    "_linkedin": "https://www.linkedin.com/in/davylassagne/"
+  },
+  {
+    "firstName": "Giorgia",
+    "lastName": "Pellizzari",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "CPO & Head of Custody",
+    "_linkedin": "https://www.linkedin.com/in/giorgiapellizzari/"
+  },
+  {
+    "firstName": "Rohit",
+    "lastName": "Apte",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "Head of Markets",
+    "_linkedin": "https://www.linkedin.com/in/rohit-apte-554a262/"
+  },
+  {
+    "firstName": "Gabriele",
+    "lastName": "Bandi",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "Head of Sales",
+    "_linkedin": "https://www.linkedin.com/in/gabrielebandi/"
+  },
+  {
+    "firstName": "Man",
+    "lastName": "Hong",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "Head of Operations",
+    "_linkedin": "https://hk.linkedin.com/in/manhay-hong"
+  },
+  {
+    "firstName": "Federico",
+    "lastName": "Fabiano",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "MD, Head of Legal & Compliance",
+    "_linkedin": "https://www.linkedin.com/in/federico-fabiano-63704416/"
+  },
+  {
+    "firstName": "Rajah",
+    "lastName": "Thiyagarajah",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "Chairman",
+    "_linkedin": "https://www.linkedin.com/in/rajaht"
+  },
+  {
+    "firstName": "Yat",
+    "lastName": "Siu",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "Director",
+    "_linkedin": "https://www.linkedin.com/in/yatsiu/"
+  },
+  {
+    "firstName": "Jehan",
+    "lastName": "Chu",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "Director",
+    "_linkedin": "https://www.linkedin.com/in/jehanchu/"
+  },
+  {
+    "firstName": "Mark",
+    "lastName": "Cheng",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "Director",
+    "_linkedin": "https://www.linkedin.com/in/cheeech/"
+  },
+  {
+    "firstName": "Colin",
+    "lastName": "Brooks",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "Chairman of Advisory Board",
+    "_linkedin": "https://www.linkedin.com/in/colin-brooks-b5334b40/"
+  },
+  {
+    "firstName": "Henri",
+    "lastName": "Arslanian",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "Advisory Board Member",
+    "_linkedin": "https://www.linkedin.com/in/henriarslanian/"
+  },
+  {
+    "firstName": "Anthony",
+    "lastName": "Chan",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "Advisory Board Member",
+    "_linkedin": "https://www.linkedin.com/in/anthony-chan-82452b5a/"
+  },
+  {
+    "firstName": "Dave",
+    "lastName": "Chapman",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "Advisory Board Member",
+    "_linkedin": "https://www.linkedin.com/in/davejchapman/"
+  },
+  {
+    "firstName": "Carlo",
+    "lastName": "Huerlimann",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "Advisory Board Member",
+    "_linkedin": "https://www.linkedin.com/in/carlo-huerlimann-031533b/"
+  },
+  {
+    "firstName": "Robin",
+    "lastName": "Janaway",
+    "companyDomain": "g3p.io",
+    "_source": "VARA",
+    "_company": "Gap 3 Partners",
+    "_role": "CEO / Web3 Advisor",
+    "_linkedin": "https://www.linkedin.com/in/robin-janaway-11799837/"
+  },
+  {
+    "firstName": "Kevin",
+    "lastName": "Hu",
+    "companyDomain": "novaDigital.io",
+    "_source": "VARA",
+    "_company": "Nova Digital",
+    "_role": "CEO / Responsible Individual",
+    "_linkedin": "https://www.linkedin.com/in/kevin-hu-46a03343/"
+  },
+  {
+    "firstName": "Stephen",
+    "lastName": "Li",
+    "companyDomain": "novaDigital.io",
+    "_source": "VARA",
+    "_company": "Nova Digital",
+    "_role": "COO",
+    "_linkedin": "https://www.linkedin.com/in/stephenli2/"
+  },
+  {
+    "firstName": "Miles",
+    "lastName": "Corney",
+    "companyDomain": "novaDigital.io",
+    "_source": "VARA",
+    "_company": "Nova Digital",
+    "_role": "CCO / Responsible Individual",
+    "_linkedin": "https://www.linkedin.com/in/milescorney/"
+  },
+  {
+    "firstName": "Burim",
+    "lastName": "Bivolaku",
+    "companyDomain": "theice.com",
+    "_source": "ADGM",
+    "_company": "Intercontinental Exchange (ICE)",
+    "_role": "Business Information Security Officer, Trading & Clearing",
+    "_linkedin": "https://www.linkedin.com/in/burim-bivolaku-2317781/"
+  },
+  {
+    "firstName": "Gabriel",
+    "lastName": "Abed",
+    "companyDomain": "binance.com",
+    "_source": "ADGM",
+    "_company": "Binance",
+    "_role": "Chairman of the Board",
+    "_linkedin": "https://www.linkedin.com/in/gabrielabed/"
+  },
+  {
+    "firstName": "Stuart",
+    "lastName": "Williams",
+    "companyDomain": "theice.com",
+    "_source": "ADGM",
+    "_company": "Intercontinental Exchange (ICE)",
+    "_role": "Chief Operating Officer",
+    "_linkedin": "https://www.linkedin.com/in/stuart-williams-2586761/"
+  },
+  {
+    "firstName": "Wee",
+    "lastName": "Teng",
+    "companyDomain": "binance.com",
+    "_source": "ADGM",
+    "_company": "Binance",
+    "_role": "Chief Executive Officer",
+    "_linkedin": "https://www.linkedin.com/in/richard-teng-binance/"
+  },
+  {
+    "firstName": "James",
+    "lastName": "Byrne",
+    "companyDomain": "tokinvest.co",
+    "_source": "VARA",
+    "_company": "Tokinvest Capital",
+    "_role": "Head of Compliance",
+    "_linkedin": null
+  },
+  {
+    "firstName": "Robert",
+    "lastName": "Cooper",
+    "companyDomain": "tokinvest.co",
+    "_source": "VARA",
+    "_company": "Tokinvest Capital",
+    "_role": "Co-Founder & COO",
+    "_linkedin": null
+  },
+  {
+    "firstName": "Jordi",
+    "lastName": "Alexander",
+    "companyDomain": "selinicapital.com",
+    "_source": "VARA",
+    "_company": "Selini Capital",
+    "_role": "Founder",
+    "_linkedin": null
+  },
+  {
+    "firstName": "Adam",
+    "lastName": "Back",
+    "companyDomain": "komainu.com",
+    "_source": "VARA",
+    "_company": "Komainu",
+    "_role": "Board Director (Blockstream)",
+    "_linkedin": null
+  },
+  {
+    "firstName": "PeterPaul",
+    "lastName": "Pardi",
+    "companyDomain": "komainu.com",
+    "_source": "VARA",
+    "_company": "Komainu",
+    "_role": "Board Director (Blockstream Capital Partners)",
+    "_linkedin": null
+  },
+  {
+    "firstName": "Steve",
+    "lastName": "Ashley",
+    "companyDomain": "komainu.com",
+    "_source": "VARA",
+    "_company": "Komainu",
+    "_role": "Board Director (Laser Digital)",
+    "_linkedin": null
+  },
+  {
+    "firstName": "Tamer",
+    "lastName": "Ghresi",
+    "companyDomain": "animocabrands.com",
+    "_source": "VARA",
+    "_company": "Animoca Brands ME",
+    "_role": "Chief Compliance Officer",
+    "_linkedin": null
+  },
+  {
+    "firstName": "Sebastian",
+    "lastName": "Widmann",
+    "companyDomain": "komainu.com",
+    "_source": "VARA",
+    "_company": "Komainu",
+    "_role": "Head of Dubai",
+    "_linkedin": "https://www.linkedin.com/in/sebastianwidmann"
+  },
+  {
+    "firstName": "Lavanya",
+    "lastName": "Sivaramakrishnan",
+    "companyDomain": "bitoasis.net",
+    "_source": "VARA",
+    "_company": "BitOasis",
+    "_role": "Director, Information (Responsible Individual)",
+    "_linkedin": "https://www.linkedin.com/in/lavanya-sivaramakrishnan-0265041"
+  },
+  {
+    "firstName": "Paul",
+    "lastName": "Frost-Smith",
+    "companyDomain": "komainu.com",
+    "_source": "VARA",
+    "_company": "Komainu",
+    "_role": "Board Director & Co-CEO",
+    "_linkedin": "https://www.linkedin.com/in/paulfrostsmith"
+  },
+  {
+    "firstName": "Steve",
+    "lastName": "Ashley",
+    "companyDomain": "laserdigital.com",
+    "_source": "VARA",
+    "_company": "Laser Digital",
+    "_role": "Executive Chairman",
+    "_linkedin": "https://www.linkedin.com/in/steven-ashley-010748b1"
+  },
+  {
+    "firstName": "Chris",
+    "lastName": "Donovan",
+    "companyDomain": "g3p.io",
+    "_source": "VARA",
+    "_company": "Gap 3 Partners",
+    "_role": "COO (& Foundation Council Member, NEAR Foundation)",
+    "_linkedin": null
+  },
+  {
+    "firstName": "Abhishek",
+    "lastName": "Vaidyanathan",
+    "companyDomain": "g3p.io",
+    "_source": "VARA",
+    "_company": "Gap 3 Partners",
+    "_role": "General Counsel (NEAR Foundation)",
+    "_linkedin": null
+  },
+  {
+    "firstName": "He",
+    "lastName": "Yi",
+    "companyDomain": "binance.com",
+    "_source": "ADGM",
+    "_company": "Binance",
+    "_role": "Co-Founder and Chief Marketing Officer",
+    "_linkedin": null
+  },
+  {
+    "firstName": "Gordon",
+    "lastName": "Bennett",
+    "companyDomain": "theice.com",
+    "_source": "ADGM",
+    "_company": "Intercontinental Exchange (ICE)",
+    "_role": "Managing Director, Utility Markets",
+    "_linkedin": null
+  },
+  {
+    "firstName": "Nicolas",
+    "lastName": "Brand",
+    "companyDomain": "komainu.com",
+    "_source": "VARA",
+    "_company": "Komainu",
+    "_role": "Board Director (Blockstream Capital Partners)",
+    "_linkedin": "https://www.linkedin.com/in/n10d"
+  },
+  {
+    "firstName": "Roger",
+    "lastName": "Wang",
+    "companyDomain": "binance.com",
+    "_source": "ADGM",
+    "_company": "Binance",
+    "_role": "Chief Technology Officer",
+    "_linkedin": null
+  }
+]

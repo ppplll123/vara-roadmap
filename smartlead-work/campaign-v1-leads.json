@@ -1,0 +1,830 @@
+[
+  {
+    "email": "matt@ctrl-alt.co",
+    "first_name": "Matt",
+    "last_name": "Ong",
+    "company_name": "Ctrl Alt",
+    "linkedin_profile": "https://www.linkedin.com/in/mattong1/",
+    "custom_fields": {
+      "role": "Founder & CEO",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "robert@ctrl-alt.co",
+    "first_name": "Robert",
+    "last_name": "Farquhar",
+    "company_name": "Ctrl Alt",
+    "linkedin_profile": "https://www.linkedin.com/in/robert-farquhar-98a417a6/",
+    "custom_fields": {
+      "role": "Head of MENA",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "lee@ctrl-alt.co",
+    "first_name": "Lee",
+    "last_name": "Bowyer",
+    "company_name": "Ctrl Alt",
+    "linkedin_profile": "https://www.linkedin.com/in/lee-bowyer-629126b7/",
+    "custom_fields": {
+      "role": "Global Head of Compliance",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "omare@animocabrands.com",
+    "first_name": "Omar",
+    "last_name": "Elassar",
+    "company_name": "Animoca Brands ME",
+    "linkedin_profile": "https://www.linkedin.com/in/oelassar/",
+    "custom_fields": {
+      "role": "Managing Director",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "talal@coinmena.com",
+    "first_name": "Talal",
+    "last_name": "Tabbaa",
+    "company_name": "CoinMENA",
+    "linkedin_profile": "https://ae.linkedin.com/in/talaltabbaa",
+    "custom_fields": {
+      "role": "Co-Founder",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "dina@coinmena.com",
+    "first_name": "Dina",
+    "last_name": "Sam'an",
+    "company_name": "CoinMENA",
+    "linkedin_profile": "https://bh.linkedin.com/in/dinasaman",
+    "custom_fields": {
+      "role": "Co-Founder",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "yazan@coinmena.com",
+    "first_name": "Yazan",
+    "last_name": "Barghuthi",
+    "company_name": "CoinMENA",
+    "linkedin_profile": "https://www.linkedin.com/in/yazanbarghuthi/",
+    "custom_fields": {
+      "role": "Co-Founder",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "mo@fuzefinance.com",
+    "first_name": "Mo",
+    "last_name": "Ali",
+    "company_name": "Fuze",
+    "linkedin_profile": "https://www.linkedin.com/in/moaliyusuf",
+    "custom_fields": {
+      "role": "CEO & Co-founder",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "arpit@fuzefinance.com",
+    "first_name": "Arpit",
+    "last_name": "Mehta",
+    "company_name": "Fuze",
+    "linkedin_profile": "https://www.linkedin.com/in/mehtaarpit",
+    "custom_fields": {
+      "role": "COO & Co-founder",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "shetty@fuze.finance",
+    "first_name": "Srijan",
+    "last_name": "Shetty",
+    "company_name": "Fuze",
+    "linkedin_profile": "https://linkedin.com/in/srijanshetty",
+    "custom_fields": {
+      "role": "CTO",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "zunair@fuzefinance.com",
+    "first_name": "Zunair",
+    "last_name": "Ali",
+    "company_name": "Fuze",
+    "linkedin_profile": "https://www.linkedin.com/in/zunair-ali-3961529b",
+    "custom_fields": {
+      "role": "MLRO",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "abeeda.khan@fuzefinance.com",
+    "first_name": "Abeeda",
+    "last_name": "Khan",
+    "company_name": "Fuze",
+    "linkedin_profile": "https://www.linkedin.com/in/abeeda-k-716b5622",
+    "custom_fields": {
+      "role": "Head of Finance",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "arshika@fuze.finance",
+    "first_name": "Arshika",
+    "last_name": "Perry",
+    "company_name": "Fuze",
+    "linkedin_profile": "https://www.linkedin.com/in/arshika-perry-240620156",
+    "custom_fields": {
+      "role": "Head of Legal",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "mhossain@fasset.com",
+    "first_name": "Mohammad",
+    "last_name": "Hossain",
+    "company_name": "Fasset",
+    "linkedin_profile": "https://ae.linkedin.com/in/raafihossain",
+    "custom_fields": {
+      "role": "Co-Founder & CEO",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "basil@midchains.com",
+    "first_name": "Basil",
+    "last_name": "Askari",
+    "company_name": "MidChains",
+    "linkedin_profile": "https://ae.linkedin.com/in/basil-al-askari-72730999",
+    "custom_fields": {
+      "role": "Founder & CEO",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "ola@bitoasis.net",
+    "first_name": "Ola",
+    "last_name": "Doudin",
+    "company_name": "BitOasis",
+    "linkedin_profile": "https://ae.linkedin.com/in/ola-doudin-5a026511",
+    "custom_fields": {
+      "role": "Co-Founder & CEO",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "armani@backpack.exchange",
+    "first_name": "Armani",
+    "last_name": "Ferrante",
+    "company_name": "Backpack Exchange",
+    "linkedin_profile": "https://www.linkedin.com/in/armaniferrante/",
+    "custom_fields": {
+      "role": "Founder & CEO",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "alessio.quaglini@hextrust.com",
+    "first_name": "Alessio",
+    "last_name": "Quaglini",
+    "company_name": "Hex Trust",
+    "linkedin_profile": "https://www.linkedin.com/in/alessioquaglini",
+    "custom_fields": {
+      "role": "CEO & Co-Founder",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "rafal.czerniawski@hextrust.com",
+    "first_name": "Rafal",
+    "last_name": "Czerniawski",
+    "company_name": "Hex Trust",
+    "linkedin_profile": "https://www.linkedin.com/in/rafalcz",
+    "custom_fields": {
+      "role": "CISO & Co-Founder",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "tommaso.natale@hextrust.com",
+    "first_name": "Tommaso",
+    "last_name": "Natale",
+    "company_name": "Hex Trust",
+    "linkedin_profile": "https://hk.linkedin.com/in/tommaso-natale-4a990",
+    "custom_fields": {
+      "role": "CTO",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "marty.jetton@hextrust.com",
+    "first_name": "Marty",
+    "last_name": "Jetton",
+    "company_name": "Hex Trust",
+    "linkedin_profile": "https://www.linkedin.com/in/martyjetton",
+    "custom_fields": {
+      "role": "Chief Risk Officer",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "james.harte@hextrust.com",
+    "first_name": "James",
+    "last_name": "Harte",
+    "company_name": "Hex Trust",
+    "linkedin_profile": "https://www.linkedin.com/in/jwharte/",
+    "custom_fields": {
+      "role": "COO",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "davy.lassagne@hextrust.com",
+    "first_name": "Davy",
+    "last_name": "Lassagne",
+    "company_name": "Hex Trust",
+    "linkedin_profile": "https://www.linkedin.com/in/davylassagne/",
+    "custom_fields": {
+      "role": "CFO",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "giorgia.pellizzari@hextrust.com",
+    "first_name": "Giorgia",
+    "last_name": "Pellizzari",
+    "company_name": "Hex Trust",
+    "linkedin_profile": "https://www.linkedin.com/in/giorgiapellizzari/",
+    "custom_fields": {
+      "role": "CPO & Head of Custody",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "rohit.apte@hextrust.com",
+    "first_name": "Rohit",
+    "last_name": "Apte",
+    "company_name": "Hex Trust",
+    "linkedin_profile": "https://www.linkedin.com/in/rohit-apte-554a262/",
+    "custom_fields": {
+      "role": "Head of Markets",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "gabriele.bandi@hextrust.com",
+    "first_name": "Gabriele",
+    "last_name": "Bandi",
+    "company_name": "Hex Trust",
+    "linkedin_profile": "https://www.linkedin.com/in/gabrielebandi/",
+    "custom_fields": {
+      "role": "Head of Sales",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "man.hong@hextrust.com",
+    "first_name": "Man",
+    "last_name": "Hong",
+    "company_name": "Hex Trust",
+    "linkedin_profile": "https://hk.linkedin.com/in/manhay-hong",
+    "custom_fields": {
+      "role": "Head of Operations",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "federico.fabiano@hextrust.com",
+    "first_name": "Federico",
+    "last_name": "Fabiano",
+    "company_name": "Hex Trust",
+    "linkedin_profile": "https://www.linkedin.com/in/federico-fabiano-63704416/",
+    "custom_fields": {
+      "role": "MD, Head of Legal & Compliance",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "jehan.chu@hextrust.com",
+    "first_name": "Jehan",
+    "last_name": "Chu",
+    "company_name": "Hex Trust",
+    "linkedin_profile": "https://www.linkedin.com/in/jehanchu/",
+    "custom_fields": {
+      "role": "Director",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "robin@g3p.io",
+    "first_name": "Robin",
+    "last_name": "Janaway",
+    "company_name": "Gap 3 Partners",
+    "linkedin_profile": "https://www.linkedin.com/in/robin-janaway-11799837/",
+    "custom_fields": {
+      "role": "CEO / Web3 Advisor",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "stuart.williams@theice.com",
+    "first_name": "Stuart",
+    "last_name": "Williams",
+    "company_name": "Intercontinental Exchange (ICE)",
+    "linkedin_profile": "https://www.linkedin.com/in/stuart-williams-2586761/",
+    "custom_fields": {
+      "role": "Chief Operating Officer",
+      "source_register": "ADGM",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "keevin.cheng@binance.com",
+    "first_name": "Wee",
+    "last_name": "Teng",
+    "company_name": "Binance",
+    "linkedin_profile": "https://www.linkedin.com/in/richard-teng-binance/",
+    "custom_fields": {
+      "role": "Chief Executive Officer",
+      "source_register": "ADGM",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "lawrence@ctrl-alt.co",
+    "first_name": "Lawrence",
+    "last_name": "Chiu",
+    "company_name": "Ctrl Alt",
+    "linkedin_profile": "https://www.linkedin.com/in/lawrencehfchiu",
+    "custom_fields": {
+      "role": "Head of Marketing",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "matt.acheson@ctrl-alt.co",
+    "first_name": "Matt",
+    "last_name": "Acheson",
+    "company_name": "Ctrl Alt",
+    "linkedin_profile": "https://www.linkedin.com/in/m-acheson",
+    "custom_fields": {
+      "role": "CPO",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "kaitlin@ctrl-alt.co",
+    "first_name": "Kaitlin",
+    "last_name": "Lemmo",
+    "company_name": "Ctrl Alt",
+    "linkedin_profile": "https://www.linkedin.com/in/kaitlin-lemmo-8032828",
+    "custom_fields": {
+      "role": "Head of Compliance, Ireland",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "jack.denton@ctrl-alt.co",
+    "first_name": "Jack",
+    "last_name": "Denton",
+    "company_name": "Ctrl Alt",
+    "linkedin_profile": "https://www.linkedin.com/in/jack-denton-uk",
+    "custom_fields": {
+      "role": "Chief of Staff",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "ilya@ctrl-alt.co",
+    "first_name": "Ilya",
+    "last_name": "Shichanin",
+    "company_name": "Ctrl Alt",
+    "linkedin_profile": "https://www.linkedin.com/in/ilyashichanin",
+    "custom_fields": {
+      "role": "Head of Partnerships",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "jordan@ctrl-alt.co",
+    "first_name": "Jordan",
+    "last_name": "McMullen",
+    "company_name": "Ctrl Alt",
+    "linkedin_profile": "https://www.linkedin.com/in/jordan-mcmullen-9b951ab8",
+    "custom_fields": {
+      "role": "COO",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "jordi@selinicapital.com",
+    "first_name": "Jordi",
+    "last_name": "Alexander",
+    "company_name": "Selini Capital",
+    "linkedin_profile": null,
+    "custom_fields": {
+      "role": "Founder",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "steve.ashley@laserdigital.com",
+    "first_name": "Steve",
+    "last_name": "Ashley",
+    "company_name": "Komainu",
+    "linkedin_profile": null,
+    "custom_fields": {
+      "role": "Board Director (Laser Digital)",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "tamerg@animocabrands.com",
+    "first_name": "Tamer",
+    "last_name": "Ghresi",
+    "company_name": "Animoca Brands ME",
+    "linkedin_profile": null,
+    "custom_fields": {
+      "role": "Chief Compliance Officer",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "jack@ctrl-alt.co",
+    "first_name": "Jack",
+    "last_name": "Spargo",
+    "company_name": "Ctrl Alt",
+    "linkedin_profile": "https://www.linkedin.com/in/jack-spargo",
+    "custom_fields": {
+      "role": "CTO",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "charles@ctrl-alt.co",
+    "first_name": "Charles",
+    "last_name": "Lucas",
+    "company_name": "Ctrl Alt",
+    "linkedin_profile": "https://www.linkedin.com/in/charles-lucas-159b9246",
+    "custom_fields": {
+      "role": "Head of Capital Markets",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "jez.mohideen@laserdigital.com",
+    "first_name": "Jez",
+    "last_name": "Mohideen",
+    "company_name": "Komainu",
+    "linkedin_profile": "https://www.linkedin.com/in/dr-jez-mohideen",
+    "custom_fields": {
+      "role": "Board Director (Laser Digital)",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "robert.johnson@komainu.com",
+    "first_name": "Robert",
+    "last_name": "Johnson",
+    "company_name": "Komainu",
+    "linkedin_profile": "https://www.linkedin.com/in/robdj",
+    "custom_fields": {
+      "role": "Co-CEO & CTO",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "jez.mohideen@laserdigital.com",
+    "first_name": "Jez",
+    "last_name": "Mohideen",
+    "company_name": "Laser Digital",
+    "linkedin_profile": "https://www.linkedin.com/in/dr-jez-mohideen",
+    "custom_fields": {
+      "role": "CEO",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "tony.larkin@komainu.com",
+    "first_name": "Tony",
+    "last_name": "Larkin",
+    "company_name": "Komainu",
+    "linkedin_profile": "https://www.linkedin.com/in/tony-larkin-901184b",
+    "custom_fields": {
+      "role": "CFO",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "sebastian.widmann@komainu.com",
+    "first_name": "Sebastian",
+    "last_name": "Widmann",
+    "company_name": "Komainu",
+    "linkedin_profile": "https://www.linkedin.com/in/sebastianwidmann",
+    "custom_fields": {
+      "role": "Head of Dubai",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "susan.patterson@komainu.com",
+    "first_name": "Susan",
+    "last_name": "Patterson",
+    "company_name": "Komainu",
+    "linkedin_profile": "https://www.linkedin.com/in/susan-patterson-a1961aab",
+    "custom_fields": {
+      "role": "Head of Jersey",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "lavanya.sivaramakrishnan@bitoasis.net",
+    "first_name": "Lavanya",
+    "last_name": "Sivaramakrishnan",
+    "company_name": "BitOasis",
+    "linkedin_profile": "https://www.linkedin.com/in/lavanya-sivaramakrishnan-0265041",
+    "custom_fields": {
+      "role": "Director, Information (Responsible Individual)",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "paul.frost-smith@komainu.com",
+    "first_name": "Paul",
+    "last_name": "Frost-Smith",
+    "company_name": "Komainu",
+    "linkedin_profile": "https://www.linkedin.com/in/paulfrostsmith",
+    "custom_fields": {
+      "role": "Board Director & Co-CEO",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "steve.ashley@laserdigital.com",
+    "first_name": "Steve",
+    "last_name": "Ashley",
+    "company_name": "Laser Digital",
+    "linkedin_profile": "https://www.linkedin.com/in/steven-ashley-010748b1",
+    "custom_fields": {
+      "role": "Executive Chairman",
+      "source_register": "VARA",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "darren.jordan@komainu.com",
+    "first_name": "Darren",
+    "last_name": "Jordan",
+    "company_name": "Komainu",
+    "linkedin_profile": "https://www.linkedin.com/in/darren-jordan-135a233",
+    "custom_fields": {
+      "role": "Chief Commercial Officer",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "chris@g3p.io",
+    "first_name": "Chris",
+    "last_name": "Donovan",
+    "company_name": "Gap 3 Partners",
+    "linkedin_profile": null,
+    "custom_fields": {
+      "role": "COO (& Foundation Council Member, NEAR Foundation)",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "adib@g3p.io",
+    "first_name": "Adib",
+    "last_name": "Tohme",
+    "company_name": "Gap 3 Partners",
+    "linkedin_profile": "https://www.linkedin.com/in/adib-tohme-a1178751",
+    "custom_fields": {
+      "role": "International Tax & Corporate Lawyer",
+      "source_register": "VARA",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "david.peniket@ice.com",
+    "first_name": "David",
+    "last_name": "Peniket",
+    "company_name": null,
+    "linkedin_profile": "https://www.linkedin.com/in/david-peniket-15a7389",
+    "custom_fields": {
+      "role": "Key Individual",
+      "source_register": "ADGM",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "helen.h@binance.com",
+    "first_name": "He",
+    "last_name": "Yi",
+    "company_name": "Binance",
+    "linkedin_profile": null,
+    "custom_fields": {
+      "role": "Co-Founder and Chief Marketing Officer",
+      "source_register": "ADGM",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "gordon.bennett@theice.com",
+    "first_name": "Gordon",
+    "last_name": "Bennett",
+    "company_name": "Intercontinental Exchange (ICE)",
+    "linkedin_profile": null,
+    "custom_fields": {
+      "role": "Managing Director, Utility Markets",
+      "source_register": "ADGM",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "roger.wang@binance.com",
+    "first_name": "Roger",
+    "last_name": "Wang",
+    "company_name": "Binance",
+    "linkedin_profile": null,
+    "custom_fields": {
+      "role": "Chief Technology Officer",
+      "source_register": "ADGM",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "aaquib.parpia@wahed.com",
+    "first_name": "Aaquib",
+    "last_name": "Parpia",
+    "company_name": null,
+    "linkedin_profile": "https://www.linkedin.com/in/aaquib-parpia-65544624",
+    "custom_fields": {
+      "role": "Approved Person",
+      "source_register": "ADGM",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "patrick.rattray@ice.com",
+    "first_name": "Patrick",
+    "last_name": "Rattray",
+    "company_name": null,
+    "linkedin_profile": "https://www.linkedin.com/in/patrick-rattray-39bbbb33",
+    "custom_fields": {
+      "role": "Key Individual",
+      "source_register": "ADGM",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "work.abdulhaseeb@gmail.com",
+    "first_name": "Abdul",
+    "last_name": "Khan",
+    "company_name": null,
+    "linkedin_profile": "https://www.linkedin.com/in/abdulhaseeboff",
+    "custom_fields": {
+      "role": "Approved Person",
+      "source_register": "ADGM",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "a.kamyar@winton.com",
+    "first_name": "Adam",
+    "last_name": "Kamyar",
+    "company_name": null,
+    "linkedin_profile": "https://www.linkedin.com/in/adam-kamyar-6027777",
+    "custom_fields": {
+      "role": "Approved Person",
+      "source_register": "ADGM",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "adam@beamventures.com",
+    "first_name": "Adam",
+    "last_name": "Haklili",
+    "company_name": null,
+    "linkedin_profile": "https://www.linkedin.com/in/adam-haklili-33290729",
+    "custom_fields": {
+      "role": "Approved Person",
+      "source_register": "ADGM",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "aggelos.stylianos@mizuhogroup.com",
+    "first_name": "Aggelos",
+    "last_name": "Stylianos",
+    "company_name": null,
+    "linkedin_profile": "https://www.linkedin.com/in/aggelos-stylianos-49056912",
+    "custom_fields": {
+      "role": "Approved Person",
+      "source_register": "ADGM",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "aackermann@paxos.com",
+    "first_name": "Adam",
+    "last_name": "Ackermann",
+    "company_name": null,
+    "linkedin_profile": "https://www.linkedin.com/in/adam-ackermann-427a777",
+    "custom_fields": {
+      "role": "Approved Person",
+      "source_register": "ADGM",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "adam.ladjadj@msquared.co.uk",
+    "first_name": "Adam",
+    "last_name": "Ladjadj",
+    "company_name": null,
+    "linkedin_profile": "https://www.linkedin.com/in/adamladjadj",
+    "custom_fields": {
+      "role": "Approved Person",
+      "source_register": "ADGM",
+      "tier": "B"
+    }
+  },
+  {
+    "email": "adiv.baruch@boscom.com",
+    "first_name": "Adiv",
+    "last_name": "Baruch",
+    "company_name": null,
+    "linkedin_profile": "https://www.linkedin.com/in/adiv-baruch-a14b4",
+    "custom_fields": {
+      "role": "Approved Person",
+      "source_register": "ADGM",
+      "tier": "A"
+    }
+  },
+  {
+    "email": "adnan.khandwala@tplproperty.com",
+    "first_name": "Adnan",
+    "last_name": "Khandwala",
+    "company_name": null,
+    "linkedin_profile": "https://www.linkedin.com/in/adnan-khandwala-fca-18452829",
+    "custom_fields": {
+      "role": "Approved Person",
+      "source_register": "ADGM",
+      "tier": "B"
+    }
+  }
+]

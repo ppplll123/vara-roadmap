@@ -1,0 +1,128 @@
+[
+  {
+    "firstName": "Scott",
+    "lastName": "Thiel",
+    "companyDomain": "tokinvest.co",
+    "_source": "VARA",
+    "_company": "Tokinvest Capital",
+    "_role": "Co-Founder & CEO",
+    "_linkedin": "https://www.linkedin.com/in/scott-thiel-9961bb6/"
+  },
+  {
+    "firstName": "Matt",
+    "lastName": "Blom",
+    "companyDomain": "tokinvest.co",
+    "_source": "VARA",
+    "_company": "Tokinvest Capital",
+    "_role": "Chief Strategy Officer",
+    "_linkedin": "https://www.linkedin.com/in/matthew-blom-2bb277b1/"
+  },
+  {
+    "firstName": "Yat",
+    "lastName": "Siu",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "Director",
+    "_linkedin": "https://www.linkedin.com/in/yatsiu/"
+  },
+  {
+    "firstName": "Mark",
+    "lastName": "Cheng",
+    "companyDomain": "hextrust.com",
+    "_source": "VARA",
+    "_company": "Hex Trust",
+    "_role": "Director",
+    "_linkedin": "https://www.linkedin.com/in/cheeech/"
+  },
+  {
+    "firstName": "Kevin",
+    "lastName": "Hu",
+    "companyDomain": "novaDigital.io",
+    "_source": "VARA",
+    "_company": "Nova Digital",
+    "_role": "CEO / Responsible Individual",
+    "_linkedin": "https://www.linkedin.com/in/kevin-hu-46a03343/"
+  },
+  {
+    "firstName": "Stephen",
+    "lastName": "Li",
+    "companyDomain": "novaDigital.io",
+    "_source": "VARA",
+    "_company": "Nova Digital",
+    "_role": "COO",
+    "_linkedin": "https://www.linkedin.com/in/stephenli2/"
+  },
+  {
+    "firstName": "Miles",
+    "lastName": "Corney",
+    "companyDomain": "novaDigital.io",
+    "_source": "VARA",
+    "_company": "Nova Digital",
+    "_role": "CCO / Responsible Individual",
+    "_linkedin": "https://www.linkedin.com/in/milescorney/"
+  },
+  {
+    "firstName": "James",
+    "lastName": "Byrne",
+    "companyDomain": "tokinvest.co",
+    "_source": "VARA",
+    "_company": "Tokinvest Capital",
+    "_role": "Head of Compliance",
+    "_linkedin": null
+  },
+  {
+    "firstName": "Robert",
+    "lastName": "Cooper",
+    "companyDomain": "tokinvest.co",
+    "_source": "VARA",
+    "_company": "Tokinvest Capital",
+    "_role": "Co-Founder & COO",
+    "_linkedin": null
+  },
+  {
+    "firstName": "Adam",
+    "lastName": "Back",
+    "companyDomain": "komainu.com",
+    "_source": "VARA",
+    "_company": "Komainu",
+    "_role": "Board Director (Blockstream)",
+    "_linkedin": null
+  },
+  {
+    "firstName": "PeterPaul",
+    "lastName": "Pardi",
+    "companyDomain": "komainu.com",
+    "_source": "VARA",
+    "_company": "Komainu",
+    "_role": "Board Director (Blockstream Capital Partners)",
+    "_linkedin": null
+  },
+  {
+    "firstName": "Steve",
+    "lastName": "Ashley",
+    "companyDomain": "komainu.com",
+    "_source": "VARA",
+    "_company": "Komainu",
+    "_role": "Board Director (Laser Digital)",
+    "_linkedin": null
+  },
+  {
+    "firstName": "Abhishek",
+    "lastName": "Vaidyanathan",
+    "companyDomain": "g3p.io",
+    "_source": "VARA",
+    "_company": "Gap 3 Partners",
+    "_role": "General Counsel (NEAR Foundation)",
+    "_linkedin": null
+  },
+  {
+    "firstName": "Nicolas",
+    "lastName": "Brand",
+    "companyDomain": "komainu.com",
+    "_source": "VARA",
+    "_company": "Komainu",
+    "_role": "Board Director (Blockstream Capital Partners)",
+    "_linkedin": "https://www.linkedin.com/in/n10d"
+  }
+]
