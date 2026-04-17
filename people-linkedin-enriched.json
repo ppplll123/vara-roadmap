@@ -51,7 +51,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Robert",
@@ -69,7 +73,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Lee",
@@ -87,7 +95,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Omar",
@@ -105,7 +117,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Talal",
@@ -123,7 +139,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Dina",
@@ -141,7 +161,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Yazan",
@@ -159,7 +183,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Mo",
@@ -177,7 +205,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Arpit",
@@ -195,7 +227,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Srijan",
@@ -213,7 +249,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Zunair",
@@ -231,7 +271,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Abeeda",
@@ -249,7 +293,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Arshika",
@@ -267,7 +315,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Mohammad",
@@ -285,7 +337,12 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "catch_all",
+      "score": 75,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Basil",
@@ -303,7 +360,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Ola",
@@ -321,7 +382,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Armani",
@@ -339,7 +404,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Alessio",
@@ -357,7 +426,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Rafal",
@@ -375,7 +448,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Tommaso",
@@ -393,7 +470,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Marty",
@@ -411,7 +492,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "James",
@@ -429,7 +514,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Davy",
@@ -447,7 +536,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Giorgia",
@@ -465,7 +558,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Rohit",
@@ -483,7 +580,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Gabriele",
@@ -501,7 +602,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Man",
@@ -519,7 +624,12 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "catch_all",
+      "score": 75,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Federico",
@@ -537,7 +647,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Rajah",
@@ -555,7 +669,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Yat",
@@ -591,7 +709,12 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "catch_all",
+      "score": 75,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Mark",
@@ -627,7 +750,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Henri",
@@ -645,7 +772,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Anthony",
@@ -663,7 +794,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Dave",
@@ -681,7 +816,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Carlo",
@@ -699,7 +838,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Robin",
@@ -717,7 +860,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Kevin",
@@ -789,7 +936,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Gabriel",
@@ -807,7 +958,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Stuart",
@@ -825,7 +980,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Sunny",
@@ -861,7 +1020,11 @@
     "past_positions_count": null,
     "found": true,
     "confidence": "high",
-    "note": "existing_linkedin_from_source"
+    "note": "existing_linkedin_from_source",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Wilson",
@@ -984,7 +1147,12 @@
     "current_position": "Head of Marketing at Ctrl Al",
     "past_positions_count": 10,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Matt",
@@ -1001,7 +1169,12 @@
     "current_position": "Chief Product Officer at Ctrl Al",
     "past_positions_count": 7,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Kaitlin",
@@ -1018,7 +1191,12 @@
     "current_position": "Head of Compliance/MLRO - Ireland at Ctrl Al",
     "past_positions_count": 4,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Jack",
@@ -1035,7 +1213,12 @@
     "current_position": "Chief of Staff at Ctrl Al",
     "past_positions_count": 3,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Ilya",
@@ -1052,7 +1235,12 @@
     "current_position": "Head of Partnerships at Ctrl Al",
     "past_positions_count": 6,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Jordan",
@@ -1069,7 +1257,12 @@
     "current_position": "Chief Operating Officer at Ctrl Al",
     "past_positions_count": 5,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Jordi",
@@ -1086,7 +1279,11 @@
     "current_position": null,
     "past_positions_count": null,
     "found": false,
-    "confidence": "none"
+    "confidence": "none",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Adam",
@@ -1137,7 +1334,11 @@
     "current_position": null,
     "past_positions_count": null,
     "found": false,
-    "confidence": "none"
+    "confidence": "none",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Tamer",
@@ -1154,7 +1355,11 @@
     "current_position": null,
     "past_positions_count": null,
     "found": false,
-    "confidence": "none"
+    "confidence": "none",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Jack",
@@ -1171,7 +1376,12 @@
     "current_position": "Chief Technology Officer at Ctrl Al",
     "past_positions_count": 10,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Charles",
@@ -1188,7 +1398,12 @@
     "current_position": "Co-Head of Capital Markets  at Ctrl Al",
     "past_positions_count": 9,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Jez",
@@ -1205,7 +1420,12 @@
     "current_position": "Co-Founder & Chief Executive Officer - Laser Digital  at LaserDigital",
     "past_positions_count": 10,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "unknown",
+      "score": null,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Robert",
@@ -1222,7 +1442,12 @@
     "current_position": "Co-Chief Executive Officer(co-CEO) and Chief Technology Officer(CTO) at Komainu",
     "past_positions_count": 9,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Jez",
@@ -1239,7 +1464,12 @@
     "current_position": "Co-Founder & Chief Executive Officer - Laser Digital  at LaserDigital",
     "past_positions_count": 10,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "unknown",
+      "score": null,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Tony",
@@ -1256,7 +1486,12 @@
     "current_position": "CFO at Komainu",
     "past_positions_count": 10,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Sebastian",
@@ -1273,7 +1508,11 @@
     "current_position": "Head of Strategy at Komainu",
     "past_positions_count": 7,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Susan",
@@ -1290,7 +1529,12 @@
     "current_position": "Head of Jersey Office and Group Corporate Secretariat at Komainu",
     "past_positions_count": 8,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Lavanya",
@@ -1307,7 +1551,11 @@
     "current_position": "CISO | DPO at BitOasis",
     "past_positions_count": 10,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Paul",
@@ -1324,7 +1572,11 @@
     "current_position": "Group Managing Director at Komainu",
     "past_positions_count": 12,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Steve",
@@ -1341,7 +1593,11 @@
     "current_position": "Co-Founder and Executive Chairman at Laser Digital",
     "past_positions_count": 6,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Darren",
@@ -1358,7 +1614,12 @@
     "current_position": "Chief Commercial Officer (CCO) at Komainu",
     "past_positions_count": 11,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Chris",
@@ -1375,7 +1636,11 @@
     "current_position": null,
     "past_positions_count": null,
     "found": false,
-    "confidence": "none"
+    "confidence": "none",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Abhishek",
@@ -1409,7 +1674,12 @@
     "current_position": "Director, Partner at Gap 3 Partners",
     "past_positions_count": 5,
     "found": true,
-    "confidence": "high"
+    "confidence": "high",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Andrew",
@@ -1443,7 +1713,12 @@
     "current_position": "Chair, ICE Futures US at Intercontinental Exchange",
     "past_positions_count": 3,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "catch_all",
+      "score": 75,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Fatema",
@@ -1477,7 +1752,12 @@
     "current_position": null,
     "past_positions_count": null,
     "found": false,
-    "confidence": "none"
+    "confidence": "none",
+    "email_verification": {
+      "status": "disabled",
+      "score": 5,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Gordon",
@@ -1494,7 +1774,11 @@
     "current_position": null,
     "past_positions_count": null,
     "found": false,
-    "confidence": "none"
+    "confidence": "none",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Heina",
@@ -1545,7 +1829,11 @@
     "current_position": null,
     "past_positions_count": null,
     "found": false,
-    "confidence": "none"
+    "confidence": "none",
+    "email_verification": {
+      "status": "valid",
+      "verifier": "smartprospect"
+    }
   },
   {
     "firstName": "Chao",
@@ -1562,7 +1850,12 @@
     "current_position": "Internship, Research Scientist at Siemens Corporate Research",
     "past_positions_count": 5,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "David",
@@ -1579,7 +1872,12 @@
     "current_position": "Managing Consultant at IBM",
     "past_positions_count": 3,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "catch_all",
+      "score": 75,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Xin",
@@ -1596,7 +1894,12 @@
     "current_position": "Senior Quantitative Analyst at HSBC",
     "past_positions_count": 3,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "catch_all",
+      "score": 75,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Hamad",
@@ -1647,7 +1950,12 @@
     "current_position": "Finance Director at Wahed",
     "past_positions_count": 11,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Abdelhadi",
@@ -1698,7 +2006,12 @@
     "current_position": "Technical Writer at Uber",
     "past_positions_count": 1,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "catch_all",
+      "score": 75,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Patrick",
@@ -1715,7 +2028,12 @@
     "current_position": "Chief Risk Officer European Exchanges at ICE",
     "past_positions_count": 7,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "catch_all",
+      "score": 75,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Abdulla",
@@ -1749,7 +2067,12 @@
     "current_position": "Information Security Analyst at Kraken",
     "past_positions_count": 1,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "catch_all",
+      "score": 75,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Afsar",
@@ -1919,7 +2242,12 @@
     "current_position": "Maintenance Supervisor at Braskem",
     "past_positions_count": 1,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "catch_all",
+      "score": 75,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Abubaker",
@@ -1953,7 +2281,12 @@
     "current_position": "Scrum Master at Tata Consultancy Services",
     "past_positions_count": 4,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": null,
+      "score": null,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Adam",
@@ -1970,7 +2303,12 @@
     "current_position": "Vice President of Sales, AMER at Deputy",
     "past_positions_count": 10,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "catch_all",
+      "score": 75,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Abdul",
@@ -1987,7 +2325,12 @@
     "current_position": "MOD Associate at Amazon",
     "past_positions_count": 4,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Adam",
@@ -2038,7 +2381,12 @@
     "current_position": "Head of Middle East & APAC at Winton",
     "past_positions_count": 6,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Adam",
@@ -2072,7 +2420,12 @@
     "current_position": "Senior Vice President / Portfolio Manager at GIC",
     "past_positions_count": 3,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "catch_all",
+      "score": 75,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Adam",
@@ -2089,7 +2442,12 @@
     "current_position": "Managing Partner at Beam Ventures",
     "past_positions_count": 11,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Adrian",
@@ -2157,7 +2515,12 @@
     "current_position": "Executive Director at Mizuho",
     "past_positions_count": 7,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Aditya",
@@ -2191,7 +2554,12 @@
     "current_position": "Head of Treasury and Portfolio Management at Paxos",
     "past_positions_count": 8,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Adam",
@@ -2208,7 +2576,12 @@
     "current_position": "Estimating Assistant at M Squared",
     "past_positions_count": 4,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Adiv",
@@ -2225,7 +2598,12 @@
     "current_position": "CEO &president at BOS",
     "past_positions_count": 1,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "catch_all",
+      "score": 75,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Adrian",
@@ -2378,7 +2756,12 @@
     "current_position": "Software Engineer II at Delivery Hero",
     "past_positions_count": 5,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "catch_all",
+      "score": 75,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Ahmed",
@@ -2412,7 +2795,12 @@
     "current_position": "Team Leader - Service & Engagement at Targe",
     "past_positions_count": 6,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "catch_all",
+      "score": 75,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Abdullah",
@@ -2429,7 +2817,12 @@
     "current_position": "Software Engineer at top.legal",
     "past_positions_count": 9,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "unknown",
+      "score": null,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Adnan",
@@ -2446,7 +2839,12 @@
     "current_position": "Chief Financial Officer at TPL Properties",
     "past_positions_count": 11,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "catch_all",
+      "score": 75,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Adrian",
@@ -2463,7 +2861,12 @@
     "current_position": "Data Manager at Best Practice Network",
     "past_positions_count": 10,
     "found": true,
-    "confidence": "medium"
+    "confidence": "medium",
+    "email_verification": {
+      "status": "safe",
+      "score": 98,
+      "verifier": "reoon"
+    }
   },
   {
     "firstName": "Ahmed",

@@ -1,0 +1,47 @@
+{
+  "campaign_id": 3193103,
+  "campaign_url": "https://app.smartlead.ai/app/email-campaign/3193103/sequence",
+  "name": "VARA Intel Outreach \u00b7 Antweave dashboard \u00b7 Apr 2026",
+  "status": "DRAFTED",
+  "mailboxes": [
+    187870,
+    188066,
+    13685897
+  ],
+  "mailbox_details": [
+    {
+      "id": 187870,
+      "email": "plewinsk@alumni.chicagobooth.edu",
+      "daily": 28,
+      "tier": "A"
+    },
+    {
+      "id": 188066,
+      "email": "Peter.Lewinski.MLF17@said.oxford.edu",
+      "daily": 28,
+      "tier": "A"
+    },
+    {
+      "id": 13685897,
+      "email": "peter@chat-gpt-leads.com",
+      "daily": 28,
+      "tier": "B"
+    }
+  ],
+  "leads_imported": 88,
+  "leads_duplicate": 2,
+  "sequence_steps": 3,
+  "schedule": {
+    "tz": "Asia/Dubai",
+    "days": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "endHour": "17:00",
+    "startHour": "09:00"
+  },
+  "tracking": []
+}

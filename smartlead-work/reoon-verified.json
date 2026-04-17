@@ -1,0 +1,1280 @@
+[
+  {
+    "email": "mhossain@fasset.com",
+    "name": "Mohammad Hossain",
+    "company": "Fasset",
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "fasset.com",
+      "email": "mhossain@fasset.com",
+      "has_inbox_full": false,
+      "is_catch_all": true,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "alt2.aspmx.l.google.com",
+        "aspmx.l.google.com",
+        "alt4.aspmx.l.google.com",
+        "alt3.aspmx.l.google.com",
+        "alt1.aspmx.l.google.com"
+      ],
+      "overall_score": 75,
+      "status": "catch_all",
+      "username": "mhossain",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "man.hong@hextrust.com",
+    "name": "Man Hong",
+    "company": "Hex Trust",
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "hextrust.com",
+      "email": "man.hong@hextrust.com",
+      "has_inbox_full": false,
+      "is_catch_all": true,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "alt1.aspmx.l.google.com",
+        "aspmx3.googlemail.com",
+        "alt2.aspmx.l.google.com",
+        "aspmx2.googlemail.com",
+        "aspmx.l.google.com"
+      ],
+      "overall_score": 75,
+      "status": "catch_all",
+      "username": "man.hong",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "jehan.chu@hextrust.com",
+    "name": "Jehan Chu",
+    "company": "Hex Trust",
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "hextrust.com",
+      "email": "jehan.chu@hextrust.com",
+      "has_inbox_full": false,
+      "is_catch_all": true,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "alt1.aspmx.l.google.com",
+        "aspmx3.googlemail.com",
+        "alt2.aspmx.l.google.com",
+        "aspmx2.googlemail.com",
+        "aspmx.l.google.com"
+      ],
+      "overall_score": 75,
+      "status": "catch_all",
+      "username": "jehan.chu",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "lawrence@ctrl-alt.co",
+    "name": "Lawrence Chiu",
+    "company": "Ctrl Alt",
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "ctrl-alt.co",
+      "email": "lawrence@ctrl-alt.co",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "alt1.aspmx.l.google.com",
+        "alt2.aspmx.l.google.com",
+        "aspmx.l.google.com",
+        "alt3.aspmx.l.google.com",
+        "alt4.aspmx.l.google.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "lawrence",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "matt.acheson@ctrl-alt.co",
+    "name": "Matt Acheson",
+    "company": "Ctrl Alt",
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "ctrl-alt.co",
+      "email": "matt.acheson@ctrl-alt.co",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "alt2.aspmx.l.google.com",
+        "aspmx.l.google.com",
+        "alt3.aspmx.l.google.com",
+        "alt4.aspmx.l.google.com",
+        "alt1.aspmx.l.google.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "matt.acheson",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "kaitlin@ctrl-alt.co",
+    "name": "Kaitlin Lemmo",
+    "company": "Ctrl Alt",
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "ctrl-alt.co",
+      "email": "kaitlin@ctrl-alt.co",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "alt1.aspmx.l.google.com",
+        "alt2.aspmx.l.google.com",
+        "alt3.aspmx.l.google.com",
+        "alt4.aspmx.l.google.com",
+        "aspmx.l.google.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "kaitlin",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "jack.denton@ctrl-alt.co",
+    "name": "Jack Denton",
+    "company": "Ctrl Alt",
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "ctrl-alt.co",
+      "email": "jack.denton@ctrl-alt.co",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "alt4.aspmx.l.google.com",
+        "alt2.aspmx.l.google.com",
+        "alt1.aspmx.l.google.com",
+        "aspmx.l.google.com",
+        "alt3.aspmx.l.google.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "jack.denton",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "ilya@ctrl-alt.co",
+    "name": "Ilya Shichanin",
+    "company": "Ctrl Alt",
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "ctrl-alt.co",
+      "email": "ilya@ctrl-alt.co",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "aspmx.l.google.com",
+        "alt3.aspmx.l.google.com",
+        "alt4.aspmx.l.google.com",
+        "alt1.aspmx.l.google.com",
+        "alt2.aspmx.l.google.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "ilya",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "jordan@ctrl-alt.co",
+    "name": "Jordan McMullen",
+    "company": "Ctrl Alt",
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "ctrl-alt.co",
+      "email": "jordan@ctrl-alt.co",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "alt4.aspmx.l.google.com",
+        "alt1.aspmx.l.google.com",
+        "alt2.aspmx.l.google.com",
+        "aspmx.l.google.com",
+        "alt3.aspmx.l.google.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "jordan",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "jack@ctrl-alt.co",
+    "name": "Jack Spargo",
+    "company": "Ctrl Alt",
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "ctrl-alt.co",
+      "email": "jack@ctrl-alt.co",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "alt4.aspmx.l.google.com",
+        "alt2.aspmx.l.google.com",
+        "alt3.aspmx.l.google.com",
+        "aspmx.l.google.com",
+        "alt1.aspmx.l.google.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "jack",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "charles@ctrl-alt.co",
+    "name": "Charles Lucas",
+    "company": "Ctrl Alt",
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "ctrl-alt.co",
+      "email": "charles@ctrl-alt.co",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "aspmx.l.google.com",
+        "alt1.aspmx.l.google.com",
+        "alt3.aspmx.l.google.com",
+        "alt2.aspmx.l.google.com",
+        "alt4.aspmx.l.google.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "charles",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "jez.mohideen@laserdigital.com",
+    "name": "Jez Mohideen",
+    "company": "Komainu",
+    "reoon": {
+      "can_connect_smtp": null,
+      "domain": "laserdigital.com",
+      "email": "jez.mohideen@laserdigital.com",
+      "has_inbox_full": null,
+      "is_catch_all": null,
+      "is_deliverable": null,
+      "is_disabled": null,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "mx1-eu1.ppe-hosted.com",
+        "mx2-eu1.ppe-hosted.com"
+      ],
+      "overall_score": null,
+      "status": "unknown",
+      "username": "jez.mohideen",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "robert.johnson@komainu.com",
+    "name": "Robert Johnson",
+    "company": "Komainu",
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "komainu.com",
+      "email": "robert.johnson@komainu.com",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "komainu-com.mail.protection.outlook.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "robert.johnson",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "jez.mohideen@laserdigital.com",
+    "name": "Jez Mohideen",
+    "company": "Laser Digital",
+    "reoon": {
+      "can_connect_smtp": null,
+      "domain": "laserdigital.com",
+      "email": "jez.mohideen@laserdigital.com",
+      "has_inbox_full": null,
+      "is_catch_all": null,
+      "is_deliverable": null,
+      "is_disabled": null,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "mx1-eu1.ppe-hosted.com",
+        "mx2-eu1.ppe-hosted.com"
+      ],
+      "overall_score": null,
+      "status": "unknown",
+      "username": "jez.mohideen",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "tony.larkin@komainu.com",
+    "name": "Tony Larkin",
+    "company": "Komainu",
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "komainu.com",
+      "email": "tony.larkin@komainu.com",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "komainu-com.mail.protection.outlook.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "tony.larkin",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "susan.patterson@komainu.com",
+    "name": "Susan Patterson",
+    "company": "Komainu",
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "komainu.com",
+      "email": "susan.patterson@komainu.com",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "komainu-com.mail.protection.outlook.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "susan.patterson",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "darren.jordan@komainu.com",
+    "name": "Darren Jordan",
+    "company": "Komainu",
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "komainu.com",
+      "email": "darren.jordan@komainu.com",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "komainu-com.mail.protection.outlook.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "darren.jordan",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "adib@g3p.io",
+    "name": "Adib Tohme",
+    "company": "Gap 3 Partners",
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "g3p.io",
+      "email": "adib@g3p.io",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "aspmx.l.google.com",
+        "alt1.aspmx.l.google.com",
+        "alt2.aspmx.l.google.com",
+        "alt4.aspmx.l.google.com",
+        "alt3.aspmx.l.google.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "adib",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "david.peniket@ice.com",
+    "name": "David Peniket",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "ice.com",
+      "email": "david.peniket@ice.com",
+      "has_inbox_full": false,
+      "is_catch_all": true,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "mxb-001f3604.gslb.pphosted.com",
+        "mxa-001f3604.gslb.pphosted.com"
+      ],
+      "overall_score": 75,
+      "status": "catch_all",
+      "username": "david.peniket",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "helen.h@binance.com",
+    "name": "He Yi",
+    "company": "Binance",
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "binance.com",
+      "email": "helen.h@binance.com",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": false,
+      "is_disabled": true,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "alt2.aspmx.l.google.com",
+        "aspmx.l.google.com",
+        "aspmx2.googlemail.com",
+        "aspmx3.googlemail.com",
+        "alt1.aspmx.l.google.com"
+      ],
+      "overall_score": 5,
+      "status": "disabled",
+      "username": "helen.h",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "chao.lu@siemens.com",
+    "name": "Chao Lu",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "siemens.com",
+      "email": "chao.lu@siemens.com",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "siemens-com.h-v1.mx.microsoft"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "chao.lu",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "david.nevin@ibm.com",
+    "name": "David Nevin",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "ibm.com",
+      "email": "david.nevin@ibm.com",
+      "has_inbox_full": false,
+      "is_catch_all": true,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "mx0b-001b2d05.pphosted.com",
+        "mx0a-001b2d05.pphosted.com"
+      ],
+      "overall_score": 75,
+      "status": "catch_all",
+      "username": "david.nevin",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "xin.wang@hsbc.com",
+    "name": "Xin Wang",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "hsbc.com",
+      "email": "xin.wang@hsbc.com",
+      "has_inbox_full": false,
+      "is_catch_all": true,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "mxb-00299f02.gslb.pphosted.com",
+        "mxa-00299f02.gslb.pphosted.com"
+      ],
+      "overall_score": 75,
+      "status": "catch_all",
+      "username": "xin.wang",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "aaquib.parpia@wahed.com",
+    "name": "Aaquib Parpia",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "wahed.com",
+      "email": "aaquib.parpia@wahed.com",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "alt4.aspmx.l.google.com",
+        "aspmx.l.google.com",
+        "alt1.aspmx.l.google.com",
+        "alt3.aspmx.l.google.com",
+        "alt2.aspmx.l.google.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "aaquib.parpia",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "thomas.gregory@uber.com",
+    "name": "Thomas Gregory",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "uber.com",
+      "email": "thomas.gregory@uber.com",
+      "has_inbox_full": false,
+      "is_catch_all": true,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "alt4.aspmx.l.google.com",
+        "aspmx.l.google.com",
+        "alt2.aspmx.l.google.com",
+        "alt1.aspmx.l.google.com",
+        "alt3.aspmx.l.google.com"
+      ],
+      "overall_score": 75,
+      "status": "catch_all",
+      "username": "thomas.gregory",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "patrick.rattray@ice.com",
+    "name": "Patrick Rattray",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "ice.com",
+      "email": "patrick.rattray@ice.com",
+      "has_inbox_full": false,
+      "is_catch_all": true,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "mxb-001f3604.gslb.pphosted.com",
+        "mxa-001f3604.gslb.pphosted.com"
+      ],
+      "overall_score": 75,
+      "status": "catch_all",
+      "username": "patrick.rattray",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "abdelhamid.arafat@kraken.com",
+    "name": "Abdelhamid Arafat",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "kraken.com",
+      "email": "abdelhamid.arafat@kraken.com",
+      "has_inbox_full": false,
+      "is_catch_all": true,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "smtp.google.com"
+      ],
+      "overall_score": 75,
+      "status": "catch_all",
+      "username": "abdelhamid.arafat",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "abraham.cinta@braskem.com",
+    "name": "Abraham Cinta",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "braskem.com",
+      "email": "abraham.cinta@braskem.com",
+      "has_inbox_full": false,
+      "is_catch_all": true,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "mxa-00821d03.gslb.pphosted.com",
+        "mxb-00821d03.gslb.pphosted.com"
+      ],
+      "overall_score": 75,
+      "status": "catch_all",
+      "username": "abraham.cinta",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "achin.malik@tcs.com",
+    "name": "Achin Malik",
+    "company": null,
+    "reoon": {
+      "error": "The read operation timed out"
+    }
+  },
+  {
+    "email": "adam.ferris@deputy.com",
+    "name": "Adam Ferris",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "deputy.com",
+      "email": "adam.ferris@deputy.com",
+      "has_inbox_full": false,
+      "is_catch_all": true,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "aspmx2.googlemail.com",
+        "alt1.aspmx.l.google.com",
+        "aspmx3.googlemail.com",
+        "aspmx.l.google.com",
+        "alt2.aspmx.l.google.com"
+      ],
+      "overall_score": 75,
+      "status": "catch_all",
+      "username": "adam.ferris",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "work.abdulhaseeb@gmail.com",
+    "name": "Abdul Khan",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "gmail.com",
+      "email": "work.abdulhaseeb@gmail.com",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": true,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "alt1.gmail-smtp-in.l.google.com",
+        "alt2.gmail-smtp-in.l.google.com",
+        "alt4.gmail-smtp-in.l.google.com",
+        "gmail-smtp-in.l.google.com",
+        "alt3.gmail-smtp-in.l.google.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "work.abdulhaseeb",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "a.kamyar@winton.com",
+    "name": "Adam Kamyar",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "winton.com",
+      "email": "a.kamyar@winton.com",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "eu-smtp-inbound-1.mimecast.com",
+        "eu-smtp-inbound-2.mimecast.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "a.kamyar",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "alvin@gic.com.sg",
+    "name": "Alvin Loke",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "gic.com.sg",
+      "email": "alvin@gic.com.sg",
+      "has_inbox_full": false,
+      "is_catch_all": true,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "mxa-004ef702.gslb.pphosted.com",
+        "mxb-004ef702.gslb.pphosted.com"
+      ],
+      "overall_score": 75,
+      "status": "catch_all",
+      "username": "alvin",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "adam@beamventures.com",
+    "name": "Adam Haklili",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "beamventures.com",
+      "email": "adam@beamventures.com",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "smtp.google.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "adam",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "aggelos.stylianos@mizuhogroup.com",
+    "name": "Aggelos Stylianos",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "mizuhogroup.com",
+      "email": "aggelos.stylianos@mizuhogroup.com",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "mxa-009c2c01.gslb.pphosted.com",
+        "mxb-009c2c01.gslb.pphosted.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "aggelos.stylianos",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "aackermann@paxos.com",
+    "name": "Adam Ackermann",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "paxos.com",
+      "email": "aackermann@paxos.com",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "alt1.aspmx.l.google.com",
+        "alt2.aspmx.l.google.com",
+        "aspmx.l.google.com",
+        "alt3.aspmx.l.google.com",
+        "alt4.aspmx.l.google.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "aackermann",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "adam.ladjadj@msquared.co.uk",
+    "name": "Adam Ladjadj",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "msquared.co.uk",
+      "email": "adam.ladjadj@msquared.co.uk",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "msquared-co-uk.mail.protection.outlook.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "adam.ladjadj",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "adiv.baruch@boscom.com",
+    "name": "Adiv Baruch",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "boscom.com",
+      "email": "adiv.baruch@boscom.com",
+      "has_inbox_full": false,
+      "is_catch_all": true,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "mailgw.boscom.com"
+      ],
+      "overall_score": 75,
+      "status": "catch_all",
+      "username": "adiv.baruch",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "ahmed.kamal@deliveryhero.com",
+    "name": "Ahmed Kamal",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "deliveryhero.com",
+      "email": "ahmed.kamal@deliveryhero.com",
+      "has_inbox_full": false,
+      "is_catch_all": true,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "aspmx.l.google.com",
+        "aspmx2.googlemail.com",
+        "aspmx3.googlemail.com",
+        "alt1.aspmx.l.google.com",
+        "alt2.aspmx.l.google.com"
+      ],
+      "overall_score": 75,
+      "status": "catch_all",
+      "username": "ahmed.kamal",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "ahmed.dajani@target.com",
+    "name": "Ahmed Dajani",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "target.com",
+      "email": "ahmed.dajani@target.com",
+      "has_inbox_full": false,
+      "is_catch_all": true,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "mxb-0020ab02.gslb.pphosted.com",
+        "mxa-0020ab02.gslb.pphosted.com"
+      ],
+      "overall_score": 75,
+      "status": "catch_all",
+      "username": "ahmed.dajani",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "abdullah.shahin@top.legal",
+    "name": "Abdullah Shahin",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": null,
+      "domain": "top.legal",
+      "email": "abdullah.shahin@top.legal",
+      "has_inbox_full": null,
+      "is_catch_all": null,
+      "is_deliverable": null,
+      "is_disabled": null,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "aspmx.l.google.com",
+        "aspmx2.googlemail.com",
+        "aspmx3.googlemail.com",
+        "mxa.mailgun.org",
+        "mxb.mailgun.org",
+        "alt1.aspmx.l.google.com",
+        "alt2.aspmx.l.google.com"
+      ],
+      "overall_score": null,
+      "status": "unknown",
+      "username": "abdullah.shahin",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "adnan.khandwala@tplproperty.com",
+    "name": "Adnan Khandwala",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "tplproperty.com",
+      "email": "adnan.khandwala@tplproperty.com",
+      "has_inbox_full": false,
+      "is_catch_all": true,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": false,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "ap1-smtp-mx1.titanhq.com",
+        "ap1-smtp-mx2.titanhq.com"
+      ],
+      "overall_score": 75,
+      "status": "catch_all",
+      "username": "adnan.khandwala",
+      "verification_mode": "power"
+    }
+  },
+  {
+    "email": "adrianbeattie@bestpracticenet.co.uk",
+    "name": "Adrian Beattie",
+    "company": null,
+    "reoon": {
+      "can_connect_smtp": true,
+      "domain": "bestpracticenet.co.uk",
+      "email": "adrianbeattie@bestpracticenet.co.uk",
+      "has_inbox_full": false,
+      "is_catch_all": false,
+      "is_deliverable": true,
+      "is_disabled": false,
+      "is_disposable": false,
+      "is_free_email": false,
+      "is_role_account": false,
+      "is_safe_to_send": true,
+      "is_spamtrap": false,
+      "is_valid_syntax": true,
+      "mx_accepts_mail": true,
+      "mx_records": [
+        "bestpracticenet-co-uk.mail.protection.outlook.com"
+      ],
+      "overall_score": 98,
+      "status": "safe",
+      "username": "adrianbeattie",
+      "verification_mode": "power"
+    }
+  }
+]
