@@ -1,0 +1,115 @@
+{
+  "generated_at": "2026-04-18T23:50:54",
+  "campaigns": [
+    {
+      "cluster_id": 0,
+      "campaign_id": 3196899,
+      "name": "ICP-0-Boutique-Advisory-Undisclosed-HQ",
+      "existing_leads": 29,
+      "new_uploaded_candidates": 14,
+      "upload_response": {
+        "ok": true,
+        "upload_count": 14,
+        "total_leads": 13,
+        "block_count": 0,
+        "duplicate_count": 1,
+        "invalid_email_count": 0,
+        "invalid_emails": [],
+        "already_added_to_campaign": 0,
+        "unsubscribed_leads": [],
+        "is_lead_limit_exhausted": false,
+        "lead_import_stopped_count": 0,
+        "bounce_count": 0
+      },
+      "final_total_expected": 43
+    },
+    {
+      "cluster_id": 1,
+      "campaign_id": 3196900,
+      "name": "ICP-1-Global-Advisory-US-HQ",
+      "existing_leads": 39,
+      "new_uploaded_candidates": 63,
+      "upload_response": {
+        "ok": true,
+        "upload_count": 63,
+        "total_leads": 63,
+        "block_count": 0,
+        "duplicate_count": 0,
+        "invalid_email_count": 0,
+        "invalid_emails": [],
+        "already_added_to_campaign": 0,
+        "unsubscribed_leads": [],
+        "is_lead_limit_exhausted": false,
+        "lead_import_stopped_count": 0,
+        "bounce_count": 0
+      },
+      "final_total_expected": 102
+    },
+    {
+      "cluster_id": 3,
+      "campaign_id": 3196901,
+      "name": "ICP-3-Mid-Cap-Advisory-FLAGGED-prior-reg-action",
+      "existing_leads": 1,
+      "new_uploaded_candidates": 3,
+      "upload_response": {
+        "ok": true,
+        "upload_count": 3,
+        "total_leads": 3,
+        "block_count": 0,
+        "duplicate_count": 0,
+        "invalid_email_count": 0,
+        "invalid_emails": [],
+        "already_added_to_campaign": 0,
+        "unsubscribed_leads": [],
+        "is_lead_limit_exhausted": false,
+        "lead_import_stopped_count": 0,
+        "bounce_count": 0
+      },
+      "final_total_expected": 4
+    },
+    {
+      "cluster_id": 4,
+      "campaign_id": 3196902,
+      "name": "ICP-4-Large-Advisory-UAE-HQ",
+      "existing_leads": 11,
+      "new_uploaded_candidates": 28,
+      "upload_response": {
+        "ok": true,
+        "upload_count": 28,
+        "total_leads": 28,
+        "block_count": 0,
+        "duplicate_count": 0,
+        "invalid_email_count": 0,
+        "invalid_emails": [],
+        "already_added_to_campaign": 0,
+        "unsubscribed_leads": [],
+        "is_lead_limit_exhausted": false,
+        "lead_import_stopped_count": 0,
+        "bounce_count": 0
+      },
+      "final_total_expected": 39
+    },
+    {
+      "cluster_id": 2,
+      "campaign_id": 3197582,
+      "name": "ICP-2-Large-Broker-Dealer-VARA-crypto",
+      "existing_leads": 0,
+      "new_uploaded_candidates": 29,
+      "upload_response": {
+        "ok": true,
+        "upload_count": 29,
+        "total_leads": 29,
+        "block_count": 0,
+        "duplicate_count": 0,
+        "invalid_email_count": 0,
+        "invalid_emails": [],
+        "already_added_to_campaign": 0,
+        "unsubscribed_leads": [],
+        "is_lead_limit_exhausted": false,
+        "lead_import_stopped_count": 0,
+        "bounce_count": 0
+      },
+      "final_total_expected": 29
+    }
+  ]
+}
