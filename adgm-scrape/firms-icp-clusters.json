@@ -1,0 +1,1053 @@
+{
+  "algorithm": "KMeans+PCA4(k=5)",
+  "silhouette": 0.4006,
+  "n_firms": 515,
+  "n_clusters": 5,
+  "n_noise": 0,
+  "generated_at": "2026-04-18T14:01:21.406716+00:00",
+  "feature_names": [
+    "emp_log",
+    "fol_log",
+    "n_activities",
+    "n_conditions",
+    "has_reg_action",
+    "is_vara",
+    "cat_Advisory",
+    "cat_AssetMgt",
+    "cat_FundMgt",
+    "cat_BrokerDealer",
+    "cat_Custody",
+    "cat_Exchange",
+    "cat_Banking",
+    "cat_Credit",
+    "cat_Insurance",
+    "cat_Islamic",
+    "cat_Payments",
+    "cat_RepOffice",
+    "cat_Trust",
+    "cat_VAIssuance",
+    "cat_Other",
+    "reg_AFRICA",
+    "reg_APAC",
+    "reg_EU",
+    "reg_GCC",
+    "reg_LATAM",
+    "reg_MENA",
+    "reg_OFFSHORE",
+    "reg_OTHER",
+    "reg_UAE",
+    "reg_UK",
+    "reg_UNKNOWN",
+    "reg_US"
+  ],
+  "clusters": [
+    {
+      "id": 0,
+      "size": 183,
+      "is_noise": false,
+      "features": {
+        "mean_emp": 1.2349726775956285,
+        "median_emp": 0.0,
+        "mean_fol": 154.3224043715847,
+        "mean_n_activities": 2.0437158469945356,
+        "mean_n_conditions": 2.9344262295081966,
+        "pct_with_reg_action": 0.0,
+        "pct_vara": 0.0,
+        "mode_src": "ADGM",
+        "mode_region": "UNKNOWN",
+        "region_distribution": {
+          "UNKNOWN": 123,
+          "EU": 7,
+          "US": 16,
+          "UAE": 21,
+          "UK": 11,
+          "GCC": 2,
+          "APAC": 3
+        },
+        "country_top3": {
+          "UNK": 123,
+          "AE": 21,
+          "US": 15
+        }
+      },
+      "top_activities": [
+        {
+          "activity": "Arranging Deals in Investments",
+          "count": 89
+        },
+        {
+          "activity": "Advising on Investments or Credit",
+          "count": 81
+        },
+        {
+          "activity": "Managing a Collective Investment Fund",
+          "count": 78
+        },
+        {
+          "activity": "Managing Assets",
+          "count": 30
+        },
+        {
+          "activity": "Arranging Credit",
+          "count": 15
+        }
+      ],
+      "top_categories": [
+        {
+          "category": "Advisory",
+          "count": 170
+        },
+        {
+          "category": "FundMgt",
+          "count": 82
+        },
+        {
+          "category": "AssetMgt",
+          "count": 30
+        }
+      ],
+      "top_firms": [
+        {
+          "name": "EnergiaRe Limited",
+          "emp": 19,
+          "id": "ADGM-FIRM-250047"
+        },
+        {
+          "name": "NZK Insurance Limited",
+          "emp": 13,
+          "id": "ADGM-FIRM-220145"
+        },
+        {
+          "name": "Blue Remit Limited",
+          "emp": 10,
+          "id": "ADGM-FIRM-170003"
+        },
+        {
+          "name": "Sandrock Capital Ltd",
+          "emp": 10,
+          "id": "ADGM-FIRM-250008"
+        },
+        {
+          "name": "Eiffel Investment ME Limited",
+          "emp": 9,
+          "id": "ADGM-FIRM-220151"
+        }
+      ],
+      "heterogeneity": 0.375,
+      "homogeneity": 0.625,
+      "name": "Boutique Advisory \u2014 Undisclosed-HQ",
+      "outreach_angle": "Investment advisory firms \u2014 often lean teams. Offer compliance-as-a-service, regulated-activity gap analysis, and referral partnerships on RWA tokenization."
+    },
+    {
+      "id": 1,
+      "size": 175,
+      "is_noise": false,
+      "features": {
+        "mean_emp": 5396.0,
+        "median_emp": 110.0,
+        "mean_fol": 208353.86857142858,
+        "mean_n_activities": 2.2285714285714286,
+        "mean_n_conditions": 3.137142857142857,
+        "pct_with_reg_action": 0.0,
+        "pct_vara": 0.0,
+        "mode_src": "ADGM",
+        "mode_region": "US",
+        "region_distribution": {
+          "EU": 22,
+          "US": 57,
+          "APAC": 20,
+          "OFFSHORE": 2,
+          "UAE": 40,
+          "UNKNOWN": 8,
+          "OTHER": 1,
+          "UK": 19,
+          "MENA": 2,
+          "GCC": 2,
+          "AFRICA": 1,
+          "LATAM": 1
+        },
+        "country_top3": {
+          "US": 54,
+          "AE": 40,
+          "GB": 19
+        }
+      },
+      "top_activities": [
+        {
+          "activity": "Arranging Deals in Investments",
+          "count": 119
+        },
+        {
+          "activity": "Advising on Investments or Credit",
+          "count": 103
+        },
+        {
+          "activity": "Managing a Collective Investment Fund",
+          "count": 56
+        },
+        {
+          "activity": "Arranging Credit",
+          "count": 20
+        },
+        {
+          "activity": "Managing Assets",
+          "count": 15
+        }
+      ],
+      "top_categories": [
+        {
+          "category": "Advisory",
+          "count": 222
+        },
+        {
+          "category": "FundMgt",
+          "count": 66
+        },
+        {
+          "category": "Credit",
+          "count": 24
+        }
+      ],
+      "top_firms": [
+        {
+          "name": "AG (Australian Gulf) Capital Limited",
+          "emp": 144831,
+          "id": "ADGM-FIRM-220056"
+        },
+        {
+          "name": "Partners Group Middle East Limited",
+          "emp": 144831,
+          "id": "ADGM-FIRM-250013"
+        },
+        {
+          "name": "BANCO BILBAO VIZCAYA ARGENTARIA, S.A.",
+          "emp": 135810,
+          "id": "ADGM-FIRM-250082"
+        },
+        {
+          "name": "Morgan Stanley & Co. International plc",
+          "emp": 96686,
+          "id": "ADGM-FIRM-240009"
+        },
+        {
+          "name": "J.P. MORGAN MIDDLE EAST LIMITED",
+          "emp": 83357,
+          "id": "ADGM-FIRM-200043"
+        }
+      ],
+      "heterogeneity": 0.62,
+      "homogeneity": 0.38,
+      "name": "Global Advisory \u2014 US-HQ",
+      "outreach_angle": "Investment advisory firms \u2014 often lean teams. Offer compliance-as-a-service, regulated-activity gap analysis, and referral partnerships on RWA tokenization."
+    },
+    {
+      "id": 4,
+      "size": 76,
+      "is_noise": false,
+      "features": {
+        "mean_emp": 1169.6052631578948,
+        "median_emp": 11.5,
+        "mean_fol": 51382.21052631579,
+        "mean_n_activities": 5.368421052631579,
+        "mean_n_conditions": 2.5657894736842106,
+        "pct_with_reg_action": 0.0,
+        "pct_vara": 0.0,
+        "mode_src": "ADGM",
+        "mode_region": "UAE",
+        "region_distribution": {
+          "US": 13,
+          "EU": 8,
+          "UK": 5,
+          "APAC": 5,
+          "GCC": 2,
+          "UAE": 26,
+          "UNKNOWN": 17
+        },
+        "country_top3": {
+          "AE": 26,
+          "UNK": 17,
+          "US": 12
+        }
+      },
+      "top_activities": [
+        {
+          "activity": "Arranging Deals in Investments",
+          "count": 72
+        },
+        {
+          "activity": "Advising on Investments or Credit",
+          "count": 70
+        },
+        {
+          "activity": "Managing Assets",
+          "count": 51
+        },
+        {
+          "activity": "Arranging Custody",
+          "count": 46
+        },
+        {
+          "activity": "Arranging Credit",
+          "count": 46
+        }
+      ],
+      "top_categories": [
+        {
+          "category": "Advisory",
+          "count": 142
+        },
+        {
+          "category": "Custody",
+          "count": 58
+        },
+        {
+          "category": "Credit",
+          "count": 54
+        }
+      ],
+      "top_firms": [
+        {
+          "name": "ACM Limited",
+          "emp": 63400,
+          "id": "ADGM-FIRM-180022"
+        },
+        {
+          "name": "BNP Paribas S.A.",
+          "emp": 9299,
+          "id": "ADGM-FIRM-170015"
+        },
+        {
+          "name": "Julius Baer (Abu Dhabi) LTD",
+          "emp": 8051,
+          "id": "ADGM-FIRM-250098"
+        },
+        {
+          "name": "eToro (ME) Ltd",
+          "emp": 2707,
+          "id": "ADGM-FIRM-220073"
+        },
+        {
+          "name": "Mirabaud (Abu Dhabi) Limited",
+          "emp": 790,
+          "id": "ADGM-FIRM-180009"
+        }
+      ],
+      "heterogeneity": 0.685,
+      "homogeneity": 0.315,
+      "name": "Large Advisory \u2014 UAE-HQ",
+      "outreach_angle": "Investment advisory firms \u2014 often lean teams. Offer compliance-as-a-service, regulated-activity gap analysis, and referral partnerships on RWA tokenization."
+    },
+    {
+      "id": 2,
+      "size": 62,
+      "is_noise": false,
+      "features": {
+        "mean_emp": 818.9032258064516,
+        "median_emp": 92.0,
+        "mean_fol": 99757.43548387097,
+        "mean_n_activities": 1.3870967741935485,
+        "mean_n_conditions": 0.0,
+        "pct_with_reg_action": 0.0,
+        "pct_vara": 1.0,
+        "mode_src": "VARA",
+        "mode_region": "US",
+        "region_distribution": {
+          "UNKNOWN": 11,
+          "APAC": 6,
+          "US": 14,
+          "AFRICA": 3,
+          "EU": 8,
+          "OFFSHORE": 3,
+          "UK": 6,
+          "GCC": 2,
+          "UAE": 9
+        },
+        "country_top3": {
+          "US": 12,
+          "UNK": 11,
+          "AE": 9
+        }
+      },
+      "top_activities": [
+        {
+          "activity": "VARA:BD",
+          "count": 47
+        },
+        {
+          "activity": "VARA:CU",
+          "count": 11
+        },
+        {
+          "activity": "VARA:EX",
+          "count": 10
+        },
+        {
+          "activity": "VARA:M&I",
+          "count": 9
+        },
+        {
+          "activity": "VARA:LB",
+          "count": 6
+        }
+      ],
+      "top_categories": [
+        {
+          "category": "BrokerDealer",
+          "count": 47
+        },
+        {
+          "category": "Custody",
+          "count": 11
+        },
+        {
+          "category": "Exchange",
+          "count": 10
+        }
+      ],
+      "top_firms": [
+        {
+          "name": "Binance FZE",
+          "emp": 14241,
+          "id": "VARA-FIRM-binancefze"
+        },
+        {
+          "name": "Crypto.com FZE",
+          "emp": 7560,
+          "id": "VARA-FIRM-cryptocomfze"
+        },
+        {
+          "name": "Coinbase FZE",
+          "emp": 7543,
+          "id": "VARA-FIRM-coinbasefze"
+        },
+        {
+          "name": "OKX MENA FZE",
+          "emp": 7126,
+          "id": "VARA-FIRM-okxmenafze"
+        },
+        {
+          "name": "Bitget FZE",
+          "emp": 2431,
+          "id": "VARA-FIRM-bitgetfze"
+        }
+      ],
+      "heterogeneity": 0.577,
+      "homogeneity": 0.423,
+      "name": "Large Broker-Dealer \u2014 US-HQ (VARA-crypto)",
+      "outreach_angle": "VARA-regulated crypto/VA operators. Lead with ERC-3643 permissioned-token readiness, Rulebook cross-mapping, and RI/OC placement support."
+    },
+    {
+      "id": 3,
+      "size": 19,
+      "is_noise": false,
+      "features": {
+        "mean_emp": 169.10526315789474,
+        "median_emp": 8.0,
+        "mean_fol": 9387.947368421053,
+        "mean_n_activities": 2.789473684210526,
+        "mean_n_conditions": 2.1052631578947367,
+        "pct_with_reg_action": 1.0,
+        "pct_vara": 0.0,
+        "mode_src": "ADGM",
+        "mode_region": "UNKNOWN",
+        "region_distribution": {
+          "US": 1,
+          "EU": 1,
+          "UAE": 3,
+          "UK": 2,
+          "UNKNOWN": 10,
+          "APAC": 2
+        },
+        "country_top3": {
+          "UNK": 10,
+          "AE": 3,
+          "GB": 2
+        }
+      },
+      "top_activities": [
+        {
+          "activity": "Arranging Deals in Investments",
+          "count": 12
+        },
+        {
+          "activity": "Managing a Collective Investment Fund",
+          "count": 7
+        },
+        {
+          "activity": "Advising on Investments or Credit",
+          "count": 7
+        },
+        {
+          "activity": "Managing Assets",
+          "count": 5
+        },
+        {
+          "activity": "Providing Custody",
+          "count": 4
+        }
+      ],
+      "top_categories": [
+        {
+          "category": "Advisory",
+          "count": 19
+        },
+        {
+          "category": "FundMgt",
+          "count": 7
+        },
+        {
+          "category": "BrokerDealer",
+          "count": 7
+        }
+      ],
+      "top_firms": [
+        {
+          "name": "Piper Sandler MENA LTD",
+          "emp": 2060,
+          "id": "ADGM-FIRM-210046"
+        },
+        {
+          "name": "Ava Trade Middle East Limited",
+          "emp": 688,
+          "id": "ADGM-FIRM-190018"
+        },
+        {
+          "name": "Pyypl Ltd",
+          "emp": 156,
+          "id": "ADGM-FIRM-170031"
+        },
+        {
+          "name": "Marex Capital (AD) Limited",
+          "emp": 88,
+          "id": "ADGM-FIRM-160024"
+        },
+        {
+          "name": "Wealthface Limited",
+          "emp": 85,
+          "id": "ADGM-FIRM-180048"
+        }
+      ],
+      "heterogeneity": 0.644,
+      "homogeneity": 0.356,
+      "name": "Mid-Cap Advisory \u2014 Undisclosed-HQ \u26a0flagged",
+      "outreach_angle": "Investment advisory firms \u2014 often lean teams. Offer compliance-as-a-service, regulated-activity gap analysis, and referral partnerships on RWA tokenization."
+    }
+  ],
+  "firm_cluster_map": {
+    "ADGM-FIRM-210046": 3,
+    "ADGM-FIRM-190018": 3,
+    "ADGM-FIRM-170031": 3,
+    "ADGM-FIRM-160024": 3,
+    "ADGM-FIRM-180048": 3,
+    "ADGM-FIRM-190017": 3,
+    "ADGM-FIRM-200034": 3,
+    "ADGM-FIRM-170025": 3,
+    "ADGM-FIRM-190037": 3,
+    "ADGM-FIRM-210027": 3,
+    "ADGM-FIRM-210057": 3,
+    "ADGM-FIRM-190016": 3,
+    "ADGM-FIRM-170006": 3,
+    "ADGM-FIRM-160008": 3,
+    "ADGM-FIRM-160003": 3,
+    "ADGM-FIRM-190031": 3,
+    "ADGM-FIRM-190014": 3,
+    "ADGM-FIRM-190008": 3,
+    "ADGM-FIRM-190011": 3,
+    "ADGM-FIRM-220056": 1,
+    "ADGM-FIRM-250013": 1,
+    "ADGM-FIRM-250082": 1,
+    "ADGM-FIRM-240009": 1,
+    "ADGM-FIRM-200043": 1,
+    "ADGM-FIRM-240032": 1,
+    "ADGM-FIRM-180022": 4,
+    "ADGM-FIRM-190021": 1,
+    "ADGM-FIRM-240047": 1,
+    "ADGM-FIRM-220169": 1,
+    "ADGM-FIRM-190020": 1,
+    "VARA-FIRM-binancefze": 2,
+    "ADGM-FIRM-210006": 1,
+    "ADGM-FIRM-250087": 1,
+    "ADGM-FIRM-170015": 4,
+    "ADGM-FIRM-180035": 1,
+    "ADGM-FIRM-200037": 1,
+    "ADGM-FIRM-240093": 1,
+    "ADGM-FIRM-250098": 4,
+    "VARA-FIRM-cryptocomfze": 2,
+    "VARA-FIRM-coinbasefze": 2,
+    "VARA-FIRM-okxmenafze": 2,
+    "ADGM-FIRM-240042": 1,
+    "ADGM-FIRM-220153": 1,
+    "ADGM-FIRM-250058": 1,
+    "ADGM-FIRM-200052": 1,
+    "ADGM-FIRM-220150": 1,
+    "ADGM-FIRM-250075": 1,
+    "ADGM-FIRM-220149": 1,
+    "ADGM-FIRM-240040": 1,
+    "ADGM-FIRM-250070": 1,
+    "ADGM-FIRM-220073": 4,
+    "VARA-FIRM-bitgetfze": 2,
+    "ADGM-FIRM-240030": 1,
+    "ADGM-FIRM-250120": 1,
+    "ADGM-FIRM-240098": 1,
+    "ADGM-FIRM-240027": 1,
+    "ADGM-FIRM-220098": 1,
+    "ADGM-FIRM-240077": 1,
+    "ADGM-FIRM-250057": 1,
+    "VARA-FIRM-mexcfze": 2,
+    "ADGM-FIRM-240017": 1,
+    "ADGM-FIRM-250004": 1,
+    "VARA-FIRM-krakenfze": 2,
+    "VARA-FIRM-huobihtxfze": 2,
+    "VARA-FIRM-fireblocksfze": 2,
+    "VARA-FIRM-bitpandafze": 2,
+    "ADGM-FIRM-240043": 1,
+    "ADGM-FIRM-240085": 1,
+    "ADGM-FIRM-200015": 1,
+    "VARA-FIRM-nexofze": 2,
+    "ADGM-FIRM-180009": 4,
+    "ADGM-FIRM-190019": 1,
+    "ADGM-FIRM-210032": 4,
+    "ADGM-FIRM-240058": 1,
+    "VARA-FIRM-anchoragedigitalfze": 2,
+    "ADGM-FIRM-240068": 1,
+    "ADGM-FIRM-220103": 1,
+    "VARA-FIRM-amberpremiumfze": 2,
+    "ADGM-FIRM-240061": 1,
+    "ADGM-FIRM-260004": 1,
+    "ADGM-FIRM-220141": 1,
+    "ADGM-FIRM-250006": 4,
+    "ADGM-FIRM-240053": 1,
+    "ADGM-FIRM-240084": 1,
+    "ADGM-FIRM-200040": 1,
+    "ADGM-FIRM-250012": 1,
+    "ADGM-FIRM-180043": 4,
+    "ADGM-FIRM-240078": 0,
+    "ADGM-FIRM-240082": 1,
+    "ADGM-FIRM-250118": 1,
+    "ADGM-FIRM-220172": 1,
+    "VARA-FIRM-polygonlabsfze": 2,
+    "ADGM-FIRM-240100": 1,
+    "VARA-FIRM-bitstampfze": 2,
+    "ADGM-FIRM-240048": 1,
+    "ADGM-FIRM-170016": 4,
+    "ADGM-FIRM-220166": 1,
+    "ADGM-FIRM-250045": 1,
+    "ADGM-FIRM-210043": 1,
+    "ADGM-FIRM-220077": 1,
+    "ADGM-FIRM-240002": 1,
+    "ADGM-FIRM-250107": 1,
+    "VARA-FIRM-coppertechnologiesfze": 2,
+    "VARA-FIRM-rainmanagementfze": 2,
+    "ADGM-FIRM-180001": 4,
+    "ADGM-FIRM-240076": 1,
+    "ADGM-FIRM-160020": 4,
+    "ADGM-FIRM-210045": 1,
+    "VARA-FIRM-securitizefze": 2,
+    "ADGM-FIRM-160022": 4,
+    "ADGM-FIRM-240015": 4,
+    "ADGM-FIRM-220130": 1,
+    "ADGM-FIRM-250041": 1,
+    "ADGM-FIRM-240104": 1,
+    "VARA-FIRM-hashkeydxfze": 2,
+    "ADGM-FIRM-210062": 1,
+    "ADGM-FIRM-200045": 1,
+    "VARA-FIRM-bit2mefze": 2,
+    "ADGM-FIRM-240091": 4,
+    "ADGM-FIRM-180042": 1,
+    "VARA-FIRM-prypcofze": 2,
+    "ADGM-FIRM-220099": 1,
+    "ADGM-FIRM-240024": 1,
+    "ADGM-FIRM-240035": 4,
+    "ADGM-FIRM-170033": 1,
+    "ADGM-FIRM-250048": 1,
+    "ADGM-FIRM-250015": 1,
+    "ADGM-FIRM-180041": 1,
+    "VARA-FIRM-stakerwafze": 2,
+    "ADGM-FIRM-220119": 1,
+    "ADGM-FIRM-250125": 1,
+    "ADGM-FIRM-220117": 4,
+    "ADGM-FIRM-200033": 1,
+    "ADGM-FIRM-220168": 4,
+    "ADGM-FIRM-240088": 1,
+    "VARA-FIRM-bitgofze": 2,
+    "VARA-FIRM-aquanowmiddleeastfze": 2,
+    "ADGM-FIRM-250033": 1,
+    "ADGM-FIRM-240031": 4,
+    "ADGM-FIRM-220137": 1,
+    "VARA-FIRM-fassettechnologiesfze": 2,
+    "ADGM-FIRM-250029": 1,
+    "ADGM-FIRM-210048": 1,
+    "VARA-FIRM-laserdigitalmiddleeastfze": 2,
+    "ADGM-FIRM-220081": 1,
+    "VARA-FIRM-hextrustfze": 2,
+    "VARA-FIRM-deribitfze": 2,
+    "ADGM-FIRM-250040": 1,
+    "ADGM-FIRM-240089": 1,
+    "ADGM-FIRM-220095": 1,
+    "ADGM-FIRM-240041": 1,
+    "VARA-FIRM-bitoasistechnologiesfze": 2,
+    "ADGM-FIRM-250083": 1,
+    "VARA-FIRM-zodiacustodyfze": 2,
+    "ADGM-FIRM-220154": 1,
+    "ADGM-FIRM-250044": 1,
+    "ADGM-FIRM-250051": 1,
+    "ADGM-FIRM-200001": 4,
+    "ADGM-FIRM-220088": 1,
+    "ADGM-FIRM-250020": 1,
+    "VARA-FIRM-alphapointfze": 2,
+    "VARA-FIRM-backpackfze": 2,
+    "ADGM-FIRM-200029": 1,
+    "ADGM-FIRM-220156": 1,
+    "ADGM-FIRM-240066": 1,
+    "VARA-FIRM-komainumeafze": 2,
+    "ADGM-FIRM-240073": 1,
+    "VARA-FIRM-tribetokenisationfze": 2,
+    "VARA-FIRM-galaxydigitalfze": 2,
+    "ADGM-FIRM-240072": 1,
+    "ADGM-FIRM-190024": 1,
+    "ADGM-FIRM-220152": 1,
+    "VARA-FIRM-bullishfze": 2,
+    "ADGM-FIRM-240018": 1,
+    "VARA-FIRM-coinmenafze": 2,
+    "ADGM-FIRM-220100": 1,
+    "VARA-FIRM-scalloptechnologiesfze": 2,
+    "ADGM-FIRM-220132": 1,
+    "ADGM-FIRM-220134": 1,
+    "ADGM-FIRM-240057": 1,
+    "VARA-FIRM-smartcrowdnawyshares": 2,
+    "ADGM-FIRM-220128": 1,
+    "ADGM-FIRM-240014": 1,
+    "ADGM-FIRM-190005": 4,
+    "ADGM-FIRM-210041": 1,
+    "ADGM-FIRM-180011": 4,
+    "ADGM-FIRM-160013": 1,
+    "ADGM-FIRM-250086": 4,
+    "ADGM-FIRM-250027": 1,
+    "ADGM-FIRM-180010": 1,
+    "ADGM-FIRM-240013": 1,
+    "ADGM-FIRM-160009": 4,
+    "VARA-FIRM-aplodigitalfze": 2,
+    "ADGM-FIRM-250054": 1,
+    "ADGM-FIRM-220148": 4,
+    "ADGM-FIRM-240055": 1,
+    "VARA-FIRM-injectivelabsfze": 2,
+    "VARA-FIRM-selinicapitalfze": 2,
+    "ADGM-FIRM-200010": 1,
+    "ADGM-FIRM-170004": 1,
+    "VARA-FIRM-gcexfze": 2,
+    "ADGM-FIRM-250030": 1,
+    "ADGM-FIRM-180005": 1,
+    "ADGM-FIRM-200031": 1,
+    "ADGM-FIRM-240075": 1,
+    "VARA-FIRM-dkkpartnersfze": 2,
+    "ADGM-FIRM-220138": 4,
+    "VARA-FIRM-shipfinexfzco": 2,
+    "ADGM-FIRM-250025": 1,
+    "ADGM-FIRM-240034": 4,
+    "ADGM-FIRM-220087": 4,
+    "ADGM-FIRM-240067": 1,
+    "ADGM-FIRM-250080": 4,
+    "ADGM-FIRM-160019": 1,
+    "ADGM-FIRM-220147": 1,
+    "ADGM-FIRM-180036": 4,
+    "ADGM-FIRM-210051": 0,
+    "ADGM-FIRM-220060": 1,
+    "ADGM-FIRM-250074": 1,
+    "ADGM-FIRM-160011": 4,
+    "ADGM-FIRM-200023": 4,
+    "ADGM-FIRM-250085": 1,
+    "VARA-FIRM-midchainsfzco": 2,
+    "ADGM-FIRM-240092": 1,
+    "ADGM-FIRM-250037": 4,
+    "ADGM-FIRM-240003": 1,
+    "VARA-FIRM-ceffufze": 2,
+    "ADGM-FIRM-180038": 1,
+    "ADGM-FIRM-260000": 4,
+    "ADGM-FIRM-240071": 1,
+    "ADGM-FIRM-220097": 1,
+    "ADGM-FIRM-250047": 0,
+    "VARA-FIRM-mtpelerinfze": 2,
+    "ADGM-FIRM-220142": 4,
+    "ADGM-FIRM-240004": 1,
+    "ADGM-FIRM-240022": 1,
+    "ADGM-FIRM-210018": 1,
+    "VARA-FIRM-woofze": 2,
+    "ADGM-FIRM-220135": 4,
+    "ADGM-FIRM-220146": 1,
+    "ADGM-FIRM-180044": 1,
+    "ADGM-FIRM-210053": 1,
+    "ADGM-FIRM-250092": 1,
+    "ADGM-FIRM-250088": 1,
+    "VARA-FIRM-mantrafinancefze": 2,
+    "ADGM-FIRM-240094": 1,
+    "ADGM-FIRM-250032": 1,
+    "VARA-FIRM-tokinvestdmcc": 2,
+    "ADGM-FIRM-180014": 0,
+    "ADGM-FIRM-220136": 1,
+    "ADGM-FIRM-210003": 1,
+    "ADGM-FIRM-220107": 4,
+    "ADGM-FIRM-240045": 1,
+    "ADGM-FIRM-220145": 0,
+    "ADGM-FIRM-200028": 1,
+    "ADGM-FIRM-240095": 1,
+    "ADGM-FIRM-210024": 4,
+    "ADGM-FIRM-240059": 4,
+    "ADGM-FIRM-220110": 1,
+    "ADGM-FIRM-220126": 0,
+    "ADGM-FIRM-220133": 1,
+    "ADGM-FIRM-220101": 4,
+    "ADGM-FIRM-240006": 0,
+    "ADGM-FIRM-170003": 0,
+    "ADGM-FIRM-210002": 4,
+    "ADGM-FIRM-220104": 1,
+    "ADGM-FIRM-220178": 1,
+    "ADGM-FIRM-240036": 1,
+    "ADGM-FIRM-220157": 4,
+    "ADGM-FIRM-250008": 0,
+    "ADGM-FIRM-240039": 1,
+    "ADGM-FIRM-220151": 0,
+    "ADGM-FIRM-240029": 4,
+    "ADGM-FIRM-220144": 1,
+    "ADGM-FIRM-220069": 4,
+    "VARA-FIRM-ripplelabsfze": 2,
+    "ADGM-FIRM-200047": 1,
+    "ADGM-FIRM-210023": 4,
+    "ADGM-FIRM-240038": 1,
+    "ADGM-FIRM-220111": 1,
+    "ADGM-FIRM-240103": 1,
+    "VARA-FIRM-blockonefze": 2,
+    "ADGM-FIRM-210052": 1,
+    "ADGM-FIRM-220114": 0,
+    "ADGM-FIRM-220091": 0,
+    "ADGM-FIRM-220122": 1,
+    "ADGM-FIRM-250105": 0,
+    "ADGM-FIRM-210033": 0,
+    "ADGM-FIRM-220176": 4,
+    "ADGM-FIRM-220068": 0,
+    "ADGM-FIRM-200006": 1,
+    "VARA-FIRM-ayacapitalfze": 2,
+    "ADGM-FIRM-200039": 1,
+    "ADGM-FIRM-210001": 1,
+    "ADGM-FIRM-210015": 0,
+    "ADGM-FIRM-220080": 4,
+    "ADGM-FIRM-200005": 1,
+    "ADGM-FIRM-220084": 4,
+    "ADGM-FIRM-200021": 1,
+    "ADGM-FIRM-220083": 4,
+    "ADGM-FIRM-240037": 1,
+    "ADGM-FIRM-210035": 4,
+    "ADGM-FIRM-240079": 0,
+    "ADGM-FIRM-220127": 1,
+    "ADGM-FIRM-250069": 1,
+    "ADGM-FIRM-180002": 0,
+    "ADGM-FIRM-220158": 0,
+    "ADGM-FIRM-250076": 4,
+    "ADGM-FIRM-240060": 0,
+    "ADGM-FIRM-170018": 0,
+    "ADGM-FIRM-240070": 1,
+    "VARA-FIRM-nineblockscapitalfze": 2,
+    "ADGM-FIRM-160018": 0,
+    "ADGM-FIRM-160012": 0,
+    "ADGM-FIRM-250079": 4,
+    "ADGM-FIRM-250046": 0,
+    "ADGM-FIRM-220065": 0,
+    "ADGM-FIRM-220108": 4,
+    "ADGM-FIRM-180021": 0,
+    "ADGM-FIRM-210025": 0,
+    "ADGM-FIRM-250007": 4,
+    "ADGM-FIRM-250023": 0,
+    "ADGM-FIRM-220171": 0,
+    "ADGM-FIRM-240080": 1,
+    "ADGM-FIRM-250016": 1,
+    "ADGM-FIRM-200022": 4,
+    "ADGM-FIRM-250011": 0,
+    "ADGM-FIRM-200044": 1,
+    "ADGM-FIRM-170009": 0,
+    "ADGM-FIRM-220061": 0,
+    "VARA-FIRM-circleinternetfinancialfze": 2,
+    "ADGM-FIRM-220116": 0,
+    "ADGM-FIRM-190045": 0,
+    "ADGM-FIRM-220066": 1,
+    "ADGM-FIRM-170002": 0,
+    "ADGM-FIRM-250038": 0,
+    "ADGM-FIRM-240044": 0,
+    "ADGM-FIRM-240020": 1,
+    "ADGM-FIRM-170001": 0,
+    "ADGM-FIRM-160021": 4,
+    "ADGM-FIRM-250001": 0,
+    "ADGM-FIRM-240101": 0,
+    "ADGM-FIRM-200013": 0,
+    "ADGM-FIRM-250071": 0,
+    "ADGM-FIRM-220059": 1,
+    "VARA-FIRM-gap3partnersfze": 2,
+    "ADGM-FIRM-250022": 0,
+    "ADGM-FIRM-240086": 0,
+    "ADGM-FIRM-240008": 4,
+    "ADGM-FIRM-210063": 0,
+    "ADGM-FIRM-220155": 0,
+    "ADGM-FIRM-170026": 0,
+    "ADGM-FIRM-220164": 0,
+    "ADGM-FIRM-210019": 4,
+    "ADGM-FIRM-190034": 0,
+    "ADGM-FIRM-190012": 0,
+    "ADGM-FIRM-210013": 0,
+    "ADGM-FIRM-220089": 0,
+    "ADGM-FIRM-200004": 0,
+    "VARA-FIRM-ctrlaltsolutionsdmcc": 2,
+    "ADGM-FIRM-240016": 0,
+    "ADGM-FIRM-250099": 0,
+    "ADGM-FIRM-190032": 0,
+    "ADGM-FIRM-220070": 0,
+    "ADGM-FIRM-200011": 0,
+    "ADGM-FIRM-180019": 0,
+    "ADGM-FIRM-220120": 0,
+    "ADGM-FIRM-250042": 0,
+    "ADGM-FIRM-220140": 0,
+    "ADGM-FIRM-250114": 0,
+    "ADGM-FIRM-250121": 0,
+    "ADGM-FIRM-240011": 0,
+    "ADGM-FIRM-220092": 0,
+    "ADGM-FIRM-240046": 0,
+    "ADGM-FIRM-220106": 0,
+    "ADGM-FIRM-240007": 0,
+    "ADGM-FIRM-250014": 0,
+    "ADGM-FIRM-180039": 0,
+    "ADGM-FIRM-170036": 4,
+    "ADGM-FIRM-160006": 0,
+    "ADGM-FIRM-160005": 4,
+    "ADGM-FIRM-180024": 0,
+    "ADGM-FIRM-220175": 0,
+    "ADGM-FIRM-160007": 0,
+    "ADGM-FIRM-220160": 0,
+    "ADGM-FIRM-160001": 0,
+    "ADGM-FIRM-250053": 0,
+    "VARA-FIRM-aldrinlabsfze": 2,
+    "ADGM-FIRM-210036": 0,
+    "ADGM-FIRM-210010": 0,
+    "ADGM-FIRM-220093": 4,
+    "ADGM-FIRM-250005": 4,
+    "ADGM-FIRM-190023": 4,
+    "ADGM-FIRM-190043": 0,
+    "ADGM-FIRM-220115": 0,
+    "ADGM-FIRM-250055": 0,
+    "ADGM-FIRM-220086": 0,
+    "ADGM-FIRM-220055": 0,
+    "ADGM-FIRM-200041": 0,
+    "ADGM-FIRM-250018": 0,
+    "ADGM-FIRM-190015": 0,
+    "ADGM-FIRM-220082": 0,
+    "ADGM-FIRM-240019": 0,
+    "ADGM-FIRM-180046": 1,
+    "ADGM-FIRM-220058": 0,
+    "ADGM-FIRM-190013": 0,
+    "ADGM-FIRM-240099": 0,
+    "ADGM-FIRM-250002": 0,
+    "ADGM-FIRM-250024": 0,
+    "ADGM-FIRM-250056": 0,
+    "ADGM-FIRM-220174": 0,
+    "ADGM-FIRM-250078": 4,
+    "ADGM-FIRM-210009": 0,
+    "ADGM-FIRM-250035": 0,
+    "ADGM-FIRM-190009": 0,
+    "ADGM-FIRM-210093": 0,
+    "ADGM-FIRM-250028": 0,
+    "ADGM-FIRM-210029": 0,
+    "ADGM-FIRM-190010": 0,
+    "ADGM-FIRM-250050": 0,
+    "ADGM-FIRM-220102": 0,
+    "ADGM-FIRM-240056": 0,
+    "ADGM-FIRM-220125": 0,
+    "ADGM-FIRM-180003": 0,
+    "ADGM-FIRM-170007": 4,
+    "ADGM-FIRM-170005": 0,
+    "ADGM-FIRM-210031": 0,
+    "ADGM-FIRM-210040": 0,
+    "ADGM-FIRM-190001": 0,
+    "ADGM-FIRM-210028": 0,
+    "VARA-FIRM-fuzefinancefze": 2,
+    "ADGM-FIRM-200038": 0,
+    "ADGM-FIRM-220085": 0,
+    "ADGM-FIRM-190006": 0,
+    "ADGM-FIRM-190040": 0,
+    "ADGM-FIRM-200007": 4,
+    "ADGM-FIRM-240081": 0,
+    "ADGM-FIRM-200026": 0,
+    "ADGM-FIRM-210016": 0,
+    "ADGM-FIRM-180013": 4,
+    "ADGM-FIRM-240062": 4,
+    "ADGM-FIRM-250077": 0,
+    "ADGM-FIRM-220159": 0,
+    "ADGM-FIRM-220131": 0,
+    "ADGM-FIRM-250034": 0,
+    "ADGM-FIRM-250052": 0,
+    "VARA-FIRM-hyundaipayfze": 2,
+    "ADGM-FIRM-260003": 0,
+    "ADGM-FIRM-210014": 0,
+    "ADGM-FIRM-210044": 0,
+    "ADGM-FIRM-200002": 0,
+    "ADGM-FIRM-170035": 0,
+    "ADGM-FIRM-240028": 0,
+    "ADGM-FIRM-250072": 0,
+    "ADGM-FIRM-240097": 0,
+    "ADGM-FIRM-240063": 0,
+    "ADGM-FIRM-200051": 4,
+    "ADGM-FIRM-240096": 0,
+    "ADGM-FIRM-220075": 4,
+    "ADGM-FIRM-190044": 0,
+    "ADGM-FIRM-220090": 0,
+    "ADGM-FIRM-200003": 0,
+    "ADGM-FIRM-250021": 0,
+    "ADGM-FIRM-250084": 0,
+    "ADGM-FIRM-220118": 0,
+    "ADGM-FIRM-160002": 0,
+    "ADGM-FIRM-200046": 0,
+    "ADGM-FIRM-170037": 0,
+    "ADGM-FIRM-180023": 0,
+    "ADGM-FIRM-240010": 1,
+    "ADGM-FIRM-160017": 0,
+    "ADGM-FIRM-240023": 0,
+    "ADGM-FIRM-210021": 0,
+    "ADGM-FIRM-210017": 0,
+    "VARA-FIRM-novadigitalinvestmentsdmcc": 2,
+    "ADGM-FIRM-210008": 0,
+    "ADGM-FIRM-240025": 0,
+    "ADGM-FIRM-220167": 0,
+    "ADGM-FIRM-160014": 0,
+    "ADGM-FIRM-250067": 0,
+    "ADGM-FIRM-210007": 0,
+    "ADGM-FIRM-220161": 0,
+    "ADGM-FIRM-240102": 0,
+    "ADGM-FIRM-180008": 0,
+    "ADGM-FIRM-220054": 0,
+    "ADGM-FIRM-200030": 0,
+    "ADGM-FIRM-180047": 4,
+    "ADGM-FIRM-220113": 0,
+    "ADGM-FIRM-200053": 0,
+    "ADGM-FIRM-190033": 0,
+    "ADGM-FIRM-200027": 4,
+    "ADGM-FIRM-220105": 0,
+    "ADGM-FIRM-190004": 4,
+    "ADGM-FIRM-180006": 4,
+    "ADGM-FIRM-200019": 0,
+    "ADGM-FIRM-220124": 0,
+    "ADGM-FIRM-190030": 4,
+    "ADGM-FIRM-170017": 0,
+    "ADGM-FIRM-170032": 0,
+    "ADGM-FIRM-210038": 0,
+    "ADGM-FIRM-210012": 0,
+    "ADGM-FIRM-190002": 0,
+    "ADGM-FIRM-240083": 0,
+    "ADGM-FIRM-200035": 0,
+    "ADGM-FIRM-220129": 0,
+    "ADGM-FIRM-190042": 0,
+    "ADGM-FIRM-160025": 4,
+    "ADGM-FIRM-250089": 0,
+    "ADGM-FIRM-220112": 0,
+    "ADGM-FIRM-200017": 0,
+    "ADGM-FIRM-180040": 0,
+    "ADGM-FIRM-200018": 0,
+    "ADGM-FIRM-250031": 0,
+    "ADGM-FIRM-190041": 4,
+    "ADGM-FIRM-240001": 0
+  }
+}
