@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import sys
 from collections import Counter
 from datetime import datetime, timezone
@@ -29,8 +30,10 @@ try:
 except Exception:
     HAVE_HDBSCAN = False
 
-ROOT = Path("/Users/openclaw/playwright")
+# Repo root = two parents up from this file (.../vara_roadmap/adgm-scrape/cluster_icp.py)
+ROOT = Path(__file__).resolve().parents[2]
 MASTER = ROOT / "antweave_roadmap" / "master-data.json"
+MASTER_BAK = ROOT / "antweave_roadmap" / "master-data.json.bak.cluster_icp"
 OUT_JSON = ROOT / "vara_roadmap" / "adgm-scrape" / "firms-icp-clusters.json"
 OUT_MD = ROOT / "vara_roadmap" / "adgm-scrape" / "firms-icp-clusters.md"
 
@@ -560,13 +563,21 @@ def main() -> int:
     OUT_MD.write_text("\n".join(md))
     print(f"Wrote {OUT_MD}")
 
-    # ── Patch master-data.json in-place with cluster_id + cluster_name ─
+    # ── Patch master-data.json with cluster_id + cluster_name (atomic) ─
     name_by_id = {c["id"]: c["name"] for c in clusters_sorted}
     for i, f in enumerate(firms):
         cid = int(labels[i])
         f["cluster_id"] = cid
         f["cluster_name"] = name_by_id.get(cid, "Edge Cases / Noise")
-    MASTER.write_text(json.dumps(data, indent=2, ensure_ascii=False))
+    # 1) Backup current master to a dedicated slot so a concurrent writer
+    #    (e.g. reconcile_suspects.py) can't clobber our safety copy.
+    if MASTER.exists():
+        MASTER_BAK.write_bytes(MASTER.read_bytes())
+        print(f"Backup -> {MASTER_BAK}")
+    # 2) Write to a sibling .tmp file, then atomically replace the target.
+    tmp_path = MASTER.with_suffix(MASTER.suffix + ".tmp")
+    tmp_path.write_text(json.dumps(data, indent=2, ensure_ascii=False))
+    os.replace(tmp_path, MASTER)
     print(f"Patched {MASTER} with cluster_id + cluster_name")
 
     return 0
